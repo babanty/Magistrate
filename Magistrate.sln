@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magistrate", "Magistrate.csproj", "{EBB1C406-D857-48C3-A21B-33AA729BF9DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBB1C406-D857-48C3-A21B-33AA729BF9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB1C406-D857-48C3-A21B-33AA729BF9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB1C406-D857-48C3-A21B-33AA729BF9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB1C406-D857-48C3-A21B-33AA729BF9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC126C3C-E5ED-4C90-BC05-1F4A367A4790}
+	EndGlobalSection
+EndGlobal

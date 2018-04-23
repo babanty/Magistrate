@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Magistrate.Forms
+{
+    public partial class Article1281appeared : Form
+    {
+        public Article1281appeared()
+        {
+            InitializeComponent();
+            string[] countries = { "Бразилия", "Аргентина", "Чили", "Уругвай", "Колумбия" }; // listBox1.SelectedItem.ToString();
+            comboBox1.Items.AddRange(countries);
+        }
+
+        private void Article12_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<ValueControl> controlArrayToString = GenerationWord.ControlArrayToString(Controls);
+            GenerationWord.СontrolAndKeyArrayToString(ref controlArrayToString);
+
+            GenerationWord.GenerateWord("E:\\MyDesktop\\Code\\Судья\\Судья v2\\Magistrate\\bin\\Debug\\Sample", "ст.12.8 ч.1 явился", controlArrayToString);
+        }
+    }
+}
