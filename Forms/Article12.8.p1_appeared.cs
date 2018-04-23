@@ -26,10 +26,12 @@ namespace Magistrate.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<ValueControl> controlArrayToString = GenerationWord.ControlArrayToString(Controls);
-            GenerationWord.СontrolAndKeyArrayToString(ref controlArrayToString);
+            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
 
+            // Сгенерировать ворд
             GenerationWord.GenerateWord("E:\\MyDesktop\\Code\\Судья\\Судья v2\\Magistrate\\bin\\Debug\\Sample", "ст.12.8 ч.1 явился", controlArrayToString);
+
         }
     }
 }

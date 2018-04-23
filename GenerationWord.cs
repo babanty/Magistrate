@@ -14,7 +14,8 @@ namespace Magistrate
     /// </summary>
     public static class GenerationWord
     {
-        private static string PathToApp = Application.StartupPath + "\\AutoitGenerateWord.exe"; // Путь до скрипта генератора
+        // Путь до скрипта генератора
+        private static string PathToApp = Application.StartupPath + "\\AutoitGenerateWord.exe"; 
 
         /// <summary>
         /// Запихнуть в ворд в пронумерованные ключи необходимую инфомарцию
@@ -24,10 +25,20 @@ namespace Magistrate
         /// <param name="Params">Массив строк впихиваемых вместо ключей</param>
         public static void GenerateWord(string PathToSamples, string NameSample , List<ValueControl> Params)
         {
+            string nameSectionValue = "ValueForGenerate"; // Название секции в ini файле, в которой будут храниться ini-ключи-значения полей ввода
+            string nameSectionProperties = "PropertiesForGenerate"; // Название секции в ini файле, в которой будут храниться ini-ключи-значения настройки для autoit-скрипта
+
             Ini ini = new Ini("PropertiesForAutoitScript"); // Создаем инифайл для последующе обработки autoit exe-шником
+
+            try // Очищаем старую информацию в секциях ini 
+            {
+                ini.DeleteSection(nameSectionProperties); 
+                ini.DeleteSection(nameSectionValue);
+            } catch { } 
+            
             try
             {
-                ini.Write(NameSample, "PathToSamples", PathToSamples + "\\" + NameSample + ".docx"); // Путь до шаблона
+                ini.Write(nameSectionProperties, "PathToSamples", PathToSamples + "\\" + NameSample + ".docx"); // Путь до шаблона
             }
             catch (Exception ex)
             {
@@ -36,18 +47,50 @@ namespace Magistrate
 
             foreach (ValueControl Param in Params)
             {
-                ini.Write(NameSample, Param.Key, Param.Text); //Записывает все ключи, которые потом будет использовать приложение autoit
+                ini.Write(nameSectionValue, Param.Key, Param.Text); //Записывает все ключи, которые потом будет использовать приложение autoit
             }
             
             OpenScriptGenerator(); // Открыть аутоит скрипт, генерирующий ворд на основе COM обхектов
+
+            // ini-файл организуется так: в секции "PropertiesForGenerate" первый ключ-значение это путь до шаблона word-
+            // файла, который используется для генерации. Далее в секции "ValueForGenerate" идут ключи-значения, 
+            // которые будут подставляться в word-е, где название ключа в ini соотвествует ключу в word файле, 
+            // а значение ключа в ini будет подставляться вместо ключа в word-файле. Если не понятно, смотри 
+            // на шаблон word файла и в сам ini файл
         }
+
+        /// <summary>
+        /// Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+        /// </summary>
+        /// <param name="controls">коллекция элементов(контролов) с формы, обычно это "Controls"</param>
+        /// <returns></returns>
+        public static List<ValueControl> StandartListValueControl(Control.ControlCollection controls)
+        {
+            if (controls == null) // Если передан пустой массив контролов
+                return null;
+
+            // Берет текст из всех форм заполнения пользователем и превращает в массив
+            List<ValueControl> controlArrayToString = ControlArrayToString(controls); 
+            if (controlArrayToString == null) // Если в массиве контролов нет полей для ввода
+                return null;
+
+            //Добавляет ключи для вставки их в шаблон к массиву строк, который потом будет замещать эти ключи в шаблоне
+            СontrolAndKeyArrayToString(ref controlArrayToString);
+            return controlArrayToString;
+        }
+
+
+        //public static void AddValueControl(ref List<ValueControl> ValueControlArray, )
+        //{
+
+        //}
 
         /// <summary>
         /// Берет текст из всех форм заполнения пользователем и превращает в массив
         /// </summary>
         /// <param name="controls"> коллекция элементов(контролов) с формы</param>
         /// <returns>Возвращает лист значений контролов</returns>
-        public static List<ValueControl> ControlArrayToString(Control.ControlCollection controls)
+        private static List<ValueControl> ControlArrayToString(Control.ControlCollection controls)
         {
             List<ValueControl> valueControlsReturn = new List<ValueControl>(); // Возвращаемый лист значений контролов
 
@@ -68,7 +111,7 @@ namespace Magistrate
         /// Добавляет ключи для вставки их в шаблон к массиву строк, который потом будет замещать эти ключи в шаблоне
         /// </summary>
         /// <param name="ControlStringArray">массив строк, к которым добавлять их значение ключа</param>
-        public static void СontrolAndKeyArrayToString(ref List<ValueControl> ValueControlArray)
+        private static void СontrolAndKeyArrayToString(ref List<ValueControl> ValueControlArray)
         {
             if (ValueControlArray == null)
                 throw new Exception("В форме не найдено полей для ввода");
