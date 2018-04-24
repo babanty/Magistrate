@@ -79,11 +79,35 @@ namespace Magistrate
             return controlArrayToString;
         }
 
+        /// <summary>
+        /// В ручную добавить ключ-значение в выгружаемый массив
+        /// </summary>
+        /// <param name="ValueControlArray">Массив, в который добавляется значение</param>
+        /// <param name="control">Контрол которыйд добавляется</param>
+        /// <param name="Key">Ключ контрола, желательно в формате #-01</param>
+        public static void AddValueControl(ref List<ValueControl> ValueControlArray, Control control, string Key)
+        {
+            ValueControl newValueControl = new ValueControl(control)
+            {
+                Key = Key // Добавляение ключа
+            };
+            ValueControlArray.Add(newValueControl); // Записать в лист
+            
+        }
 
-        //public static void AddValueControl(ref List<ValueControl> ValueControlArray, )
-        //{
+        /// <summary>
+        /// В ручную добавить ключ-значение в выгружаемый массив. Ключ будет значение TablIndex элемента
+        /// </summary>
+        /// <param name="ValueControlArray">Массив, в который добавляется значение</param>
+        /// <param name="control">Контрол которыйд добавляется</param>
+        public static void AddValueControl(ref List<ValueControl> ValueControlArray, Control control)
+        {
+            ValueControl newValueControl = new ValueControl(control);
+            newValueControl.Key = GenerateKey(newValueControl);
 
-        //}
+            ValueControlArray.Add(newValueControl); // Записать в лист
+
+        }
 
         /// <summary>
         /// Берет текст из всех форм заполнения пользователем и превращает в массив
@@ -116,16 +140,35 @@ namespace Magistrate
             if (ValueControlArray == null)
                 throw new Exception("В форме не найдено полей для ввода");
 
-            int num = 0;
-            string numString = "";
             foreach (ValueControl i in ValueControlArray)
             {
-                numString = num.ToString();
-                if (num < 10)
-                    numString = "0" + numString; // добавляет 0 перед числом если оно меньше 10, чтобы число всегда было из 2х цифр
-                i.Key = "#" + numString;
-                num++;
+                i.Key = GenerateKey(i); // Сгенерировать ключ
             }
+        }
+
+        /// <summary>
+        /// Сгенерировать ключ для контрола
+        /// </summary>
+        /// <param name="valueControl">собственно сам контрол</param>
+        /// <returns>Ключ для word файла или null в случае не успеха</returns>
+        private static string GenerateKey(ValueControl valueControl)
+        {
+            if (valueControl == null)
+                return null;
+
+            string returnResult = "#00";
+            string numString = "";
+
+            int num = valueControl.Control.TabIndex; // Номер ключа зависит от табл индекса
+
+            numString = num.ToString();
+
+            if (num < 10)
+                numString = "0" + numString; // добавляет 0 перед числом если оно меньше 10, чтобы число всегда было из 2х цифр
+
+
+            returnResult = "#" + numString; // Пример результата: #05
+            return returnResult;
         }
 
         /// <summary>

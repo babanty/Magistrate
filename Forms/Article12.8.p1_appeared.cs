@@ -15,8 +15,9 @@ namespace Magistrate.Forms
         public Article1281appeared()
         {
             InitializeComponent();
-            string[] countries = { "Бразилия", "Аргентина", "Чили", "Уругвай", "Колумбия" }; // listBox1.SelectedItem.ToString();
-            comboBox1.Items.AddRange(countries);
+
+            //string[] countries = { "Бразилия", "Аргентина", "Чили", "Уругвай", "Колумбия" }; // listBox1.SelectedItem.ToString();
+            //comboBox1.Items.AddRange(countries);
         }
 
         private void Article12_Load(object sender, EventArgs e)
@@ -30,8 +31,7 @@ namespace Magistrate.Forms
             List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
 
             // Сгенерировать ворд
-            GenerationWord.GenerateWord("E:\\MyDesktop\\Code\\Судья\\Судья v2\\Magistrate\\bin\\Debug\\Sample", "ст.12.8 ч.1 явился", controlArrayToString);
-
+            GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "ст.12.8 ч.1 явился", controlArrayToString);
         }
     }
 }
