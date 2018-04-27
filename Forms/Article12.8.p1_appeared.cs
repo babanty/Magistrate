@@ -33,5 +33,10 @@ namespace Magistrate.Forms
             // Сгенерировать ворд
             GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "ст.12.8 ч.1 явился", controlArrayToString);
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
