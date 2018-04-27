@@ -51,11 +51,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Article12.26.p1_appeared.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Article12.26.p1_appeared.Designer.cs">
+      <DependentUpon>Article12.26.p1_appeared.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Article12.8.p1_appeared.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Article12.8.p1_appeared.Designer.cs">
       <DependentUpon>Article12.8.p1_appeared.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Article12.8.p1_DidNotAppear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Article12.8.p1_DidNotAppear.Designer.cs">
+      <DependentUpon>Article12.8.p1_DidNotAppear.cs</DependentUpon>
     </Compile>
     <Compile Include="GenerationWord.cs" />
     <Compile Include="Ini.cs" />
@@ -65,8 +77,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Article12.26.p1_appeared.resx">
+      <DependentUpon>Article12.26.p1_appeared.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Article12.8.p1_appeared.resx">
       <DependentUpon>Article12.8.p1_appeared.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Article12.8.p1_DidNotAppear.resx">
+      <DependentUpon>Article12.8.p1_DidNotAppear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +111,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Sample\Описание папки.txt" />
+    <Content Include="Инструкция по коду.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

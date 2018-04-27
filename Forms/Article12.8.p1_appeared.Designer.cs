@@ -566,6 +566,7 @@
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(192, 24);
             this.comboBox15.TabIndex = 20;
+            this.comboBox15.Text = "д.4";
             // 
             // comboBox16
             // 

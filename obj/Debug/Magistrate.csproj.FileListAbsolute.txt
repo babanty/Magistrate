@@ -9,3 +9,5 @@ E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.cspro
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.csproj.CoreCompileInputs.cache
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.exe
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.pdb
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1281notAppear.resources
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1226p1_appeared.resources

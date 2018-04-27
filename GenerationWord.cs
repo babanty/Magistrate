@@ -45,10 +45,8 @@ namespace Magistrate
                 MessageBox.Show("ПРОБЛЕМА С ЗАПИСЬЮ КЛЮЧЕЙ В ИНИ-ФАЙЛ ДЛЯ СКРИПТА AUTOIT: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            foreach (ValueControl Param in Params)
-            {
-                ini.Write(nameSectionValue, Param.Key, Param.Text); //Записывает все ключи, которые потом будет использовать приложение autoit
-            }
+            foreach (ValueControl Param in Params) //Записывает все ключи чекбоксов, которые потом будет использовать приложение autoit
+                ini.Write(nameSectionValue, Param.Key, Param.Text);
             
             OpenScriptGenerator(); // Открыть аутоит скрипт, генерирующий ворд на основе COM обхектов
 
@@ -93,6 +91,21 @@ namespace Magistrate
             };
             ValueControlArray.Add(newValueControl); // Записать в лист
             
+        }
+
+        /// <summary>
+        /// В ручную добавить ключ-значение в выгружаемый массив без информации с котрола на форме
+        /// </summary>
+        /// <param name="ValueControlArray">Массив, в который добавляется значение</param>
+        /// <param name="text">Текст, который добавляется вместо текста с котрола</param>
+        /// <param name="Key">Ключ контрола, желательно в формате #-01</param>
+        public static void AddValueControl(ref List<ValueControl> ValueControlArray, string text, string Key)
+        {
+            ValueControl newValueControl = new ValueControl(null, text)
+            {
+                Key = Key // Добавляение ключа
+            };
+            ValueControlArray.Add(newValueControl); // Записать в лист
         }
 
         /// <summary>

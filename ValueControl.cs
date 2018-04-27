@@ -44,5 +44,19 @@ namespace Magistrate
             Text = Control.Text;
             NameControl = Control.Name;
         }
+
+        /// <summary>
+        /// конструктор с обязательными параметрами
+        /// </summary>
+        /// <param name="Control">Контрол, который мы записываем, может равняться null как обозначение ручного значения контрола</param>
+        /// <param name="Key">Его ключ</param>
+        /// <param name="Text">Текст контрола забить в ручную</param>
+        public ValueControl(Control Control, string Text)
+        {
+            this.Control = Control;
+            Key = "";
+            this.Text = Text;
+            NameControl = Control.Name;
+        }
     }
 }
