@@ -19,6 +19,9 @@ namespace Magistrate.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+
             // На форме есть связанные чекбоксы, забиваю их значения в одну строку
             string checkBoxValue = "";
             foreach (Control control in Controls)
@@ -29,14 +32,14 @@ namespace Magistrate.Forms
                     checkBoxValue += control.Text + ", "; // Взять его текст и добавить к строке с запятой и пробелом
                 }
             }
-            checkBoxValue.Remove(checkBoxValue.Length - 2); ; // Удалем последние два лишних символа ", "
-            textBox12ForCheckBox.Text = checkBoxValue; // В невидимый текст бокс под индексом 38 загоняем получившийся текст
+            if(checkBoxValue.Length > 3)
+                checkBoxValue = checkBoxValue.Remove(checkBoxValue.Length - 2); // Удалем последние два лишних символа ", "
+            GenerationWord.AddValueControl(ref controlArrayToString, checkBoxValue, "#38"); // в ручную добавляем новый ключ
 
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-
-            // Делаем инициалы
-            string initials = textBox2.Text.Remove(0, 1) + "." + textBox3.Text.Remove(0, 1) + ".";
+            // Делаем инициалы ФИО
+            string initials = "";
+            if (textBox2.Text.Length > 2 && textBox3.Text.Length > 2) // Если правильно заполнили имя и отчество
+                initials = textBox2.Text.Remove(1) + "." + textBox3.Text.Remove(1) + ".";
             GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-01"); // в ручную добавляем новый ключ
 
 

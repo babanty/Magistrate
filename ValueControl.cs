@@ -23,12 +23,12 @@ namespace Magistrate
         public string Key { get; set; }
 
         /// <summary>
-        /// Название контрола для поиска значений по названию
+        /// Название контрола для поиска значений по названию, может быть равен null если ручное заполнение
         /// </summary>
         public string NameControl { get; }
 
         /// <summary>
-        /// Собственно сам контрол
+        /// Собственно сам контрол, может быть равен null если ручное заполнение
         /// </summary>
         public readonly Control Control;
 
@@ -42,7 +42,8 @@ namespace Magistrate
             this.Control = Control;
             Key = "";
             Text = Control.Text;
-            NameControl = Control.Name;
+            if (Control != null)
+                NameControl = Control.Name;
         }
 
         /// <summary>
@@ -56,7 +57,8 @@ namespace Magistrate
             this.Control = Control;
             Key = "";
             this.Text = Text;
-            NameControl = Control.Name;
+            if(Control != null)
+                NameControl = Control.Name;
         }
     }
 }

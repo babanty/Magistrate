@@ -67,7 +67,6 @@
             this.comboBox22 = new System.Windows.Forms.ComboBox();
             this.comboBox21 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -95,7 +94,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
@@ -104,7 +102,6 @@
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.textBox12ForCheckBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // comboBox18
@@ -373,8 +370,8 @@
             // 
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Items.AddRange(new object[] {
-            "г.Сергиев Посад Московской области",
-            "г.Москва",
+            "г. Сергиев Посад Московской области",
+            "г. Москва",
             "Сергиево-Посадский р-н",
             "Сергиево-Посадский р-н, п.Богородское"});
             this.comboBox10.Location = new System.Drawing.Point(12, 302);
@@ -887,23 +884,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 1149);
+            this.button1.Location = new System.Drawing.Point(12, 1019);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 30);
             this.button1.TabIndex = 45;
             this.button1.Text = "Сгенерировать Word";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(12, 830);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox9.Size = new System.Drawing.Size(369, 124);
-            this.textBox9.TabIndex = 46;
-            this.textBox9.Text = resources.GetString("textBox9.Text");
             // 
             // label27
             // 
@@ -1148,23 +1135,11 @@
             this.label18.TabIndex = 84;
             this.label18.Text = "Дата совершения преступления день-месяц-год-час-минута";
             // 
-            // label28
-            // 
-            this.label28.AllowDrop = true;
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(387, 833);
-            this.label28.MaximumSize = new System.Drawing.Size(200, 100);
-            this.label28.MinimumSize = new System.Drawing.Size(100, 100);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(186, 100);
-            this.label28.TabIndex = 93;
-            this.label28.Text = "Удалить из списка отстутствующие признаки опьянения";
-            // 
             // label29
             // 
             this.label29.AllowDrop = true;
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(387, 1009);
+            this.label29.Location = new System.Drawing.Point(410, 885);
             this.label29.MaximumSize = new System.Drawing.Size(200, 80);
             this.label29.MinimumSize = new System.Drawing.Size(100, 80);
             this.label29.Name = "label29";
@@ -1175,80 +1150,72 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(12, 962);
+            this.checkBox8.Location = new System.Drawing.Point(12, 830);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(144, 21);
-            this.checkBox8.TabIndex = 39;
-            this.checkBox8.Text = " нарушение речи";
+            this.checkBox8.Size = new System.Drawing.Size(140, 21);
+            this.checkBox8.TabIndex = 38;
+            this.checkBox8.Text = "нарушение речи";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(12, 989);
+            this.checkBox9.Location = new System.Drawing.Point(12, 857);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(366, 21);
+            this.checkBox9.Size = new System.Drawing.Size(362, 21);
             this.checkBox9.TabIndex = 39;
-            this.checkBox9.Text = " резкое изменение окраски кожных покровов лица";
+            this.checkBox9.Text = "резкое изменение окраски кожных покровов лица";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(12, 1016);
+            this.checkBox10.Location = new System.Drawing.Point(12, 884);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(330, 21);
+            this.checkBox10.Size = new System.Drawing.Size(326, 21);
             this.checkBox10.TabIndex = 40;
-            this.checkBox10.Text = " поведение, не соответствующее обстановке";
+            this.checkBox10.Text = "поведение, не соответствующее обстановке";
             this.checkBox10.UseVisualStyleBackColor = true;
             // 
             // checkBox11
             // 
             this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(12, 1043);
+            this.checkBox11.Location = new System.Drawing.Point(12, 911);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(269, 21);
+            this.checkBox11.Size = new System.Drawing.Size(265, 21);
             this.checkBox11.TabIndex = 41;
-            this.checkBox11.Text = " выраженное дрожание пальцев рук";
+            this.checkBox11.Text = "выраженное дрожание пальцев рук";
             this.checkBox11.UseVisualStyleBackColor = true;
             // 
             // checkBox12
             // 
             this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(12, 1070);
+            this.checkBox12.Location = new System.Drawing.Point(12, 938);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(140, 21);
+            this.checkBox12.Size = new System.Drawing.Size(136, 21);
             this.checkBox12.TabIndex = 42;
-            this.checkBox12.Text = " шаткая походка";
+            this.checkBox12.Text = "шаткая походка";
             this.checkBox12.UseVisualStyleBackColor = true;
             // 
             // checkBox13
             // 
             this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(13, 1097);
+            this.checkBox13.Location = new System.Drawing.Point(12, 965);
             this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(176, 21);
+            this.checkBox13.Size = new System.Drawing.Size(172, 21);
             this.checkBox13.TabIndex = 43;
-            this.checkBox13.Text = " неустойчивость позы";
+            this.checkBox13.Text = "неустойчивость позы";
             this.checkBox13.UseVisualStyleBackColor = true;
             // 
             // checkBox14
             // 
             this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(12, 1124);
+            this.checkBox14.Location = new System.Drawing.Point(12, 992);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(189, 21);
+            this.checkBox14.Size = new System.Drawing.Size(185, 21);
             this.checkBox14.TabIndex = 44;
-            this.checkBox14.Text = " запах алкоголя изо рта";
+            this.checkBox14.Text = "запах алкоголя изо рта";
             this.checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // textBox12ForCheckBox
-            // 
-            this.textBox12ForCheckBox.Location = new System.Drawing.Point(195, 962);
-            this.textBox12ForCheckBox.Name = "textBox12ForCheckBox";
-            this.textBox12ForCheckBox.Size = new System.Drawing.Size(8, 22);
-            this.textBox12ForCheckBox.TabIndex = 38;
-            this.textBox12ForCheckBox.Visible = false;
             // 
             // Article1226p1_appeared
             // 
@@ -1256,7 +1223,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Controls.Add(this.textBox12ForCheckBox);
             this.Controls.Add(this.checkBox14);
             this.Controls.Add(this.checkBox13);
             this.Controls.Add(this.checkBox12);
@@ -1265,7 +1231,6 @@
             this.Controls.Add(this.checkBox9);
             this.Controls.Add(this.checkBox8);
             this.Controls.Add(this.label29);
-            this.Controls.Add(this.label28);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
@@ -1293,7 +1258,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox9);
             this.Controls.Add(this.comboBox27);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox10);
@@ -1380,7 +1344,6 @@
         private System.Windows.Forms.ComboBox comboBox22;
         private System.Windows.Forms.ComboBox comboBox21;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
@@ -1408,7 +1371,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox9;
@@ -1417,6 +1379,5 @@
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.CheckBox checkBox13;
         private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.TextBox textBox12ForCheckBox;
     }
 }

@@ -123,15 +123,6 @@
   <data name="comboBox23.Items1" xml:space="preserve">
     <value>УФК по МО (УГИБДД  ГУ МВД России по Московской области) ИНН – 770 303 7039, КПП – 770 245 001, Банк получателя: Отделение №1 МГТУ Банка России г.Москва 705, р/с 40 101 810 6 000 000 101 02, л/с 04481А83650 КБК 188 116 43000016000140, БИК – 044 583 001, ОКТМО – 46 647 000</value>
   </data>
-  <data name="textBox9.Text" xml:space="preserve">
-    <value> запах алкоголя изо рта, 
- резкое изменение окраски кожных покровов лица,
- поведение, не соответствующее обстановке,
- выраженное дрожание пальцев рук,
- шаткая походка,
- неустойчивость позы,
- нарушение речи</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
