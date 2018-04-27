@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="comboBox23.Items" xml:space="preserve">
+    <value>УФК по МО (Управление МВД России по Сергиево-Посадскому району), ИНН – 504 202 5334, КПП – 504 201 001, р\с  № 401 018 106 000 000 101 02 в отделение 1 Москва, БИК – 044 583 001, КБК 188 116430 000 160 001 40, ОКТМО 46615000</value>
+  </data>
+  <data name="comboBox23.Items1" xml:space="preserve">
+    <value>УФК по МО (УГИБДД  ГУ МВД России по Московской области) ИНН – 770 303 7039, КПП – 770 245 001, Банк получателя: Отделение №1 МГТУ Банка России г.Москва 705, р/с 40 101 810 6 000 000 101 02, л/с 04481А83650 КБК 188 116 43000016000140, БИК – 044 583 001, ОКТМО – 46 647 000</value>
+  </data>
 </root>

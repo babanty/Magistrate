@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Article1281appeared));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -134,6 +135,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(192, 24);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.Text = "228";
             // 
             // comboBox2
             // 
@@ -213,10 +215,14 @@
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "И.о. мирового судьи",
+            "Мировой судья"});
             this.comboBox5.Location = new System.Drawing.Point(13, 68);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(191, 24);
             this.comboBox5.TabIndex = 5;
+            this.comboBox5.Text = "Мировой судья";
             // 
             // textBox1
             // 
@@ -368,54 +374,194 @@
             // comboBox9
             // 
             this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Items.AddRange(new object[] {
+            "Белоруссия",
+            "Украина",
+            "РФ",
+            "Армения",
+            "Азербайджан",
+            "Казахстан",
+            "Киргизия",
+            "Молдавия",
+            "Таджикистан",
+            "Узбекистан"});
             this.comboBox9.Location = new System.Drawing.Point(12, 268);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(192, 24);
             this.comboBox9.TabIndex = 14;
+            this.comboBox9.Text = "РФ";
             // 
             // comboBox10
             // 
             this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Items.AddRange(new object[] {
+            "г.Сергиев Посад Московской области",
+            "г.Москва",
+            "Сергиево-Посадский р-н",
+            "Сергиево-Посадский р-н, п.Богородское"});
             this.comboBox10.Location = new System.Drawing.Point(12, 298);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(192, 24);
             this.comboBox10.TabIndex = 15;
+            this.comboBox10.Text = "г.Сергиев Посад Московской области";
             // 
             // comboBox11
             // 
             this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Items.AddRange(new object[] {
+            "Белоруссия",
+            "Украина",
+            "РФ",
+            "Армения",
+            "Азербайджан",
+            "Казахстан",
+            "Киргизия",
+            "Молдавия",
+            "Таджикистан",
+            "Узбекистан"});
             this.comboBox11.Location = new System.Drawing.Point(12, 328);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(192, 24);
             this.comboBox11.TabIndex = 16;
+            this.comboBox11.Text = "РФ";
             // 
             // comboBox12
             // 
             this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Items.AddRange(new object[] {
+            "Алтайский край",
+            "Амурская область",
+            "Архангельская область",
+            "Астраханская область",
+            "Белгородская область",
+            "Брянская область",
+            "Владимирская область",
+            "Волгоградская область",
+            "Вологодская область",
+            "Воронежская область",
+            "г. Москва",
+            "Еврейская автономная область",
+            "Забайкальский край",
+            "Ивановская область",
+            "Иные территории, включая город и космодром Байконур",
+            "Иркутская область",
+            "Кабардино-Балкарская Республика",
+            "Калининградская область",
+            "Калужская область",
+            "Камчатский край",
+            "Карачаево-Черкесская Республика",
+            "Кемеровская область",
+            "Кировская область",
+            "Костромская область",
+            "Краснодарский край",
+            "Красноярский край",
+            "Курганская область",
+            "Курская область",
+            "Ленинградская область",
+            "Липецкая область",
+            "Магаданская область",
+            "Московская область",
+            "Мурманская область",
+            "Ненецкий автономный округ",
+            "Нижегородская область",
+            "Новгородская область",
+            "Новосибирская область",
+            "Омская область",
+            "Оренбургская область",
+            "Орловская область",
+            "Пензенская область",
+            "Пермский край",
+            "Приморский край",
+            "Псковская область",
+            "Республика Адыгея (Адыгея)",
+            "Республика Алтай",
+            "Республика Башкортостан",
+            "Республика Бурятия",
+            "Республика Дагестан",
+            "Республика Ингушетия",
+            "Республика Калмыкия",
+            "Республика Карелия",
+            "Республика Коми",
+            "Республика Крым",
+            "Республика Марий Эл",
+            "Республика Мордовия",
+            "Республика Саха (Якутия)",
+            "Республика Северная Осетия - Алания",
+            "Республика Татарстан (Татарстан)",
+            "Республика Тыва",
+            "Республика Хакасия",
+            "Ростовская область",
+            "Рязанская область",
+            "Самарская область",
+            "Санкт-Петербург",
+            "Саратовская область",
+            "Сахалинская область",
+            "Свердловская область",
+            "Севастополь",
+            "Смоленская область",
+            "Ставропольский край",
+            "Тамбовская область",
+            "Тверская область",
+            "Томская область",
+            "Тульская область",
+            "Тюменская область",
+            "Удмуртская Республика",
+            "Ульяновская область",
+            "Хабаровский край",
+            "Ханты-Мансийский автономный округ - Югра",
+            "Челябинская область",
+            "Чеченская Республика",
+            "Чувашская Республика - Чувашия",
+            "Чукотский автономный округ",
+            "Ямало-Ненецкий автономный округ",
+            "Ярославская область"});
             this.comboBox12.Location = new System.Drawing.Point(12, 358);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(192, 24);
             this.comboBox12.TabIndex = 17;
+            this.comboBox12.Text = "Московская область";
             // 
             // comboBox13
             // 
             this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Items.AddRange(new object[] {
+            "г.Сергиев Посад",
+            "г.Москва",
+            "Сергиево-Посадский р-н",
+            "п.Богородское"});
             this.comboBox13.Location = new System.Drawing.Point(12, 388);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(192, 24);
             this.comboBox13.TabIndex = 18;
+            this.comboBox13.Text = "г.Сергиев Посад";
             // 
             // comboBox14
             // 
             this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Items.AddRange(new object[] {
+            "Кукуевская набережная",
+            "Рабочий тупик",
+            "ул.Алексеева",
+            "ул.Громова",
+            "пр. Красной Армии",
+            "п. Богородское",
+            "п. Муханово"});
             this.comboBox14.Location = new System.Drawing.Point(12, 418);
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.Size = new System.Drawing.Size(192, 24);
             this.comboBox14.TabIndex = 19;
+            this.comboBox14.Text = "пр. Красной Армии";
             // 
             // comboBox15
             // 
             this.comboBox15.FormattingEnabled = true;
+            this.comboBox15.Items.AddRange(new object[] {
+            "д.4",
+            "д.6",
+            "д.7",
+            "д.9.",
+            "д.10",
+            "д.20"});
             this.comboBox15.Location = new System.Drawing.Point(12, 448);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(192, 24);
@@ -424,18 +570,26 @@
             // comboBox16
             // 
             this.comboBox16.FormattingEnabled = true;
+            this.comboBox16.Items.AddRange(new object[] {
+            "не работающего",
+            "работающего в "});
             this.comboBox16.Location = new System.Drawing.Point(12, 478);
             this.comboBox16.Name = "comboBox16";
             this.comboBox16.Size = new System.Drawing.Size(192, 24);
             this.comboBox16.TabIndex = 21;
+            this.comboBox16.Text = "не работающего";
             // 
             // comboBox17
             // 
             this.comboBox17.FormattingEnabled = true;
+            this.comboBox17.Items.AddRange(new object[] {
+            "не привлекавшегося",
+            "привлекавшегося"});
             this.comboBox17.Location = new System.Drawing.Point(12, 508);
             this.comboBox17.Name = "comboBox17";
             this.comboBox17.Size = new System.Drawing.Size(192, 24);
             this.comboBox17.TabIndex = 22;
+            this.comboBox17.Text = "не привлекавшегося";
             // 
             // comboBox18
             // 
@@ -617,6 +771,9 @@
             // comboBox23
             // 
             this.comboBox23.FormattingEnabled = true;
+            this.comboBox23.Items.AddRange(new object[] {
+            resources.GetString("comboBox23.Items"),
+            resources.GetString("comboBox23.Items1")});
             this.comboBox23.Location = new System.Drawing.Point(12, 598);
             this.comboBox23.Name = "comboBox23";
             this.comboBox23.Size = new System.Drawing.Size(192, 24);
@@ -735,6 +892,10 @@
             // comboBox27
             // 
             this.comboBox27.FormattingEnabled = true;
+            this.comboBox27.Items.AddRange(new object[] {
+            "А-108 Дмитровско-Ярославского направления Московской области",
+            "Сергиев Посад-Калязин-Рыбинск-Череповец",
+            "у дома  по ул.  г.Сергиев Посад Московской области"});
             this.comboBox27.Location = new System.Drawing.Point(12, 742);
             this.comboBox27.Name = "comboBox27";
             this.comboBox27.Size = new System.Drawing.Size(192, 24);
@@ -971,7 +1132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(803, 553);
+            this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
