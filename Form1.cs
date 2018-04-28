@@ -40,5 +40,11 @@ namespace Magistrate
             Article1226p1_appeared form2 = new Article1226p1_appeared(); // Создание соовтественующего окна
             form2.Show(); // показать окно
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Article1226p1_NotAppeared form2 = new Article1226p1_NotAppeared(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
     }
 }

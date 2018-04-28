@@ -243,7 +243,7 @@
             "г.Сергиев Посад",
             "г.Москва",
             "Сергиево-Посадский р-н",
-            "п.Богородское"});
+            "Сергиево-Посадский р-н, п.Богородское"});
             this.comboBox13.Location = new System.Drawing.Point(12, 392);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(192, 24);
@@ -371,9 +371,11 @@
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Items.AddRange(new object[] {
             "г. Сергиев Посад Московской области",
+            "г. Загорск Московской области",
             "г. Москва",
+            "Сергиево-Посадский р-н, п.Богородское",
             "Сергиево-Посадский р-н",
-            "Сергиево-Посадский р-н, п.Богородское"});
+            "Загорский р-н"});
             this.comboBox10.Location = new System.Drawing.Point(12, 302);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(192, 24);
@@ -1104,18 +1106,18 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(210, 663);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(148, 17);
+            this.label21.Size = new System.Drawing.Size(156, 17);
             this.label21.TabIndex = 87;
-            this.label21.Text = "Дата протокола 12.8";
+            this.label21.Text = "Дата протокола 12.26";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(210, 635);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(216, 17);
+            this.label20.Size = new System.Drawing.Size(208, 17);
             this.label20.TabIndex = 86;
-            this.label20.Text = "УИН, продолжить : 1881045014";
+            this.label20.Text = "УИН, продолжить : 188104501";
             // 
             // label19
             // 
@@ -1298,7 +1300,7 @@
             this.Controls.Add(this.comboBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Article1226p1_appeared";
-            this.Text = "Ст. 12.26 ч.1 Явился";
+            this.Text = "Ст. 12.26 ч.1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
