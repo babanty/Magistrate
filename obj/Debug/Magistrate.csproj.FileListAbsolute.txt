@@ -12,3 +12,5 @@ E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.pdb
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1281notAppear.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1226p1_appeared.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1226p1_NotAppeared.resources
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.CreditOrder.resources
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.CasTaxes.resources

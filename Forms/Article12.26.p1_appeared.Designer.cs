@@ -196,6 +196,7 @@
             this.comboBox16.FormattingEnabled = true;
             this.comboBox16.Items.AddRange(new object[] {
             "не работающего",
+            "неизвестно",
             "работающего в "});
             this.comboBox16.Location = new System.Drawing.Point(12, 482);
             this.comboBox16.Name = "comboBox16";
@@ -555,7 +556,7 @@
             this.comboBox5.Items.AddRange(new object[] {
             "И.о. мирового судьи",
             "Мировой судья"});
-            this.comboBox5.Location = new System.Drawing.Point(13, 72);
+            this.comboBox5.Location = new System.Drawing.Point(12, 42);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(191, 24);
             this.comboBox5.TabIndex = 5;
@@ -570,7 +571,7 @@
             "2018",
             "2019",
             "2020"});
-            this.comboBox4.Location = new System.Drawing.Point(144, 42);
+            this.comboBox4.Location = new System.Drawing.Point(144, 72);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(60, 24);
             this.comboBox4.TabIndex = 4;
@@ -591,7 +592,7 @@
             "октября",
             "ноября",
             "декабря"});
-            this.comboBox3.Location = new System.Drawing.Point(78, 42);
+            this.comboBox3.Location = new System.Drawing.Point(78, 72);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(60, 24);
             this.comboBox3.TabIndex = 3;
@@ -631,7 +632,7 @@
             "29",
             "30",
             "31"});
-            this.comboBox2.Location = new System.Drawing.Point(12, 42);
+            this.comboBox2.Location = new System.Drawing.Point(12, 72);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(60, 24);
             this.comboBox2.TabIndex = 2;
@@ -642,7 +643,15 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "228",
-            "226"});
+            "225",
+            "226",
+            "227",
+            "229",
+            "230",
+            "231",
+            "232",
+            "233",
+            "234"});
             this.comboBox1.Location = new System.Drawing.Point(12, 12);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(192, 24);
@@ -1032,7 +1041,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(210, 75);
+            this.label3.Location = new System.Drawing.Point(209, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(426, 17);
             this.label3.TabIndex = 68;
@@ -1041,7 +1050,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(210, 45);
+            this.label2.Location = new System.Drawing.Point(210, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 17);
             this.label2.TabIndex = 67;

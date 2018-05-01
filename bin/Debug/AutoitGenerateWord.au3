@@ -16,12 +16,9 @@ For $i = 1 to UBound($ValueKey) - 1 ; Перебор всех ключей в с
 		if(StringLen($ValueKey[$i][1]) > 400) Then
 			msg('Превышено максимальное количество символов для вставки в один ключ в 400 символов. Ключ: "' + $ValueKey[$i][0] + '" заменен не будет')
 		EndIf
-		msg($ValueKey[$i][1])
 		Local $stringOne = StringLeft($ValueKey[$i][1], 200) & "#[1]" ; Разбиение строки на две, тут первая строка
-		msg($stringOne)
 		_Word_DocFindReplace($oDoc, $ValueKey[$i][0], $stringOne) ; замена ключей на значения
 		Local $stringTwo = StringRight($ValueKey[$i][1], StringLen($ValueKey[$i][1]) - 200) ; Разбиение строки на две, тут вторая строка
-		msg($stringTwo)
 		_Word_DocFindReplace($oDoc, "#[1]", $stringTwo) ; замена ключей на значения
 	Else
 		_Word_DocFindReplace($oDoc, $ValueKey[$i][0], $ValueKey[$i][1]) ; замена ключей на значения

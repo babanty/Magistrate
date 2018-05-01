@@ -122,6 +122,52 @@ namespace Magistrate
 
         }
 
+        #region IntInRubAndCop - Число с плавающей запятой переделать в формат "0 руб. 0 коп."
+        /// <summary>
+        /// Число с плавающей запятой переделать в формат "0 руб. 0 коп."
+        /// </summary>
+        /// <param name="num">Число</param>
+        public static string IntInRubAndCop(decimal num)
+        {
+            int whole = (int)Math.Truncate(num); // Целая часть, это рубли
+            decimal numToDecimal = (decimal)num; // для точности вычислений
+            int fraction = (int)((numToDecimal - whole) * 100); // дробная часть, это копейки
+            string fractionString = fraction.ToString();
+            if (fraction < 10)
+                fractionString = "0" + fractionString;
+
+            string result = whole + " руб. " + fractionString + " коп.";
+            return result;
+        }
+
+        /// <summary>
+        /// Число с плавающей запятой переделать в формат "0 руб. 0 коп."
+        /// </summary>
+        /// <param name="num">Число</param>
+        public static string IntInRubAndCop(double num)
+        {
+            return IntInRubAndCop((decimal)num);
+        }
+
+        /// <summary>
+        /// Число с плавающей запятой переделать в формат "0 руб. 0 коп."
+        /// </summary>
+        /// <param name="strNum">Число</param>
+        public static string IntInRubAndCop(string strNum)
+        {
+            try
+            {
+                double num = double.Parse(strNum);
+                return IntInRubAndCop(num);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Не правильно введена цифра " + strNum + ", дробная часть должна отделяться запятой.");
+                return null;
+            }
+        }
+        #endregion IntInRubAndCop - Число с плавающей запятой переделать в формат "0 руб. 0 коп."
+
         /// <summary>
         /// Берет текст из всех форм заполнения пользователем и превращает в массив
         /// </summary>

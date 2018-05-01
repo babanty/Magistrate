@@ -46,5 +46,22 @@ namespace Magistrate
             Article1226p1_NotAppeared form2 = new Article1226p1_NotAppeared(); // Создание соовтественующего окна
             form2.Show(); // показать окно
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CreditOrder form2 = new CreditOrder(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            CasTaxes form2 = new CasTaxes(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
     }
 }
