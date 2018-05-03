@@ -12,8 +12,6 @@ namespace Magistrate.Forms
 {
     public partial class PropertiesApp : Form
     {
-        // Инициализация файла для сохранения настроек
-        Ini properties = new Ini("PropertiesApp");
 
         // Конструктор с инициализацией формы
         public PropertiesApp()
@@ -31,7 +29,7 @@ namespace Magistrate.Forms
             }
 
             // заполняем значением поле с основным участком
-            comboBox2.Text = properties.IniReadKey("PropertiesApp", "PlaceNum", "228");
+            comboBox2.Text = PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum, "228");
         }
 
         // Удалить
@@ -51,7 +49,7 @@ namespace Magistrate.Forms
         // Сохранить
         private void button3_Click(object sender, EventArgs e)
         {
-            properties.Write("PropertiesApp", "PlaceNum", comboBox2.Text); // Сохранения основного участка судьи
+            PropertiesMyApp.SetPropertiesValue(comboBox2.Text, TypeProperties.PlaceNum); // Сохранения основного участка судьи
         }
 
         /// <summary>

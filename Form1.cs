@@ -70,5 +70,12 @@ namespace Magistrate
             PropertiesApp form2 = new PropertiesApp(); // Создание соовтественующего окна
             form2.Show(); // показать окно
         }
+
+        // 15.33 СЗВ-М
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Article1533 form2 = new Article1533(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
     }
 }

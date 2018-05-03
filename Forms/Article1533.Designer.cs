@@ -38,7 +38,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
             this.comboBox15 = new System.Windows.Forms.ComboBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
@@ -69,17 +68,42 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox17 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBox16 = new System.Windows.Forms.ComboBox();
+            this.comboBox18 = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.comboBox19 = new System.Windows.Forms.ComboBox();
+            this.comboBox20 = new System.Windows.Forms.ComboBox();
+            this.comboBox21 = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.comboBox22 = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.comboBox23 = new System.Windows.Forms.ComboBox();
+            this.comboBox24 = new System.Windows.Forms.ComboBox();
+            this.comboBox25 = new System.Windows.Forms.ComboBox();
+            this.comboBox26 = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.comboBox27 = new System.Windows.Forms.ComboBox();
+            this.comboBox28 = new System.Windows.Forms.ComboBox();
+            this.comboBox29 = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(210, 583);
+            this.label16.Location = new System.Drawing.Point(358, 649);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(456, 20);
+            this.label16.Size = new System.Drawing.Size(325, 20);
             this.label16.TabIndex = 169;
-            this.label16.Text = "Место работы, например: работающего в ООО \"ПИК\"";
+            this.label16.Text = "Место работы, например: ООО \"ПИК\".";
             // 
             // label15
             // 
@@ -161,20 +185,6 @@
             this.label17.TabIndex = 161;
             this.label17.Text = "Дата рождения подсудимого";
             // 
-            // comboBox16
-            // 
-            this.comboBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Items.AddRange(new object[] {
-            "не работающего",
-            "неизвестно",
-            "место работы: "});
-            this.comboBox16.Location = new System.Drawing.Point(12, 580);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(192, 28);
-            this.comboBox16.TabIndex = 151;
-            this.comboBox16.Text = "неизвестно";
-            // 
             // comboBox15
             // 
             this.comboBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -189,7 +199,7 @@
             this.comboBox15.Location = new System.Drawing.Point(12, 546);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(192, 28);
-            this.comboBox15.TabIndex = 150;
+            this.comboBox15.TabIndex = 21;
             this.comboBox15.Text = "д.4";
             // 
             // comboBox14
@@ -207,7 +217,7 @@
             this.comboBox14.Location = new System.Drawing.Point(12, 512);
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.Size = new System.Drawing.Size(192, 28);
-            this.comboBox14.TabIndex = 149;
+            this.comboBox14.TabIndex = 20;
             this.comboBox14.Text = "пр. Красной Армии";
             // 
             // comboBox13
@@ -222,7 +232,7 @@
             this.comboBox13.Location = new System.Drawing.Point(12, 478);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(192, 28);
-            this.comboBox13.TabIndex = 148;
+            this.comboBox13.TabIndex = 19;
             this.comboBox13.Text = "г.Сергиев Посад";
             // 
             // comboBox12
@@ -319,7 +329,7 @@
             this.comboBox12.Location = new System.Drawing.Point(12, 444);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(192, 28);
-            this.comboBox12.TabIndex = 147;
+            this.comboBox12.TabIndex = 18;
             this.comboBox12.Text = "Московская область";
             // 
             // comboBox11
@@ -340,7 +350,7 @@
             this.comboBox11.Location = new System.Drawing.Point(12, 410);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(192, 28);
-            this.comboBox11.TabIndex = 146;
+            this.comboBox11.TabIndex = 17;
             this.comboBox11.Text = "РФ";
             // 
             // comboBox10
@@ -357,7 +367,7 @@
             this.comboBox10.Location = new System.Drawing.Point(12, 376);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(192, 28);
-            this.comboBox10.TabIndex = 145;
+            this.comboBox10.TabIndex = 16;
             this.comboBox10.Text = "г.Сергиев Посад Московской области";
             // 
             // comboBox9
@@ -378,7 +388,7 @@
             this.comboBox9.Location = new System.Drawing.Point(12, 342);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(192, 28);
-            this.comboBox9.TabIndex = 144;
+            this.comboBox9.TabIndex = 15;
             this.comboBox9.Text = "РФ";
             // 
             // comboBox6
@@ -431,7 +441,7 @@
             this.comboBox6.Location = new System.Drawing.Point(144, 308);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(60, 28);
-            this.comboBox6.TabIndex = 143;
+            this.comboBox6.TabIndex = 14;
             // 
             // comboBox7
             // 
@@ -453,7 +463,7 @@
             this.comboBox7.Location = new System.Drawing.Point(78, 308);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(60, 28);
-            this.comboBox7.TabIndex = 142;
+            this.comboBox7.TabIndex = 13;
             // 
             // comboBox8
             // 
@@ -494,13 +504,13 @@
             this.comboBox8.Location = new System.Drawing.Point(12, 308);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(60, 28);
-            this.comboBox8.TabIndex = 141;
+            this.comboBox8.TabIndex = 12;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(210, 242);
+            this.label7.Location = new System.Drawing.Point(210, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(399, 20);
             this.label7.TabIndex = 159;
@@ -509,16 +519,17 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(12, 242);
+            this.textBox5.Location = new System.Drawing.Point(12, 148);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(192, 26);
-            this.textBox5.TabIndex = 139;
+            this.textBox5.TabIndex = 7;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(210, 210);
+            this.label8.Location = new System.Drawing.Point(210, 180);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(417, 20);
             this.label8.TabIndex = 158;
@@ -527,16 +538,16 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(12, 210);
+            this.textBox6.Location = new System.Drawing.Point(12, 180);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(192, 26);
-            this.textBox6.TabIndex = 138;
+            this.textBox6.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(210, 178);
+            this.label5.Location = new System.Drawing.Point(210, 276);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(436, 20);
             this.label5.TabIndex = 157;
@@ -546,7 +557,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(210, 149);
+            this.label4.Location = new System.Drawing.Point(210, 247);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(309, 20);
             this.label4.TabIndex = 156;
@@ -555,24 +566,24 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(12, 178);
+            this.textBox3.Location = new System.Drawing.Point(12, 276);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(192, 26);
-            this.textBox3.TabIndex = 137;
+            this.textBox3.TabIndex = 11;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(12, 146);
+            this.textBox2.Location = new System.Drawing.Point(12, 244);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(192, 26);
-            this.textBox2.TabIndex = 136;
+            this.textBox2.TabIndex = 10;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(209, 120);
+            this.label27.Location = new System.Drawing.Point(210, 215);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(462, 20);
             this.label27.TabIndex = 155;
@@ -581,10 +592,10 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(12, 114);
+            this.textBox1.Location = new System.Drawing.Point(12, 212);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 26);
-            this.textBox1.TabIndex = 135;
+            this.textBox1.TabIndex = 9;
             // 
             // label3
             // 
@@ -625,8 +636,9 @@
             "Мировой судья"});
             this.comboBox5.Location = new System.Drawing.Point(12, 46);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(191, 28);
-            this.comboBox5.TabIndex = 131;
+            this.comboBox5.Size = new System.Drawing.Size(192, 28);
+            this.comboBox5.TabIndex = 2;
+            this.comboBox5.TabStop = false;
             this.comboBox5.Text = "Мировой судья";
             // 
             // comboBox4
@@ -642,7 +654,7 @@
             this.comboBox4.Location = new System.Drawing.Point(144, 80);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(60, 28);
-            this.comboBox4.TabIndex = 134;
+            this.comboBox4.TabIndex = 5;
             // 
             // comboBox3
             // 
@@ -664,7 +676,7 @@
             this.comboBox3.Location = new System.Drawing.Point(78, 80);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(60, 28);
-            this.comboBox3.TabIndex = 133;
+            this.comboBox3.TabIndex = 4;
             // 
             // comboBox2
             // 
@@ -705,7 +717,7 @@
             this.comboBox2.Location = new System.Drawing.Point(12, 80);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(60, 28);
-            this.comboBox2.TabIndex = 132;
+            this.comboBox2.TabIndex = 3;
             // 
             // comboBox1
             // 
@@ -726,39 +738,484 @@
             this.comboBox1.Location = new System.Drawing.Point(12, 12);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(192, 28);
-            this.comboBox1.TabIndex = 130;
+            this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "228";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(210, 277);
+            this.label6.Location = new System.Drawing.Point(210, 583);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(338, 20);
+            this.label6.Size = new System.Drawing.Size(103, 20);
             this.label6.TabIndex = 171;
-            this.label6.Text = "Место рождения подсудимого. Страна";
+            this.label6.Text = "Должность";
             // 
             // comboBox17
             // 
             this.comboBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox17.FormattingEnabled = true;
             this.comboBox17.Items.AddRange(new object[] {
-            "Белоруссия",
-            "Украина",
-            "РФ",
-            "Армения",
-            "Азербайджан",
-            "Казахстан",
-            "Киргизия",
-            "Молдавия",
-            "Таджикистан",
-            "Узбекистан"});
-            this.comboBox17.Location = new System.Drawing.Point(12, 274);
+            "генеральным директором",
+            "директором",
+            "ИП",
+            "председателем"});
+            this.comboBox17.Location = new System.Drawing.Point(12, 580);
             this.comboBox17.Name = "comboBox17";
             this.comboBox17.Size = new System.Drawing.Size(192, 28);
-            this.comboBox17.TabIndex = 170;
-            this.comboBox17.Text = "РФ";
+            this.comboBox17.TabIndex = 22;
+            this.comboBox17.SelectedIndexChanged += new System.EventHandler(this.comboBox17_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(12, 1098);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(192, 30);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Сгенерировать Word";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(12, 720);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox4.Size = new System.Drawing.Size(340, 170);
+            this.textBox4.TabIndex = 24;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(12, 614);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox7.Size = new System.Drawing.Size(340, 100);
+            this.textBox7.TabIndex = 23;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(358, 786);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(449, 40);
+            this.label18.TabIndex = 175;
+            this.label18.Text = "Расположение организации.\r\nАвтоматически заполняетя при выборе должности.";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(204, 899);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(379, 20);
+            this.label19.TabIndex = 178;
+            this.label19.Text = "не представил СЗВ-М за какой месяц и год";
+            // 
+            // comboBox16
+            // 
+            this.comboBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox16.FormattingEnabled = true;
+            this.comboBox16.Items.AddRange(new object[] {
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020"});
+            this.comboBox16.Location = new System.Drawing.Point(108, 896);
+            this.comboBox16.Name = "comboBox16";
+            this.comboBox16.Size = new System.Drawing.Size(90, 28);
+            this.comboBox16.TabIndex = 26;
+            // 
+            // comboBox18
+            // 
+            this.comboBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox18.FormattingEnabled = true;
+            this.comboBox18.Items.AddRange(new object[] {
+            "январь",
+            "февраль",
+            "март",
+            "апрель",
+            "май",
+            "июнь",
+            "июль",
+            "август",
+            "сентябрь",
+            "октябрь",
+            "ноябрь",
+            "декабрь"});
+            this.comboBox18.Location = new System.Drawing.Point(12, 896);
+            this.comboBox18.Name = "comboBox18";
+            this.comboBox18.Size = new System.Drawing.Size(90, 28);
+            this.comboBox18.TabIndex = 25;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(210, 933);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(561, 20);
+            this.label20.TabIndex = 179;
+            this.label20.Text = "В срок не позднее какого числа надо было предоставить СЗВ-М";
+            // 
+            // comboBox19
+            // 
+            this.comboBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox19.FormattingEnabled = true;
+            this.comboBox19.Items.AddRange(new object[] {
+            "1960",
+            "1961",
+            "1962",
+            "1963",
+            "1964",
+            "1965",
+            "1966",
+            "1967",
+            "1968",
+            "1969",
+            "1970",
+            "1971",
+            "1972",
+            "1973",
+            "1974",
+            "1975",
+            "1976",
+            "1977",
+            "1978",
+            "1979",
+            "1980",
+            "1981",
+            "1982",
+            "1983",
+            "1984",
+            "1985",
+            "1986",
+            "1987",
+            "1988",
+            "1989",
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001"});
+            this.comboBox19.Location = new System.Drawing.Point(144, 930);
+            this.comboBox19.Name = "comboBox19";
+            this.comboBox19.Size = new System.Drawing.Size(60, 28);
+            this.comboBox19.TabIndex = 29;
+            // 
+            // comboBox20
+            // 
+            this.comboBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox20.FormattingEnabled = true;
+            this.comboBox20.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
+            this.comboBox20.Location = new System.Drawing.Point(78, 930);
+            this.comboBox20.Name = "comboBox20";
+            this.comboBox20.Size = new System.Drawing.Size(60, 28);
+            this.comboBox20.TabIndex = 28;
+            // 
+            // comboBox21
+            // 
+            this.comboBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox21.FormattingEnabled = true;
+            this.comboBox21.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.comboBox21.Location = new System.Drawing.Point(12, 930);
+            this.comboBox21.Name = "comboBox21";
+            this.comboBox21.Size = new System.Drawing.Size(60, 28);
+            this.comboBox21.TabIndex = 27;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(209, 117);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(158, 20);
+            this.label21.TabIndex = 184;
+            this.label21.Text = "Пол подсудимого";
+            // 
+            // comboBox22
+            // 
+            this.comboBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox22.FormattingEnabled = true;
+            this.comboBox22.Items.AddRange(new object[] {
+            "Муж",
+            "Жен"});
+            this.comboBox22.Location = new System.Drawing.Point(12, 114);
+            this.comboBox22.Name = "comboBox22";
+            this.comboBox22.Size = new System.Drawing.Size(192, 28);
+            this.comboBox22.TabIndex = 6;
+            this.comboBox22.Text = "Жен";
+            this.comboBox22.SelectedIndexChanged += new System.EventHandler(this.comboBox22_SelectedIndexChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(210, 967);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(582, 20);
+            this.label22.TabIndex = 186;
+            this.label22.Text = "В суд явился или нет. ВАЖНО, обратите внимание на пол человека";
+            // 
+            // comboBox23
+            // 
+            this.comboBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox23.FormattingEnabled = true;
+            this.comboBox23.Items.AddRange(new object[] {
+            "Явился",
+            "Не явился",
+            "Явилась",
+            "Не явилась"});
+            this.comboBox23.Location = new System.Drawing.Point(12, 964);
+            this.comboBox23.Name = "comboBox23";
+            this.comboBox23.Size = new System.Drawing.Size(192, 28);
+            this.comboBox23.TabIndex = 30;
+            this.comboBox23.Text = "Явился";
+            // 
+            // comboBox24
+            // 
+            this.comboBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox24.FormattingEnabled = true;
+            this.comboBox24.Items.AddRange(new object[] {
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021"});
+            this.comboBox24.Location = new System.Drawing.Point(144, 998);
+            this.comboBox24.Name = "comboBox24";
+            this.comboBox24.Size = new System.Drawing.Size(60, 28);
+            this.comboBox24.TabIndex = 33;
+            // 
+            // comboBox25
+            // 
+            this.comboBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox25.FormattingEnabled = true;
+            this.comboBox25.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
+            this.comboBox25.Location = new System.Drawing.Point(78, 998);
+            this.comboBox25.Name = "comboBox25";
+            this.comboBox25.Size = new System.Drawing.Size(60, 28);
+            this.comboBox25.TabIndex = 32;
+            // 
+            // comboBox26
+            // 
+            this.comboBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox26.FormattingEnabled = true;
+            this.comboBox26.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.comboBox26.Location = new System.Drawing.Point(12, 998);
+            this.comboBox26.Name = "comboBox26";
+            this.comboBox26.Size = new System.Drawing.Size(60, 28);
+            this.comboBox26.TabIndex = 31;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(210, 1001);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(476, 20);
+            this.label23.TabIndex = 187;
+            this.label23.Text = "Фактически указанные сведения были предоставлены";
+            // 
+            // comboBox27
+            // 
+            this.comboBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox27.FormattingEnabled = true;
+            this.comboBox27.Items.AddRange(new object[] {
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021"});
+            this.comboBox27.Location = new System.Drawing.Point(144, 1032);
+            this.comboBox27.Name = "comboBox27";
+            this.comboBox27.Size = new System.Drawing.Size(60, 28);
+            this.comboBox27.TabIndex = 36;
+            // 
+            // comboBox28
+            // 
+            this.comboBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox28.FormattingEnabled = true;
+            this.comboBox28.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
+            this.comboBox28.Location = new System.Drawing.Point(78, 1032);
+            this.comboBox28.Name = "comboBox28";
+            this.comboBox28.Size = new System.Drawing.Size(60, 28);
+            this.comboBox28.TabIndex = 35;
+            // 
+            // comboBox29
+            // 
+            this.comboBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox29.FormattingEnabled = true;
+            this.comboBox29.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.comboBox29.Location = new System.Drawing.Point(12, 1032);
+            this.comboBox29.Name = "comboBox29";
+            this.comboBox29.Size = new System.Drawing.Size(60, 28);
+            this.comboBox29.TabIndex = 34;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(210, 1035);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(488, 20);
+            this.label24.TabIndex = 191;
+            this.label24.Text = "Дата протокола об административном правонарушении";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.Location = new System.Drawing.Point(210, 1066);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(112, 20);
+            this.label25.TabIndex = 196;
+            this.label25.Text = "Протокол №";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox8.Location = new System.Drawing.Point(12, 1066);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(192, 26);
+            this.textBox8.TabIndex = 37;
             // 
             // Article1533
             // 
@@ -766,6 +1223,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.comboBox27);
+            this.Controls.Add(this.comboBox28);
+            this.Controls.Add(this.comboBox29);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.comboBox24);
+            this.Controls.Add(this.comboBox25);
+            this.Controls.Add(this.comboBox26);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.comboBox23);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.comboBox22);
+            this.Controls.Add(this.comboBox19);
+            this.Controls.Add(this.comboBox20);
+            this.Controls.Add(this.comboBox21);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.comboBox16);
+            this.Controls.Add(this.comboBox18);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox17);
             this.Controls.Add(this.label16);
@@ -777,7 +1259,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.comboBox16);
             this.Controls.Add(this.comboBox15);
             this.Controls.Add(this.comboBox14);
             this.Controls.Add(this.comboBox13);
@@ -808,7 +1289,7 @@
             this.Controls.Add(this.comboBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Article1533";
             this.Text = "ст. 15.33";
             this.ResumeLayout(false);
@@ -827,7 +1308,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox16;
         private System.Windows.Forms.ComboBox comboBox15;
         private System.Windows.Forms.ComboBox comboBox14;
         private System.Windows.Forms.ComboBox comboBox13;
@@ -858,5 +1338,30 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox17;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox comboBox16;
+        private System.Windows.Forms.ComboBox comboBox18;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboBox19;
+        private System.Windows.Forms.ComboBox comboBox20;
+        private System.Windows.Forms.ComboBox comboBox21;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox comboBox22;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox comboBox23;
+        private System.Windows.Forms.ComboBox comboBox24;
+        private System.Windows.Forms.ComboBox comboBox25;
+        private System.Windows.Forms.ComboBox comboBox26;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox comboBox27;
+        private System.Windows.Forms.ComboBox comboBox28;
+        private System.Windows.Forms.ComboBox comboBox29;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }

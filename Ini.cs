@@ -44,11 +44,6 @@ namespace Magistrate
         [In] [MarshalAs(UnmanagedType.LPStr)] string strFileName
         );
 
-        [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
-        static extern uint GetPrivateProfileSectionNames(IntPtr lpszReturnBuffer,
-        uint nSize, string lpFileName);
-
-
         /// <summary>
         /// Вернуть простой массив значения ключей в секции, где [-,0] - имя ключа, а [-, 1] - значение ключа или null
         /// </summary>
@@ -96,21 +91,22 @@ namespace Magistrate
             return array.Length;
         }
 
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
+        static extern uint GetPrivateProfileSectionNames(IntPtr lpszReturnBuffer,
+           uint nSize, string lpFileName);
         /// <summary>
-        /// Вернуть имена всех секций
+        /// Вернуть имена всех секций, сделан из костылей
         /// </summary>
         /// <returns></returns>
         public string[] GetSectionNames()
         {
-            uint MAX_BUFFER = 32767;
-            IntPtr pReturnedString = Marshal.AllocCoTaskMem((int)MAX_BUFFER);
-            uint bytesReturned = GetPrivateProfileSectionNames(pReturnedString, MAX_BUFFER, PathAndName);
-            if (bytesReturned == 0)
-                return null;
-            string local = Marshal.PtrToStringAnsi(pReturnedString, (int)bytesReturned).ToString();
-            Marshal.FreeCoTaskMem(pReturnedString);
-            //use of Substring below removes terminating null for split
-            return local.Substring(0, local.Length - 1).Split('\0');
+            FileStream file1 = new FileStream(PathAndName, FileMode.Open); //создаем файловый поток
+            StreamReader reader = new StreamReader(file1); // создаем «потоковый читатель» и связываем его с файловым потоком 
+            string fileInString = reader.ReadToEnd(); //вытащить весь текст из файла
+            reader.Close(); //закрываем поток
+            string[] returnArr = ВернутьВсеСовпаденияМеждуДвумяСтроками(fileInString, "[", "]").ToArray();
+            return returnArr; // распарсить текст
         }
 
         /// <summary>
