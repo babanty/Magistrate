@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 namespace Magistrate
 {

@@ -63,5 +63,12 @@ namespace Magistrate
             CasTaxes form2 = new CasTaxes(); // Создание соовтественующего окна
             form2.Show(); // показать окно
         }
+
+        // Настройки
+        private void button6_Click(object sender, EventArgs e)
+        {
+            PropertiesApp form2 = new PropertiesApp(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
     }
 }

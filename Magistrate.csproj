@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Db.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +76,12 @@
     <Compile Include="Forms\Article12.8.p1_DidNotAppear.Designer.cs">
       <DependentUpon>Article12.8.p1_DidNotAppear.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Article1533.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Article1533.Designer.cs">
+      <DependentUpon>Article1533.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CasTaxes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +93,12 @@
     </Compile>
     <Compile Include="Forms\CreditOrder.Designer.cs">
       <DependentUpon>CreditOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Properties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Properties.Designer.cs">
+      <DependentUpon>Properties.cs</DependentUpon>
     </Compile>
     <Compile Include="GenerationWord.cs" />
     <Compile Include="Ini.cs" />
@@ -107,11 +120,17 @@
     <EmbeddedResource Include="Forms\Article12.8.p1_DidNotAppear.resx">
       <DependentUpon>Article12.8.p1_DidNotAppear.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Article1533.resx">
+      <DependentUpon>Article1533.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CasTaxes.resx">
       <DependentUpon>CasTaxes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreditOrder.resx">
       <DependentUpon>CreditOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Properties.resx">
+      <DependentUpon>Properties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
