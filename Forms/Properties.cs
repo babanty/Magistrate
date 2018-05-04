@@ -36,14 +36,15 @@ namespace Magistrate.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             Db.DeleteValueInColumn(listBox1.Text, comboBox1.Text);
+            comboBox1_SelectedIndexChanged(null, null); // Перезаполняем лист с вариантами
         }
 
         // Добавить
         private void button2_Click(object sender, EventArgs e)
         {
             Db.SetValueInColumn(textBox1.Text, comboBox1.Text);
-            comboBox1.Text = "";
-            comboBox1_SelectedIndexChanged(null, null);
+            textBox1.Text = "";
+            comboBox1_SelectedIndexChanged(null, null); // Перезаполняем лист с вариантами
         }
 
         // Сохранить
@@ -60,6 +61,7 @@ namespace Magistrate.Forms
             // Заполняем вариантами внутри полей лист бокс
             string nameColumn = comboBox1.Text; // название поля для ввода с вариантами
             List<string> array = Db.GetColumn(nameColumn); // возвращает список вариантов записанных в поле для ввода
+            listBox1.Items.Clear(); // обнуляет лист бокс
             listBox1.Items.AddRange(array.ToArray()); // закидываем варианты в листбокс
         }
     }

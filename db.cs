@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Magistrate
 {
@@ -83,6 +84,18 @@ namespace Magistrate
         public static string[] GetColumnsName()
         {
             return db.GetSectionNames();
+        }
+
+        /// <summary>
+        /// Заполняет поля для ввода комбобокс вариантами из БД
+        /// </summary>
+        /// <param name="comboBox">Комбобокс который надо заполнить</param>
+        /// <param name="column">Название колоки в БД</param>
+        public static void SetPropertiesComboBox(ref ComboBox comboBox, string column)
+        {
+            string[] str = GetColumn(column).ToArray();
+            if (str != null)
+                comboBox.Items.AddRange(str);
         }
     }
 }

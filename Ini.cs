@@ -91,10 +91,6 @@ namespace Magistrate
             return array.Length;
         }
 
-
-        [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
-        static extern uint GetPrivateProfileSectionNames(IntPtr lpszReturnBuffer,
-           uint nSize, string lpFileName);
         /// <summary>
         /// Вернуть имена всех секций, сделан из костылей
         /// </summary>
@@ -213,7 +209,8 @@ namespace Magistrate
         private static List<string> ВернутьВсеСовпаденияМеждуДвумяСтроками(string текстДляПоиска, string перваяСтрока, string втораяСтрока)
         {
             List<string> возврат = new List<string>();
-            Regex regex = new Regex(@"(?i)" + перваяСтрока + @"(.*?)" + втораяСтрока + @"");
+            string pattern = @"(?i)\" + перваяСтрока + @"(.*?)\" + втораяСтрока + @""; //  @"<div class=""date"">(?<val>.*?)<\/span>"; перваяСтрока + @"(.*)" + втораяСтрока
+            Regex regex = new Regex(pattern);
             //Regex regex = new Regex(@"([^\" + перваяСтрока + @"\" + перваяСтрока + @"]+)(?=\" + втораяСтрока + @")"); // ([^\]\[]+)(?=\])
             MatchCollection matches = regex.Matches(текстДляПоиска);
             string значениеРегулярки = "";
