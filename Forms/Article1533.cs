@@ -15,6 +15,12 @@ namespace Magistrate.Forms
         public Article1533()
         {
             InitializeComponent();
+
+            // Заполнение полей ввода вариантами
+            Db.SetPropertiesComboBox(ref comboBox10, "mesto rogdeniya"); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref comboBox13, "mesto jitelstva gorod"); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBox14, "mesto jitelstva ylitsa"); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBox15, "mesto jitelstva dom"); // Место жителства дом
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +47,7 @@ namespace Magistrate.Forms
             // Указание если явился ,кроме признания своей вины,
             if (comboBox23.Text == "Явился" || comboBox23.Text == "Явилась")
             {
-                GenerationWord.AddValueControl(ref controlArrayToString, ",кроме признания своей вины,", "#-3"); // в ручную добавляем новый ключ
+                GenerationWord.AddValueControl(ref controlArrayToString, ", кроме признания своей вины,", "#-3"); // в ручную добавляем новый ключ
             } else
             {
                 GenerationWord.AddValueControl(ref controlArrayToString, "", "#-3"); // в ручную добавляем новый ключ
@@ -88,6 +94,21 @@ namespace Magistrate.Forms
         }
 
 
+        // Автоматически переносит полное ФИО на другие поля
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox11.Text = textBox1.Text;
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox10.Text = textBox2.Text;
+        }
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox9.Text = textBox3.Text;
+        }
+
+
         // авотматически заполняет расположение организации
         private void comboBox17_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -114,6 +135,62 @@ namespace Magistrate.Forms
                 comboBox23.Text = "Явилась";
             }
         }
+
+        // автоматическое заполнение следющего месяца 
+        private void comboBox18_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string valueControl = comboBox18.Text;
+            switch (valueControl)
+            {
+                case "январь":
+                    comboBox20.Text = "02";
+                break;
+                case "февраль":
+                    comboBox20.Text = "03";
+                    break;
+                case "март":
+                    comboBox20.Text = "04";
+                    break;
+                case "апрель":
+                    comboBox20.Text = "05";
+                    break;
+                case "май":
+                    comboBox20.Text = "06";
+                    break;
+                case "июнь":
+                    comboBox20.Text = "07";
+                    break;
+                case "июль":
+                    comboBox20.Text = "08";
+                    break;
+                case "август":
+                    comboBox20.Text = "09";
+                    break;
+                case "сентябрь":
+                    comboBox20.Text = "10";
+                    break;
+                case "октябрь":
+                    comboBox20.Text = "11";
+                    break;
+                case "ноябрь":
+                    comboBox20.Text = "12";
+                    break;
+                case "декабрь":
+                    comboBox20.Text = "01";
+                    break;
+            }
+        }
+
+        // автоматическое выставление года "не позднее"
+        private void comboBox16_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox19.Text = comboBox16.Text;
+            // Если декабрь, то год пишется следующий
+            if(comboBox18.Text == "декабрь") 
+                comboBox19.Text = (int.Parse(comboBox16.Text)+1).ToString(); // преобразовываем год в число, прибавляем 1 и возвращаем обратно в строку
+
+        }
+
 
         /// <summary>
         /// метод возвращающий формулировку в случае если явился или не явился или null если не правильные параметры
