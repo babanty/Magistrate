@@ -15,6 +15,11 @@ namespace Magistrate.Forms
         public CasTaxes()
         {
             InitializeComponent();
+
+            Db.SetPropertiesComboBox(ref comboBox10, "mesto rogdeniya"); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref comboBox13, "mesto jitelstva gorod"); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBox14, "mesto jitelstva ylitsa"); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBox15, "mesto jitelstva dom"); // Место жителства дом
         }
 
         private void button1_Click(object sender, EventArgs e)

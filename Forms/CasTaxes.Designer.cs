@@ -459,13 +459,6 @@
             // 
             this.comboBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Items.AddRange(new object[] {
-            "д.4",
-            "д.6",
-            "д.7",
-            "д.9.",
-            "д.10",
-            "д.20"});
             this.comboBox15.Location = new System.Drawing.Point(12, 544);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(296, 28);
@@ -476,14 +469,6 @@
             // 
             this.comboBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Items.AddRange(new object[] {
-            "Кукуевская набережная",
-            "Рабочий тупик",
-            "ул.Алексеева",
-            "ул.Громова",
-            "пр. Красной Армии",
-            "п. Богородское",
-            "п. Муханово"});
             this.comboBox14.Location = new System.Drawing.Point(12, 510);
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.Size = new System.Drawing.Size(296, 28);
@@ -494,16 +479,11 @@
             // 
             this.comboBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Items.AddRange(new object[] {
-            "г.Сергиев Посад",
-            "г.Москва",
-            "Сергиево-Посадский р-н",
-            "Сергиево-Посадский р-н, п.Богородское"});
             this.comboBox13.Location = new System.Drawing.Point(12, 476);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(296, 28);
             this.comboBox13.TabIndex = 19;
-            this.comboBox13.Text = "г.Сергиев Посад";
+            this.comboBox13.Text = "г. Сергиев Посад";
             // 
             // comboBox12
             // 
@@ -627,18 +607,11 @@
             // 
             this.comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "г. Сергиев Посад Московской области",
-            "г. Загорск Московской области",
-            "г. Москва",
-            "Сергиево-Посадский р-н, п.Богородское",
-            "Сергиево-Посадский р-н",
-            "Загорский р-н"});
             this.comboBox10.Location = new System.Drawing.Point(12, 374);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(296, 28);
             this.comboBox10.TabIndex = 16;
-            this.comboBox10.Text = "г.Сергиев Посад Московской области";
+            this.comboBox10.Text = "г. Сергиев Посад Московской области";
             // 
             // comboBox9
             // 
@@ -1024,7 +997,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(982, 653);
+            this.ClientSize = new System.Drawing.Size(1003, 653);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
