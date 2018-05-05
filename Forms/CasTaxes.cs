@@ -139,5 +139,17 @@ namespace Magistrate.Forms
         {
             textBox4.Text = textBox3.Text;
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
+            {
+                comboBox5.Text = "Мировой судья";
+            }
+            else
+            {
+                comboBox5.Text = "И.о. мирового судьи";
+            }
+        }
     }
 }

@@ -131,6 +131,7 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(297, 28);
             this.comboBox5.TabIndex = 2;
+            this.comboBox5.TabStop = false;
             this.comboBox5.Text = "Мировой судья";
             // 
             // comboBox4
@@ -232,6 +233,7 @@
             this.comboBox1.Size = new System.Drawing.Size(296, 28);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "228";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label27
             // 

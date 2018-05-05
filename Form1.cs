@@ -77,5 +77,12 @@ namespace Magistrate
             Article1533 form2 = new Article1533(); // Создание соовтественующего окна
             form2.Show(); // показать окно
         }
+
+        // Отмена приказа по ГПК
+        private void button8_Click(object sender, EventArgs e)
+        {
+            CancellationOrderGPK form2 = new CancellationOrderGPK(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
     }
 }
