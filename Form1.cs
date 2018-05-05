@@ -84,5 +84,11 @@ namespace Magistrate
             CancellationOrderGPK form2 = new CancellationOrderGPK(); // Создание соовтественующего окна
             form2.Show(); // показать окно
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            CancellationOrderKAS form2 = new CancellationOrderKAS(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
     }
 }

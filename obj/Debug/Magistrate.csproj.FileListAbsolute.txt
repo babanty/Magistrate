@@ -17,3 +17,4 @@ E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.PropertiesApp.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1533.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.CancellationOrderGPK.resources
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.CancellationOrderKAS.resources

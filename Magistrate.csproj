@@ -88,6 +88,12 @@
     <Compile Include="Forms\CancellationOrderGPK.Designer.cs">
       <DependentUpon>CancellationOrderGPK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CancellationOrderKAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CancellationOrderKAS.Designer.cs">
+      <DependentUpon>CancellationOrderKAS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CasTaxes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CancellationOrderGPK.resx">
       <DependentUpon>CancellationOrderGPK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CancellationOrderKAS.resx">
+      <DependentUpon>CancellationOrderKAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CasTaxes.resx">
       <DependentUpon>CasTaxes.cs</DependentUpon>

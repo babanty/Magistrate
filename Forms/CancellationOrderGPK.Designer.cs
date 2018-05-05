@@ -336,9 +336,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(315, 117);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(221, 20);
+            this.label7.Size = new System.Drawing.Size(265, 20);
             this.label7.TabIndex = 220;
-            this.label7.Text = "Дата вынесения приказа";
+            this.label7.Text = "Дата вынесения определения";
             // 
             // comboBox8
             // 
@@ -475,7 +475,7 @@
             this.Controls.Add(this.comboBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CancellationOrderGPK";
             this.Text = "Отмена приказа по ГПК";
             this.ResumeLayout(false);
