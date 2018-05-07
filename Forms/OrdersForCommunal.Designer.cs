@@ -1114,93 +1114,94 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Enabled = false;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(314, 1178);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(368, 20);
             this.label9.TabIndex = 226;
             this.label9.Text = "Дом, квартира и т.д., например: д.20, кв 60";
-            this.label9.Visible = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Enabled = false;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.Location = new System.Drawing.Point(314, 1144);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(459, 20);
             this.label10.TabIndex = 225;
             this.label10.Text = "Поселок, улица, проспект и т.д., напрмер: ул.Громова";
-            this.label10.Visible = false;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Enabled = false;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.Location = new System.Drawing.Point(314, 1106);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(407, 20);
             this.label11.TabIndex = 224;
             this.label11.Text = "Населенный пункт, например: г.Сергиев Посад";
-            this.label11.Visible = false;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
+            this.label28.Enabled = false;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label28.Location = new System.Drawing.Point(314, 1072);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(356, 20);
             this.label28.TabIndex = 223;
             this.label28.Text = "Область, например: Московская область";
-            this.label28.Visible = false;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
+            this.label29.Enabled = false;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label29.Location = new System.Drawing.Point(314, 1038);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(318, 20);
             this.label29.TabIndex = 222;
             this.label29.Text = "Зарегестрирован по адресу. Страна";
-            this.label29.Visible = false;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
+            this.label30.Enabled = false;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label30.Location = new System.Drawing.Point(314, 1004);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(340, 20);
             this.label30.TabIndex = 221;
             this.label30.Text = "Населенный пункт, например: г.Москва";
-            this.label30.Visible = false;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
+            this.label31.Enabled = false;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label31.Location = new System.Drawing.Point(314, 970);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(338, 20);
             this.label31.TabIndex = 220;
             this.label31.Text = "Место рождения подсудимого. Страна";
-            this.label31.Visible = false;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
+            this.label32.Enabled = false;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label32.Location = new System.Drawing.Point(314, 936);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(257, 20);
             this.label32.TabIndex = 219;
             this.label32.Text = "Дата рождения подсудимого";
-            this.label32.Visible = false;
             // 
             // d2comboBox10
             // 
+            this.d2comboBox10.Enabled = false;
             this.d2comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2comboBox10.FormattingEnabled = true;
             this.d2comboBox10.Location = new System.Drawing.Point(11, 1175);
@@ -1208,10 +1209,10 @@
             this.d2comboBox10.Size = new System.Drawing.Size(296, 28);
             this.d2comboBox10.TabIndex = 46;
             this.d2comboBox10.Text = "д.4";
-            this.d2comboBox10.Visible = false;
             // 
             // d2comboBox9
             // 
+            this.d2comboBox9.Enabled = false;
             this.d2comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2comboBox9.FormattingEnabled = true;
             this.d2comboBox9.Location = new System.Drawing.Point(11, 1141);
@@ -1219,10 +1220,10 @@
             this.d2comboBox9.Size = new System.Drawing.Size(296, 28);
             this.d2comboBox9.TabIndex = 45;
             this.d2comboBox9.Text = "пр. Красной Армии";
-            this.d2comboBox9.Visible = false;
             // 
             // d2comboBox8
             // 
+            this.d2comboBox8.Enabled = false;
             this.d2comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2comboBox8.FormattingEnabled = true;
             this.d2comboBox8.Location = new System.Drawing.Point(11, 1103);
@@ -1230,10 +1231,10 @@
             this.d2comboBox8.Size = new System.Drawing.Size(296, 28);
             this.d2comboBox8.TabIndex = 44;
             this.d2comboBox8.Text = "г.Сергиев Посад";
-            this.d2comboBox8.Visible = false;
             // 
             // d2comboBox7
             // 
+            this.d2comboBox7.Enabled = false;
             this.d2comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2comboBox7.FormattingEnabled = true;
             this.d2comboBox7.Items.AddRange(new object[] {
@@ -1328,10 +1329,10 @@
             this.d2comboBox7.Size = new System.Drawing.Size(296, 28);
             this.d2comboBox7.TabIndex = 43;
             this.d2comboBox7.Text = "Московская область";
-            this.d2comboBox7.Visible = false;
             // 
             // d2comboBox6
             // 
+            this.d2comboBox6.Enabled = false;
             this.d2comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2comboBox6.FormattingEnabled = true;
             this.d2comboBox6.Items.AddRange(new object[] {
@@ -1350,20 +1351,20 @@
             this.d2comboBox6.Size = new System.Drawing.Size(296, 28);
             this.d2comboBox6.TabIndex = 42;
             this.d2comboBox6.Text = "РФ";
-            this.d2comboBox6.Visible = false;
             // 
             // d2comboBox5
             // 
+            this.d2comboBox5.Enabled = false;
             this.d2comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2comboBox5.FormattingEnabled = true;
             this.d2comboBox5.Location = new System.Drawing.Point(11, 1001);
             this.d2comboBox5.Name = "d2comboBox5";
             this.d2comboBox5.Size = new System.Drawing.Size(296, 28);
             this.d2comboBox5.TabIndex = 41;
-            this.d2comboBox5.Visible = false;
             // 
             // d2comboBox4
             // 
+            this.d2comboBox4.Enabled = false;
             this.d2comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2comboBox4.FormattingEnabled = true;
             this.d2comboBox4.Items.AddRange(new object[] {
@@ -1382,10 +1383,10 @@
             this.d2comboBox4.Size = new System.Drawing.Size(296, 28);
             this.d2comboBox4.TabIndex = 40;
             this.d2comboBox4.Text = "Неизвестно";
-            this.d2comboBox4.Visible = false;
             // 
             // d2comboBox3
             // 
+            this.d2comboBox3.Enabled = false;
             this.d2comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2comboBox3.FormattingEnabled = true;
             this.d2comboBox3.Items.AddRange(new object[] {
@@ -1435,10 +1436,10 @@
             this.d2comboBox3.Name = "d2comboBox3";
             this.d2comboBox3.Size = new System.Drawing.Size(103, 28);
             this.d2comboBox3.TabIndex = 39;
-            this.d2comboBox3.Visible = false;
             // 
             // d2comboBox2
             // 
+            this.d2comboBox2.Enabled = false;
             this.d2comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2comboBox2.FormattingEnabled = true;
             this.d2comboBox2.Items.AddRange(new object[] {
@@ -1458,10 +1459,10 @@
             this.d2comboBox2.Name = "d2comboBox2";
             this.d2comboBox2.Size = new System.Drawing.Size(106, 28);
             this.d2comboBox2.TabIndex = 38;
-            this.d2comboBox2.Visible = false;
             // 
             // d2comboBox1
             // 
+            this.d2comboBox1.Enabled = false;
             this.d2comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2comboBox1.FormattingEnabled = true;
             this.d2comboBox1.Items.AddRange(new object[] {
@@ -1500,168 +1501,168 @@
             this.d2comboBox1.Name = "d2comboBox1";
             this.d2comboBox1.Size = new System.Drawing.Size(75, 28);
             this.d2comboBox1.TabIndex = 37;
-            this.d2comboBox1.Visible = false;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
+            this.label33.Enabled = false;
             this.label33.Location = new System.Drawing.Point(12, 814);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(149, 20);
             this.label33.TabIndex = 33;
             this.label33.Text = "Второй должник";
-            this.label33.Visible = false;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
+            this.label34.Enabled = false;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label34.Location = new System.Drawing.Point(315, 901);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(619, 20);
             this.label34.TabIndex = 207;
             this.label34.Text = "Отчество, взыскании задолженности с кого?  (пример: \"Геннадиевича\")";
-            this.label34.Visible = false;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
+            this.label35.Enabled = false;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label35.Location = new System.Drawing.Point(315, 872);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(492, 20);
             this.label35.TabIndex = 206;
             this.label35.Text = "Имя, взыскании задолженности с кого? (пример: \"Игоря\")";
-            this.label35.Visible = false;
             // 
             // d2textBox3
             // 
+            this.d2textBox3.Enabled = false;
             this.d2textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2textBox3.Location = new System.Drawing.Point(12, 901);
             this.d2textBox3.Name = "d2textBox3";
             this.d2textBox3.Size = new System.Drawing.Size(296, 26);
             this.d2textBox3.TabIndex = 36;
-            this.d2textBox3.Visible = false;
             // 
             // d2textBox2
             // 
+            this.d2textBox2.Enabled = false;
             this.d2textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2textBox2.Location = new System.Drawing.Point(12, 869);
             this.d2textBox2.Name = "d2textBox2";
             this.d2textBox2.Size = new System.Drawing.Size(296, 26);
             this.d2textBox2.TabIndex = 35;
-            this.d2textBox2.Visible = false;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
+            this.label36.Enabled = false;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label36.Location = new System.Drawing.Point(315, 840);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(564, 20);
             this.label36.TabIndex = 205;
             this.label36.Text = "Фамилия, взыскании задолженности с кого?  (пример: \"Иванова\")";
-            this.label36.Visible = false;
             // 
             // d2textBox1
             // 
+            this.d2textBox1.Enabled = false;
             this.d2textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d2textBox1.Location = new System.Drawing.Point(12, 837);
             this.d2textBox1.Name = "d2textBox1";
             this.d2textBox1.Size = new System.Drawing.Size(296, 26);
             this.d2textBox1.TabIndex = 34;
-            this.d2textBox1.Visible = false;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
+            this.label37.Enabled = false;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label37.Location = new System.Drawing.Point(314, 1570);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(368, 20);
             this.label37.TabIndex = 251;
             this.label37.Text = "Дом, квартира и т.д., например: д.20, кв 60";
-            this.label37.Visible = false;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
+            this.label38.Enabled = false;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label38.Location = new System.Drawing.Point(314, 1536);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(459, 20);
             this.label38.TabIndex = 250;
             this.label38.Text = "Поселок, улица, проспект и т.д., напрмер: ул.Громова";
-            this.label38.Visible = false;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
+            this.label39.Enabled = false;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label39.Location = new System.Drawing.Point(314, 1498);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(407, 20);
             this.label39.TabIndex = 249;
             this.label39.Text = "Населенный пункт, например: г.Сергиев Посад";
-            this.label39.Visible = false;
             // 
             // label40
             // 
             this.label40.AutoSize = true;
+            this.label40.Enabled = false;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label40.Location = new System.Drawing.Point(314, 1464);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(356, 20);
             this.label40.TabIndex = 248;
             this.label40.Text = "Область, например: Московская область";
-            this.label40.Visible = false;
             // 
             // label41
             // 
             this.label41.AutoSize = true;
+            this.label41.Enabled = false;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label41.Location = new System.Drawing.Point(314, 1430);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(318, 20);
             this.label41.TabIndex = 247;
             this.label41.Text = "Зарегестрирован по адресу. Страна";
-            this.label41.Visible = false;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
+            this.label42.Enabled = false;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label42.Location = new System.Drawing.Point(314, 1396);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(340, 20);
             this.label42.TabIndex = 246;
             this.label42.Text = "Населенный пункт, например: г.Москва";
-            this.label42.Visible = false;
             // 
             // label43
             // 
             this.label43.AutoSize = true;
+            this.label43.Enabled = false;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label43.Location = new System.Drawing.Point(314, 1362);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(338, 20);
             this.label43.TabIndex = 245;
             this.label43.Text = "Место рождения подсудимого. Страна";
-            this.label43.Visible = false;
             // 
             // label44
             // 
             this.label44.AutoSize = true;
+            this.label44.Enabled = false;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label44.Location = new System.Drawing.Point(314, 1328);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(257, 20);
             this.label44.TabIndex = 244;
             this.label44.Text = "Дата рождения подсудимого";
-            this.label44.Visible = false;
             // 
             // d3comboBox10
             // 
+            this.d3comboBox10.Enabled = false;
             this.d3comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3comboBox10.FormattingEnabled = true;
             this.d3comboBox10.Location = new System.Drawing.Point(11, 1567);
@@ -1669,10 +1670,10 @@
             this.d3comboBox10.Size = new System.Drawing.Size(296, 28);
             this.d3comboBox10.TabIndex = 60;
             this.d3comboBox10.Text = "д.4";
-            this.d3comboBox10.Visible = false;
             // 
             // d3comboBox9
             // 
+            this.d3comboBox9.Enabled = false;
             this.d3comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3comboBox9.FormattingEnabled = true;
             this.d3comboBox9.Location = new System.Drawing.Point(11, 1533);
@@ -1680,10 +1681,10 @@
             this.d3comboBox9.Size = new System.Drawing.Size(296, 28);
             this.d3comboBox9.TabIndex = 59;
             this.d3comboBox9.Text = "пр. Красной Армии";
-            this.d3comboBox9.Visible = false;
             // 
             // d3comboBox8
             // 
+            this.d3comboBox8.Enabled = false;
             this.d3comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3comboBox8.FormattingEnabled = true;
             this.d3comboBox8.Location = new System.Drawing.Point(11, 1495);
@@ -1691,10 +1692,10 @@
             this.d3comboBox8.Size = new System.Drawing.Size(296, 28);
             this.d3comboBox8.TabIndex = 58;
             this.d3comboBox8.Text = "г.Сергиев Посад";
-            this.d3comboBox8.Visible = false;
             // 
             // d3comboBox7
             // 
+            this.d3comboBox7.Enabled = false;
             this.d3comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3comboBox7.FormattingEnabled = true;
             this.d3comboBox7.Items.AddRange(new object[] {
@@ -1789,10 +1790,10 @@
             this.d3comboBox7.Size = new System.Drawing.Size(296, 28);
             this.d3comboBox7.TabIndex = 57;
             this.d3comboBox7.Text = "Московская область";
-            this.d3comboBox7.Visible = false;
             // 
             // d3comboBox6
             // 
+            this.d3comboBox6.Enabled = false;
             this.d3comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3comboBox6.FormattingEnabled = true;
             this.d3comboBox6.Items.AddRange(new object[] {
@@ -1811,20 +1812,20 @@
             this.d3comboBox6.Size = new System.Drawing.Size(296, 28);
             this.d3comboBox6.TabIndex = 56;
             this.d3comboBox6.Text = "РФ";
-            this.d3comboBox6.Visible = false;
             // 
             // d3comboBox5
             // 
+            this.d3comboBox5.Enabled = false;
             this.d3comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3comboBox5.FormattingEnabled = true;
             this.d3comboBox5.Location = new System.Drawing.Point(11, 1393);
             this.d3comboBox5.Name = "d3comboBox5";
             this.d3comboBox5.Size = new System.Drawing.Size(296, 28);
             this.d3comboBox5.TabIndex = 55;
-            this.d3comboBox5.Visible = false;
             // 
             // d3comboBox4
             // 
+            this.d3comboBox4.Enabled = false;
             this.d3comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3comboBox4.FormattingEnabled = true;
             this.d3comboBox4.Items.AddRange(new object[] {
@@ -1843,10 +1844,10 @@
             this.d3comboBox4.Size = new System.Drawing.Size(296, 28);
             this.d3comboBox4.TabIndex = 54;
             this.d3comboBox4.Text = "Неизвестно";
-            this.d3comboBox4.Visible = false;
             // 
             // d3comboBox3
             // 
+            this.d3comboBox3.Enabled = false;
             this.d3comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3comboBox3.FormattingEnabled = true;
             this.d3comboBox3.Items.AddRange(new object[] {
@@ -1896,10 +1897,10 @@
             this.d3comboBox3.Name = "d3comboBox3";
             this.d3comboBox3.Size = new System.Drawing.Size(103, 28);
             this.d3comboBox3.TabIndex = 53;
-            this.d3comboBox3.Visible = false;
             // 
             // d3comboBox2
             // 
+            this.d3comboBox2.Enabled = false;
             this.d3comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3comboBox2.FormattingEnabled = true;
             this.d3comboBox2.Items.AddRange(new object[] {
@@ -1919,10 +1920,10 @@
             this.d3comboBox2.Name = "d3comboBox2";
             this.d3comboBox2.Size = new System.Drawing.Size(106, 28);
             this.d3comboBox2.TabIndex = 52;
-            this.d3comboBox2.Visible = false;
             // 
             // d3comboBox1
             // 
+            this.d3comboBox1.Enabled = false;
             this.d3comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3comboBox1.FormattingEnabled = true;
             this.d3comboBox1.Items.AddRange(new object[] {
@@ -1961,168 +1962,168 @@
             this.d3comboBox1.Name = "d3comboBox1";
             this.d3comboBox1.Size = new System.Drawing.Size(75, 28);
             this.d3comboBox1.TabIndex = 51;
-            this.d3comboBox1.Visible = false;
             // 
             // label45
             // 
             this.label45.AutoSize = true;
+            this.label45.Enabled = false;
             this.label45.Location = new System.Drawing.Point(12, 1206);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(147, 20);
             this.label45.TabIndex = 47;
             this.label45.Text = "Третий должник";
-            this.label45.Visible = false;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
+            this.label46.Enabled = false;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label46.Location = new System.Drawing.Point(315, 1293);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(619, 20);
             this.label46.TabIndex = 232;
             this.label46.Text = "Отчество, взыскании задолженности с кого?  (пример: \"Геннадиевича\")";
-            this.label46.Visible = false;
             // 
             // label47
             // 
             this.label47.AutoSize = true;
+            this.label47.Enabled = false;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label47.Location = new System.Drawing.Point(315, 1264);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(492, 20);
             this.label47.TabIndex = 231;
             this.label47.Text = "Имя, взыскании задолженности с кого? (пример: \"Игоря\")";
-            this.label47.Visible = false;
             // 
             // d3textBox3
             // 
+            this.d3textBox3.Enabled = false;
             this.d3textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3textBox3.Location = new System.Drawing.Point(12, 1293);
             this.d3textBox3.Name = "d3textBox3";
             this.d3textBox3.Size = new System.Drawing.Size(296, 26);
             this.d3textBox3.TabIndex = 50;
-            this.d3textBox3.Visible = false;
             // 
             // d3textBox2
             // 
+            this.d3textBox2.Enabled = false;
             this.d3textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3textBox2.Location = new System.Drawing.Point(12, 1261);
             this.d3textBox2.Name = "d3textBox2";
             this.d3textBox2.Size = new System.Drawing.Size(296, 26);
             this.d3textBox2.TabIndex = 49;
-            this.d3textBox2.Visible = false;
             // 
             // label48
             // 
             this.label48.AutoSize = true;
+            this.label48.Enabled = false;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label48.Location = new System.Drawing.Point(315, 1232);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(564, 20);
             this.label48.TabIndex = 230;
             this.label48.Text = "Фамилия, взыскании задолженности с кого?  (пример: \"Иванова\")";
-            this.label48.Visible = false;
             // 
             // d3textBox1
             // 
+            this.d3textBox1.Enabled = false;
             this.d3textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d3textBox1.Location = new System.Drawing.Point(12, 1229);
             this.d3textBox1.Name = "d3textBox1";
             this.d3textBox1.Size = new System.Drawing.Size(296, 26);
             this.d3textBox1.TabIndex = 48;
-            this.d3textBox1.Visible = false;
             // 
             // label49
             // 
             this.label49.AutoSize = true;
+            this.label49.Enabled = false;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label49.Location = new System.Drawing.Point(314, 1962);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(368, 20);
             this.label49.TabIndex = 276;
             this.label49.Text = "Дом, квартира и т.д., например: д.20, кв 60";
-            this.label49.Visible = false;
             // 
             // label50
             // 
             this.label50.AutoSize = true;
+            this.label50.Enabled = false;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label50.Location = new System.Drawing.Point(314, 1928);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(459, 20);
             this.label50.TabIndex = 275;
             this.label50.Text = "Поселок, улица, проспект и т.д., напрмер: ул.Громова";
-            this.label50.Visible = false;
             // 
             // label51
             // 
             this.label51.AutoSize = true;
+            this.label51.Enabled = false;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label51.Location = new System.Drawing.Point(314, 1890);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(407, 20);
             this.label51.TabIndex = 274;
             this.label51.Text = "Населенный пункт, например: г.Сергиев Посад";
-            this.label51.Visible = false;
             // 
             // label52
             // 
             this.label52.AutoSize = true;
+            this.label52.Enabled = false;
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label52.Location = new System.Drawing.Point(314, 1856);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(356, 20);
             this.label52.TabIndex = 273;
             this.label52.Text = "Область, например: Московская область";
-            this.label52.Visible = false;
             // 
             // label53
             // 
             this.label53.AutoSize = true;
+            this.label53.Enabled = false;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label53.Location = new System.Drawing.Point(314, 1822);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(318, 20);
             this.label53.TabIndex = 272;
             this.label53.Text = "Зарегестрирован по адресу. Страна";
-            this.label53.Visible = false;
             // 
             // label54
             // 
             this.label54.AutoSize = true;
+            this.label54.Enabled = false;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label54.Location = new System.Drawing.Point(314, 1788);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(340, 20);
             this.label54.TabIndex = 271;
             this.label54.Text = "Населенный пункт, например: г.Москва";
-            this.label54.Visible = false;
             // 
             // label55
             // 
             this.label55.AutoSize = true;
+            this.label55.Enabled = false;
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label55.Location = new System.Drawing.Point(314, 1754);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(338, 20);
             this.label55.TabIndex = 270;
             this.label55.Text = "Место рождения подсудимого. Страна";
-            this.label55.Visible = false;
             // 
             // label56
             // 
             this.label56.AutoSize = true;
+            this.label56.Enabled = false;
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label56.Location = new System.Drawing.Point(314, 1720);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(257, 20);
             this.label56.TabIndex = 269;
             this.label56.Text = "Дата рождения подсудимого";
-            this.label56.Visible = false;
             // 
             // d4comboBox10
             // 
+            this.d4comboBox10.Enabled = false;
             this.d4comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4comboBox10.FormattingEnabled = true;
             this.d4comboBox10.Location = new System.Drawing.Point(11, 1959);
@@ -2130,10 +2131,10 @@
             this.d4comboBox10.Size = new System.Drawing.Size(296, 28);
             this.d4comboBox10.TabIndex = 74;
             this.d4comboBox10.Text = "д.4";
-            this.d4comboBox10.Visible = false;
             // 
             // d4comboBox9
             // 
+            this.d4comboBox9.Enabled = false;
             this.d4comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4comboBox9.FormattingEnabled = true;
             this.d4comboBox9.Location = new System.Drawing.Point(11, 1925);
@@ -2141,10 +2142,10 @@
             this.d4comboBox9.Size = new System.Drawing.Size(296, 28);
             this.d4comboBox9.TabIndex = 73;
             this.d4comboBox9.Text = "пр. Красной Армии";
-            this.d4comboBox9.Visible = false;
             // 
             // d4comboBox8
             // 
+            this.d4comboBox8.Enabled = false;
             this.d4comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4comboBox8.FormattingEnabled = true;
             this.d4comboBox8.Location = new System.Drawing.Point(11, 1887);
@@ -2152,10 +2153,10 @@
             this.d4comboBox8.Size = new System.Drawing.Size(296, 28);
             this.d4comboBox8.TabIndex = 72;
             this.d4comboBox8.Text = "г.Сергиев Посад";
-            this.d4comboBox8.Visible = false;
             // 
             // d4comboBox7
             // 
+            this.d4comboBox7.Enabled = false;
             this.d4comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4comboBox7.FormattingEnabled = true;
             this.d4comboBox7.Items.AddRange(new object[] {
@@ -2250,10 +2251,10 @@
             this.d4comboBox7.Size = new System.Drawing.Size(296, 28);
             this.d4comboBox7.TabIndex = 71;
             this.d4comboBox7.Text = "Московская область";
-            this.d4comboBox7.Visible = false;
             // 
             // d4comboBox6
             // 
+            this.d4comboBox6.Enabled = false;
             this.d4comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4comboBox6.FormattingEnabled = true;
             this.d4comboBox6.Items.AddRange(new object[] {
@@ -2272,20 +2273,20 @@
             this.d4comboBox6.Size = new System.Drawing.Size(296, 28);
             this.d4comboBox6.TabIndex = 70;
             this.d4comboBox6.Text = "РФ";
-            this.d4comboBox6.Visible = false;
             // 
             // d4comboBox5
             // 
+            this.d4comboBox5.Enabled = false;
             this.d4comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4comboBox5.FormattingEnabled = true;
             this.d4comboBox5.Location = new System.Drawing.Point(11, 1785);
             this.d4comboBox5.Name = "d4comboBox5";
             this.d4comboBox5.Size = new System.Drawing.Size(296, 28);
             this.d4comboBox5.TabIndex = 69;
-            this.d4comboBox5.Visible = false;
             // 
             // d4comboBox4
             // 
+            this.d4comboBox4.Enabled = false;
             this.d4comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4comboBox4.FormattingEnabled = true;
             this.d4comboBox4.Items.AddRange(new object[] {
@@ -2304,10 +2305,10 @@
             this.d4comboBox4.Size = new System.Drawing.Size(296, 28);
             this.d4comboBox4.TabIndex = 68;
             this.d4comboBox4.Text = "Неизвестно";
-            this.d4comboBox4.Visible = false;
             // 
             // d4comboBox3
             // 
+            this.d4comboBox3.Enabled = false;
             this.d4comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4comboBox3.FormattingEnabled = true;
             this.d4comboBox3.Items.AddRange(new object[] {
@@ -2357,10 +2358,10 @@
             this.d4comboBox3.Name = "d4comboBox3";
             this.d4comboBox3.Size = new System.Drawing.Size(103, 28);
             this.d4comboBox3.TabIndex = 67;
-            this.d4comboBox3.Visible = false;
             // 
             // d4comboBox2
             // 
+            this.d4comboBox2.Enabled = false;
             this.d4comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4comboBox2.FormattingEnabled = true;
             this.d4comboBox2.Items.AddRange(new object[] {
@@ -2380,10 +2381,10 @@
             this.d4comboBox2.Name = "d4comboBox2";
             this.d4comboBox2.Size = new System.Drawing.Size(106, 28);
             this.d4comboBox2.TabIndex = 66;
-            this.d4comboBox2.Visible = false;
             // 
             // d4comboBox1
             // 
+            this.d4comboBox1.Enabled = false;
             this.d4comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4comboBox1.FormattingEnabled = true;
             this.d4comboBox1.Items.AddRange(new object[] {
@@ -2422,168 +2423,168 @@
             this.d4comboBox1.Name = "d4comboBox1";
             this.d4comboBox1.Size = new System.Drawing.Size(75, 28);
             this.d4comboBox1.TabIndex = 65;
-            this.d4comboBox1.Visible = false;
             // 
             // label57
             // 
             this.label57.AutoSize = true;
+            this.label57.Enabled = false;
             this.label57.Location = new System.Drawing.Point(12, 1598);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(182, 20);
             this.label57.TabIndex = 61;
             this.label57.Text = "Четвертый должник";
-            this.label57.Visible = false;
             // 
             // label58
             // 
             this.label58.AutoSize = true;
+            this.label58.Enabled = false;
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label58.Location = new System.Drawing.Point(315, 1685);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(619, 20);
             this.label58.TabIndex = 257;
             this.label58.Text = "Отчество, взыскании задолженности с кого?  (пример: \"Геннадиевича\")";
-            this.label58.Visible = false;
             // 
             // label59
             // 
             this.label59.AutoSize = true;
+            this.label59.Enabled = false;
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label59.Location = new System.Drawing.Point(315, 1656);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(492, 20);
             this.label59.TabIndex = 256;
             this.label59.Text = "Имя, взыскании задолженности с кого? (пример: \"Игоря\")";
-            this.label59.Visible = false;
             // 
             // d4textBox3
             // 
+            this.d4textBox3.Enabled = false;
             this.d4textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4textBox3.Location = new System.Drawing.Point(12, 1685);
             this.d4textBox3.Name = "d4textBox3";
             this.d4textBox3.Size = new System.Drawing.Size(296, 26);
             this.d4textBox3.TabIndex = 64;
-            this.d4textBox3.Visible = false;
             // 
             // d4textBox2
             // 
+            this.d4textBox2.Enabled = false;
             this.d4textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4textBox2.Location = new System.Drawing.Point(12, 1653);
             this.d4textBox2.Name = "d4textBox2";
             this.d4textBox2.Size = new System.Drawing.Size(296, 26);
             this.d4textBox2.TabIndex = 63;
-            this.d4textBox2.Visible = false;
             // 
             // label60
             // 
             this.label60.AutoSize = true;
+            this.label60.Enabled = false;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label60.Location = new System.Drawing.Point(315, 1624);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(564, 20);
             this.label60.TabIndex = 255;
             this.label60.Text = "Фамилия, взыскании задолженности с кого?  (пример: \"Иванова\")";
-            this.label60.Visible = false;
             // 
             // d4textBox1
             // 
+            this.d4textBox1.Enabled = false;
             this.d4textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d4textBox1.Location = new System.Drawing.Point(12, 1621);
             this.d4textBox1.Name = "d4textBox1";
             this.d4textBox1.Size = new System.Drawing.Size(296, 26);
             this.d4textBox1.TabIndex = 62;
-            this.d4textBox1.Visible = false;
             // 
             // label61
             // 
             this.label61.AutoSize = true;
+            this.label61.Enabled = false;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label61.Location = new System.Drawing.Point(314, 2354);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(368, 20);
             this.label61.TabIndex = 301;
             this.label61.Text = "Дом, квартира и т.д., например: д.20, кв 60";
-            this.label61.Visible = false;
             // 
             // label62
             // 
             this.label62.AutoSize = true;
+            this.label62.Enabled = false;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label62.Location = new System.Drawing.Point(314, 2320);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(459, 20);
             this.label62.TabIndex = 300;
             this.label62.Text = "Поселок, улица, проспект и т.д., напрмер: ул.Громова";
-            this.label62.Visible = false;
             // 
             // label63
             // 
             this.label63.AutoSize = true;
+            this.label63.Enabled = false;
             this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label63.Location = new System.Drawing.Point(314, 2282);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(407, 20);
             this.label63.TabIndex = 299;
             this.label63.Text = "Населенный пункт, например: г.Сергиев Посад";
-            this.label63.Visible = false;
             // 
             // label64
             // 
             this.label64.AutoSize = true;
+            this.label64.Enabled = false;
             this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label64.Location = new System.Drawing.Point(314, 2248);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(356, 20);
             this.label64.TabIndex = 298;
             this.label64.Text = "Область, например: Московская область";
-            this.label64.Visible = false;
             // 
             // label65
             // 
             this.label65.AutoSize = true;
+            this.label65.Enabled = false;
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label65.Location = new System.Drawing.Point(314, 2214);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(318, 20);
             this.label65.TabIndex = 297;
             this.label65.Text = "Зарегестрирован по адресу. Страна";
-            this.label65.Visible = false;
             // 
             // label66
             // 
             this.label66.AutoSize = true;
+            this.label66.Enabled = false;
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label66.Location = new System.Drawing.Point(314, 2180);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(340, 20);
             this.label66.TabIndex = 296;
             this.label66.Text = "Населенный пункт, например: г.Москва";
-            this.label66.Visible = false;
             // 
             // label67
             // 
             this.label67.AutoSize = true;
+            this.label67.Enabled = false;
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label67.Location = new System.Drawing.Point(314, 2146);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(338, 20);
             this.label67.TabIndex = 295;
             this.label67.Text = "Место рождения подсудимого. Страна";
-            this.label67.Visible = false;
             // 
             // label68
             // 
             this.label68.AutoSize = true;
+            this.label68.Enabled = false;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label68.Location = new System.Drawing.Point(314, 2112);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(257, 20);
             this.label68.TabIndex = 294;
             this.label68.Text = "Дата рождения подсудимого";
-            this.label68.Visible = false;
             // 
             // d5comboBox10
             // 
+            this.d5comboBox10.Enabled = false;
             this.d5comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5comboBox10.FormattingEnabled = true;
             this.d5comboBox10.Location = new System.Drawing.Point(11, 2351);
@@ -2591,10 +2592,10 @@
             this.d5comboBox10.Size = new System.Drawing.Size(296, 28);
             this.d5comboBox10.TabIndex = 88;
             this.d5comboBox10.Text = "д.4";
-            this.d5comboBox10.Visible = false;
             // 
             // d5comboBox9
             // 
+            this.d5comboBox9.Enabled = false;
             this.d5comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5comboBox9.FormattingEnabled = true;
             this.d5comboBox9.Location = new System.Drawing.Point(11, 2317);
@@ -2602,10 +2603,10 @@
             this.d5comboBox9.Size = new System.Drawing.Size(296, 28);
             this.d5comboBox9.TabIndex = 87;
             this.d5comboBox9.Text = "пр. Красной Армии";
-            this.d5comboBox9.Visible = false;
             // 
             // d5comboBox8
             // 
+            this.d5comboBox8.Enabled = false;
             this.d5comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5comboBox8.FormattingEnabled = true;
             this.d5comboBox8.Location = new System.Drawing.Point(11, 2279);
@@ -2613,10 +2614,10 @@
             this.d5comboBox8.Size = new System.Drawing.Size(296, 28);
             this.d5comboBox8.TabIndex = 86;
             this.d5comboBox8.Text = "г.Сергиев Посад";
-            this.d5comboBox8.Visible = false;
             // 
             // d5comboBox7
             // 
+            this.d5comboBox7.Enabled = false;
             this.d5comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5comboBox7.FormattingEnabled = true;
             this.d5comboBox7.Items.AddRange(new object[] {
@@ -2711,10 +2712,10 @@
             this.d5comboBox7.Size = new System.Drawing.Size(296, 28);
             this.d5comboBox7.TabIndex = 85;
             this.d5comboBox7.Text = "Московская область";
-            this.d5comboBox7.Visible = false;
             // 
             // d5comboBox6
             // 
+            this.d5comboBox6.Enabled = false;
             this.d5comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5comboBox6.FormattingEnabled = true;
             this.d5comboBox6.Items.AddRange(new object[] {
@@ -2733,20 +2734,20 @@
             this.d5comboBox6.Size = new System.Drawing.Size(296, 28);
             this.d5comboBox6.TabIndex = 84;
             this.d5comboBox6.Text = "РФ";
-            this.d5comboBox6.Visible = false;
             // 
             // d5comboBox5
             // 
+            this.d5comboBox5.Enabled = false;
             this.d5comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5comboBox5.FormattingEnabled = true;
             this.d5comboBox5.Location = new System.Drawing.Point(11, 2177);
             this.d5comboBox5.Name = "d5comboBox5";
             this.d5comboBox5.Size = new System.Drawing.Size(296, 28);
             this.d5comboBox5.TabIndex = 83;
-            this.d5comboBox5.Visible = false;
             // 
             // d5comboBox4
             // 
+            this.d5comboBox4.Enabled = false;
             this.d5comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5comboBox4.FormattingEnabled = true;
             this.d5comboBox4.Items.AddRange(new object[] {
@@ -2765,10 +2766,10 @@
             this.d5comboBox4.Size = new System.Drawing.Size(296, 28);
             this.d5comboBox4.TabIndex = 82;
             this.d5comboBox4.Text = "Неизвестно";
-            this.d5comboBox4.Visible = false;
             // 
             // d5comboBox3
             // 
+            this.d5comboBox3.Enabled = false;
             this.d5comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5comboBox3.FormattingEnabled = true;
             this.d5comboBox3.Items.AddRange(new object[] {
@@ -2818,10 +2819,10 @@
             this.d5comboBox3.Name = "d5comboBox3";
             this.d5comboBox3.Size = new System.Drawing.Size(103, 28);
             this.d5comboBox3.TabIndex = 81;
-            this.d5comboBox3.Visible = false;
             // 
             // d5comboBox2
             // 
+            this.d5comboBox2.Enabled = false;
             this.d5comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5comboBox2.FormattingEnabled = true;
             this.d5comboBox2.Items.AddRange(new object[] {
@@ -2841,10 +2842,10 @@
             this.d5comboBox2.Name = "d5comboBox2";
             this.d5comboBox2.Size = new System.Drawing.Size(106, 28);
             this.d5comboBox2.TabIndex = 80;
-            this.d5comboBox2.Visible = false;
             // 
             // d5comboBox1
             // 
+            this.d5comboBox1.Enabled = false;
             this.d5comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5comboBox1.FormattingEnabled = true;
             this.d5comboBox1.Items.AddRange(new object[] {
@@ -2883,77 +2884,76 @@
             this.d5comboBox1.Name = "d5comboBox1";
             this.d5comboBox1.Size = new System.Drawing.Size(75, 28);
             this.d5comboBox1.TabIndex = 79;
-            this.d5comboBox1.Visible = false;
             // 
             // label69
             // 
             this.label69.AutoSize = true;
+            this.label69.Enabled = false;
             this.label69.Location = new System.Drawing.Point(12, 1990);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(142, 20);
             this.label69.TabIndex = 75;
             this.label69.Text = "Пятый должник";
-            this.label69.Visible = false;
             // 
             // label70
             // 
             this.label70.AutoSize = true;
+            this.label70.Enabled = false;
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label70.Location = new System.Drawing.Point(315, 2077);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(619, 20);
             this.label70.TabIndex = 282;
             this.label70.Text = "Отчество, взыскании задолженности с кого?  (пример: \"Геннадиевича\")";
-            this.label70.Visible = false;
             // 
             // label71
             // 
             this.label71.AutoSize = true;
+            this.label71.Enabled = false;
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label71.Location = new System.Drawing.Point(315, 2048);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(492, 20);
             this.label71.TabIndex = 281;
             this.label71.Text = "Имя, взыскании задолженности с кого? (пример: \"Игоря\")";
-            this.label71.Visible = false;
             // 
             // d5textBox3
             // 
+            this.d5textBox3.Enabled = false;
             this.d5textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5textBox3.Location = new System.Drawing.Point(12, 2077);
             this.d5textBox3.Name = "d5textBox3";
             this.d5textBox3.Size = new System.Drawing.Size(296, 26);
             this.d5textBox3.TabIndex = 78;
-            this.d5textBox3.Visible = false;
             // 
             // d5textBox2
             // 
+            this.d5textBox2.Enabled = false;
             this.d5textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5textBox2.Location = new System.Drawing.Point(12, 2045);
             this.d5textBox2.Name = "d5textBox2";
             this.d5textBox2.Size = new System.Drawing.Size(296, 26);
             this.d5textBox2.TabIndex = 77;
-            this.d5textBox2.Visible = false;
             // 
             // label72
             // 
             this.label72.AutoSize = true;
+            this.label72.Enabled = false;
             this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label72.Location = new System.Drawing.Point(315, 2016);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(564, 20);
             this.label72.TabIndex = 280;
             this.label72.Text = "Фамилия, взыскании задолженности с кого?  (пример: \"Иванова\")";
-            this.label72.Visible = false;
             // 
             // d5textBox1
             // 
+            this.d5textBox1.Enabled = false;
             this.d5textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d5textBox1.Location = new System.Drawing.Point(12, 2013);
             this.d5textBox1.Name = "d5textBox1";
             this.d5textBox1.Size = new System.Drawing.Size(296, 26);
             this.d5textBox1.TabIndex = 76;
-            this.d5textBox1.Visible = false;
             // 
             // OrdersForCommunal
             // 
