@@ -39,8 +39,11 @@ namespace Magistrate.Forms
 
             // Заполнение второй даты, выделено отдельно т.к. иначе в word-е будут лишние точки
             string dateTwo = ""; // дата вторая 
-            if(comboBox25.Text != "" && comboBox25.Text != null)
+            if (comboBox25.Text != "" && comboBox25.Text != null)
+            {
                 dateTwo = comboBox25.Text + "." + comboBox24.Text + "." + comboBox23.Text;
+                dateTwo = " по " + dateTwo + " года";
+            }
             GenerationWord.AddValueControl(ref controlArrayToString, dateTwo, "#-2"); // в ручную добавляем новый ключ
 
             // Изменение суммы задолженности по принципу 0 руб. 0 коп.

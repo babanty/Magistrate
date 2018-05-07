@@ -90,5 +90,11 @@ namespace Magistrate
             CancellationOrderKAS form2 = new CancellationOrderKAS(); // Создание соовтественующего окна
             form2.Show(); // показать окно
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            OrdersForCommunal form2 = new OrdersForCommunal(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
     }
 }
