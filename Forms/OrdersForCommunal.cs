@@ -54,7 +54,7 @@ namespace Magistrate.Forms
             {
                 severally = "солидарно";
             }
-            GenerationWord.AddValueControl(ref controlArrayToString, severally, "#-2"); // в ручную добавляем новый ключ
+            GenerationWord.AddValueControl(ref controlArrayToString, severally, "#-3"); // в ручную добавляем новый ключ
 
 
             // Заполнение второй даты, выделено отдельно т.к. иначе в word-е будут лишние точки
@@ -70,61 +70,71 @@ namespace Magistrate.Forms
             // С кого взимать задолженность, только ФИО все вместе
             string fullNames = "";
             if (numericUpDown3.Value > 0) // добавляем по одному человеку
-                fullNames += d1textBox1 + " " + d1textBox2 + " " + d1textBox3;
+                fullNames += d1textBox1.Text + " " + d1textBox2.Text + " " + d1textBox3.Text;
             if (numericUpDown3.Value > 1) // добавляем по одному человеку
-                fullNames += ", " + d2textBox1 + " " + d2textBox2 + " " + d2textBox3;
+                fullNames += ", " + d2textBox1.Text + " " + d2textBox2.Text + " " + d2textBox3.Text;
             if (numericUpDown3.Value > 2) // добавляем по одному человеку
-                fullNames += ", " + d3textBox1 + " " + d3textBox2 + " " + d3textBox3;
+                fullNames += ", " + d3textBox1.Text + " " + d3textBox2.Text + " " + d3textBox3.Text;
             if (numericUpDown3.Value > 3) // добавляем по одному человеку
-                fullNames += ", " + d4textBox1 + " " + d4textBox2 + " " + d4textBox3;
+                fullNames += ", " + d4textBox1.Text + " " + d4textBox2.Text + " " + d4textBox3.Text;
             if (numericUpDown3.Value > 4) // добавляем по одному человеку
-                fullNames += ", " + d5textBox1 + " " + d5textBox2 + " " + d5textBox3;
+                fullNames += ", " + d5textBox1.Text + " " + d5textBox2.Text + " " + d5textBox3.Text;
             GenerationWord.AddValueControl(ref controlArrayToString, fullNames, "#-5"); // в ручную добавляем новый ключ
 
 
             // С кого взимать задолженность, полные реквизиты все вместе
             string allDetailsDebtors = "";
             if (numericUpDown3.Value > 0) // добавляем по одному человеку
-                fullNames += d1textBox1 + " " + d1textBox2 + " " + d1textBox3
-                    + ", дата рождения: " + d1comboBox1 + "." + d1comboBox2 + "." + d1comboBox3 + "г.р."
-                    + ", место рождения: " + d1comboBox4 + " " + d1comboBox5
-                    + ", место регистрации: " + d1comboBox6 + ", " + d1comboBox7 + ", " + d1comboBox8
-                     + ", " + d1comboBox9 + ", " + d1comboBox10;
+                allDetailsDebtors += d1textBox1.Text + " " + d1textBox2.Text + " " + d1textBox3.Text
+                    + ", дата рождения: " + d1comboBox1.Text + "." + d1comboBox2.Text + "." + d1comboBox3.Text + " г.р."
+                    + ", место рождения: " + d1comboBox4.Text + " " + d1comboBox5.Text
+                    + ", место регистрации: " + d1comboBox6.Text + ", " + d1comboBox7.Text + ", " + d1comboBox8.Text
+                     + ", " + d1comboBox9.Text + ", " + d1comboBox10.Text;
             if (numericUpDown3.Value > 1) // добавляем по одному человеку
-                fullNames += ", " + d2textBox1 + " " + d2textBox2 + " " + d2textBox3
-                    + ", дата рождения: " + d2comboBox1 + "." + d2comboBox2 + "." + d2comboBox3 + "г.р."
-                    + ", место рождения: " + d2comboBox4 + " " + d2comboBox5
-                    + ", место регистрации: " + d2comboBox6 + ", " + d2comboBox7 + ", " + d2comboBox8
-                     + ", " + d2comboBox9 + ", " + d2comboBox10;
+                allDetailsDebtors += ", " + d2textBox1.Text + " " + d2textBox2.Text + " " + d2textBox3.Text
+                    + ", дата рождения: " + d2comboBox1.Text + "." + d2comboBox2.Text + "." + d2comboBox3.Text + " г.р."
+                    + ", место рождения: " + d2comboBox4.Text + " " + d2comboBox5.Text
+                    + ", место регистрации: " + d2comboBox6.Text + ", " + d2comboBox7.Text + ", " + d2comboBox8.Text
+                     + ", " + d2comboBox9.Text + ", " + d2comboBox10.Text;
             if (numericUpDown3.Value > 2) // добавляем по одному человеку
-                fullNames += ", " + d3textBox1 + " " + d3textBox2 + " " + d3textBox3
-                    + ", дата рождения: " + d3comboBox1 + "." + d3comboBox2 + "." + d3comboBox3 + "г.р."
-                    + ", место рождения: " + d3comboBox4 + " " + d3comboBox5
-                    + ", место регистрации: " + d3comboBox6 + ", " + d3comboBox7 + ", " + d3comboBox8
-                     + ", " + d3comboBox9 + ", " + d3comboBox10;
+                allDetailsDebtors += ", " + d3textBox1.Text + " " + d3textBox2.Text + " " + d3textBox3.Text
+                    + ", дата рождения: " + d3comboBox1.Text + "." + d3comboBox2.Text + "." + d3comboBox3.Text + " г.р."
+                    + ", место рождения: " + d3comboBox4.Text + " " + d3comboBox5.Text
+                    + ", место регистрации: " + d3comboBox6.Text + ", " + d3comboBox7.Text + ", " + d3comboBox8.Text
+                     + ", " + d3comboBox9.Text + ", " + d3comboBox10.Text;
             if (numericUpDown3.Value > 3) // добавляем по одному человеку
-                fullNames += ", " + d4textBox1 + " " + d4textBox2 + " " + d4textBox3
-                    + ", дата рождения: " + d4comboBox1 + "." + d4comboBox2 + "." + d4comboBox3 + "г.р."
-                    + ", место рождения: " + d4comboBox4 + " " + d4comboBox5
-                    + ", место регистрации: " + d4comboBox6 + ", " + d4comboBox7 + ", " + d4comboBox8
-                     + ", " + d4comboBox9 + ", " + d4comboBox10;
+                allDetailsDebtors += ", " + d4textBox1.Text + " " + d4textBox2.Text + " " + d4textBox3.Text
+                    + ", дата рождения: " + d4comboBox1.Text + "." + d4comboBox2.Text + "." + d4comboBox3.Text + " г.р."
+                    + ", место рождения: " + d4comboBox4.Text + " " + d4comboBox5.Text
+                    + ", место регистрации: " + d4comboBox6.Text + ", " + d4comboBox7.Text + ", " + d4comboBox8.Text
+                     + ", " + d4comboBox9.Text + ", " + d4comboBox10.Text;
             if (numericUpDown3.Value > 4) // добавляем по одному человеку
-                fullNames += ", " + d5textBox1 + " " + d5textBox2 + " " + d5textBox3
-                    + ", дата рождения: " + d5comboBox1 + "." + d5comboBox2 + "." + d5comboBox3 + "г.р."
-                    + ", место рождения: " + d5comboBox4 + " " + d5comboBox5
-                    + ", место регистрации: " + d5comboBox6 + ", " + d5comboBox7 + ", " + d5comboBox8
-                     + ", " + d5comboBox9 + ", " + d5comboBox10;
+                allDetailsDebtors += ", " + d5textBox1.Text + " " + d5textBox2.Text + " " + d5textBox3.Text
+                    + ", дата рождения: " + d5comboBox1.Text + "." + d5comboBox2.Text + "." + d5comboBox3.Text + " г.р."
+                    + ", место рождения: " + d5comboBox4.Text + " " + d5comboBox5.Text
+                    + ", место регистрации: " + d5comboBox6.Text + ", " + d5comboBox7.Text + ", " + d5comboBox8.Text
+                     + ", " + d5comboBox9.Text + ", " + d5comboBox10.Text;
             GenerationWord.AddValueControl(ref controlArrayToString, allDetailsDebtors, "#-6"); // в ручную добавляем новый ключ
 
 
             // В сумме руб коп
-#-7
+            string Summ = GenerationWord.IntInRubAndCop(numericUpDown1.Value);
+            if (Summ == null)
+                return;
+            GenerationWord.AddValueControl(ref controlArrayToString, Summ, "#-7"); // в ручную добавляем новый ключ
+
 
             // Пени руб коп
-#-8
+            string Duty = GenerationWord.IntInRubAndCop(numericUpDown2.Value);
+            if (Duty == null)
+                return;
+            GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-8"); // в ручную добавляем новый ключ
 
             // Всего руб коп
-#-9
+            decimal summToPay = numericUpDown1.Value + numericUpDown2.Value; // сумма к оплате
+            string ToPay = GenerationWord.IntInRubAndCop(summToPay);
+            GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-9"); // в ручную добавляем новый ключ
+
 
             // Сгенерировать ворд
             GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Приказ по комуналке", controlArrayToString);
