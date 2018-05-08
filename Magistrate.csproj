@@ -76,6 +76,12 @@
     <Compile Include="Forms\Article12.8.p1_DidNotAppear.Designer.cs">
       <DependentUpon>Article12.8.p1_DidNotAppear.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Article1215.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Article1215.Designer.cs">
+      <DependentUpon>Article1215.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Article1533.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Article12.8.p1_DidNotAppear.resx">
       <DependentUpon>Article12.8.p1_DidNotAppear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Article1215.resx">
+      <DependentUpon>Article1215.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Article1533.resx">
       <DependentUpon>Article1533.cs</DependentUpon>

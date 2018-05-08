@@ -96,5 +96,11 @@ namespace Magistrate
             OrdersForCommunal form2 = new OrdersForCommunal(); // Создание соовтественующего окна
             form2.Show(); // показать окно
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Article1215 form2 = new Article1215(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
     }
 }
