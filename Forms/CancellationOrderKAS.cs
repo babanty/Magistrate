@@ -37,12 +37,12 @@ namespace Magistrate.Forms
             List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
 
             // Если с восстановлением, то один шаблон, если нет, то другой
-            if (radioButton1.Checked)
+            if (radioButton2.Checked)
             {
                 // Сгенерировать ворд
                 GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Отмена приказа без восстановления КАС", controlArrayToString);
             }
-            else if (radioButton2.Checked)
+            else if (radioButton1.Checked)
             {
                 // Сгенерировать ворд
                 GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Отмена приказа с восстановлением КАС", controlArrayToString);

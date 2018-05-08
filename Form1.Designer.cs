@@ -99,6 +99,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button6.Location = new System.Drawing.Point(12, 12);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(208, 60);
@@ -110,7 +111,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(12, 210);
+            this.button7.Location = new System.Drawing.Point(226, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(208, 60);
             this.button7.TabIndex = 8;
@@ -143,7 +144,7 @@
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button10.Location = new System.Drawing.Point(226, 12);
+            this.button10.Location = new System.Drawing.Point(12, 210);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(208, 60);
             this.button10.TabIndex = 11;
@@ -156,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);

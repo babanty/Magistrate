@@ -56,6 +56,7 @@
             this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label31 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -143,7 +144,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(315, 215);
+            this.label28.Location = new System.Drawing.Point(315, 411);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(500, 20);
             this.label28.TabIndex = 207;
@@ -152,7 +153,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(12, 212);
+            this.textBox3.Location = new System.Drawing.Point(12, 408);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(296, 26);
             this.textBox3.TabIndex = 9;
@@ -161,7 +162,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label29.Location = new System.Drawing.Point(315, 183);
+            this.label29.Location = new System.Drawing.Point(315, 379);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(401, 20);
             this.label29.TabIndex = 206;
@@ -170,7 +171,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(12, 180);
+            this.textBox2.Location = new System.Drawing.Point(12, 376);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(296, 26);
             this.textBox2.TabIndex = 8;
@@ -179,7 +180,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(314, 151);
+            this.label5.Location = new System.Drawing.Point(314, 347);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(490, 20);
             this.label5.TabIndex = 203;
@@ -188,7 +189,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(12, 148);
+            this.textBox1.Location = new System.Drawing.Point(12, 344);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(296, 26);
             this.textBox1.TabIndex = 7;
@@ -196,7 +197,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 404);
+            this.button1.Location = new System.Drawing.Point(12, 440);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(296, 30);
             this.button1.TabIndex = 16;
@@ -215,7 +216,7 @@
             "2019",
             "2020",
             "2021"});
-            this.comboBox6.Location = new System.Drawing.Point(206, 244);
+            this.comboBox6.Location = new System.Drawing.Point(206, 148);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(102, 28);
             this.comboBox6.TabIndex = 12;
@@ -237,7 +238,7 @@
             "10",
             "11",
             "12"});
-            this.comboBox5.Location = new System.Drawing.Point(93, 244);
+            this.comboBox5.Location = new System.Drawing.Point(93, 148);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(107, 28);
             this.comboBox5.TabIndex = 11;
@@ -278,7 +279,7 @@
             "29",
             "30",
             "31"});
-            this.comboBox4.Location = new System.Drawing.Point(12, 244);
+            this.comboBox4.Location = new System.Drawing.Point(12, 148);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(75, 28);
             this.comboBox4.TabIndex = 10;
@@ -286,7 +287,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(315, 247);
+            this.label23.Location = new System.Drawing.Point(315, 151);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(338, 20);
             this.label23.TabIndex = 212;
@@ -296,7 +297,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(315, 281);
+            this.label4.Location = new System.Drawing.Point(315, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(229, 20);
             this.label4.TabIndex = 214;
@@ -305,7 +306,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(12, 278);
+            this.textBox4.Location = new System.Drawing.Point(12, 182);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(296, 26);
             this.textBox4.TabIndex = 13;
@@ -314,7 +315,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(315, 313);
+            this.label6.Location = new System.Drawing.Point(315, 217);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(238, 20);
             this.label6.TabIndex = 216;
@@ -324,7 +325,7 @@
             // 
             this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(12, 310);
+            this.comboBox7.Location = new System.Drawing.Point(12, 214);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(296, 28);
             this.comboBox7.TabIndex = 14;
@@ -421,7 +422,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 344);
+            this.radioButton1.Location = new System.Drawing.Point(12, 248);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(197, 24);
             this.radioButton1.TabIndex = 223;
@@ -432,7 +433,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 374);
+            this.radioButton2.Location = new System.Drawing.Point(12, 278);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(204, 24);
             this.radioButton2.TabIndex = 224;
@@ -440,12 +441,24 @@
             this.radioButton2.Text = "Без восстановления";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label31.Location = new System.Drawing.Point(12, 316);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(369, 25);
+            this.label31.TabIndex = 225;
+            this.label31.Text = "Привлекаемый к ответственности";
+            // 
             // CancellationOrderGPK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 503);
+            this.Controls.Add(this.label31);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label7);
@@ -512,5 +525,6 @@
         private System.Windows.Forms.ComboBox comboBox10;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label31;
     }
 }
