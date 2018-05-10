@@ -19,6 +19,14 @@ namespace Magistrate.Forms
             Db.SetPropertiesComboBox(ref comboBox7, "bank incomplete"); // Заполняем банки
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+
+            // Автозаполнение 
+            // Заполнение даты вынесения решения текущими датами
+            DateTime dateTimeNow = DateTime.Now;
+            string month = GenerationWord.MonthInString(dateTimeNow.Month); // месяц
+            string year = dateTimeNow.Year.ToString(); // год
+            comboBox9.Text = month;
+            comboBox8.Text = year;
         }
 
         // Выбранный участок, автоматически подставляет кто судья

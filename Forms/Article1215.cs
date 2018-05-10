@@ -27,6 +27,14 @@ namespace Magistrate.Forms
             comboBox24.Items.AddRange(Db.GetAllShortRequisitesGAI().ToArray()); // Получатель бабулесов, ГАИ, заполняем варианты
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm , ref comboBoxLoad);// заполнение вариантами сохранений
+
+            // Автозаполнение 
+            // Заполнение даты вынесения решения текущими датами
+            DateTime dateTimeNow = DateTime.Now;
+            string month = GenerationWord.MonthInString(dateTimeNow.Month); // месяц
+            string year = dateTimeNow.Year.ToString(); // год
+            comboBox3.Text = month;
+            comboBox4.Text = year;
         }
 
 

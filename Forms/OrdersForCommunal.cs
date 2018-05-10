@@ -20,6 +20,14 @@ namespace Magistrate.Forms
             Db.SetPropertiesComboBox(ref comboBox7, "komynalka"); // Место жителства дом
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+
+            // Автозаполнение 
+            // Заполнение даты вынесения решения текущими датами
+            DateTime dateTimeNow = DateTime.Now;
+            string month = GenerationWord.MonthInString(dateTimeNow.Month); // месяц
+            string year = dateTimeNow.Year.ToString(); // год
+            comboBox3.Text = month;
+            comboBox4.Text = year;
         }
 
         private void button1_Click(object sender, EventArgs e)

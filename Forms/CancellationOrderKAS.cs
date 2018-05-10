@@ -17,6 +17,14 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+
+            // Автозаполнение 
+            // Заполнение даты вынесения решения текущими датами
+            DateTime dateTimeNow = DateTime.Now;
+            string month = GenerationWord.MonthInString(dateTimeNow.Month); // месяц
+            string year = dateTimeNow.Year.ToString(); // год
+            comboBox9.Text = month;
+            comboBox8.Text = year;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
