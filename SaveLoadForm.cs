@@ -80,11 +80,11 @@ namespace Magistrate
         /// <param name="comboBox">Комбобокс, который необходимо заполнить</param>
         public static void SetVariantsSaveInComboBox(string nameForm, ref ComboBox comboBox)
         {
-            var getColumnsName = GetColumnsName();
-            List<string> str = new List<string>();
-            if (getColumnsName != null)
+            var getColumnsName = GetColumnsName(); // вернуть названия всех колонок
+            List<string> str = new List<string>(); // создаем локальное хранилище строк
+            if (getColumnsName != null) // если файл не пустой
             {
-                str = getColumnsName.ToList();
+                str = getColumnsName.ToList(); // заполняем локальное хранилище вариантами
             }
             else // значит нет файла save.ini
             {
@@ -93,13 +93,15 @@ namespace Magistrate
             
 
             // Распарсиваем, вынимаем только название т.к. строка приходит в виде "названиеФормы$Имя сохранения"
+            // Исключаем варианты сохранений не относящиеся к заполняемой форме
             string[] strParse;
             List<string> returnStr = new List<string>();
             foreach(string strin in str)
             {
                 strParse = strin.Split('$');
-                if (strParse != null && strParse.Length == 2)
-                    returnStr.Add(strParse[1]);
+                if (strParse != null && strParse.Length == 2) // если сохранение корректно
+                    if (strParse[0] == nameForm) // Если относится к текущей форме
+                        returnStr.Add(strParse[1]);
             }
 
             if (returnStr != null)

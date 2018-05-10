@@ -60,12 +60,19 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.buttonDeleteSave = new System.Windows.Forms.Button();
+            this.comboBoxLoad = new System.Windows.Forms.ComboBox();
+            this.textBoxForSave = new System.Windows.Forms.TextBox();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 385);
+            this.radioButton2.Location = new System.Drawing.Point(9, 30);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(204, 24);
             this.radioButton2.TabIndex = 17;
@@ -76,7 +83,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 355);
+            this.radioButton1.Location = new System.Drawing.Point(9, 0);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(197, 24);
             this.radioButton1.TabIndex = 16;
@@ -184,6 +191,8 @@
             // 
             // comboBox7
             // 
+            this.comboBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
@@ -488,6 +497,72 @@
             this.label9.TabIndex = 255;
             this.label9.Text = "2а-";
             // 
+            // buttonDeleteSave
+            // 
+            this.buttonDeleteSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDeleteSave.Location = new System.Drawing.Point(536, 615);
+            this.buttonDeleteSave.Name = "buttonDeleteSave";
+            this.buttonDeleteSave.Size = new System.Drawing.Size(74, 28);
+            this.buttonDeleteSave.TabIndex = 309;
+            this.buttonDeleteSave.Text = "Удалить";
+            this.buttonDeleteSave.UseVisualStyleBackColor = true;
+            this.buttonDeleteSave.Click += new System.EventHandler(this.buttonDeleteSave_Click);
+            // 
+            // comboBoxLoad
+            // 
+            this.comboBoxLoad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxLoad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxLoad.FormattingEnabled = true;
+            this.comboBoxLoad.Location = new System.Drawing.Point(314, 615);
+            this.comboBoxLoad.Name = "comboBoxLoad";
+            this.comboBoxLoad.Size = new System.Drawing.Size(216, 28);
+            this.comboBoxLoad.TabIndex = 308;
+            // 
+            // textBoxForSave
+            // 
+            this.textBoxForSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxForSave.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textBoxForSave.Location = new System.Drawing.Point(314, 583);
+            this.textBoxForSave.Name = "textBoxForSave";
+            this.textBoxForSave.Size = new System.Drawing.Size(296, 26);
+            this.textBoxForSave.TabIndex = 306;
+            this.textBoxForSave.Text = "имя сохранения";
+            this.textBoxForSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonLoad
+            // 
+            this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLoad.Location = new System.Drawing.Point(12, 615);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(296, 28);
+            this.buttonLoad.TabIndex = 307;
+            this.buttonLoad.Text = "Загрузить сохраненные поля";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.Location = new System.Drawing.Point(12, 583);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(296, 26);
+            this.buttonSave.TabIndex = 305;
+            this.buttonSave.Text = "Сохранить заполненные поля";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 361);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(218, 59);
+            this.groupBox1.TabIndex = 310;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // CancellationOrderKAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -495,12 +570,16 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 603);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonDeleteSave);
+            this.Controls.Add(this.comboBoxLoad);
+            this.Controls.Add(this.textBoxForSave);
+            this.Controls.Add(this.buttonLoad);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox8);
             this.Controls.Add(this.comboBox9);
@@ -531,6 +610,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CancellationOrderKAS";
             this.Text = "Отмена приказа по КАС";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -569,5 +650,11 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button buttonDeleteSave;
+        private System.Windows.Forms.ComboBox comboBoxLoad;
+        private System.Windows.Forms.TextBox textBoxForSave;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

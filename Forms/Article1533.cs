@@ -21,6 +21,8 @@ namespace Magistrate.Forms
             Db.SetPropertiesComboBox(ref comboBox13, "mesto jitelstva gorod"); // Место жителства населенный пункт
             Db.SetPropertiesComboBox(ref comboBox14, "mesto jitelstva ylitsa"); // Место жителства улица
             Db.SetPropertiesComboBox(ref comboBox15, "mesto jitelstva dom"); // Место жителства дом
+
+            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -224,6 +226,42 @@ namespace Magistrate.Forms
             }
 
             return null;
+        }
+
+        // Сохранить заполненные поля
+        string nameForm = "Article1533";
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+
+            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
+            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
+
+            // перезаполняем варианты сохранений
+            comboBoxLoad.Items.Clear(); // стираем текущие варианты
+            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+        }
+        // Загрузить сохраненные поля
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
+
+            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
+            for (int i = 0; i < controls.Count; i++)
+            {
+                Controls[i].Text = controls[i].Text;
+            }
+        }
+        // Удалить сохранение
+        private void buttonDeleteSave_Click(object sender, EventArgs e)
+        {
+            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
+
+            // перезаполняем варианты сохранений
+            comboBoxLoad.Items.Clear(); // стираем текущие варианты
+            comboBoxLoad.Text = ""; // стираем текущие варианты
+            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
         }
     }
 }

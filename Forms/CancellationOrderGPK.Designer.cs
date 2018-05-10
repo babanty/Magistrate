@@ -57,6 +57,11 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label31 = new System.Windows.Forms.Label();
+            this.buttonDeleteSave = new System.Windows.Forms.Button();
+            this.comboBoxLoad = new System.Windows.Forms.ComboBox();
+            this.textBoxForSave = new System.Windows.Forms.TextBox();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -323,6 +328,8 @@
             // 
             // comboBox7
             // 
+            this.comboBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(12, 214);
@@ -451,6 +458,61 @@
             this.label31.TabIndex = 225;
             this.label31.Text = "Привлекаемый к ответственности";
             // 
+            // buttonDeleteSave
+            // 
+            this.buttonDeleteSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDeleteSave.Location = new System.Drawing.Point(536, 508);
+            this.buttonDeleteSave.Name = "buttonDeleteSave";
+            this.buttonDeleteSave.Size = new System.Drawing.Size(74, 28);
+            this.buttonDeleteSave.TabIndex = 309;
+            this.buttonDeleteSave.Text = "Удалить";
+            this.buttonDeleteSave.UseVisualStyleBackColor = true;
+            this.buttonDeleteSave.Click += new System.EventHandler(this.buttonDeleteSave_Click);
+            // 
+            // comboBoxLoad
+            // 
+            this.comboBoxLoad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxLoad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxLoad.FormattingEnabled = true;
+            this.comboBoxLoad.Location = new System.Drawing.Point(314, 508);
+            this.comboBoxLoad.Name = "comboBoxLoad";
+            this.comboBoxLoad.Size = new System.Drawing.Size(216, 28);
+            this.comboBoxLoad.TabIndex = 308;
+            // 
+            // textBoxForSave
+            // 
+            this.textBoxForSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxForSave.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textBoxForSave.Location = new System.Drawing.Point(314, 476);
+            this.textBoxForSave.Name = "textBoxForSave";
+            this.textBoxForSave.Size = new System.Drawing.Size(296, 26);
+            this.textBoxForSave.TabIndex = 306;
+            this.textBoxForSave.Text = "имя сохранения";
+            this.textBoxForSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonLoad
+            // 
+            this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLoad.Location = new System.Drawing.Point(12, 508);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(296, 28);
+            this.buttonLoad.TabIndex = 307;
+            this.buttonLoad.Text = "Загрузить сохраненные поля";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.Location = new System.Drawing.Point(12, 476);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(296, 26);
+            this.buttonSave.TabIndex = 305;
+            this.buttonSave.Text = "Сохранить заполненные поля";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // CancellationOrderGPK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -458,6 +520,11 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 503);
+            this.Controls.Add(this.buttonDeleteSave);
+            this.Controls.Add(this.comboBoxLoad);
+            this.Controls.Add(this.textBoxForSave);
+            this.Controls.Add(this.buttonLoad);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -526,5 +593,10 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Button buttonDeleteSave;
+        private System.Windows.Forms.ComboBox comboBoxLoad;
+        private System.Windows.Forms.TextBox textBoxForSave;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.Button buttonSave;
     }
 }

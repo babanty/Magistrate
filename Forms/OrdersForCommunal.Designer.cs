@@ -183,6 +183,11 @@
             this.d5textBox2 = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
             this.d5textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonDeleteSave = new System.Windows.Forms.Button();
+            this.comboBoxLoad = new System.Windows.Forms.ComboBox();
+            this.textBoxForSave = new System.Windows.Forms.TextBox();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -554,6 +559,8 @@
             // 
             // comboBox6
             // 
+            this.comboBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
@@ -579,6 +586,8 @@
             // 
             // comboBox7
             // 
+            this.comboBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(12, 114);
@@ -813,6 +822,8 @@
             // 
             // d1comboBox10
             // 
+            this.d1comboBox10.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.d1comboBox10.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.d1comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d1comboBox10.FormattingEnabled = true;
             this.d1comboBox10.Location = new System.Drawing.Point(11, 783);
@@ -824,6 +835,8 @@
             // 
             // d1comboBox9
             // 
+            this.d1comboBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.d1comboBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.d1comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d1comboBox9.FormattingEnabled = true;
             this.d1comboBox9.Location = new System.Drawing.Point(11, 749);
@@ -835,6 +848,8 @@
             // 
             // d1comboBox8
             // 
+            this.d1comboBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.d1comboBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.d1comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d1comboBox8.FormattingEnabled = true;
             this.d1comboBox8.Location = new System.Drawing.Point(11, 711);
@@ -846,6 +861,8 @@
             // 
             // d1comboBox7
             // 
+            this.d1comboBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.d1comboBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.d1comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d1comboBox7.FormattingEnabled = true;
             this.d1comboBox7.Items.AddRange(new object[] {
@@ -913,7 +930,7 @@
             "Ростовская область",
             "Рязанская область",
             "Самарская область",
-            "Санкт-Петербург",
+            "Санкт-Петербург г.",
             "Саратовская область",
             "Сахалинская область",
             "Свердловская область",
@@ -934,7 +951,9 @@
             "Чувашская Республика - Чувашия",
             "Чукотский автономный округ",
             "Ямало-Ненецкий автономный округ",
-            "Ярославская область"});
+            "Ярославская область",
+            "Москва г.",
+            "г. Санкт-Петербург"});
             this.d1comboBox7.Location = new System.Drawing.Point(11, 677);
             this.d1comboBox7.Name = "d1comboBox7";
             this.d1comboBox7.Size = new System.Drawing.Size(296, 28);
@@ -966,6 +985,8 @@
             // 
             // d1comboBox5
             // 
+            this.d1comboBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.d1comboBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.d1comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d1comboBox5.FormattingEnabled = true;
             this.d1comboBox5.Location = new System.Drawing.Point(11, 609);
@@ -976,6 +997,8 @@
             // 
             // d1comboBox4
             // 
+            this.d1comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.d1comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.d1comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.d1comboBox4.FormattingEnabled = true;
             this.d1comboBox4.Items.AddRange(new object[] {
@@ -2955,6 +2978,61 @@
             this.d5textBox1.Size = new System.Drawing.Size(296, 26);
             this.d5textBox1.TabIndex = 76;
             // 
+            // buttonDeleteSave
+            // 
+            this.buttonDeleteSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDeleteSave.Location = new System.Drawing.Point(837, 338);
+            this.buttonDeleteSave.Name = "buttonDeleteSave";
+            this.buttonDeleteSave.Size = new System.Drawing.Size(74, 28);
+            this.buttonDeleteSave.TabIndex = 309;
+            this.buttonDeleteSave.Text = "Удалить";
+            this.buttonDeleteSave.UseVisualStyleBackColor = true;
+            this.buttonDeleteSave.Click += new System.EventHandler(this.buttonDeleteSave_Click);
+            // 
+            // comboBoxLoad
+            // 
+            this.comboBoxLoad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxLoad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxLoad.FormattingEnabled = true;
+            this.comboBoxLoad.Location = new System.Drawing.Point(615, 338);
+            this.comboBoxLoad.Name = "comboBoxLoad";
+            this.comboBoxLoad.Size = new System.Drawing.Size(216, 28);
+            this.comboBoxLoad.TabIndex = 308;
+            // 
+            // textBoxForSave
+            // 
+            this.textBoxForSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxForSave.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textBoxForSave.Location = new System.Drawing.Point(615, 306);
+            this.textBoxForSave.Name = "textBoxForSave";
+            this.textBoxForSave.Size = new System.Drawing.Size(296, 26);
+            this.textBoxForSave.TabIndex = 306;
+            this.textBoxForSave.Text = "имя сохранения";
+            this.textBoxForSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonLoad
+            // 
+            this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLoad.Location = new System.Drawing.Point(313, 338);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(296, 28);
+            this.buttonLoad.TabIndex = 307;
+            this.buttonLoad.Text = "Загрузить сохраненные поля";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.Location = new System.Drawing.Point(313, 306);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(296, 26);
+            this.buttonSave.TabIndex = 305;
+            this.buttonSave.Text = "Сохранить заполненные поля";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // OrdersForCommunal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -2962,6 +3040,11 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.buttonDeleteSave);
+            this.Controls.Add(this.comboBoxLoad);
+            this.Controls.Add(this.textBoxForSave);
+            this.Controls.Add(this.buttonLoad);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label61);
             this.Controls.Add(this.label62);
             this.Controls.Add(this.label63);
@@ -3285,5 +3368,10 @@
         private System.Windows.Forms.TextBox d5textBox2;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.TextBox d5textBox1;
+        private System.Windows.Forms.Button buttonDeleteSave;
+        private System.Windows.Forms.ComboBox comboBoxLoad;
+        private System.Windows.Forms.TextBox textBoxForSave;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.Button buttonSave;
     }
 }
