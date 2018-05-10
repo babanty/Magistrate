@@ -109,6 +109,10 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -439,7 +443,7 @@
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(296, 28);
             this.comboBox13.TabIndex = 23;
-            this.comboBox13.Text = "г.Сергиев Посад";
+            this.comboBox13.Text = "г. Сергиев Посад";
             // 
             // comboBox12
             // 
@@ -567,7 +571,7 @@
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(296, 28);
             this.comboBox10.TabIndex = 20;
-            this.comboBox10.Text = "г.Сергиев Посад Московской области";
+            this.comboBox10.Text = "г. Сергиев Посад Московской области";
             // 
             // comboBox9
             // 
@@ -802,7 +806,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 1427);
+            this.button1.Location = new System.Drawing.Point(12, 1453);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(296, 30);
             this.button1.TabIndex = 242;
@@ -826,6 +830,7 @@
             this.comboBox16.FormattingEnabled = true;
             this.comboBox16.Items.AddRange(new object[] {
             "не работающего",
+            "не работающей",
             "неизвестно",
             "место работы: "});
             this.comboBox16.Location = new System.Drawing.Point(12, 737);
@@ -1112,6 +1117,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(296, 26);
             this.textBox8.TabIndex = 37;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox12
             // 
@@ -1149,9 +1155,10 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox1.Location = new System.Drawing.Point(13, 806);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(141, 24);
+            this.checkBox1.Size = new System.Drawing.Size(153, 24);
             this.checkBox1.TabIndex = 27;
             this.checkBox1.Text = "В суд явился";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -1193,11 +1200,12 @@
             this.comboBox24.Name = "comboBox24";
             this.comboBox24.Size = new System.Drawing.Size(296, 28);
             this.comboBox24.TabIndex = 39;
+            this.comboBox24.SelectedIndexChanged += new System.EventHandler(this.comboBox24_SelectedIndexChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(12, 1221);
+            this.checkBox2.Location = new System.Drawing.Point(12, 1247);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(677, 24);
             this.checkBox2.TabIndex = 271;
@@ -1208,7 +1216,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(12, 1251);
+            this.checkBox3.Location = new System.Drawing.Point(12, 1277);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(672, 24);
             this.checkBox3.TabIndex = 272;
@@ -1219,7 +1227,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(12, 1281);
+            this.checkBox4.Location = new System.Drawing.Point(12, 1307);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(555, 24);
             this.checkBox4.TabIndex = 273;
@@ -1231,7 +1239,7 @@
             // 
             this.textBox13.Enabled = false;
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox13.Location = new System.Drawing.Point(12, 1311);
+            this.textBox13.Location = new System.Drawing.Point(12, 1337);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1243,7 +1251,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label32.Location = new System.Drawing.Point(8, 1198);
+            this.label32.Location = new System.Drawing.Point(8, 1224);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(289, 20);
             this.label32.TabIndex = 275;
@@ -1251,7 +1259,7 @@
             // 
             // label33
             // 
-            this.label33.Location = new System.Drawing.Point(315, 1311);
+            this.label33.Location = new System.Drawing.Point(315, 1337);
             this.label33.MaximumSize = new System.Drawing.Size(500, 100);
             this.label33.MinimumSize = new System.Drawing.Size(300, 100);
             this.label33.Name = "label33";
@@ -1293,6 +1301,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label34.Location = new System.Drawing.Point(315, 1198);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(147, 20);
+            this.label34.TabIndex = 281;
+            this.label34.Text = "УИН получателя";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox14.Location = new System.Drawing.Point(12, 1195);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(296, 26);
+            this.textBox14.TabIndex = 280;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(12, 1489);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(296, 30);
+            this.button2.TabIndex = 282;
+            this.button2.Text = "Сохранить заполненные поля";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(12, 1525);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(296, 30);
+            this.button3.TabIndex = 283;
+            this.button3.Text = "Загрузить сохраненные поля";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Article1215
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -1300,6 +1348,10 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.textBox14);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label32);
@@ -1380,7 +1432,7 @@
             this.Controls.Add(this.comboBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Article1215";
             this.Text = "Article1215";
             this.groupBox1.ResumeLayout(false);
@@ -1472,5 +1524,9 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

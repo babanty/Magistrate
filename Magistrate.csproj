@@ -112,6 +112,12 @@
     <Compile Include="Forms\CreditOrder.Designer.cs">
       <DependentUpon>CreditOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NewGAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewGAI.Designer.cs">
+      <DependentUpon>NewGAI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\OrdersForCommunal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreditOrder.resx">
       <DependentUpon>CreditOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewGAI.resx">
+      <DependentUpon>NewGAI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrdersForCommunal.resx">
       <DependentUpon>OrdersForCommunal.cs</DependentUpon>

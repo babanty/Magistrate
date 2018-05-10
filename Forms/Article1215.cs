@@ -23,7 +23,8 @@ namespace Magistrate.Forms
             Db.SetPropertiesComboBox(ref comboBox15, "mesto jitelstva dom"); // Место жителства дом
             Db.SetPropertiesComboBox(ref comboBox22, "auto brands"); // Марка авто
             Db.SetPropertiesComboBox(ref comboBox23, "Route"); // Трасса
-            Db.SetPropertiesComboBox(ref comboBox24, "Details of GAI"); // Получатель бабулесов
+
+            comboBox24.Items.AddRange(Db.GetAllShortRequisitesGAI().ToArray()); // Получатель бабулесов, ГАИ, заполняем варианты
 
         }
 
@@ -148,6 +149,31 @@ namespace Magistrate.Forms
             Db.SetPropertiesComboBox(ref comboBox23, "Route"); // Место жителства населенный пункт
         }
 
+
+        // Набивает УИН получателя для продолжения
+        private void comboBox24_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string yin = ""; // Статичная часть УИНа
+            Db.GetRequisitesGAI(comboBox24.Text, out string requisitesGAI, out yin); // Заполняем переменные с реквизитами
+
+            // меняем текст в лэйбле
+            if (yin == null)
+            {
+                label34.Text = "УИН получателя, получатель не опознан";
+            }else
+            {
+                label34.Text = "УИН получателя, продолжить: " + yin;
+            }
+        }
+
+
+        // Гос рег знак заглавные буквы
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            textBox8.Text = textBox8.Text.ToUpper();
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
@@ -189,9 +215,16 @@ namespace Magistrate.Forms
             GenerationWord.AddValueControl(ref controlArrayToString, addressViolation, "#-5"); // в ручную добавляем новый ключ
 
 
+            // Получатель и УИН
+            string requisitesGAI = ""; // полные реквзииты ГАИ
+            Db.GetRequisitesGAI(comboBox24.Text, out requisitesGAI, out string standartYIN); // Заполняем переменные с реквизитами
+            requisitesGAI += textBox14.Text; // Добавляем оставшийся УИН
+            GenerationWord.AddValueControl(ref controlArrayToString, requisitesGAI, "#-6"); // в ручную добавляем новый ключ
+
+
 
             // Если пол мужской, то один шаблон, если женский, то другой
-            if (checkBox1.Checked)
+            if (radioButton1.Checked)
             {
                 // Сгенерировать ворд
                 GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "ст 12.15 Муж", controlArrayToString);
@@ -230,6 +263,39 @@ namespace Magistrate.Forms
                     "рассмотреть дело в его отсутствие.";
 
             return null;
+        }
+
+
+        // Сохранить заполненные поля
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+
+            GenerationWord.SaveForm("Article1215", controlArrayToString);
+        }
+        // Загрузить сохраненные поля
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string column = "Article1215";
+
+            Ini ini = new Ini("SaveForm");
+
+            string text = ""; // текст для формы
+            string tabIndex = ""; // индекс в ini-файле
+            foreach (Control control in Controls)
+            {
+                // Делаем правильный индекс - ключ для ini файла
+                tabIndex = control.TabIndex.ToString();
+                if (control.TabIndex < 10)
+                    tabIndex = "0" + tabIndex;
+                tabIndex = "#" + tabIndex;
+
+                // Считываем и заполняем
+                text = ini.IniReadKey(column, tabIndex);
+                if(text != null && text != "")
+                    control.Text = text;
+            }
         }
     }
 }

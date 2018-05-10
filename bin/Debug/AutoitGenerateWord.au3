@@ -14,15 +14,15 @@ $oDoc = _Word_DocOpen($oWord,$PathToSampleFile , Default, Default, True) ; от�
 For $i = 1 to UBound($ValueKey) - 1 ; Перебор всех ключей в секции с ключами-значениями для word
 
 	if(StringLen($ValueKey[$i][1]) > 200) Then ; Если больше 200 символов,то надо делить на две вставки
-		$numCycle = Ceiling ( (StringLen($ValueKey[$i][1])/200) ); Число циклов, каждые 200 символов +1 цикл
+		$numCycle = Ceiling ( (StringLen($ValueKey[$i][1])/150) ); Число циклов, каждые 200 символов +1 цикл
 		Local $localStr = ""
 		_Word_DocFindReplace($oDoc, $ValueKey[$i][0], "#[strDiv]") ; замена ключей на значения
 		For $ii = 0 To $numCycle - 1 ; разбить на строчки
 			if($ii = $numCycle - 1) Then ; если это последний цикл
-				$localStr = StringMid ( $ValueKey[$i][1], 1 + 200 * $ii ) ; вырезаем строчку 200 символов
+				$localStr = StringMid ( $ValueKey[$i][1], 1 + 150 * $ii ) ; вырезаем строчку 200 символов
 				_Word_DocFindReplace($oDoc, "#[strDiv]", $localStr) ; замена ключей на значения
 			Else
-				$localStr = StringMid ( $ValueKey[$i][1], 1 + 200 * $ii, 200 + 200 * $ii ) ; вырезаем строчку 200 символов
+				$localStr = StringMid ( $ValueKey[$i][1], 1 + 150 * $ii, 150 ) ; вырезаем строчку 200 символов
 				$localStr = $localStr & "#[strDiv]" ; добавление заменяемой строчки
 				_Word_DocFindReplace($oDoc, "#[strDiv]", $localStr) ; замена ключей на значения
 			EndIf

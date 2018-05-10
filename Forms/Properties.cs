@@ -64,5 +64,14 @@ namespace Magistrate.Forms
             listBox1.Items.Clear(); // обнуляет лист бокс
             listBox1.Items.AddRange(array.ToArray()); // закидываем варианты в листбокс
         }
+
+
+        // Открыть окно Добавить / изменить рекв. получатель ГАИ
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NewGAI form2 = new NewGAI(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+            this.Close(); // закрыть настройки
+        }
     }
 }
