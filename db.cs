@@ -94,9 +94,16 @@ namespace Magistrate
         /// <param name="column">Название колоки в БД</param>
         public static void SetPropertiesComboBox(ref ComboBox comboBox, string column)
         {
-            string[] str = GetColumn(column).ToArray();
+            List<string> str = GetColumn(column);
+
             if (str != null)
-                comboBox.Items.AddRange(str);
+            {
+                // сортировка по возрастанию, LINQ запрос
+                var sortedStr = from s in str // определяем каждый объект из teams как t
+                                orderby s  // упорядочиваем по возрастанию
+                                select s; // выбираем объект
+                comboBox.Items.AddRange(sortedStr.ToArray());
+            }
         }
 
 
