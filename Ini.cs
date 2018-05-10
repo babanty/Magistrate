@@ -97,12 +97,19 @@ namespace Magistrate
         /// <returns></returns>
         public string[] GetSectionNames()
         {
-            FileStream file1 = new FileStream(PathAndName, FileMode.Open); //создаем файловый поток
-            StreamReader reader = new StreamReader(file1); // создаем «потоковый читатель» и связываем его с файловым потоком 
-            string fileInString = reader.ReadToEnd(); //вытащить весь текст из файла
-            reader.Close(); //закрываем поток
-            string[] returnArr = ВернутьВсеСовпаденияМеждуДвумяСтроками(fileInString, "[", "]").ToArray();
-            return returnArr; // распарсить текст
+            try
+            {
+                FileStream file1 = new FileStream(PathAndName, FileMode.Open); //создаем файловый поток
+                StreamReader reader = new StreamReader(file1, Encoding.GetEncoding(1251)); // создаем «потоковый читатель» и связываем его с файловым потоком 
+                string fileInString = reader.ReadToEnd(); //вытащить весь текст из файла
+                reader.Close(); //закрываем поток
+                string[] returnArr = ВернутьВсеСовпаденияМеждуДвумяСтроками(fileInString, "[", "]").ToArray();
+                return returnArr; // распарсить текст
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>

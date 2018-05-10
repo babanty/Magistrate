@@ -99,7 +99,7 @@ namespace Magistrate
             if (str != null)
             {
                 // сортировка по возрастанию, LINQ запрос
-                var sortedStr = from s in str // определяем каждый объект из teams как t
+                var sortedStr = from s in str // определяем каждый объект из str как s
                                 orderby s  // упорядочиваем по возрастанию
                                 select s; // выбираем объект
                 comboBox.Items.AddRange(sortedStr.ToArray());

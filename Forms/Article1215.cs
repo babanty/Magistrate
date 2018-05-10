@@ -26,6 +26,7 @@ namespace Magistrate.Forms
 
             comboBox24.Items.AddRange(Db.GetAllShortRequisitesGAI().ToArray()); // Получатель бабулесов, ГАИ, заполняем варианты
 
+            SaveLoadForm.SetVariantsSaveInComboBox(nameForm , ref comboBoxLoad);// заполнение вариантами сохранений
         }
 
 
@@ -267,35 +268,39 @@ namespace Magistrate.Forms
 
 
         // Сохранить заполненные поля
-        private void button2_Click(object sender, EventArgs e)
+        string nameForm = "Article1215";
+        private void buttonSave_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
             List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
 
-            GenerationWord.SaveForm("Article1215", controlArrayToString);
+            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
+            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
+
+            // перезаполняем варианты сохранений
+            comboBoxLoad.Items.Clear(); // стираем текущие варианты
+            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
         }
         // Загрузить сохраненные поля
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonLoad_Click(object sender, EventArgs e)
         {
-            string column = "Article1215";
+            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
 
-            Ini ini = new Ini("SaveForm");
-
-            string text = ""; // текст для формы
-            string tabIndex = ""; // индекс в ini-файле
-            foreach (Control control in Controls)
+            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
+            for (int i = 0; i < controls.Count; i++)
             {
-                // Делаем правильный индекс - ключ для ini файла
-                tabIndex = control.TabIndex.ToString();
-                if (control.TabIndex < 10)
-                    tabIndex = "0" + tabIndex;
-                tabIndex = "#" + tabIndex;
-
-                // Считываем и заполняем
-                text = ini.IniReadKey(column, tabIndex);
-                if(text != null && text != "")
-                    control.Text = text;
+                Controls[i].Text = controls[i].Text;
             }
+        }
+        // Удалить сохранение
+        private void buttonDeleteSave_Click(object sender, EventArgs e)
+        {
+            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
+
+            // перезаполняем варианты сохранений
+            comboBoxLoad.Items.Clear(); // стираем текущие варианты
+            comboBoxLoad.Text = ""; // стираем текущие варианты
+            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
         }
     }
 }

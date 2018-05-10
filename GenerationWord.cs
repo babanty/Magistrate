@@ -58,69 +58,6 @@ namespace Magistrate
             // на шаблон word файла и в сам ini файл
         }
 
-        #region Загрузка и сохранение формы
-        /// <summary>
-        /// Сохранить значение полей ввода
-        /// </summary>
-        /// <param name="nameForm">Назавине формы</param>
-        /// <param name="Params">Массив строк впихиваемых вместо ключей</param>
-        public static void SaveForm(string nameForm, List<ValueControl> Params)
-        {
-            string nameSectionValue = nameForm; // Название секции в ini файле, в которой будут храниться ini-ключи-значения полей ввода
-
-            Ini ini = new Ini("SaveForm"); // Создаем инифайл для последующе обработки autoit exe-шником
-
-            try // Очищаем старую информацию в секциях ini 
-            {
-                ini.DeleteSection(nameSectionValue);
-            }
-            catch { }
-
-            try
-            {
-                foreach (ValueControl Param in Params) //Записывает все ключи полей
-                    ini.Write(nameSectionValue, Param.Key, Param.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ПРОБЛЕМА С ЗАПИСЬЮ КЛЮЧЕЙ В ИНИ-ФАЙЛ ДЛЯ СКРИПТА AUTOIT: " + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public static void LoadForm(string nameForm, ref Control.ControlCollection controls)
-        {
-            MessageBox.Show("Внутри этого метода написано какой код вставлять в конпку " +
-                "загрузить т.к. Сontrols защищено от ref");
-
-            /*
-            string column = nameForm;
-
-            Ini ini = new Ini("SaveForm");
-
-            foreach (Control control in controls)
-            {
-                control.Text = ini.IniReadKey(column, control.TabIndex.ToString());
-            }*/
-        }
-
-        /// <summary>
-        /// Возвращает контрол по его таб индексу
-        /// </summary>
-        /// <param name="controls">коллекция контролов</param>
-        /// <param name="tabIndex">номер таб индекса</param>
-        /// <returns></returns>
-        private static Control GetControlAtTabIndex(Control.ControlCollection controls, int tabIndex)
-        {
-            foreach (Control control in controls)
-            {
-                if (control.TabIndex == tabIndex)
-                    return control;
-            }
-
-            return null;
-        }
-        #endregion Загрузка и сохранение формы
-
 
         /// <summary>
         /// Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 

@@ -111,8 +111,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.textBoxForSave = new System.Windows.Forms.TextBox();
+            this.comboBoxLoad = new System.Windows.Forms.ComboBox();
+            this.buttonDeleteSave = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -447,6 +450,8 @@
             // 
             // comboBox12
             // 
+            this.comboBox12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox12.FormattingEnabled = true;
             this.comboBox12.Items.AddRange(new object[] {
@@ -1065,6 +1070,8 @@
             // 
             // textBox7
             // 
+            this.textBox7.AccessibleDescription = "";
+            this.textBox7.AccessibleName = "";
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox7.Location = new System.Drawing.Point(12, 965);
             this.textBox7.Name = "textBox7";
@@ -1319,27 +1326,60 @@
             this.textBox14.Size = new System.Drawing.Size(296, 26);
             this.textBox14.TabIndex = 280;
             // 
-            // button2
+            // buttonSave
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(12, 1489);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(296, 30);
-            this.button2.TabIndex = 282;
-            this.button2.Text = "Сохранить заполненные поля";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.Location = new System.Drawing.Point(12, 1493);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(296, 26);
+            this.buttonSave.TabIndex = 300;
+            this.buttonSave.Text = "Сохранить заполненные поля";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // button3
+            // buttonLoad
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(12, 1525);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(296, 30);
-            this.button3.TabIndex = 283;
-            this.button3.Text = "Загрузить сохраненные поля";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLoad.Location = new System.Drawing.Point(12, 1525);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(296, 28);
+            this.buttonLoad.TabIndex = 302;
+            this.buttonLoad.Text = "Загрузить сохраненные поля";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
+            // 
+            // textBoxForSave
+            // 
+            this.textBoxForSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxForSave.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textBoxForSave.Location = new System.Drawing.Point(314, 1493);
+            this.textBoxForSave.Name = "textBoxForSave";
+            this.textBoxForSave.Size = new System.Drawing.Size(296, 26);
+            this.textBoxForSave.TabIndex = 301;
+            this.textBoxForSave.Text = "имя сохранения";
+            this.textBoxForSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // comboBoxLoad
+            // 
+            this.comboBoxLoad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxLoad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxLoad.FormattingEnabled = true;
+            this.comboBoxLoad.Location = new System.Drawing.Point(314, 1525);
+            this.comboBoxLoad.Name = "comboBoxLoad";
+            this.comboBoxLoad.Size = new System.Drawing.Size(216, 28);
+            this.comboBoxLoad.TabIndex = 303;
+            // 
+            // buttonDeleteSave
+            // 
+            this.buttonDeleteSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDeleteSave.Location = new System.Drawing.Point(536, 1525);
+            this.buttonDeleteSave.Name = "buttonDeleteSave";
+            this.buttonDeleteSave.Size = new System.Drawing.Size(74, 28);
+            this.buttonDeleteSave.TabIndex = 304;
+            this.buttonDeleteSave.Text = "Удалить";
+            this.buttonDeleteSave.UseVisualStyleBackColor = true;
+            this.buttonDeleteSave.Click += new System.EventHandler(this.buttonDeleteSave_Click);
             // 
             // Article1215
             // 
@@ -1347,9 +1387,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(982, 653);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1003, 653);
+            this.Controls.Add(this.buttonDeleteSave);
+            this.Controls.Add(this.comboBoxLoad);
+            this.Controls.Add(this.textBoxForSave);
+            this.Controls.Add(this.buttonLoad);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.textBox14);
             this.Controls.Add(this.groupBox1);
@@ -1434,7 +1477,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Article1215";
-            this.Text = "Article1215";
+            this.Text = "ст. 12.15";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -1526,7 +1569,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonLoad;
+        private System.Windows.Forms.TextBox textBoxForSave;
+        private System.Windows.Forms.ComboBox comboBoxLoad;
+        private System.Windows.Forms.Button buttonDeleteSave;
     }
 }
