@@ -16,17 +16,17 @@ namespace Magistrate.Forms
         {
             InitializeComponent();
 
-            Db.SetPropertiesComboBox(ref comboBox10, "mesto rogdeniya"); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBox13, "mesto jitelstva gorod"); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBox14, "mesto jitelstva ylitsa"); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBox15, "mesto jitelstva dom"); // Место жителства дом
+            Db.SetPropertiesComboBox(ref comboBox10, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref comboBox13, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBox14, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBox15, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
 
             // Автозаполнение 
             // Заполнение даты вынесения решения текущими датами
             DateTime dateTimeNow = DateTime.Now;
-            string month = GenerationWord.MonthInString(dateTimeNow.Month); // месяц
+            string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
             comboBox3.Text = month;
             comboBox4.Text = year;
@@ -60,22 +60,22 @@ namespace Magistrate.Forms
             {
                 taxesString += checkBox1.Text; // указываем налог
                 taxesString += " за " + comboBox26.Text + " год"; // добавляем год
-                taxesString += " в сумме " + GenerationWord.IntInRubAndCop(numericUpDown1.Value); // сумму налога переводим в 0 руб. 0 коп
-                taxesString += ", пени в сумме " + GenerationWord.IntInRubAndCop(numericUpDown2.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
+                taxesString += " в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown1.Value); // сумму налога переводим в 0 руб. 0 коп
+                taxesString += ", пени в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown2.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
             }
             if (checkBox2.Checked) // Транспортный налог
             {
                 taxesString += checkBox2.Text; // указываем налог
                 taxesString += " за " + comboBox17.Text + " год"; // добавляем год
-                taxesString += " в сумме " + GenerationWord.IntInRubAndCop(numericUpDown3.Value); // сумму налога переводим в 0 руб. 0 коп
-                taxesString += ", пени в сумме " + GenerationWord.IntInRubAndCop(numericUpDown4.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
+                taxesString += " в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown3.Value); // сумму налога переводим в 0 руб. 0 коп
+                taxesString += ", пени в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown4.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
             }
             if (checkBox3.Checked) // Транспортный налог
             {
                 taxesString += checkBox3.Text; // указываем налог
                 taxesString += " за " + comboBox18.Text + " год"; // добавляем год
-                taxesString += " в сумме " + GenerationWord.IntInRubAndCop(numericUpDown5.Value); // сумму налога переводим в 0 руб. 0 коп
-                taxesString += ", пени в сумме " + GenerationWord.IntInRubAndCop(numericUpDown6.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
+                taxesString += " в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown5.Value); // сумму налога переводим в 0 руб. 0 коп
+                taxesString += ", пени в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown6.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
             }
             GenerationWord.AddValueControl(ref controlArrayToString, taxesString, "#-1"); // в ручную добавляем новый ключ
 
@@ -96,7 +96,7 @@ namespace Magistrate.Forms
                 MessageBox.Show("Все поля с цифрами задолженности и пени должны быть заполнены хотя бы нулем");
                 return;
             }
-            string taxesSumToString = GenerationWord.IntInRubAndCop(taxesSum); // сумму налога переводим в 0 руб. 0 коп
+            string taxesSumToString = HandlerTextControls.IntInRubAndCop(taxesSum); // сумму налога переводим в 0 руб. 0 коп
             taxesSumToString = "всего " + taxesSumToString;
             GenerationWord.AddValueControl(ref controlArrayToString, taxesSumToString, "#-2"); // в ручную добавляем новый ключ
 
@@ -133,7 +133,7 @@ namespace Magistrate.Forms
                 MessageBox.Show("Ну удалось посчитать госпошлину из-за некорректных данных");
                 return;
             }
-            dutyToString = GenerationWord.IntInRubAndCop(Math.Round(duty, 2)); // сумму пошлины переводим в 0 руб. 0 коп
+            dutyToString = HandlerTextControls.IntInRubAndCop(Math.Round(duty, 2)); // сумму пошлины переводим в 0 руб. 0 коп
             GenerationWord.AddValueControl(ref controlArrayToString, dutyToString, "#-3"); // в ручную добавляем новый ключ
 
 

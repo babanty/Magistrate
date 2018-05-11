@@ -17,14 +17,19 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // добавление организаций
-            Db.SetPropertiesComboBox(ref comboBox7, "komynalka"); // Место жителства дом
+            Db.SetPropertiesComboBox(ref comboBox7, NamePropertiesForComboBox.КомуналкаСокращенная); // Место жителства дом
+
+            Db.SetPropertiesComboBox(ref d1comboBox5, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref d1comboBox8, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref d1comboBox9, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            Db.SetPropertiesComboBox(ref d1comboBox10, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
 
             // Автозаполнение 
             // Заполнение даты вынесения решения текущими датами
             DateTime dateTimeNow = DateTime.Now;
-            string month = GenerationWord.MonthInString(dateTimeNow.Month); // месяц
+            string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
             comboBox3.Text = month;
             comboBox4.Text = year;
@@ -128,21 +133,21 @@ namespace Magistrate.Forms
 
 
             // В сумме руб коп
-            string Summ = GenerationWord.IntInRubAndCop(numericUpDown1.Value);
+            string Summ = HandlerTextControls.IntInRubAndCop(numericUpDown1.Value);
             if (Summ == null)
                 return;
             GenerationWord.AddValueControl(ref controlArrayToString, Summ, "#-7"); // в ручную добавляем новый ключ
 
 
             // Пени руб коп
-            string Duty = GenerationWord.IntInRubAndCop(numericUpDown2.Value);
+            string Duty = HandlerTextControls.IntInRubAndCop(numericUpDown2.Value);
             if (Duty == null)
                 return;
             GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-8"); // в ручную добавляем новый ключ
 
             // Всего руб коп
             decimal summToPay = numericUpDown1.Value + numericUpDown2.Value; // сумма к оплате
-            string ToPay = GenerationWord.IntInRubAndCop(summToPay);
+            string ToPay = HandlerTextControls.IntInRubAndCop(summToPay);
             GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-9"); // в ручную добавляем новый ключ
 
 

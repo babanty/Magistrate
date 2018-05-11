@@ -131,6 +131,7 @@
       <DependentUpon>Properties.cs</DependentUpon>
     </Compile>
     <Compile Include="GenerationWord.cs" />
+    <Compile Include="HandlerTextControls.cs" />
     <Compile Include="Ini.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="PropertiesMyApp.cs" />

@@ -17,12 +17,12 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            Db.SetPropertiesComboBox(ref comboBox10, "mesto rogdeniya"); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBox13, "mesto jitelstva gorod"); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBox14, "mesto jitelstva ylitsa"); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBox15, "mesto jitelstva dom"); // Место жителства дом
-            Db.SetPropertiesComboBox(ref comboBox22, "auto brands"); // Марка авто
-            Db.SetPropertiesComboBox(ref comboBox23, "Route"); // Трасса
+            Db.SetPropertiesComboBox(ref comboBox10, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref comboBox13, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBox14, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBox15, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            Db.SetPropertiesComboBox(ref comboBox22, NamePropertiesForComboBox.МаркаАвто); // Марка авто
+            Db.SetPropertiesComboBox(ref comboBox23, NamePropertiesForComboBox.НазваниеТрассы); // Трасса
 
             comboBox24.Items.AddRange(Db.GetAllShortRequisitesGAI().ToArray()); // Получатель бабулесов, ГАИ, заполняем варианты
 
@@ -31,7 +31,7 @@ namespace Magistrate.Forms
             // Автозаполнение 
             // Заполнение даты вынесения решения текущими датами
             DateTime dateTimeNow = DateTime.Now;
-            string month = GenerationWord.MonthInString(dateTimeNow.Month); // месяц
+            string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
             comboBox3.Text = month;
             comboBox4.Text = year;
@@ -146,7 +146,7 @@ namespace Magistrate.Forms
             label22.Text = "Город, есть выбор";
 
             comboBox23.Items.Clear(); // очищаем варианты для городов
-            Db.SetPropertiesComboBox(ref comboBox23, "mesto pravonarushenia"); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBox23, NamePropertiesForComboBox.МестоПравонарушения); // Место жителства населенный пункт
         }
 
         // Нажали "на трассе"
@@ -158,7 +158,7 @@ namespace Magistrate.Forms
             label22.Text = "Трасса, на которой было правонарушение";
 
             comboBox23.Items.Clear(); // очищаем варианты для городов
-            Db.SetPropertiesComboBox(ref comboBox23, "Route"); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBox23, NamePropertiesForComboBox.НазваниеТрассы); // Место жителства населенный пункт
         }
 
 

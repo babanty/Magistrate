@@ -16,18 +16,18 @@ namespace Magistrate.Forms
         {
             InitializeComponent();
 
-            Db.SetPropertiesComboBox(ref comboBox17, "bank incomplete"); // Заполняем банки
-            Db.SetPropertiesComboBox(ref comboBox10, "mesto rogdeniya"); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBox13, "mesto jitelstva gorod"); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBox14, "mesto jitelstva ylitsa"); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBox15, "mesto jitelstva dom"); // Место жителства дом
+            Db.SetPropertiesComboBox(ref comboBox17, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
+            Db.SetPropertiesComboBox(ref comboBox10, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref comboBox13, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBox14, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBox15, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
 
             // Автозаполнение 
             // Заполнение даты вынесения решения текущими датами
             DateTime dateTimeNow = DateTime.Now;
-            string month = GenerationWord.MonthInString(dateTimeNow.Month); // месяц
+            string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
             comboBox3.Text = month;
             comboBox4.Text = year;
@@ -60,14 +60,14 @@ namespace Magistrate.Forms
 
 
             // Изменение суммы задолженности по принципу 0 руб. 0 коп.
-            string Debt = GenerationWord.IntInRubAndCop(textBox5.Text);
+            string Debt = HandlerTextControls.IntInRubAndCop(textBox5.Text);
             if (Debt == null)
                 return;
             GenerationWord.AddValueControl(ref controlArrayToString, Debt, "#-3"); // в ручную добавляем новый ключ
 
 
             // Изменение суммы государственной пошлины по принципу 0 руб. 0 коп.
-            string Duty = GenerationWord.IntInRubAndCop(textBox6.Text);
+            string Duty = HandlerTextControls.IntInRubAndCop(textBox6.Text);
             if (Duty == null)
                 return;
             GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-4"); // в ручную добавляем новый ключ
@@ -75,7 +75,7 @@ namespace Magistrate.Forms
 
             // Суммирование взыскиваемой суммы
             double summToPay = double.Parse(textBox5.Text) + double.Parse(textBox6.Text); // сумма к оплате
-            string ToPay = GenerationWord.IntInRubAndCop(summToPay);
+            string ToPay = HandlerTextControls.IntInRubAndCop(summToPay);
             GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-5"); // в ручную добавляем новый ключ
 
 

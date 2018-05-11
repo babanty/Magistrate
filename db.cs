@@ -21,7 +21,9 @@ namespace Magistrate
         /// <returns></returns>
         public static List<string> GetColumn(string nameColumn)
         {
-            
+            if (nameColumn == null)
+                return null;
+
             string[,] iniReadSection = db.IniReadSection(nameColumn);
             if (iniReadSection == null)
                 return null;
@@ -92,8 +94,11 @@ namespace Magistrate
         /// </summary>
         /// <param name="comboBox">Комбобокс который надо заполнить</param>
         /// <param name="column">Название колоки в БД</param>
-        public static void SetPropertiesComboBox(ref ComboBox comboBox, string column)
+        public static void SetPropertiesComboBox(ref ComboBox comboBox, NamePropertiesForComboBox nameProperties)
         {
+            // Расшифровываем значение настройки
+            string column = DecodingEnumPropertiesForComboBox(nameProperties);
+
             List<string> str = GetColumn(column);
 
             if (str != null)
@@ -104,6 +109,56 @@ namespace Magistrate
                                 select s; // выбираем объект
                 comboBox.Items.AddRange(sortedStr.ToArray());
             }
+        }
+
+        /// <summary>
+        /// Расшифровывает что значат типы настроек для комбобокса, возвращает строку,
+        /// по которой обращаться в БД, нарпимер "Банк полные реквизиты" или null
+        /// </summary>
+        /// <param name="nameProperties"></param>
+        /// <returns>возвращает строку, по которой обращаться в БД, нарпимер "Банк полные реквизиты" или null</returns>
+        private static string DecodingEnumPropertiesForComboBox(NamePropertiesForComboBox nameProperties)
+        {
+            string returnStr = null;
+
+            switch (nameProperties)
+            {
+                case NamePropertiesForComboBox.МестоРождения:
+                    returnStr = "Место Рождения";
+                    break;
+                case NamePropertiesForComboBox.МестоЖительстваГород:
+                    returnStr = "Место жительства город";
+                    break;
+                case NamePropertiesForComboBox.МестоЖительстваУлица:
+                    returnStr = "Место жительства улица";
+                    break;
+                case NamePropertiesForComboBox.МестоЖительстваДом:
+                    returnStr = "Место жительства дом";
+                    break;
+                case NamePropertiesForComboBox.МаркаАвто:
+                    returnStr = "Марка авто";
+                    break;
+                case NamePropertiesForComboBox.НазваниеТрассы:
+                    returnStr = "Название трассы";
+                    break;
+                case NamePropertiesForComboBox.МестоПравонарушения:
+                    returnStr = "Место правонарушения";
+                    break;
+                case NamePropertiesForComboBox.БанкСокращенный:
+                    returnStr = "Банк только название";
+                    break;
+                case NamePropertiesForComboBox.БанкПолный:
+                    returnStr = "Банк полные реквизиты";
+                    break;
+                case NamePropertiesForComboBox.КомуналкаСокращенная:
+                    returnStr = "Комуналка организации только название";
+                    break;
+                case NamePropertiesForComboBox.КомуналкаПолная:
+                    returnStr = "Комуналка организации полные реквизиты";
+                    break;
+            }
+
+            return returnStr;
         }
 
 
@@ -181,5 +236,22 @@ namespace Magistrate
             return processed;
         }
         #endregion ГАИ
+    }
+
+
+    /// <summary> Имя массива вариантов для полей-контролов (comboBox) </summary>
+    public enum NamePropertiesForComboBox
+    {
+        МестоРождения,
+        МестоЖительстваГород,
+        МестоЖительстваУлица,
+        МестоЖительстваДом,
+        МаркаАвто,
+        НазваниеТрассы,
+        МестоПравонарушения,
+        БанкСокращенный,
+        БанкПолный,
+        КомуналкаСокращенная,
+        КомуналкаПолная
     }
 }
