@@ -106,6 +106,10 @@
             this.textBoxForSave = new System.Windows.Forms.TextBox();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.textBoxClipPutName = new System.Windows.Forms.TextBox();
+            this.LabelClipPutNum = new System.Windows.Forms.Label();
+            this.LabelClipPutDescript = new System.Windows.Forms.Label();
+            this.textBoxClipPutNum = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label16
@@ -206,7 +210,7 @@
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(296, 28);
             this.comboBox15.TabIndex = 21;
-            this.comboBox15.Text = "д.4";
+            this.comboBox15.Text = "д. ";
             // 
             // comboBox14
             // 
@@ -230,7 +234,7 @@
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(296, 28);
             this.comboBox13.TabIndex = 19;
-            this.comboBox13.Text = "г.Сергиев Посад";
+            this.comboBox13.Text = "г. Сергиев Посад";
             // 
             // comboBox12
             // 
@@ -364,7 +368,7 @@
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(296, 28);
             this.comboBox10.TabIndex = 16;
-            this.comboBox10.Text = "г.Сергиев Посад Московской области";
+            this.comboBox10.Text = "г. Сергиев Посад Московской области";
             // 
             // comboBox9
             // 
@@ -769,7 +773,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(13, 1275);
+            this.button1.Location = new System.Drawing.Point(13, 1307);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(296, 30);
             this.button1.TabIndex = 38;
@@ -1261,7 +1265,7 @@
             // buttonDeleteSave
             // 
             this.buttonDeleteSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDeleteSave.Location = new System.Drawing.Point(537, 1343);
+            this.buttonDeleteSave.Location = new System.Drawing.Point(537, 1375);
             this.buttonDeleteSave.Name = "buttonDeleteSave";
             this.buttonDeleteSave.Size = new System.Drawing.Size(74, 28);
             this.buttonDeleteSave.TabIndex = 309;
@@ -1275,7 +1279,7 @@
             this.comboBoxLoad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxLoad.FormattingEnabled = true;
-            this.comboBoxLoad.Location = new System.Drawing.Point(315, 1343);
+            this.comboBoxLoad.Location = new System.Drawing.Point(315, 1375);
             this.comboBoxLoad.Name = "comboBoxLoad";
             this.comboBoxLoad.Size = new System.Drawing.Size(216, 28);
             this.comboBoxLoad.TabIndex = 308;
@@ -1284,7 +1288,7 @@
             // 
             this.textBoxForSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxForSave.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBoxForSave.Location = new System.Drawing.Point(315, 1311);
+            this.textBoxForSave.Location = new System.Drawing.Point(315, 1343);
             this.textBoxForSave.Name = "textBoxForSave";
             this.textBoxForSave.Size = new System.Drawing.Size(296, 26);
             this.textBoxForSave.TabIndex = 306;
@@ -1294,7 +1298,7 @@
             // buttonLoad
             // 
             this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLoad.Location = new System.Drawing.Point(13, 1343);
+            this.buttonLoad.Location = new System.Drawing.Point(13, 1375);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(296, 28);
             this.buttonLoad.TabIndex = 307;
@@ -1305,13 +1309,48 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(13, 1311);
+            this.buttonSave.Location = new System.Drawing.Point(13, 1343);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(296, 26);
             this.buttonSave.TabIndex = 305;
             this.buttonSave.Text = "Сохранить заполненные поля";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // textBoxClipPutName
+            // 
+            this.textBoxClipPutName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxClipPutName.Location = new System.Drawing.Point(145, 1275);
+            this.textBoxClipPutName.Name = "textBoxClipPutName";
+            this.textBoxClipPutName.Size = new System.Drawing.Size(164, 26);
+            this.textBoxClipPutName.TabIndex = 313;
+            // 
+            // LabelClipPutNum
+            // 
+            this.LabelClipPutNum.AutoSize = true;
+            this.LabelClipPutNum.Location = new System.Drawing.Point(9, 1278);
+            this.LabelClipPutNum.Name = "LabelClipPutNum";
+            this.LabelClipPutNum.Size = new System.Drawing.Size(25, 20);
+            this.LabelClipPutNum.TabIndex = 312;
+            this.LabelClipPutNum.Text = "№";
+            // 
+            // LabelClipPutDescript
+            // 
+            this.LabelClipPutDescript.AutoSize = true;
+            this.LabelClipPutDescript.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelClipPutDescript.Location = new System.Drawing.Point(315, 1278);
+            this.LabelClipPutDescript.Name = "LabelClipPutDescript";
+            this.LabelClipPutDescript.Size = new System.Drawing.Size(547, 20);
+            this.LabelClipPutDescript.TabIndex = 311;
+            this.LabelClipPutDescript.Text = "Имя файла, запишется в буфер обмена (можно вставить ctrl+v)";
+            // 
+            // textBoxClipPutNum
+            // 
+            this.textBoxClipPutNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxClipPutNum.Location = new System.Drawing.Point(40, 1275);
+            this.textBoxClipPutNum.Name = "textBoxClipPutNum";
+            this.textBoxClipPutNum.Size = new System.Drawing.Size(99, 26);
+            this.textBoxClipPutNum.TabIndex = 310;
             // 
             // Article1533
             // 
@@ -1320,6 +1359,10 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.textBoxClipPutName);
+            this.Controls.Add(this.LabelClipPutNum);
+            this.Controls.Add(this.LabelClipPutDescript);
+            this.Controls.Add(this.textBoxClipPutNum);
             this.Controls.Add(this.buttonDeleteSave);
             this.Controls.Add(this.comboBoxLoad);
             this.Controls.Add(this.textBoxForSave);
@@ -1486,5 +1529,9 @@
         private System.Windows.Forms.TextBox textBoxForSave;
         private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.TextBox textBoxClipPutName;
+        private System.Windows.Forms.Label LabelClipPutNum;
+        private System.Windows.Forms.Label LabelClipPutDescript;
+        private System.Windows.Forms.TextBox textBoxClipPutNum;
     }
 }

@@ -38,6 +38,7 @@ namespace Magistrate.Forms
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
             List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
 
+
             // Заполняем полные реквизиты банка
             string bankRequisites = GetBank(comboBox17.Text); // находим полные реквизиты банка
             if(bankRequisites == null) // банк не опознан
@@ -46,6 +47,7 @@ namespace Magistrate.Forms
                 bankRequisites = "";
             }
             GenerationWord.AddValueControl(ref controlArrayToString, bankRequisites, "#-1"); // в ручную добавляем новый ключ
+
 
             // Заполнение второй даты, выделено отдельно т.к. иначе в word-е будут лишние точки
             string dateTwo = ""; // дата вторая 
@@ -56,11 +58,13 @@ namespace Magistrate.Forms
             }
             GenerationWord.AddValueControl(ref controlArrayToString, dateTwo, "#-2"); // в ручную добавляем новый ключ
 
+
             // Изменение суммы задолженности по принципу 0 руб. 0 коп.
             string Debt = GenerationWord.IntInRubAndCop(textBox5.Text);
             if (Debt == null)
                 return;
             GenerationWord.AddValueControl(ref controlArrayToString, Debt, "#-3"); // в ручную добавляем новый ключ
+
 
             // Изменение суммы государственной пошлины по принципу 0 руб. 0 коп.
             string Duty = GenerationWord.IntInRubAndCop(textBox6.Text);
@@ -68,10 +72,16 @@ namespace Magistrate.Forms
                 return;
             GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-4"); // в ручную добавляем новый ключ
             
+
             // Суммирование взыскиваемой суммы
             double summToPay = double.Parse(textBox5.Text) + double.Parse(textBox6.Text); // сумма к оплате
             string ToPay = GenerationWord.IntInRubAndCop(summToPay);
             GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-5"); // в ручную добавляем новый ключ
+
+
+            // Вставляем название в буфер обмена
+            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
+
 
             // Сгенерировать ворд
             GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Приказ по банку или фин орг", controlArrayToString);
@@ -103,6 +113,14 @@ namespace Magistrate.Forms
 
 
         }
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            // название при сохранении
+            textBoxClipPutName.Text = textBox1.Text;
+        }
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -153,6 +171,7 @@ namespace Magistrate.Forms
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
         }
         #endregion Сохранение
+
 
     }
 }

@@ -44,11 +44,21 @@ namespace Magistrate.Forms
             }
         }
 
+
+        // название при сохранении
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBoxClipPutName.Text = textBox1.Text;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
             List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-            
+
+            // Вставляем название в буфер обмена
+            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
+
             // Если с восстановлением, то один шаблон, если нет, то другой
             if (radioButton2.Checked)
             {
@@ -101,5 +111,6 @@ namespace Magistrate.Forms
             comboBoxLoad.Text = ""; // стираем текущие варианты
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
         }
+
     }
 }

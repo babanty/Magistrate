@@ -37,6 +37,7 @@ namespace Magistrate.Forms
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
             List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
 
+
             // Если ИНН не равен 12 символам
             if (textBox7.Text != null && textBox7.Text.Length != 12) 
             {
@@ -44,12 +45,14 @@ namespace Magistrate.Forms
                 return;
             }
 
+
             // Если не чекнули ни один налог
             if(checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == false)
             {
                 MessageBox.Show("Не поставили галку не над одиним налогом");
                 return;
             }
+
 
             // Обработка налогов, составление строки
             string taxesString = "";
@@ -76,6 +79,7 @@ namespace Magistrate.Forms
             }
             GenerationWord.AddValueControl(ref controlArrayToString, taxesString, "#-1"); // в ручную добавляем новый ключ
 
+
             // Подсчет суммы всех налогов
             decimal taxesSum = 0m; // Сумма всех налогов
             try
@@ -95,6 +99,7 @@ namespace Magistrate.Forms
             string taxesSumToString = GenerationWord.IntInRubAndCop(taxesSum); // сумму налога переводим в 0 руб. 0 коп
             taxesSumToString = "всего " + taxesSumToString;
             GenerationWord.AddValueControl(ref controlArrayToString, taxesSumToString, "#-2"); // в ручную добавляем новый ключ
+
 
             //Считаем гос.пошлину
             decimal duty = 0m;
@@ -131,6 +136,11 @@ namespace Magistrate.Forms
             dutyToString = GenerationWord.IntInRubAndCop(Math.Round(duty, 2)); // сумму пошлины переводим в 0 руб. 0 коп
             GenerationWord.AddValueControl(ref controlArrayToString, dutyToString, "#-3"); // в ручную добавляем новый ключ
 
+
+            // Вставляем название в буфер обмена
+            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
+
+
             // Сгенерировать ворд
             GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Взыскание налога", controlArrayToString);
         }
@@ -138,6 +148,9 @@ namespace Magistrate.Forms
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             textBox6.Text = textBox1.Text;
+
+            // название при сохранении
+            textBoxClipPutName.Text = textBox1.Text;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

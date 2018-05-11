@@ -44,6 +44,9 @@ namespace Magistrate.Forms
         {
             textBox1.Text = textBox5.Text;
             textBox6.Text = textBox5.Text;
+
+            // название при сохранении
+            textBoxClipPutName.Text = textBox5.Text;
         }
 
 
@@ -231,6 +234,8 @@ namespace Magistrate.Forms
             GenerationWord.AddValueControl(ref controlArrayToString, requisitesGAI, "#-6"); // в ручную добавляем новый ключ
 
 
+            // Вставляем название в буфер обмена
+            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
 
             // Если пол мужской, то один шаблон, если женский, то другой
             if (radioButton1.Checked)

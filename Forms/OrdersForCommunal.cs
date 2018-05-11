@@ -146,6 +146,10 @@ namespace Magistrate.Forms
             GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-9"); // в ручную добавляем новый ключ
 
 
+            // Вставляем название в буфер обмена
+            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
+
+
             // Сгенерировать ворд
             GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Приказ по комуналке", controlArrayToString);
         }
@@ -208,6 +212,9 @@ namespace Magistrate.Forms
             d3textBox1.Text = d1textBox1.Text;
             d4textBox1.Text = d1textBox1.Text;
             d5textBox1.Text = d1textBox1.Text;
+
+            // название при сохранении
+            textBoxClipPutName.Text = d1textBox1.Text;
         }
 
         // Имя автоперенос
