@@ -81,9 +81,7 @@
             this.comboBox24 = new System.Windows.Forms.ComboBox();
             this.comboBox25 = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.comboBox26 = new System.Windows.Forms.ComboBox();
             this.comboBox27 = new System.Windows.Forms.ComboBox();
@@ -99,6 +97,10 @@
             this.LabelClipPutNum = new System.Windows.Forms.Label();
             this.LabelClipPutDescript = new System.Windows.Forms.Label();
             this.textBoxClipPutNum = new System.Windows.Forms.TextBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -714,7 +716,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 920);
+            this.button1.Location = new System.Drawing.Point(11, 907);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(297, 30);
             this.button1.TabIndex = 35;
@@ -1000,37 +1002,21 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(317, 824);
+            this.label21.Location = new System.Drawing.Point(12, 821);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(646, 20);
+            this.label21.Size = new System.Drawing.Size(144, 20);
             this.label21.TabIndex = 128;
-            this.label21.Text = "Сумма задолженности, например: 5000,01  Важно, в конце копейки 2 цифры";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(12, 824);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(296, 26);
-            this.textBox5.TabIndex = 33;
+            this.label21.Text = "Задолженность";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(317, 856);
+            this.label22.Location = new System.Drawing.Point(166, 821);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(649, 20);
+            this.label22.Size = new System.Drawing.Size(119, 20);
             this.label22.TabIndex = 130;
-            this.label22.Text = "Расходы по гос. пошлине, например: 72,08  Важно, в конце копейки 2 цифры";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(12, 856);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(296, 26);
-            this.textBox6.TabIndex = 34;
+            this.label22.Text = "гос. пошлина";
             // 
             // label23
             // 
@@ -1148,7 +1134,7 @@
             // buttonDeleteSave
             // 
             this.buttonDeleteSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDeleteSave.Location = new System.Drawing.Point(534, 988);
+            this.buttonDeleteSave.Location = new System.Drawing.Point(536, 975);
             this.buttonDeleteSave.Name = "buttonDeleteSave";
             this.buttonDeleteSave.Size = new System.Drawing.Size(74, 28);
             this.buttonDeleteSave.TabIndex = 309;
@@ -1162,7 +1148,7 @@
             this.comboBoxLoad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxLoad.FormattingEnabled = true;
-            this.comboBoxLoad.Location = new System.Drawing.Point(312, 988);
+            this.comboBoxLoad.Location = new System.Drawing.Point(314, 975);
             this.comboBoxLoad.Name = "comboBoxLoad";
             this.comboBoxLoad.Size = new System.Drawing.Size(216, 28);
             this.comboBoxLoad.TabIndex = 308;
@@ -1171,7 +1157,7 @@
             // 
             this.textBoxForSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxForSave.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBoxForSave.Location = new System.Drawing.Point(312, 956);
+            this.textBoxForSave.Location = new System.Drawing.Point(314, 943);
             this.textBoxForSave.Name = "textBoxForSave";
             this.textBoxForSave.Size = new System.Drawing.Size(296, 26);
             this.textBoxForSave.TabIndex = 306;
@@ -1181,7 +1167,7 @@
             // buttonLoad
             // 
             this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLoad.Location = new System.Drawing.Point(10, 988);
+            this.buttonLoad.Location = new System.Drawing.Point(12, 975);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(296, 28);
             this.buttonLoad.TabIndex = 307;
@@ -1192,7 +1178,7 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(10, 956);
+            this.buttonSave.Location = new System.Drawing.Point(12, 943);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(296, 26);
             this.buttonSave.TabIndex = 305;
@@ -1203,7 +1189,7 @@
             // textBoxClipPutName
             // 
             this.textBoxClipPutName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxClipPutName.Location = new System.Drawing.Point(143, 888);
+            this.textBoxClipPutName.Location = new System.Drawing.Point(142, 875);
             this.textBoxClipPutName.Name = "textBoxClipPutName";
             this.textBoxClipPutName.Size = new System.Drawing.Size(164, 26);
             this.textBoxClipPutName.TabIndex = 313;
@@ -1211,9 +1197,10 @@
             // LabelClipPutNum
             // 
             this.LabelClipPutNum.AutoSize = true;
-            this.LabelClipPutNum.Location = new System.Drawing.Point(7, 891);
+            this.LabelClipPutNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelClipPutNum.Location = new System.Drawing.Point(6, 878);
             this.LabelClipPutNum.Name = "LabelClipPutNum";
-            this.LabelClipPutNum.Size = new System.Drawing.Size(22, 17);
+            this.LabelClipPutNum.Size = new System.Drawing.Size(25, 20);
             this.LabelClipPutNum.TabIndex = 312;
             this.LabelClipPutNum.Text = "№";
             // 
@@ -1221,7 +1208,7 @@
             // 
             this.LabelClipPutDescript.AutoSize = true;
             this.LabelClipPutDescript.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelClipPutDescript.Location = new System.Drawing.Point(313, 891);
+            this.LabelClipPutDescript.Location = new System.Drawing.Point(312, 878);
             this.LabelClipPutDescript.Name = "LabelClipPutDescript";
             this.LabelClipPutDescript.Size = new System.Drawing.Size(547, 20);
             this.LabelClipPutDescript.TabIndex = 311;
@@ -1230,10 +1217,39 @@
             // textBoxClipPutNum
             // 
             this.textBoxClipPutNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxClipPutNum.Location = new System.Drawing.Point(38, 888);
+            this.textBoxClipPutNum.Location = new System.Drawing.Point(37, 875);
             this.textBoxClipPutNum.Name = "textBoxClipPutNum";
             this.textBoxClipPutNum.Size = new System.Drawing.Size(99, 26);
             this.textBoxClipPutNum.TabIndex = 310;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.DecimalPlaces = 2;
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDown2.Location = new System.Drawing.Point(170, 844);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            4000000,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(136, 27);
+            this.numericUpDown2.TabIndex = 315;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.DecimalPlaces = 2;
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDown1.Location = new System.Drawing.Point(11, 844);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            4000000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(153, 27);
+            this.numericUpDown1.TabIndex = 314;
+            this.numericUpDown1.ThousandsSeparator = true;
             // 
             // CreditOrder
             // 
@@ -1242,6 +1258,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.textBoxClipPutName);
             this.Controls.Add(this.LabelClipPutNum);
             this.Controls.Add(this.LabelClipPutDescript);
@@ -1258,9 +1276,7 @@
             this.Controls.Add(this.comboBox27);
             this.Controls.Add(this.comboBox28);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.comboBox23);
             this.Controls.Add(this.comboBox24);
@@ -1315,6 +1331,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreditOrder";
             this.Text = "Банки, микрофинансовые организации";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1374,9 +1392,7 @@
         private System.Windows.Forms.ComboBox comboBox24;
         private System.Windows.Forms.ComboBox comboBox25;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox comboBox26;
         private System.Windows.Forms.ComboBox comboBox27;
@@ -1392,5 +1408,7 @@
         private System.Windows.Forms.Label LabelClipPutNum;
         private System.Windows.Forms.Label LabelClipPutDescript;
         private System.Windows.Forms.TextBox textBoxClipPutNum;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

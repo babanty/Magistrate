@@ -42,12 +42,7 @@ namespace Magistrate.Forms
 
 
             //Явился или не явился
-            string resultAppeared = AppearedOrNot(comboBox23.Text);
-            if(resultAppeared == null)
-            {
-                MessageBox.Show("Не правильно задано значение Явился или не Явился, следует выбирать из предлаемых вариантов");
-                return;
-            }
+            string resultAppeared = AppearedOrNot(checkBoxAppearedOrNot.Checked, radioButtonSexWoomen.Checked);
             GenerationWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); // в ручную добавляем новый ключ
 
             // Делаем инициалы ФИО
@@ -57,7 +52,7 @@ namespace Magistrate.Forms
             GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
 
             // Указание если явился ,кроме признания своей вины,
-            if (comboBox23.Text == "Явился" || comboBox23.Text == "Явилась")
+            if (checkBoxAppearedOrNot.Checked)
             {
                 GenerationWord.AddValueControl(ref controlArrayToString, ", кроме признания своей вины,", "#-3"); // в ручную добавляем новый ключ
             } else
@@ -71,19 +66,14 @@ namespace Magistrate.Forms
 
 
             // Если пол мужской, то один шаблон, если женский, то другой
-            if (comboBox22.Text == "Муж")
+            if (radioButtonSexMen.Checked)
             {
                 // Сгенерировать ворд
                 GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "ст 15.33 Муж", controlArrayToString);
-            }
-            else if (comboBox22.Text == "Жен")
+            }else
             {
                 // Сгенерировать ворд
                 GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "ст 15.33 Жен", controlArrayToString);
-            }
-            else
-            {
-                MessageBox.Show("Не правильно выбран пол, выберите либо \"Муж\" либо \"Жен\"");
             }
         }
 
@@ -140,19 +130,6 @@ namespace Magistrate.Forms
             placeOrganization += comboBox15.Text; // Дом, квартира и т.д., например: д.20, кв 60
 
             textBox4.Text = placeOrganization;
-        }
-
-        // указание явился или не явился, зависит от пола
-        private void comboBox22_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox22.Text == "Муж")
-            {
-                comboBox23.Text = "Явился";
-            }
-            else if (comboBox22.Text == "Жен")
-            {
-                comboBox23.Text = "Явилась";
-            }
         }
 
         // автоматическое заполнение следющего месяца 
@@ -214,33 +191,28 @@ namespace Magistrate.Forms
         /// <summary>
         /// метод возвращающий формулировку в случае если явился или не явился или null если не правильные параметры
         /// </summary>
-        /// <param name="value">Тут может быть значение только "Явился","Не явился","Явилась", "Не явилась"</param>
+        /// <param name="appeared">Если явился, то true</param>
+        /// <param name="ItIsWoomen">Если женщина, то true</param>
         /// <returns>метод возвращающий формулировку в случае если явился или не явился или null</returns>
-        private string AppearedOrNot(string value)
+        private string AppearedOrNot(bool appeared, bool ItIsWoomen)
         {
-            if(value == "Явился")
-            {
-                return "явился, вину признал";
-            }else if(value == "Не явился")
-            {
-                return "не явился, извещен надлежащим образом о времени и месте судебного " +
-                    "заседания. Учитывая, что имеются данные о его надлежащем извещении о месте и " +
-                    "времени рассмотрения дела и от него не поступило ходатайство об отложении " +
-                    "рассмотрения дела, суд на основании ч.2 ст.25.1 КоАП РФ считает возможным " +
-                    "рассмотреть дело в его отсутствие.";
-            }
-            else if (value == "Явилась")
-            {
+            if (appeared && ItIsWoomen)
                 return "явилась, вину признала";
-            }
-            else if (value == "Не явилась")
-            {
+            if (appeared == false && ItIsWoomen)
                 return "не явилась, извещена надлежащим образом о времени и месте судебного " +
                     "заседания. Учитывая, что имеются данные о ее надлежащем извещении о месте и " +
                     "времени рассмотрения дела и от нее не поступило ходатайство об отложении " +
                     "рассмотрения дела, суд на основании ч.2 ст.25.1 КоАП РФ считает возможным " +
                     "рассмотреть дело в ее отсутствие.";
-            }
+
+            if (appeared && ItIsWoomen == false)
+                return "явился, вину признал";
+            if (appeared == false && ItIsWoomen == false)
+                return "не явился, извещен надлежащим образом о времени и месте судебного " +
+                    "заседания. Учитывая, что имеются данные о его надлежащем извещении о месте и " +
+                    "времени рассмотрения дела и от него не поступило ходатайство об отложении " +
+                    "рассмотрения дела, суд на основании ч.2 ст.25.1 КоАП РФ считает возможным " +
+                    "рассмотреть дело в его отсутствие.";
 
             return null;
         }

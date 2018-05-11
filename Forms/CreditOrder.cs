@@ -60,21 +60,21 @@ namespace Magistrate.Forms
 
 
             // Изменение суммы задолженности по принципу 0 руб. 0 коп.
-            string Debt = HandlerTextControls.IntInRubAndCop(textBox5.Text);
+            string Debt = HandlerTextControls.IntInRubAndCop(numericUpDown1.Value);
             if (Debt == null)
                 return;
             GenerationWord.AddValueControl(ref controlArrayToString, Debt, "#-3"); // в ручную добавляем новый ключ
 
 
             // Изменение суммы государственной пошлины по принципу 0 руб. 0 коп.
-            string Duty = HandlerTextControls.IntInRubAndCop(textBox6.Text);
+            string Duty = HandlerTextControls.IntInRubAndCop(numericUpDown2.Value);
             if (Duty == null)
                 return;
             GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-4"); // в ручную добавляем новый ключ
-            
+
 
             // Суммирование взыскиваемой суммы
-            double summToPay = double.Parse(textBox5.Text) + double.Parse(textBox6.Text); // сумма к оплате
+            decimal summToPay = numericUpDown1.Value + numericUpDown2.Value; // сумма к оплате
             string ToPay = HandlerTextControls.IntInRubAndCop(summToPay);
             GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-5"); // в ручную добавляем новый ключ
 

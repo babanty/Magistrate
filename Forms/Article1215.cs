@@ -193,9 +193,9 @@ namespace Magistrate.Forms
 
 
             //Явился или не явился
-            string resultAppeared = AppearedOrNot(checkBox1.Checked, radioButton2.Checked);
+            string resultAppeared = AppearedOrNot(checkBoxAppearedOrNot.Checked, radioButtonSexWoomen.Checked);
             GenerationWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); // в ручную добавляем новый ключ
-            if (checkBox1.Checked)
+            if (checkBoxAppearedOrNot.Checked)
             {
                 resultAppeared = "Смягчающим ответственность обстоятельством суд считает признание им своей вины." +
                     " Отягчающих обстоятельств судом не установлено.";
@@ -238,7 +238,7 @@ namespace Magistrate.Forms
             Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
 
             // Если пол мужской, то один шаблон, если женский, то другой
-            if (radioButton1.Checked)
+            if (radioButtonSexMen.Checked)
             {
                 // Сгенерировать ворд
                 GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "ст 12.15 Муж", controlArrayToString);

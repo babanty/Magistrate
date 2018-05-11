@@ -66,6 +66,8 @@
             this.LabelClipPutNum = new System.Windows.Forms.Label();
             this.LabelClipPutDescript = new System.Windows.Forms.Label();
             this.textBoxClipPutNum = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -434,7 +436,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 248);
+            this.radioButton1.Location = new System.Drawing.Point(10, 0);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(197, 24);
             this.radioButton1.TabIndex = 223;
@@ -445,7 +447,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 278);
+            this.radioButton2.Location = new System.Drawing.Point(10, 30);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(204, 24);
             this.radioButton2.TabIndex = 224;
@@ -553,6 +555,17 @@
             this.textBoxClipPutNum.Size = new System.Drawing.Size(99, 26);
             this.textBoxClipPutNum.TabIndex = 310;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 248);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(223, 66);
+            this.groupBox1.TabIndex = 314;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // CancellationOrderGPK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -560,6 +573,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 503);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxClipPutName);
             this.Controls.Add(this.LabelClipPutNum);
             this.Controls.Add(this.LabelClipPutDescript);
@@ -570,8 +584,6 @@
             this.Controls.Add(this.buttonLoad);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox8);
             this.Controls.Add(this.comboBox9);
@@ -602,6 +614,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CancellationOrderGPK";
             this.Text = "Отмена приказа по ГПК";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,5 +660,6 @@
         private System.Windows.Forms.Label LabelClipPutNum;
         private System.Windows.Forms.Label LabelClipPutDescript;
         private System.Windows.Forms.TextBox textBoxClipPutNum;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
