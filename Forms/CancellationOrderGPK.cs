@@ -76,6 +76,7 @@ namespace Magistrate.Forms
             }
         }
 
+        #region Сохранение
         // Сохранить заполненные поля
         string nameForm = "CancellationOrderGPK";
         private void buttonSave_Click(object sender, EventArgs e)
@@ -111,6 +112,7 @@ namespace Magistrate.Forms
             comboBoxLoad.Text = ""; // стираем текущие варианты
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
         }
+        #endregion Сохранение
 
     }
 }

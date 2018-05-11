@@ -332,7 +332,7 @@ namespace Magistrate.Forms
 
 
             // Проверяем сходится ли название с полными реквизитами
-            List<string> allRec = Db.GetColumn("komynalka complete");
+            List<string> allRec = Db.GetColumn(NamePropertiesForComboBox.КомуналкаПолная);
             if (allRec == null)
                 return null;
 

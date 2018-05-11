@@ -210,7 +210,8 @@
             this.comboBox15.Location = new System.Drawing.Point(13, 738);
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.Size = new System.Drawing.Size(296, 28);
-            this.comboBox15.TabIndex = 21;
+            this.comboBox15.TabIndex = 44;
+            this.comboBox15.Tag = "21";
             this.comboBox15.Text = "д. ";
             // 
             // comboBox14
@@ -222,7 +223,8 @@
             this.comboBox14.Location = new System.Drawing.Point(13, 704);
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.Size = new System.Drawing.Size(296, 28);
-            this.comboBox14.TabIndex = 20;
+            this.comboBox14.TabIndex = 43;
+            this.comboBox14.Tag = "20";
             this.comboBox14.Text = "пр. Красной Армии";
             // 
             // comboBox13
@@ -234,7 +236,8 @@
             this.comboBox13.Location = new System.Drawing.Point(12, 670);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(296, 28);
-            this.comboBox13.TabIndex = 19;
+            this.comboBox13.TabIndex = 42;
+            this.comboBox13.Tag = "19";
             this.comboBox13.Text = "г. Сергиев Посад";
             // 
             // comboBox12
@@ -335,7 +338,8 @@
             this.comboBox12.Location = new System.Drawing.Point(12, 636);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(296, 28);
-            this.comboBox12.TabIndex = 18;
+            this.comboBox12.TabIndex = 41;
+            this.comboBox12.Tag = "18";
             this.comboBox12.Text = "Московская область";
             // 
             // comboBox11
@@ -356,7 +360,8 @@
             this.comboBox11.Location = new System.Drawing.Point(12, 602);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(296, 28);
-            this.comboBox11.TabIndex = 17;
+            this.comboBox11.TabIndex = 40;
+            this.comboBox11.Tag = "17";
             this.comboBox11.Text = "РФ";
             // 
             // comboBox10
@@ -368,7 +373,8 @@
             this.comboBox10.Location = new System.Drawing.Point(12, 568);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(296, 28);
-            this.comboBox10.TabIndex = 16;
+            this.comboBox10.TabIndex = 30;
+            this.comboBox10.Tag = "16";
             this.comboBox10.Text = "г. Сергиев Посад Московской области";
             // 
             // comboBox9
@@ -389,7 +395,8 @@
             this.comboBox9.Location = new System.Drawing.Point(12, 534);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(296, 28);
-            this.comboBox9.TabIndex = 15;
+            this.comboBox9.TabIndex = 29;
+            this.comboBox9.Tag = "15";
             this.comboBox9.Text = "РФ";
             // 
             // comboBox6
@@ -442,7 +449,8 @@
             this.comboBox6.Location = new System.Drawing.Point(205, 500);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(103, 28);
-            this.comboBox6.TabIndex = 14;
+            this.comboBox6.TabIndex = 28;
+            this.comboBox6.Tag = "14";
             // 
             // comboBox7
             // 
@@ -464,7 +472,8 @@
             this.comboBox7.Location = new System.Drawing.Point(93, 500);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(106, 28);
-            this.comboBox7.TabIndex = 13;
+            this.comboBox7.TabIndex = 27;
+            this.comboBox7.Tag = "13";
             // 
             // comboBox8
             // 
@@ -505,7 +514,8 @@
             this.comboBox8.Location = new System.Drawing.Point(12, 500);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(75, 28);
-            this.comboBox8.TabIndex = 12;
+            this.comboBox8.TabIndex = 26;
+            this.comboBox8.Tag = "12";
             // 
             // label7
             // 
@@ -523,7 +533,8 @@
             this.textBox5.Location = new System.Drawing.Point(12, 244);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(296, 26);
-            this.textBox5.TabIndex = 7;
+            this.textBox5.TabIndex = 9;
+            this.textBox5.Tag = "7";
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label8
@@ -542,7 +553,8 @@
             this.textBox6.Location = new System.Drawing.Point(12, 276);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(296, 26);
-            this.textBox6.TabIndex = 8;
+            this.textBox6.TabIndex = 10;
+            this.textBox6.Tag = "8";
             // 
             // label5
             // 
@@ -570,7 +582,8 @@
             this.textBox3.Location = new System.Drawing.Point(12, 372);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(296, 26);
-            this.textBox3.TabIndex = 11;
+            this.textBox3.TabIndex = 22;
+            this.textBox3.Tag = "11";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
@@ -579,7 +592,8 @@
             this.textBox2.Location = new System.Drawing.Point(12, 340);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(296, 26);
-            this.textBox2.TabIndex = 10;
+            this.textBox2.TabIndex = 21;
+            this.textBox2.Tag = "10";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label27
@@ -598,7 +612,8 @@
             this.textBox1.Location = new System.Drawing.Point(12, 308);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(296, 26);
-            this.textBox1.TabIndex = 9;
+            this.textBox1.TabIndex = 20;
+            this.textBox1.Tag = "9";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
@@ -643,6 +658,7 @@
             this.comboBox5.Size = new System.Drawing.Size(296, 28);
             this.comboBox5.TabIndex = 2;
             this.comboBox5.TabStop = false;
+            this.comboBox5.Tag = "2";
             this.comboBox5.Text = "Мировой судья";
             // 
             // comboBox4
@@ -659,6 +675,8 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(103, 28);
             this.comboBox4.TabIndex = 5;
+            this.comboBox4.TabStop = false;
+            this.comboBox4.Tag = "5";
             // 
             // comboBox3
             // 
@@ -681,6 +699,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(106, 28);
             this.comboBox3.TabIndex = 4;
+            this.comboBox3.Tag = "4";
             // 
             // comboBox2
             // 
@@ -722,6 +741,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(75, 28);
             this.comboBox2.TabIndex = 3;
+            this.comboBox2.Tag = "3";
             // 
             // comboBox1
             // 
@@ -743,6 +763,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(296, 28);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.Tag = "1";
             this.comboBox1.Text = "228";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -768,7 +789,8 @@
             this.comboBox17.Location = new System.Drawing.Point(13, 772);
             this.comboBox17.Name = "comboBox17";
             this.comboBox17.Size = new System.Drawing.Size(296, 28);
-            this.comboBox17.TabIndex = 22;
+            this.comboBox17.TabIndex = 45;
+            this.comboBox17.Tag = "22";
             this.comboBox17.SelectedIndexChanged += new System.EventHandler(this.comboBox17_SelectedIndexChanged);
             // 
             // button1
@@ -777,7 +799,7 @@
             this.button1.Location = new System.Drawing.Point(13, 1356);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(296, 30);
-            this.button1.TabIndex = 38;
+            this.button1.TabIndex = 80;
             this.button1.Text = "Сгенерировать Word";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -789,7 +811,8 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox4.Size = new System.Drawing.Size(297, 170);
-            this.textBox4.TabIndex = 24;
+            this.textBox4.TabIndex = 47;
+            this.textBox4.Tag = "24";
             // 
             // textBox7
             // 
@@ -798,7 +821,8 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox7.Size = new System.Drawing.Size(297, 100);
-            this.textBox7.TabIndex = 23;
+            this.textBox7.TabIndex = 46;
+            this.textBox7.Tag = "23";
             // 
             // label18
             // 
@@ -813,7 +837,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(316, 1130);
+            this.label19.Location = new System.Drawing.Point(316, 1200);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(379, 20);
             this.label19.TabIndex = 178;
@@ -829,10 +853,11 @@
             "2018",
             "2019",
             "2020"});
-            this.comboBox16.Location = new System.Drawing.Point(166, 1122);
+            this.comboBox16.Location = new System.Drawing.Point(166, 1192);
             this.comboBox16.Name = "comboBox16";
             this.comboBox16.Size = new System.Drawing.Size(144, 28);
-            this.comboBox16.TabIndex = 26;
+            this.comboBox16.TabIndex = 62;
+            this.comboBox16.Tag = "26";
             this.comboBox16.SelectedIndexChanged += new System.EventHandler(this.comboBox16_SelectedIndexChanged);
             // 
             // comboBox18
@@ -854,16 +879,17 @@
             "октябрь",
             "ноябрь",
             "декабрь"});
-            this.comboBox18.Location = new System.Drawing.Point(13, 1122);
+            this.comboBox18.Location = new System.Drawing.Point(13, 1192);
             this.comboBox18.Name = "comboBox18";
             this.comboBox18.Size = new System.Drawing.Size(147, 28);
-            this.comboBox18.TabIndex = 25;
+            this.comboBox18.TabIndex = 61;
+            this.comboBox18.Tag = "25";
             this.comboBox18.SelectedIndexChanged += new System.EventHandler(this.comboBox18_SelectedIndexChanged);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(316, 1159);
+            this.label20.Location = new System.Drawing.Point(316, 1229);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(561, 20);
             this.label20.TabIndex = 179;
@@ -879,10 +905,11 @@
             "2018",
             "2019",
             "2020"});
-            this.comboBox19.Location = new System.Drawing.Point(206, 1156);
+            this.comboBox19.Location = new System.Drawing.Point(206, 1226);
             this.comboBox19.Name = "comboBox19";
             this.comboBox19.Size = new System.Drawing.Size(103, 28);
-            this.comboBox19.TabIndex = 29;
+            this.comboBox19.TabIndex = 65;
+            this.comboBox19.Tag = "29";
             // 
             // comboBox20
             // 
@@ -901,10 +928,11 @@
             "10",
             "11",
             "12"});
-            this.comboBox20.Location = new System.Drawing.Point(94, 1156);
+            this.comboBox20.Location = new System.Drawing.Point(94, 1226);
             this.comboBox20.Name = "comboBox20";
             this.comboBox20.Size = new System.Drawing.Size(106, 28);
-            this.comboBox20.TabIndex = 28;
+            this.comboBox20.TabIndex = 64;
+            this.comboBox20.Tag = "28";
             // 
             // comboBox21
             // 
@@ -942,10 +970,11 @@
             "29",
             "30",
             "31"});
-            this.comboBox21.Location = new System.Drawing.Point(13, 1156);
+            this.comboBox21.Location = new System.Drawing.Point(13, 1226);
             this.comboBox21.Name = "comboBox21";
             this.comboBox21.Size = new System.Drawing.Size(75, 28);
-            this.comboBox21.TabIndex = 27;
+            this.comboBox21.TabIndex = 63;
+            this.comboBox21.Tag = "27";
             this.comboBox21.Text = "15";
             // 
             // comboBox24
@@ -958,10 +987,11 @@
             "2019",
             "2020",
             "2021"});
-            this.comboBox24.Location = new System.Drawing.Point(207, 1224);
+            this.comboBox24.Location = new System.Drawing.Point(207, 1260);
             this.comboBox24.Name = "comboBox24";
             this.comboBox24.Size = new System.Drawing.Size(103, 28);
-            this.comboBox24.TabIndex = 33;
+            this.comboBox24.TabIndex = 68;
+            this.comboBox24.Tag = "33";
             // 
             // comboBox25
             // 
@@ -980,10 +1010,11 @@
             "10",
             "11",
             "12"});
-            this.comboBox25.Location = new System.Drawing.Point(94, 1224);
+            this.comboBox25.Location = new System.Drawing.Point(94, 1260);
             this.comboBox25.Name = "comboBox25";
             this.comboBox25.Size = new System.Drawing.Size(107, 28);
-            this.comboBox25.TabIndex = 32;
+            this.comboBox25.TabIndex = 67;
+            this.comboBox25.Tag = "32";
             // 
             // comboBox26
             // 
@@ -1021,15 +1052,16 @@
             "29",
             "30",
             "31"});
-            this.comboBox26.Location = new System.Drawing.Point(13, 1224);
+            this.comboBox26.Location = new System.Drawing.Point(13, 1260);
             this.comboBox26.Name = "comboBox26";
             this.comboBox26.Size = new System.Drawing.Size(75, 28);
-            this.comboBox26.TabIndex = 31;
+            this.comboBox26.TabIndex = 66;
+            this.comboBox26.Tag = "31";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(316, 1227);
+            this.label23.Location = new System.Drawing.Point(316, 1263);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(476, 20);
             this.label23.TabIndex = 187;
@@ -1045,10 +1077,11 @@
             "2019",
             "2020",
             "2021"});
-            this.comboBox27.Location = new System.Drawing.Point(206, 1258);
+            this.comboBox27.Location = new System.Drawing.Point(206, 1158);
             this.comboBox27.Name = "comboBox27";
             this.comboBox27.Size = new System.Drawing.Size(103, 28);
-            this.comboBox27.TabIndex = 36;
+            this.comboBox27.TabIndex = 60;
+            this.comboBox27.Tag = "36";
             // 
             // comboBox28
             // 
@@ -1067,10 +1100,11 @@
             "10",
             "11",
             "12"});
-            this.comboBox28.Location = new System.Drawing.Point(94, 1258);
+            this.comboBox28.Location = new System.Drawing.Point(94, 1158);
             this.comboBox28.Name = "comboBox28";
             this.comboBox28.Size = new System.Drawing.Size(107, 28);
-            this.comboBox28.TabIndex = 35;
+            this.comboBox28.TabIndex = 50;
+            this.comboBox28.Tag = "35";
             // 
             // comboBox29
             // 
@@ -1108,15 +1142,16 @@
             "29",
             "30",
             "31"});
-            this.comboBox29.Location = new System.Drawing.Point(13, 1258);
+            this.comboBox29.Location = new System.Drawing.Point(13, 1158);
             this.comboBox29.Name = "comboBox29";
             this.comboBox29.Size = new System.Drawing.Size(75, 28);
-            this.comboBox29.TabIndex = 34;
+            this.comboBox29.TabIndex = 49;
+            this.comboBox29.Tag = "34";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(316, 1261);
+            this.label24.Location = new System.Drawing.Point(316, 1161);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(488, 20);
             this.label24.TabIndex = 191;
@@ -1126,7 +1161,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(316, 1292);
+            this.label25.Location = new System.Drawing.Point(316, 1126);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(112, 20);
             this.label25.TabIndex = 196;
@@ -1135,10 +1170,11 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(13, 1292);
+            this.textBox8.Location = new System.Drawing.Point(13, 1126);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(296, 26);
-            this.textBox8.TabIndex = 37;
+            this.textBox8.TabIndex = 48;
+            this.textBox8.Tag = "37";
             // 
             // label26
             // 
@@ -1166,7 +1202,8 @@
             this.textBox9.Location = new System.Drawing.Point(12, 468);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(296, 26);
-            this.textBox9.TabIndex = 199;
+            this.textBox9.TabIndex = 25;
+            this.textBox9.Tag = "199";
             // 
             // textBox10
             // 
@@ -1174,7 +1211,8 @@
             this.textBox10.Location = new System.Drawing.Point(12, 436);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(296, 26);
-            this.textBox10.TabIndex = 198;
+            this.textBox10.TabIndex = 24;
+            this.textBox10.Tag = "198";
             // 
             // label29
             // 
@@ -1192,7 +1230,8 @@
             this.textBox11.Location = new System.Drawing.Point(12, 404);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(296, 26);
-            this.textBox11.TabIndex = 197;
+            this.textBox11.TabIndex = 23;
+            this.textBox11.Tag = "197";
             // 
             // label30
             // 
@@ -1220,7 +1259,7 @@
             this.buttonDeleteSave.Location = new System.Drawing.Point(537, 1424);
             this.buttonDeleteSave.Name = "buttonDeleteSave";
             this.buttonDeleteSave.Size = new System.Drawing.Size(74, 28);
-            this.buttonDeleteSave.TabIndex = 309;
+            this.buttonDeleteSave.TabIndex = 85;
             this.buttonDeleteSave.Text = "Удалить";
             this.buttonDeleteSave.UseVisualStyleBackColor = true;
             this.buttonDeleteSave.Click += new System.EventHandler(this.buttonDeleteSave_Click);
@@ -1234,7 +1273,7 @@
             this.comboBoxLoad.Location = new System.Drawing.Point(315, 1424);
             this.comboBoxLoad.Name = "comboBoxLoad";
             this.comboBoxLoad.Size = new System.Drawing.Size(216, 28);
-            this.comboBoxLoad.TabIndex = 308;
+            this.comboBoxLoad.TabIndex = 83;
             // 
             // textBoxForSave
             // 
@@ -1243,7 +1282,7 @@
             this.textBoxForSave.Location = new System.Drawing.Point(315, 1392);
             this.textBoxForSave.Name = "textBoxForSave";
             this.textBoxForSave.Size = new System.Drawing.Size(296, 26);
-            this.textBoxForSave.TabIndex = 306;
+            this.textBoxForSave.TabIndex = 81;
             this.textBoxForSave.Text = "имя сохранения";
             this.textBoxForSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1253,7 +1292,7 @@
             this.buttonLoad.Location = new System.Drawing.Point(13, 1424);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(296, 28);
-            this.buttonLoad.TabIndex = 307;
+            this.buttonLoad.TabIndex = 84;
             this.buttonLoad.Text = "Загрузить сохраненные поля";
             this.buttonLoad.UseVisualStyleBackColor = true;
             this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
@@ -1264,7 +1303,7 @@
             this.buttonSave.Location = new System.Drawing.Point(13, 1392);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(296, 26);
-            this.buttonSave.TabIndex = 305;
+            this.buttonSave.TabIndex = 82;
             this.buttonSave.Text = "Сохранить заполненные поля";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -1275,7 +1314,7 @@
             this.textBoxClipPutName.Location = new System.Drawing.Point(145, 1324);
             this.textBoxClipPutName.Name = "textBoxClipPutName";
             this.textBoxClipPutName.Size = new System.Drawing.Size(164, 26);
-            this.textBoxClipPutName.TabIndex = 313;
+            this.textBoxClipPutName.TabIndex = 71;
             // 
             // LabelClipPutNum
             // 
@@ -1302,18 +1341,16 @@
             this.textBoxClipPutNum.Location = new System.Drawing.Point(40, 1324);
             this.textBoxClipPutNum.Name = "textBoxClipPutNum";
             this.textBoxClipPutNum.Size = new System.Drawing.Size(99, 26);
-            this.textBoxClipPutNum.TabIndex = 310;
+            this.textBoxClipPutNum.TabIndex = 70;
             // 
             // checkBoxAppearedOrNot
             // 
             this.checkBoxAppearedOrNot.AutoSize = true;
-            this.checkBoxAppearedOrNot.Checked = true;
-            this.checkBoxAppearedOrNot.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxAppearedOrNot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxAppearedOrNot.Location = new System.Drawing.Point(12, 1194);
+            this.checkBoxAppearedOrNot.Location = new System.Drawing.Point(13, 1294);
             this.checkBoxAppearedOrNot.Name = "checkBoxAppearedOrNot";
             this.checkBoxAppearedOrNot.Size = new System.Drawing.Size(153, 24);
-            this.checkBoxAppearedOrNot.TabIndex = 30;
+            this.checkBoxAppearedOrNot.TabIndex = 69;
             this.checkBoxAppearedOrNot.Text = "В суд явился";
             this.checkBoxAppearedOrNot.UseVisualStyleBackColor = true;
             // 
@@ -1323,7 +1360,7 @@
             this.radioButtonSexWoomen.Location = new System.Drawing.Point(6, 56);
             this.radioButtonSexWoomen.Name = "radioButtonSexWoomen";
             this.radioButtonSexWoomen.Size = new System.Drawing.Size(102, 24);
-            this.radioButtonSexWoomen.TabIndex = 315;
+            this.radioButtonSexWoomen.TabIndex = 8;
             this.radioButtonSexWoomen.Text = "Женский";
             this.radioButtonSexWoomen.UseVisualStyleBackColor = true;
             // 
@@ -1334,7 +1371,7 @@
             this.radioButtonSexMen.Location = new System.Drawing.Point(6, 26);
             this.radioButtonSexMen.Name = "radioButtonSexMen";
             this.radioButtonSexMen.Size = new System.Drawing.Size(102, 24);
-            this.radioButtonSexMen.TabIndex = 314;
+            this.radioButtonSexMen.TabIndex = 7;
             this.radioButtonSexMen.TabStop = true;
             this.radioButtonSexMen.Text = "Мужской";
             this.radioButtonSexMen.UseVisualStyleBackColor = true;
@@ -1346,7 +1383,7 @@
             this.groupBoxSex.Location = new System.Drawing.Point(12, 151);
             this.groupBoxSex.Name = "groupBoxSex";
             this.groupBoxSex.Size = new System.Drawing.Size(174, 87);
-            this.groupBoxSex.TabIndex = 316;
+            this.groupBoxSex.TabIndex = 6;
             this.groupBoxSex.TabStop = false;
             this.groupBoxSex.Text = "Пол подсудимого";
             // 

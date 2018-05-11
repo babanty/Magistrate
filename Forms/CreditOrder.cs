@@ -98,7 +98,7 @@ namespace Magistrate.Forms
 
 
             // Проверяем сходится ли название с полными реквизитами
-            List<string> allBanks = Db.GetColumn("bank complete");
+            List<string> allBanks = Db.GetColumn(NamePropertiesForComboBox.БанкПолный);
             if (allBanks == null)
                 return null;
 

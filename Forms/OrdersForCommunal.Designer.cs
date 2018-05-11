@@ -239,6 +239,7 @@
             this.comboBox5.Size = new System.Drawing.Size(297, 28);
             this.comboBox5.TabIndex = 2;
             this.comboBox5.TabStop = false;
+            this.comboBox5.Tag = "2";
             this.comboBox5.Text = "Мировой судья";
             // 
             // comboBox4
@@ -255,6 +256,8 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(99, 28);
             this.comboBox4.TabIndex = 5;
+            this.comboBox4.TabStop = false;
+            this.comboBox4.Tag = "5";
             // 
             // comboBox3
             // 
@@ -277,6 +280,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(105, 28);
             this.comboBox3.TabIndex = 4;
+            this.comboBox3.Tag = "4";
             // 
             // comboBox2
             // 
@@ -318,6 +322,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(81, 28);
             this.comboBox2.TabIndex = 3;
+            this.comboBox2.Tag = "3";
             // 
             // comboBox1
             // 
@@ -339,6 +344,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(296, 28);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.Tag = "1";
             this.comboBox1.Text = "228";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -371,6 +377,7 @@
             this.comboBox23.Name = "comboBox23";
             this.comboBox23.Size = new System.Drawing.Size(98, 28);
             this.comboBox23.TabIndex = 14;
+            this.comboBox23.Tag = "14";
             // 
             // comboBox24
             // 
@@ -393,6 +400,7 @@
             this.comboBox24.Name = "comboBox24";
             this.comboBox24.Size = new System.Drawing.Size(105, 28);
             this.comboBox24.TabIndex = 13;
+            this.comboBox24.Tag = "13";
             // 
             // comboBox25
             // 
@@ -434,6 +442,7 @@
             this.comboBox25.Name = "comboBox25";
             this.comboBox25.Size = new System.Drawing.Size(81, 28);
             this.comboBox25.TabIndex = 12;
+            this.comboBox25.Tag = "12";
             // 
             // label19
             // 
@@ -464,6 +473,7 @@
             this.comboBox20.Name = "comboBox20";
             this.comboBox20.Size = new System.Drawing.Size(98, 28);
             this.comboBox20.TabIndex = 11;
+            this.comboBox20.Tag = "11";
             // 
             // comboBox21
             // 
@@ -486,6 +496,7 @@
             this.comboBox21.Name = "comboBox21";
             this.comboBox21.Size = new System.Drawing.Size(105, 28);
             this.comboBox21.TabIndex = 10;
+            this.comboBox21.Tag = "10";
             // 
             // comboBox22
             // 
@@ -527,6 +538,7 @@
             this.comboBox22.Name = "comboBox22";
             this.comboBox22.Size = new System.Drawing.Size(81, 28);
             this.comboBox22.TabIndex = 9;
+            this.comboBox22.Tag = "9";
             // 
             // label18
             // 
@@ -549,6 +561,7 @@
             this.comboBox19.Name = "comboBox19";
             this.comboBox19.Size = new System.Drawing.Size(296, 28);
             this.comboBox19.TabIndex = 8;
+            this.comboBox19.Tag = "8";
             this.comboBox19.Text = "за период";
             // 
             // label4
@@ -571,11 +584,13 @@
             "по оплате жилищно-коммунальных услуг",
             "за поставленный природный газ",
             "за поставленную электроэнергию",
-            "по оплате услуг доступа к глобальной сети Интернет"});
+            "по оплате услуг доступа к глобальной сети Интернет",
+            "по взносам на капитальный ремонт"});
             this.comboBox6.Location = new System.Drawing.Point(12, 148);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(296, 28);
             this.comboBox6.TabIndex = 7;
+            this.comboBox6.Tag = "7";
             this.comboBox6.Text = "по оплате жилищно-коммунальных услуг";
             // 
             // label5
@@ -598,6 +613,7 @@
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(296, 28);
             this.comboBox7.TabIndex = 6;
+            this.comboBox7.Tag = "6";
             // 
             // label22
             // 
@@ -629,6 +645,7 @@
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(141, 27);
             this.numericUpDown2.TabIndex = 16;
+            this.numericUpDown2.Tag = "16";
             // 
             // numericUpDown1
             // 
@@ -642,6 +659,7 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(148, 27);
             this.numericUpDown1.TabIndex = 15;
+            this.numericUpDown1.Tag = "15";
             this.numericUpDown1.ThousandsSeparator = true;
             // 
             // button1
@@ -650,7 +668,7 @@
             this.button1.Location = new System.Drawing.Point(12, 376);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(297, 60);
-            this.button1.TabIndex = 18;
+            this.button1.TabIndex = 19;
             this.button1.Text = "Сгенерировать Word (после заполнения должников)";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -705,6 +723,7 @@
             this.d1textBox3.Name = "d1textBox3";
             this.d1textBox3.Size = new System.Drawing.Size(296, 26);
             this.d1textBox3.TabIndex = 22;
+            this.d1textBox3.Tag = "22";
             this.d1textBox3.TextChanged += new System.EventHandler(this.d1textBox3_TextChanged);
             // 
             // d1textBox2
@@ -714,6 +733,7 @@
             this.d1textBox2.Name = "d1textBox2";
             this.d1textBox2.Size = new System.Drawing.Size(296, 26);
             this.d1textBox2.TabIndex = 21;
+            this.d1textBox2.Tag = "21";
             this.d1textBox2.TextChanged += new System.EventHandler(this.d1textBox2_TextChanged);
             // 
             // label27
@@ -733,6 +753,7 @@
             this.d1textBox1.Name = "d1textBox1";
             this.d1textBox1.Size = new System.Drawing.Size(296, 26);
             this.d1textBox1.TabIndex = 20;
+            this.d1textBox1.Tag = "20";
             this.d1textBox1.TextChanged += new System.EventHandler(this.d1textBox1_TextChanged);
             // 
             // label24
@@ -834,6 +855,7 @@
             this.d1comboBox10.Name = "d1comboBox10";
             this.d1comboBox10.Size = new System.Drawing.Size(296, 28);
             this.d1comboBox10.TabIndex = 32;
+            this.d1comboBox10.Tag = "32";
             this.d1comboBox10.Text = "д. ";
             this.d1comboBox10.TextChanged += new System.EventHandler(this.d1comboBox10_SelectedIndexChanged);
             // 
@@ -847,6 +869,7 @@
             this.d1comboBox9.Name = "d1comboBox9";
             this.d1comboBox9.Size = new System.Drawing.Size(296, 28);
             this.d1comboBox9.TabIndex = 31;
+            this.d1comboBox9.Tag = "31";
             this.d1comboBox9.Text = "пр. Красной Армии";
             this.d1comboBox9.TextChanged += new System.EventHandler(this.d1comboBox9_SelectedIndexChanged);
             // 
@@ -860,6 +883,7 @@
             this.d1comboBox8.Name = "d1comboBox8";
             this.d1comboBox8.Size = new System.Drawing.Size(296, 28);
             this.d1comboBox8.TabIndex = 30;
+            this.d1comboBox8.Tag = "30";
             this.d1comboBox8.Text = "г. Сергиев Посад";
             this.d1comboBox8.TextChanged += new System.EventHandler(this.d1comboBox8_SelectedIndexChanged);
             // 
@@ -962,6 +986,7 @@
             this.d1comboBox7.Name = "d1comboBox7";
             this.d1comboBox7.Size = new System.Drawing.Size(296, 28);
             this.d1comboBox7.TabIndex = 29;
+            this.d1comboBox7.Tag = "29";
             this.d1comboBox7.Text = "Московская область";
             this.d1comboBox7.TextChanged += new System.EventHandler(this.d1comboBox7_SelectedIndexChanged);
             // 
@@ -984,6 +1009,7 @@
             this.d1comboBox6.Name = "d1comboBox6";
             this.d1comboBox6.Size = new System.Drawing.Size(296, 28);
             this.d1comboBox6.TabIndex = 28;
+            this.d1comboBox6.Tag = "28";
             this.d1comboBox6.Text = "РФ";
             this.d1comboBox6.TextChanged += new System.EventHandler(this.d1comboBox6_SelectedIndexChanged);
             // 
@@ -997,6 +1023,7 @@
             this.d1comboBox5.Name = "d1comboBox5";
             this.d1comboBox5.Size = new System.Drawing.Size(296, 28);
             this.d1comboBox5.TabIndex = 27;
+            this.d1comboBox5.Tag = "27";
             this.d1comboBox5.TextChanged += new System.EventHandler(this.d1comboBox5_SelectedIndexChanged);
             // 
             // d1comboBox4
@@ -1020,6 +1047,7 @@
             this.d1comboBox4.Name = "d1comboBox4";
             this.d1comboBox4.Size = new System.Drawing.Size(296, 28);
             this.d1comboBox4.TabIndex = 26;
+            this.d1comboBox4.Tag = "26";
             this.d1comboBox4.Text = "Неизвестно";
             this.d1comboBox4.TextChanged += new System.EventHandler(this.d1comboBox4_SelectedIndexChanged);
             // 
@@ -1074,6 +1102,7 @@
             this.d1comboBox3.Name = "d1comboBox3";
             this.d1comboBox3.Size = new System.Drawing.Size(103, 28);
             this.d1comboBox3.TabIndex = 25;
+            this.d1comboBox3.Tag = "25";
             // 
             // d1comboBox2
             // 
@@ -1096,6 +1125,7 @@
             this.d1comboBox2.Name = "d1comboBox2";
             this.d1comboBox2.Size = new System.Drawing.Size(106, 28);
             this.d1comboBox2.TabIndex = 24;
+            this.d1comboBox2.Tag = "24";
             // 
             // d1comboBox1
             // 
@@ -1137,6 +1167,7 @@
             this.d1comboBox1.Name = "d1comboBox1";
             this.d1comboBox1.Size = new System.Drawing.Size(75, 28);
             this.d1comboBox1.TabIndex = 23;
+            this.d1comboBox1.Tag = "23";
             // 
             // label9
             // 
@@ -3043,7 +3074,7 @@
             this.textBoxClipPutName.Location = new System.Drawing.Point(145, 344);
             this.textBoxClipPutName.Name = "textBoxClipPutName";
             this.textBoxClipPutName.Size = new System.Drawing.Size(164, 26);
-            this.textBoxClipPutName.TabIndex = 313;
+            this.textBoxClipPutName.TabIndex = 19;
             // 
             // LabelClipPutNum
             // 
@@ -3070,7 +3101,7 @@
             this.textBoxClipPutNum.Location = new System.Drawing.Point(40, 344);
             this.textBoxClipPutNum.Name = "textBoxClipPutNum";
             this.textBoxClipPutNum.Size = new System.Drawing.Size(99, 26);
-            this.textBoxClipPutNum.TabIndex = 310;
+            this.textBoxClipPutNum.TabIndex = 18;
             // 
             // OrdersForCommunal
             // 

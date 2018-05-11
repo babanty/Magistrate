@@ -14,6 +14,7 @@ namespace Magistrate
     public static class Db
     {
         private static Ini db = new Ini("db");
+
         /// <summary>
         /// Вернуть значения одной колонки
         /// </summary>
@@ -21,6 +22,32 @@ namespace Magistrate
         /// <returns></returns>
         public static List<string> GetColumn(string nameColumn)
         {
+            if (nameColumn == null)
+                return null;
+
+            string[,] iniReadSection = db.IniReadSection(nameColumn);
+            if (iniReadSection == null)
+                return null;
+
+            List<string> returnList = new List<string>();
+            for (int i = 0; i < iniReadSection.GetLength(0); i++)
+            {
+                returnList.Add(iniReadSection[i, 1]);
+            }
+
+            return returnList;
+        }
+
+        /// <summary>
+        /// Вернуть значения одной колонки
+        /// </summary>
+        /// <param name="nameProperties">название колонки</param>
+        /// <returns></returns>
+        public static List<string> GetColumn(NamePropertiesForComboBox nameProperties)
+        {
+            // Расшифровываем значение настройки
+            string nameColumn = DecodingEnumPropertiesForComboBox(nameProperties);
+
             if (nameColumn == null)
                 return null;
 
@@ -96,10 +123,7 @@ namespace Magistrate
         /// <param name="column">Название колоки в БД</param>
         public static void SetPropertiesComboBox(ref ComboBox comboBox, NamePropertiesForComboBox nameProperties)
         {
-            // Расшифровываем значение настройки
-            string column = DecodingEnumPropertiesForComboBox(nameProperties);
-
-            List<string> str = GetColumn(column);
+            List<string> str = GetColumn(nameProperties);
 
             if (str != null)
             {

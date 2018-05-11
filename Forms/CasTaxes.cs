@@ -213,5 +213,54 @@ namespace Magistrate.Forms
         }
         #endregion Сохранение
 
+        #region Разблокировка возможности писать сумму задолженности и пени
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                comboBox26.Enabled = true;
+                numericUpDown1.Enabled = true;
+                numericUpDown2.Enabled = true;
+            }
+            else
+            {
+                comboBox26.Enabled = false;
+                numericUpDown1.Enabled = false;
+                numericUpDown2.Enabled = false;
+            }
+
+        }
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                comboBox17.Enabled = true;
+                numericUpDown3.Enabled = true;
+                numericUpDown4.Enabled = true;
+            }
+            else
+            {
+                comboBox17.Enabled = false;
+                numericUpDown3.Enabled = false;
+                numericUpDown4.Enabled = false;
+            }
+        }
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                comboBox18.Enabled = true;
+                numericUpDown5.Enabled = true;
+                numericUpDown6.Enabled = true;
+            }
+            else
+            {
+                comboBox18.Enabled = false;
+                numericUpDown5.Enabled = false;
+                numericUpDown6.Enabled = false;
+            }
+        }
+        #endregion Разблокировка возможности писать сумму задолженности и пени
+
     }
 }

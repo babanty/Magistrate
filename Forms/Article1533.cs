@@ -180,6 +180,8 @@ namespace Magistrate.Forms
         // автоматическое выставление года "не позднее"
         private void comboBox16_SelectedIndexChanged(object sender, EventArgs e)
         {
+            comboBox24.Text = comboBox16.Text; // Фактически отдал сзв-м в таком то году, авто перенос
+
             comboBox19.Text = comboBox16.Text;
             // Если декабрь, то год пишется следующий
             if(comboBox18.Text == "декабрь") 

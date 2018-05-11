@@ -174,11 +174,13 @@ namespace Magistrate
             string returnResult = "#00";
             string numString = "";
 
-            int num = valueControl.Control.TabIndex; // Номер ключа зависит от табл индекса
+            object tag = valueControl.Control.Tag;
+            if (tag == null)
+                return null;
 
-            numString = num.ToString();
+            numString = valueControl.Control.Tag.ToString() ; // Номер ключа зависит от тега
 
-            if (num < 10)
+            if (numString.Length == 1)
                 numString = "0" + numString; // добавляет 0 перед числом если оно меньше 10, чтобы число всегда было из 2х цифр
 
 

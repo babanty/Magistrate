@@ -55,17 +55,19 @@ namespace Magistrate
             string column = nameForm + "$" + fuulNameSave;
 
             string text = ""; // текст для формы
-            string tabIndex = ""; // индекс в ini-файле
+            string tagIndex = ""; // индекс в ini-файле
             foreach (Control control in controls)
             {
                 // Делаем правильный индекс - ключ для ini файла
-                tabIndex = control.TabIndex.ToString();
-                if (control.TabIndex < 10)
-                    tabIndex = "0" + tabIndex;
-                tabIndex = "#" + tabIndex;
+                if (control.Tag == null)
+                    continue;
+                tagIndex = control.Tag.ToString();
+                if (tagIndex.Length == 1)
+                    tagIndex = "0" + tagIndex;
+                tagIndex = "#" + tagIndex;
 
                 // Считываем и заполняем
-                text = ini.IniReadKey(column, tabIndex);
+                text = ini.IniReadKey(column, tagIndex);
                 if (text != null && text != "")
                     control.Text = text;
             }
