@@ -183,6 +183,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(103, 28);
             this.comboBox4.TabIndex = 15;
+            this.comboBox4.TabStop = false;
             this.comboBox4.Tag = "5";
             // 
             // comboBox3
@@ -1378,7 +1379,7 @@
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSave.Location = new System.Drawing.Point(13, 1553);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(296, 26);
+            this.buttonSave.Size = new System.Drawing.Size(296, 28);
             this.buttonSave.TabIndex = 102;
             this.buttonSave.Text = "Сохранить заполненные поля";
             this.buttonSave.UseVisualStyleBackColor = true;

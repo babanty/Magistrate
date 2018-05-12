@@ -21,3 +21,4 @@ E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.OrdersForCommunal.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1215.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.NewGAI.resources
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article2025.resources

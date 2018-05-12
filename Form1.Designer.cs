@@ -42,6 +42,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button12 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -184,14 +185,26 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button12);
             this.groupBox2.Controls.Add(this.button11);
             this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Location = new System.Drawing.Point(238, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(220, 154);
+            this.groupBox2.Size = new System.Drawing.Size(220, 222);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Административки";
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button12.Location = new System.Drawing.Point(6, 153);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(208, 60);
+            this.button12.TabIndex = 13;
+            this.button12.Text = "СТ. 20.25 (неуплата штрафа)";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Magistrate
             // 
@@ -230,6 +243,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button12;
     }
 }
 

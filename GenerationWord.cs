@@ -47,7 +47,8 @@ namespace Magistrate
             }
 
             foreach (ValueControl Param in Params) //Записывает все ключи чекбоксов, которые потом будет использовать приложение autoit
-                ini.Write(nameSectionValue, Param.Key, Param.Text);
+                if(Param.Key != null)
+                    ini.Write(nameSectionValue, Param.Key, Param.Text);
             
             OpenScriptGenerator(); // Открыть аутоит скрипт, генерирующий ворд на основе COM обхектов
 

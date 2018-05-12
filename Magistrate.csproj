@@ -88,6 +88,12 @@
     <Compile Include="Forms\Article1533.Designer.cs">
       <DependentUpon>Article1533.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Article2025.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Article2025.Designer.cs">
+      <DependentUpon>Article2025.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CancellationOrderGPK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Article1533.resx">
       <DependentUpon>Article1533.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Article2025.resx">
+      <DependentUpon>Article2025.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CancellationOrderGPK.resx">
       <DependentUpon>CancellationOrderGPK.cs</DependentUpon>

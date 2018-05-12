@@ -102,5 +102,11 @@ namespace Magistrate
             Article1215 form2 = new Article1215(); // Создание соовтественующего окна
             form2.Show(); // показать окно
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Article2025 form2 = new Article2025(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
     }
 }
