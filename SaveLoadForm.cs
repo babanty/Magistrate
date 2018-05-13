@@ -29,7 +29,8 @@ namespace Magistrate
             try
             {
                 foreach (ValueControl Param in Params) //Записывает все ключи полей
-                    ini.Write(nameSectionValue, Param.Key, Param.Text);
+                    if(Param.Key != null)
+                        ini.Write(nameSectionValue, Param.Key, Param.Text);
             }
             catch (Exception ex)
             {
