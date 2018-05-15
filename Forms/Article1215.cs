@@ -12,6 +12,7 @@ namespace Magistrate.Forms
 {
     public partial class Article1215 : Form
     {
+        #region Инициализация
         public Article1215()
         {
             InitializeComponent();
@@ -37,8 +38,10 @@ namespace Magistrate.Forms
             comboBox4.Text = year;
         }
 
+        #endregion Инициализация
 
 
+        #region Автоматическое заполнение полей
         // Перенос фамилии
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
@@ -113,30 +116,6 @@ namespace Magistrate.Forms
         }
 
 
-        /// <summary>
-        /// Возвращает текст со всеми вариантами того как нарушил ПДД
-        /// </summary>
-        /// <param name="text"></param>
-        /// <returns></returns>
-        private string GetTextWhithAlternative(string text = "")
-        {
-            string returnStr = "";
-
-            if (checkBox2.Checked)
-                returnStr += " " + checkBox2.Text;
-
-            if (checkBox3.Checked)
-                returnStr += " " + checkBox3.Text;
-
-            if(text != "" && text != null)
-                returnStr += " " + text;
-
-            returnStr = "обгон транспортного средства в нарушение п.1.3 ПДД РФ " + returnStr + 
-                ", с выездом на полосу встречного движения.";
-
-            return returnStr;
-        }
-
         // Нажали "у дома"
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
@@ -184,8 +163,109 @@ namespace Magistrate.Forms
         {
             textBox8.Text = textBox8.Text.ToUpper();
         }
+        #endregion Автоматическое заполнение полей
 
 
+        #region Приватные методы
+
+        /// <summary>
+        /// Возвращает текст со всеми вариантами того как нарушил ПДД
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        private string GetTextWhithAlternative(string text = "")
+        {
+            string returnStr = "";
+
+            if (checkBox2.Checked)
+                returnStr += " " + checkBox2.Text;
+
+            if (checkBox3.Checked)
+                returnStr += " " + checkBox3.Text;
+
+            if (text != "" && text != null)
+                returnStr += " " + text;
+
+            returnStr = "обгон транспортного средства в нарушение п.1.3 ПДД РФ " + returnStr +
+                ", с выездом на полосу встречного движения.";
+
+            return returnStr;
+        }
+
+
+        /// <summary>
+        /// метод возвращающий формулировку в случае если явился или не явился или null если не правильные параметры
+        /// </summary>
+        /// <param name="appeared">Если явился, то true</param>
+        /// <param name="ItIsWoomen">Если женщина, то true</param>
+        /// <returns>метод возвращающий формулировку в случае если явился или не явился или null</returns>
+        private string AppearedOrNot(bool appeared, bool ItIsWoomen)
+        {
+            if (appeared && ItIsWoomen)
+                return "явилась, вину признала";
+            if (appeared == false && ItIsWoomen)
+                return "не явилась, извещена надлежащим образом о времени и месте судебного " +
+                    "заседания. Учитывая, что имеются данные о ее надлежащем извещении о месте и " +
+                    "времени рассмотрения дела и от нее не поступило ходатайство об отложении " +
+                    "рассмотрения дела, суд на основании ч.2 ст.25.1 КоАП РФ считает возможным " +
+                    "рассмотреть дело в ее отсутствие.";
+
+            if (appeared && ItIsWoomen == false)
+                return "явился, вину признал";
+            if (appeared == false && ItIsWoomen == false)
+                return "не явился, извещен надлежащим образом о времени и месте судебного " +
+                    "заседания. Учитывая, что имеются данные о его надлежащем извещении о месте и " +
+                    "времени рассмотрения дела и от него не поступило ходатайство об отложении " +
+                    "рассмотрения дела, суд на основании ч.2 ст.25.1 КоАП РФ считает возможным " +
+                    "рассмотреть дело в его отсутствие.";
+
+            return null;
+        }
+
+
+        #endregion Приватные методы
+
+
+        #region Сохранение
+        // Сохранить заполненные поля
+        string nameForm = "Article1215";
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+
+            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
+            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
+
+            // перезаполняем варианты сохранений
+            comboBoxLoad.Items.Clear(); // стираем текущие варианты
+            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+        }
+        // Загрузить сохраненные поля
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
+
+            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
+            for (int i = 0; i < controls.Count; i++)
+            {
+                Controls[i].Text = controls[i].Text;
+            }
+        }
+        // Удалить сохранение
+        private void buttonDeleteSave_Click(object sender, EventArgs e)
+        {
+            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
+
+            // перезаполняем варианты сохранений
+            comboBoxLoad.Items.Clear(); // стираем текущие варианты
+            comboBoxLoad.Text = ""; // стираем текущие варианты
+            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+        }
+        #endregion Сохранение
+
+
+        // СГЕНЕРИРОВАТЬ WORD
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
@@ -249,74 +329,6 @@ namespace Magistrate.Forms
                 GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "ст 12.15 Жен", controlArrayToString);
             }
         }
-
-        /// <summary>
-        /// метод возвращающий формулировку в случае если явился или не явился или null если не правильные параметры
-        /// </summary>
-        /// <param name="appeared">Если явился, то true</param>
-        /// <param name="ItIsWoomen">Если женщина, то true</param>
-        /// <returns>метод возвращающий формулировку в случае если явился или не явился или null</returns>
-        private string AppearedOrNot(bool appeared, bool ItIsWoomen)
-        {
-            if (appeared && ItIsWoomen)
-                return "явилась, вину признала";
-            if (appeared == false && ItIsWoomen)
-                return "не явилась, извещена надлежащим образом о времени и месте судебного " +
-                    "заседания. Учитывая, что имеются данные о ее надлежащем извещении о месте и " +
-                    "времени рассмотрения дела и от нее не поступило ходатайство об отложении " +
-                    "рассмотрения дела, суд на основании ч.2 ст.25.1 КоАП РФ считает возможным " +
-                    "рассмотреть дело в ее отсутствие.";
-
-            if (appeared && ItIsWoomen == false)
-                return "явился, вину признал";
-            if (appeared == false && ItIsWoomen == false)
-                return "не явился, извещен надлежащим образом о времени и месте судебного " +
-                    "заседания. Учитывая, что имеются данные о его надлежащем извещении о месте и " +
-                    "времени рассмотрения дела и от него не поступило ходатайство об отложении " +
-                    "рассмотрения дела, суд на основании ч.2 ст.25.1 КоАП РФ считает возможным " +
-                    "рассмотреть дело в его отсутствие.";
-
-            return null;
-        }
-
-
-        #region Сохранение
-        // Сохранить заполненные поля
-        string nameForm = "Article1215";
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-
-            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
-            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
-        }
-        // Загрузить сохраненные поля
-        private void buttonLoad_Click(object sender, EventArgs e)
-        {
-            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
-
-            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
-            for (int i = 0; i < controls.Count; i++)
-            {
-                Controls[i].Text = controls[i].Text;
-            }
-        }
-        // Удалить сохранение
-        private void buttonDeleteSave_Click(object sender, EventArgs e)
-        {
-            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            comboBoxLoad.Text = ""; // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
-        }
-        #endregion Сохранение
 
     }
 }

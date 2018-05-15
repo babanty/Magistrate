@@ -12,6 +12,9 @@ namespace Magistrate.Forms
 {
     public partial class CancellationOrderKAS : Form
     {
+
+        #region Инициализация
+
         public CancellationOrderKAS()
         {
             InitializeComponent();
@@ -26,6 +29,10 @@ namespace Magistrate.Forms
             comboBox9.Text = month;
             comboBox8.Text = year;
         }
+        #endregion Инициализация
+
+
+        #region Автоматическое заполнение полей
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -48,33 +55,10 @@ namespace Magistrate.Forms
             textBoxClipPutName.Text = textBox1.Text;
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+        #endregion Автоматическое заполнение полей
 
 
-            // Вставляем название в буфер обмена
-            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
-
-
-            // Если с восстановлением, то один шаблон, если нет, то другой
-            if (radioButton2.Checked)
-            {
-                // Сгенерировать ворд
-                GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Отмена приказа без восстановления КАС", controlArrayToString);
-            }
-            else if (radioButton1.Checked)
-            {
-                // Сгенерировать ворд
-                GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Отмена приказа с восстановлением КАС", controlArrayToString);
-            }
-            else
-            {
-                MessageBox.Show("Не выбрано с восстановлением или без");
-            }
-        }
+        #region Сохранение
 
         // Сохранить заполненные поля
         string nameForm = "CancellationOrderKAS";
@@ -112,6 +96,36 @@ namespace Magistrate.Forms
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
         }
 
+        #endregion Сохранение
+
+
+        // СГЕНЕРИРОВАТЬ WORD
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+
+
+            // Вставляем название в буфер обмена
+            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
+
+
+            // Если с восстановлением, то один шаблон, если нет, то другой
+            if (radioButton2.Checked)
+            {
+                // Сгенерировать ворд
+                GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Отмена приказа без восстановления КАС", controlArrayToString);
+            }
+            else if (radioButton1.Checked)
+            {
+                // Сгенерировать ворд
+                GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Отмена приказа с восстановлением КАС", controlArrayToString);
+            }
+            else
+            {
+                MessageBox.Show("Не выбрано с восстановлением или без");
+            }
+        }
 
     }
 }

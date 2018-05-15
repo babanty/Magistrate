@@ -10,75 +10,72 @@ using System.Windows.Forms;
 
 namespace Magistrate.Forms
 {
-    public partial class CancellationOrderGPK : Form
+    public partial class ReturnDuty : Form
     {
-
         #region Инициализация
-        public CancellationOrderGPK()
+        public ReturnDuty()
         {
             InitializeComponent();
 
-            Db.SetPropertiesComboBox(ref comboBox7, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
-
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            // Заполнение полей ввода вариантами
+            Db.SetPropertiesComboBox(ref comboBoxNameBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
+            // Save
+            SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
 
             // Автозаполнение 
             // Заполнение даты вынесения решения текущими датами
             DateTime dateTimeNow = DateTime.Now;
             string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
-            comboBox9.Text = month;
-            comboBox8.Text = year;
+            comboBox3.Text = month;
+            comboBox4.Text = year;
         }
         #endregion Инициализация
 
-        
-        #region Автоматическое заполнение полей
 
+        #region автоматическое заполнение полей
         // Выбранный участок, автоматически подставляет кто судья
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
             {
-                comboBox2.Text = "Мировой судья";
-                comboBox3.Text = "мировым судьей";
+                comboBox5.Text = "Мировой судья";
             }
             else
             {
-                comboBox2.Text = "И.о. мирового судьи";
-                comboBox3.Text = "и.о. мирового судьи";
+                comboBox5.Text = "И.о. мирового судьи";
             }
         }
-        
 
-        // название при сохранении
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+        // Название файла и сохранения
+        private void textBox6FIO_TextChanged(object sender, EventArgs e)
         {
-            textBoxClipPutName.Text = textBox1.Text;
+            textBoxClipPutName.Text = textBox6FIO.Text;
+            textBoxForSave.Text = textBox6FIO.Text;
         }
 
-        #endregion Автоматическое заполнение полей
+        #endregion автоматическое заполнение полей
 
 
         #region Сохранение
         // Сохранить заполненные поля
-        string nameForm = "CancellationOrderGPK";
         private void buttonSave_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
             List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
 
-            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
+            string nameSave = this.Name + "$" + textBoxForSave.Text; // имя сохранения
             SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
 
             // перезаполняем варианты сохранений
             comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
         }
         // Загрузить сохраненные поля
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
+            var controls = SaveLoadForm.LoadForm(this.Name, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
 
             // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
             for (int i = 0; i < controls.Count; i++)
@@ -89,12 +86,12 @@ namespace Magistrate.Forms
         // Удалить сохранение
         private void buttonDeleteSave_Click(object sender, EventArgs e)
         {
-            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
+            SaveLoadForm.DeleteSave(comboBoxLoad.Text, this.Name); // Удаляем сохранение
 
             // перезаполняем варианты сохранений
             comboBoxLoad.Items.Clear(); // стираем текущие варианты
             comboBoxLoad.Text = ""; // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
         }
         #endregion Сохранение
 
@@ -105,24 +102,24 @@ namespace Magistrate.Forms
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
             List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
 
-            // Вставляем название в буфер обмена
-            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
 
-            // Если с восстановлением, то один шаблон, если нет, то другой
-            if (radioButton2.Checked)
-            {
-                // Сгенерировать ворд
-                GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Отмена приказа по ГПК Без восстановления", controlArrayToString);
-            }
-            else if (radioButton1.Checked)
-            {
-                // Сгенерировать ворд
-                GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Отмена приказа по ГПК С восстановлением", controlArrayToString);
-            }
-            else
-            {
-                MessageBox.Show("Не выбрано с восстановлением или без");
-            }
+            // Изменение суммы госпошлины по принципу 0 руб. 0 коп.
+            string Duty = HandlerTextControls.IntInRubAndCop(numericUpDownDuty.Value);
+            if (Duty == null)
+                return;
+            GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-1"); // в ручную добавляем новый ключ
+
+
+            // Вставляем название в буфер обмена
+            string numCase = ""; // номер дела
+            if (textBoxClipPutNum.Text != null && textBoxClipPutNum.Text != "")
+                numCase = textBoxClipPutNum.Text + "  ";
+            Clipboard.SetText(numCase + textBoxClipPutName.Text + "  " + this.Text);
+
+            // Сгенерировать ворд
+            GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Возврат госпошлины", controlArrayToString);
         }
+
+
     }
 }

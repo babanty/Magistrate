@@ -16,7 +16,7 @@ namespace Magistrate.Forms
         {
             InitializeComponent();
 
-            Db.SetPropertiesComboBox(ref comboBox17, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
+            Db.SetPropertiesComboBox(ref comboBoxNameBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
             Db.SetPropertiesComboBox(ref comboBox10, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
             Db.SetPropertiesComboBox(ref comboBox13, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
             Db.SetPropertiesComboBox(ref comboBox14, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
@@ -40,7 +40,7 @@ namespace Magistrate.Forms
 
 
             // Заполняем полные реквизиты банка
-            string bankRequisites = GetBank(comboBox17.Text); // находим полные реквизиты банка
+            string bankRequisites = GetBank(comboBoxNameBank.Text); // находим полные реквизиты банка
             if(bankRequisites == null) // банк не опознан
             {
                 MessageBox.Show("Реквизиты банка не опознаны, после герации не забудьте их вписать");

@@ -12,6 +12,9 @@ namespace Magistrate.Forms
 {
     public partial class CasTaxes : Form
     {
+
+        #region Инициализация
+
         public CasTaxes()
         {
             InitializeComponent();
@@ -31,7 +34,133 @@ namespace Magistrate.Forms
             comboBox3.Text = month;
             comboBox4.Text = year;
         }
+        #endregion Инициализация
 
+
+        #region Автоматическое заполнение полей
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox6.Text = textBox1.Text;
+
+            // название при сохранении
+            textBoxClipPutName.Text = textBox1.Text;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox5.Text = textBox2.Text;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            textBox4.Text = textBox3.Text;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
+            {
+                comboBox5.Text = "Мировой судья";
+            }
+            else
+            {
+                comboBox5.Text = "И.о. мирового судьи";
+            }
+        }
+
+        #region Разблокировка возможности писать сумму задолженности и пени
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                comboBox26.Enabled = true;
+                numericUpDown1.Enabled = true;
+                numericUpDown2.Enabled = true;
+            }
+            else
+            {
+                comboBox26.Enabled = false;
+                numericUpDown1.Enabled = false;
+                numericUpDown2.Enabled = false;
+            }
+
+        }
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                comboBox17.Enabled = true;
+                numericUpDown3.Enabled = true;
+                numericUpDown4.Enabled = true;
+            }
+            else
+            {
+                comboBox17.Enabled = false;
+                numericUpDown3.Enabled = false;
+                numericUpDown4.Enabled = false;
+            }
+        }
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                comboBox18.Enabled = true;
+                numericUpDown5.Enabled = true;
+                numericUpDown6.Enabled = true;
+            }
+            else
+            {
+                comboBox18.Enabled = false;
+                numericUpDown5.Enabled = false;
+                numericUpDown6.Enabled = false;
+            }
+        }
+        #endregion Разблокировка возможности писать сумму задолженности и пени
+        
+        #endregion Автоматическое заполнение полей
+
+
+        #region Сохранение
+        // Сохранить заполненные поля
+        string nameForm = "CasTaxes";
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+
+            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
+            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
+
+            // перезаполняем варианты сохранений
+            comboBoxLoad.Items.Clear(); // стираем текущие варианты
+            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+        }
+        // Загрузить сохраненные поля
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
+
+            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
+            for (int i = 0; i < controls.Count; i++)
+            {
+                Controls[i].Text = controls[i].Text;
+            }
+        }
+        // Удалить сохранение
+        private void buttonDeleteSave_Click(object sender, EventArgs e)
+        {
+            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
+
+            // перезаполняем варианты сохранений
+            comboBoxLoad.Items.Clear(); // стираем текущие варианты
+            comboBoxLoad.Text = ""; // стираем текущие варианты
+            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+        }
+        #endregion Сохранение
+
+        
+        // СГЕНЕРИРОВАТЬ WORD
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
@@ -39,7 +168,7 @@ namespace Magistrate.Forms
 
 
             // Если ИНН не равен 12 символам
-            if (textBox7.Text != null && textBox7.Text.Length != 12) 
+            if (textBox7.Text != null && textBox7.Text.Length != 12)
             {
                 MessageBox.Show("ИНН должен состоять из 12 символов");
                 return;
@@ -47,7 +176,7 @@ namespace Magistrate.Forms
 
 
             // Если не чекнули ни один налог
-            if(checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == false)
+            if (checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == false)
             {
                 MessageBox.Show("Не поставили галку не над одиним налогом");
                 return;
@@ -104,13 +233,13 @@ namespace Magistrate.Forms
             //Считаем гос.пошлину
             decimal duty = 0m;
             string dutyToString = "";
-            if(taxesSum <= 20000)
+            if (taxesSum <= 20000)
             {
                 duty = taxesSum / 100 * 2;
                 if (duty < 200)
                     duty = 200;
             }
-            else if(taxesSum > 20000 && taxesSum <= 100000)
+            else if (taxesSum > 20000 && taxesSum <= 100000)
             {
                 duty = (800 + (taxesSum - 20000) / 100 * 3) / 2;
             }
@@ -144,123 +273,5 @@ namespace Magistrate.Forms
             // Сгенерировать ворд
             GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Взыскание налога", controlArrayToString);
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            textBox6.Text = textBox1.Text;
-
-            // название при сохранении
-            textBoxClipPutName.Text = textBox1.Text;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            textBox5.Text = textBox2.Text;
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            textBox4.Text = textBox3.Text;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
-            {
-                comboBox5.Text = "Мировой судья";
-            }
-            else
-            {
-                comboBox5.Text = "И.о. мирового судьи";
-            }
-        }
-
-        #region Сохранение
-        // Сохранить заполненные поля
-        string nameForm = "CasTaxes";
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-
-            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
-            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
-        }
-        // Загрузить сохраненные поля
-        private void buttonLoad_Click(object sender, EventArgs e)
-        {
-            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
-
-            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
-            for (int i = 0; i < controls.Count; i++)
-            {
-                Controls[i].Text = controls[i].Text;
-            }
-        }
-        // Удалить сохранение
-        private void buttonDeleteSave_Click(object sender, EventArgs e)
-        {
-            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            comboBoxLoad.Text = ""; // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
-        }
-        #endregion Сохранение
-
-        #region Разблокировка возможности писать сумму задолженности и пени
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if(checkBox1.Checked)
-            {
-                comboBox26.Enabled = true;
-                numericUpDown1.Enabled = true;
-                numericUpDown2.Enabled = true;
-            }
-            else
-            {
-                comboBox26.Enabled = false;
-                numericUpDown1.Enabled = false;
-                numericUpDown2.Enabled = false;
-            }
-
-        }
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox2.Checked)
-            {
-                comboBox17.Enabled = true;
-                numericUpDown3.Enabled = true;
-                numericUpDown4.Enabled = true;
-            }
-            else
-            {
-                comboBox17.Enabled = false;
-                numericUpDown3.Enabled = false;
-                numericUpDown4.Enabled = false;
-            }
-        }
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox3.Checked)
-            {
-                comboBox18.Enabled = true;
-                numericUpDown5.Enabled = true;
-                numericUpDown6.Enabled = true;
-            }
-            else
-            {
-                comboBox18.Enabled = false;
-                numericUpDown5.Enabled = false;
-                numericUpDown6.Enabled = false;
-            }
-        }
-        #endregion Разблокировка возможности писать сумму задолженности и пени
-
     }
 }

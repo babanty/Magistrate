@@ -64,7 +64,7 @@
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
+            this.comboBoxNameBank = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox18 = new System.Windows.Forms.ComboBox();
@@ -744,17 +744,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox17
+            // comboBoxNameBank
             // 
-            this.comboBox17.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox17.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Location = new System.Drawing.Point(12, 622);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(419, 28);
-            this.comboBox17.TabIndex = 52;
-            this.comboBox17.Tag = "6";
+            this.comboBoxNameBank.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxNameBank.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxNameBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxNameBank.FormattingEnabled = true;
+            this.comboBoxNameBank.Location = new System.Drawing.Point(12, 622);
+            this.comboBoxNameBank.Name = "comboBoxNameBank";
+            this.comboBoxNameBank.Size = new System.Drawing.Size(419, 28);
+            this.comboBoxNameBank.TabIndex = 52;
+            this.comboBoxNameBank.Tag = "6";
             // 
             // label6
             // 
@@ -1325,7 +1325,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox18);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox17);
+            this.Controls.Add(this.comboBoxNameBank);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -1408,7 +1408,7 @@
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox17;
+        private System.Windows.Forms.ComboBox comboBoxNameBank;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox18;

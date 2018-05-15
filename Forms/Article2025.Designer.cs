@@ -912,7 +912,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(314, 1043);
+            this.label18.Location = new System.Drawing.Point(314, 941);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(291, 20);
             this.label18.TabIndex = 313;
@@ -925,18 +925,22 @@
             this.comboBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox17.FormattingEnabled = true;
             this.comboBox17.Items.AddRange(new object[] {
-            "ст. 12.37 ч.1"});
-            this.comboBox17.Location = new System.Drawing.Point(12, 1040);
+            "12.9 ч.2",
+            "12.18",
+            "12.6",
+            "12.37 ч.1",
+            "12.2 ч.1"});
+            this.comboBox17.Location = new System.Drawing.Point(12, 938);
             this.comboBox17.Name = "comboBox17";
             this.comboBox17.Size = new System.Drawing.Size(296, 28);
-            this.comboBox17.TabIndex = 78;
+            this.comboBox17.TabIndex = 73;
             this.comboBox17.Tag = "25";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(314, 941);
+            this.label19.Location = new System.Drawing.Point(314, 975);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(177, 20);
             this.label19.TabIndex = 315;
@@ -953,16 +957,17 @@
             "Закона Московской области от 04.05.2016 N 37/2016-ОЗ \"Кодекс Московской области о" +
                 "б административных правонарушениях\"",
             "Кодекса г.Москвы об административных правонарушениях"});
-            this.comboBox18.Location = new System.Drawing.Point(12, 938);
+            this.comboBox18.Location = new System.Drawing.Point(12, 972);
             this.comboBox18.Name = "comboBox18";
             this.comboBox18.Size = new System.Drawing.Size(296, 28);
-            this.comboBox18.TabIndex = 73;
+            this.comboBox18.TabIndex = 74;
             this.comboBox18.Tag = "26";
+            this.comboBox18.Text = "КоАП РФ";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(315, 980);
+            this.label20.Location = new System.Drawing.Point(315, 1014);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(565, 20);
             this.label20.TabIndex = 319;
@@ -977,10 +982,10 @@
             "2018",
             "2019",
             "2020"});
-            this.comboBox19.Location = new System.Drawing.Point(205, 972);
+            this.comboBox19.Location = new System.Drawing.Point(205, 1006);
             this.comboBox19.Name = "comboBox19";
             this.comboBox19.Size = new System.Drawing.Size(103, 28);
-            this.comboBox19.TabIndex = 76;
+            this.comboBox19.TabIndex = 77;
             this.comboBox19.Tag = "31";
             // 
             // comboBox20
@@ -999,10 +1004,10 @@
             "10",
             "11",
             "12"});
-            this.comboBox20.Location = new System.Drawing.Point(93, 972);
+            this.comboBox20.Location = new System.Drawing.Point(93, 1006);
             this.comboBox20.Name = "comboBox20";
             this.comboBox20.Size = new System.Drawing.Size(106, 28);
-            this.comboBox20.TabIndex = 75;
+            this.comboBox20.TabIndex = 76;
             this.comboBox20.Tag = "30";
             // 
             // comboBox21
@@ -1040,17 +1045,17 @@
             "29",
             "30",
             "31"});
-            this.comboBox21.Location = new System.Drawing.Point(12, 972);
+            this.comboBox21.Location = new System.Drawing.Point(12, 1006);
             this.comboBox21.Name = "comboBox21";
             this.comboBox21.Size = new System.Drawing.Size(75, 28);
-            this.comboBox21.TabIndex = 74;
+            this.comboBox21.TabIndex = 75;
             this.comboBox21.Tag = "29";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(314, 1009);
+            this.label21.Location = new System.Drawing.Point(314, 1043);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(406, 20);
             this.label21.TabIndex = 321;
@@ -1060,7 +1065,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label30.Location = new System.Drawing.Point(315, 841);
+            this.label30.Location = new System.Drawing.Point(316, 875);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(185, 20);
             this.label30.TabIndex = 324;
@@ -1072,10 +1077,10 @@
             this.comboBoxGAI.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxGAI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxGAI.FormattingEnabled = true;
-            this.comboBoxGAI.Location = new System.Drawing.Point(12, 838);
+            this.comboBoxGAI.Location = new System.Drawing.Point(13, 872);
             this.comboBoxGAI.Name = "comboBoxGAI";
             this.comboBoxGAI.Size = new System.Drawing.Size(296, 28);
-            this.comboBoxGAI.TabIndex = 58;
+            this.comboBoxGAI.TabIndex = 71;
             this.comboBoxGAI.Tag = "27";
             this.comboBoxGAI.SelectedIndexChanged += new System.EventHandler(this.comboBoxGAI_SelectedIndexChanged);
             // 
@@ -1083,7 +1088,7 @@
             // 
             this.labelYIN.AutoSize = true;
             this.labelYIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelYIN.Location = new System.Drawing.Point(315, 875);
+            this.labelYIN.Location = new System.Drawing.Point(316, 909);
             this.labelYIN.Name = "labelYIN";
             this.labelYIN.Size = new System.Drawing.Size(147, 20);
             this.labelYIN.TabIndex = 326;
@@ -1092,10 +1097,10 @@
             // textBoxYIN
             // 
             this.textBoxYIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxYIN.Location = new System.Drawing.Point(12, 872);
+            this.textBoxYIN.Location = new System.Drawing.Point(13, 906);
             this.textBoxYIN.Name = "textBoxYIN";
             this.textBoxYIN.Size = new System.Drawing.Size(296, 26);
-            this.textBoxYIN.TabIndex = 59;
+            this.textBoxYIN.TabIndex = 72;
             this.textBoxYIN.Tag = "28";
             // 
             // comboBox22
@@ -1106,11 +1111,17 @@
             this.comboBox22.FormattingEnabled = true;
             this.comboBox22.Items.AddRange(new object[] {
             "500",
-            "1000"});
-            this.comboBox22.Location = new System.Drawing.Point(12, 1006);
+            "800",
+            "1000",
+            "1500",
+            "2000",
+            "2500",
+            "3000",
+            "5000"});
+            this.comboBox22.Location = new System.Drawing.Point(12, 1040);
             this.comboBox22.Name = "comboBox22";
             this.comboBox22.Size = new System.Drawing.Size(296, 28);
-            this.comboBox22.TabIndex = 77;
+            this.comboBox22.TabIndex = 78;
             this.comboBox22.Tag = "32";
             // 
             // textBox8FIO
@@ -1212,7 +1223,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(314, 907);
+            this.label24.Location = new System.Drawing.Point(314, 841);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(321, 20);
             this.label24.TabIndex = 341;
@@ -1227,10 +1238,10 @@
             "2018",
             "2019",
             "2020"});
-            this.comboBox23.Location = new System.Drawing.Point(205, 904);
+            this.comboBox23.Location = new System.Drawing.Point(205, 838);
             this.comboBox23.Name = "comboBox23";
             this.comboBox23.Size = new System.Drawing.Size(103, 28);
-            this.comboBox23.TabIndex = 72;
+            this.comboBox23.TabIndex = 60;
             this.comboBox23.Tag = "35";
             // 
             // comboBox24
@@ -1249,10 +1260,10 @@
             "10",
             "11",
             "12"});
-            this.comboBox24.Location = new System.Drawing.Point(93, 904);
+            this.comboBox24.Location = new System.Drawing.Point(93, 838);
             this.comboBox24.Name = "comboBox24";
             this.comboBox24.Size = new System.Drawing.Size(106, 28);
-            this.comboBox24.TabIndex = 71;
+            this.comboBox24.TabIndex = 59;
             this.comboBox24.Tag = "34";
             // 
             // comboBox25
@@ -1290,10 +1301,10 @@
             "29",
             "30",
             "31"});
-            this.comboBox25.Location = new System.Drawing.Point(12, 904);
+            this.comboBox25.Location = new System.Drawing.Point(12, 838);
             this.comboBox25.Name = "comboBox25";
             this.comboBox25.Size = new System.Drawing.Size(75, 28);
-            this.comboBox25.TabIndex = 60;
+            this.comboBox25.TabIndex = 58;
             this.comboBox25.Tag = "33";
             // 
             // Article2025

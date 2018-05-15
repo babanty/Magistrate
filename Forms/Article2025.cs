@@ -39,7 +39,7 @@ namespace Magistrate.Forms
         #endregion Инициализация
 
 
-        #region автоматическое заполнение полей
+        #region Автоматическое заполнение полей
         // Выбранный участок, автоматически подставляет кто судья
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -135,7 +135,7 @@ namespace Magistrate.Forms
         #endregion Сохранение
 
 
-        #region приватные методы
+        #region Приватные методы
         /// <summary>
         /// метод возвращающий формулировку в случае если явился или не явился или null если не правильные параметры
         /// </summary>
