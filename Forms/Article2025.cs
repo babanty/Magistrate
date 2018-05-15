@@ -202,8 +202,12 @@ namespace Magistrate.Forms
                 return;
             }
 
-            // Вставляем название в буфер обмена Перед генерацией
-            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
+            // Вставляем название в буфер обмена
+            string numCase = ""; // номер дела
+            if (textBoxClipPutNum.Text != null && textBoxClipPutNum.Text != "")
+                numCase = textBoxClipPutNum.Text + "  ";
+            Clipboard.SetText(numCase + textBoxClipPutName.Text + "  " + this.Text);
+
             // Если пол мужской, то один шаблон, если женский, то другой
             if (radioButtonSexMen.Checked)
             {

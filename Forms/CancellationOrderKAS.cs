@@ -107,7 +107,10 @@ namespace Magistrate.Forms
 
 
             // Вставляем название в буфер обмена
-            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
+            string numCase = ""; // номер дела
+            if (textBoxClipPutNum.Text != null && textBoxClipPutNum.Text != "")
+                numCase = textBoxClipPutNum.Text + "  ";
+            Clipboard.SetText(numCase + textBoxClipPutName.Text + "  " + this.Text);
 
 
             // Если с восстановлением, то один шаблон, если нет, то другой

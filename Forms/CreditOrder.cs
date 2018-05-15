@@ -12,6 +12,7 @@ namespace Magistrate.Forms
 {
     public partial class CreditOrder : Form
     {
+        #region Инициализация
         public CreditOrder()
         {
             InitializeComponent();
@@ -32,89 +33,10 @@ namespace Magistrate.Forms
             comboBox3.Text = month;
             comboBox4.Text = year;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+        #endregion Инициализация
 
 
-            // Заполняем полные реквизиты банка
-            string bankRequisites = GetBank(comboBoxNameBank.Text); // находим полные реквизиты банка
-            if(bankRequisites == null) // банк не опознан
-            {
-                MessageBox.Show("Реквизиты банка не опознаны, после герации не забудьте их вписать");
-                bankRequisites = "";
-            }
-            GenerationWord.AddValueControl(ref controlArrayToString, bankRequisites, "#-1"); // в ручную добавляем новый ключ
-
-
-            // Заполнение второй даты, выделено отдельно т.к. иначе в word-е будут лишние точки
-            string dateTwo = ""; // дата вторая 
-            if (comboBox25.Text != "" && comboBox25.Text != null)
-            {
-                dateTwo = comboBox25.Text + "." + comboBox24.Text + "." + comboBox23.Text;
-                dateTwo = " по " + dateTwo + " года";
-            }
-            GenerationWord.AddValueControl(ref controlArrayToString, dateTwo, "#-2"); // в ручную добавляем новый ключ
-
-
-            // Изменение суммы задолженности по принципу 0 руб. 0 коп.
-            string Debt = HandlerTextControls.IntInRubAndCop(numericUpDown1.Value);
-            if (Debt == null)
-                return;
-            GenerationWord.AddValueControl(ref controlArrayToString, Debt, "#-3"); // в ручную добавляем новый ключ
-
-
-            // Изменение суммы государственной пошлины по принципу 0 руб. 0 коп.
-            string Duty = HandlerTextControls.IntInRubAndCop(numericUpDown2.Value);
-            if (Duty == null)
-                return;
-            GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-4"); // в ручную добавляем новый ключ
-
-
-            // Суммирование взыскиваемой суммы
-            decimal summToPay = numericUpDown1.Value + numericUpDown2.Value; // сумма к оплате
-            string ToPay = HandlerTextControls.IntInRubAndCop(summToPay);
-            GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-5"); // в ручную добавляем новый ключ
-
-
-            // Вставляем название в буфер обмена
-            Clipboard.SetText(textBoxClipPutNum.Text + "  " + textBoxClipPutName.Text + "  " + this.Text);
-
-
-            // Сгенерировать ворд
-            GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Приказ по банку или фин орг", controlArrayToString);
-        }
-
-        /// <summary>
-        /// Возвращает полные реквизиты банка по названию или null
-        /// </summary>
-        /// <param name="Name">Название банка</param>
-        private string GetBank(string Name)
-        { // потом сделать динамчным вытгиванием из БД 
-            int nameLength = Name.Length; // Количество символов в названии банка
-            string result = null;
-
-
-            // Проверяем сходится ли название с полными реквизитами
-            List<string> allBanks = Db.GetColumn(NamePropertiesForComboBox.БанкПолный);
-            if (allBanks == null)
-                return null;
-
-            foreach(string bank in allBanks)
-            {
-                if (bank.Substring(0, nameLength) == Name) // первые слова в полных реквизитах соотвествуют 
-                    return bank;
-            }
-
-            // Возвращаем результат null
-            return result;
-
-
-        }
-
-
+        #region Автоматическое заполнение полей
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             // название при сохранении
@@ -133,6 +55,37 @@ namespace Magistrate.Forms
                 comboBox5.Text = "И.о. мирового судьи";
             }
         }
+        #endregion Автоматическое заполнение полей
+
+
+        #region Приватные методы
+        /// <summary>
+        /// Возвращает полные реквизиты банка по названию или null
+        /// </summary>
+        /// <param name="Name">Название банка</param>
+        private string GetBank(string Name)
+        { // потом сделать динамчным вытгиванием из БД 
+            int nameLength = Name.Length; // Количество символов в названии банка
+            string result = null;
+
+
+            // Проверяем сходится ли название с полными реквизитами
+            List<string> allBanks = Db.GetColumn(NamePropertiesForComboBox.БанкПолный);
+            if (allBanks == null)
+                return null;
+
+            foreach (string bank in allBanks)
+            {
+                if (bank.Substring(0, nameLength) == Name) // первые слова в полных реквизитах соотвествуют 
+                    return bank;
+            }
+
+            // Возвращаем результат null
+            return result;
+            
+        }
+        #endregion Приватные методы
+
 
         #region Сохранение
         // Сохранить заполненные поля
@@ -173,6 +126,63 @@ namespace Magistrate.Forms
         #endregion Сохранение
 
 
+        // СГЕНЕРИРОВАТЬ WORD
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+
+
+            // Заполняем полные реквизиты банка
+            string bankRequisites = GetBank(comboBoxNameBank.Text); // находим полные реквизиты банка
+            if (bankRequisites == null) // банк не опознан
+            {
+                MessageBox.Show("Реквизиты банка не опознаны, после герации не забудьте их вписать");
+                bankRequisites = "";
+            }
+            GenerationWord.AddValueControl(ref controlArrayToString, bankRequisites, "#-1"); // в ручную добавляем новый ключ
+
+
+            // Заполнение второй даты, выделено отдельно т.к. иначе в word-е будут лишние точки
+            string dateTwo = ""; // дата вторая 
+            if (comboBox25.Text != "" && comboBox25.Text != null)
+            {
+                dateTwo = comboBox25.Text + "." + comboBox24.Text + "." + comboBox23.Text;
+                dateTwo = " по " + dateTwo + " года";
+            }
+            GenerationWord.AddValueControl(ref controlArrayToString, dateTwo, "#-2"); // в ручную добавляем новый ключ
+
+
+            // Изменение суммы задолженности по принципу 0 руб. 0 коп.
+            string Debt = HandlerTextControls.IntInRubAndCop(numericUpDown1.Value);
+            if (Debt == null)
+                return;
+            GenerationWord.AddValueControl(ref controlArrayToString, Debt, "#-3"); // в ручную добавляем новый ключ
+
+
+            // Изменение суммы государственной пошлины по принципу 0 руб. 0 коп.
+            string Duty = HandlerTextControls.IntInRubAndCop(numericUpDown2.Value);
+            if (Duty == null)
+                return;
+            GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-4"); // в ручную добавляем новый ключ
+
+
+            // Суммирование взыскиваемой суммы
+            decimal summToPay = numericUpDown1.Value + numericUpDown2.Value; // сумма к оплате
+            string ToPay = HandlerTextControls.IntInRubAndCop(summToPay);
+            GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-5"); // в ручную добавляем новый ключ
+
+
+            // Вставляем название в буфер обмена
+            string numCase = ""; // номер дела
+            if (textBoxClipPutNum.Text != null && textBoxClipPutNum.Text != "")
+                numCase = textBoxClipPutNum.Text + "  ";
+            Clipboard.SetText(numCase + textBoxClipPutName.Text + "  " + this.Text);
+
+
+            // Сгенерировать ворд
+            GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Приказ по банку или фин орг", controlArrayToString);
+        }
     }
 }
 
