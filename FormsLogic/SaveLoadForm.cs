@@ -9,7 +9,7 @@ namespace Magistrate
 {
     public static class SaveLoadForm
     {
-        static Ini ini = new Ini("SaveForm"); // Создаем инифайл для последующе обработки autoit exe-шником
+        static IniFacade ini = new IniFacade("SaveForm"); // Создаем инифайл для последующе обработки autoit exe-шником
 
         /// <summary>
         /// Сохранить значение полей ввода

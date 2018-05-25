@@ -12,7 +12,7 @@ namespace Magistrate
     public static class PropertiesMyApp
     {
         // Инициализация файла для сохранения настроек
-        private static Ini properties = new Ini("PropertiesApp");
+        private static IniFacade properties = new IniFacade("PropertiesApp");
 
         /// <summary>
         /// Возвращает значение указанной настройки

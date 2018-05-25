@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Db.cs" />
+    <Compile Include="DataBase\Db.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,10 +112,10 @@
     <Compile Include="Forms\OrdersForCommunal.Designer.cs">
       <DependentUpon>OrdersForCommunal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Properties.cs">
+    <Compile Include="PropertiesForm\Properties.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Properties.Designer.cs">
+    <Compile Include="PropertiesForm\Properties.Designer.cs">
       <DependentUpon>Properties.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReturnDuty.cs">
@@ -124,14 +124,14 @@
     <Compile Include="Forms\ReturnDuty.Designer.cs">
       <DependentUpon>ReturnDuty.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenerationWord.cs" />
-    <Compile Include="HandlerTextControls.cs" />
-    <Compile Include="Ini.cs" />
+    <Compile Include="FormsLogic\GenerationWord.cs" />
+    <Compile Include="FormsLogic\HandlerTextControls.cs" />
+    <Compile Include="DataBase\IniFacade.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="PropertiesMyApp.cs" />
+    <Compile Include="PropertiesForm\PropertiesMyApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SaveLoadForm.cs" />
-    <Compile Include="ValueControl.cs" />
+    <Compile Include="FormsLogic\SaveLoadForm.cs" />
+    <Compile Include="FormsLogic\ValueControl.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,7 +165,7 @@
     <EmbeddedResource Include="Forms\OrdersForCommunal.resx">
       <DependentUpon>OrdersForCommunal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Properties.resx">
+    <EmbeddedResource Include="PropertiesForm\Properties.resx">
       <DependentUpon>Properties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReturnDuty.resx">
@@ -193,7 +193,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MyIni\MyIni.csproj">
+      <Project>{51945e23-d32c-4321-a36f-c42580867bba}</Project>
+      <Name>MyIni</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Sample\Описание папки.txt" />
     <Content Include="Задачи для выполнения.txt" />

@@ -29,7 +29,7 @@ namespace Magistrate
             string nameSectionValue = "ValueForGenerate"; // Название секции в ini файле, в которой будут храниться ini-ключи-значения полей ввода
             string nameSectionProperties = "PropertiesForGenerate"; // Название секции в ini файле, в которой будут храниться ini-ключи-значения настройки для autoit-скрипта
 
-            Ini ini = new Ini("PropertiesForAutoitScript"); // Создаем инифайл для последующе обработки autoit exe-шником
+            IniFacade ini = new IniFacade("PropertiesForAutoitScript"); // Создаем инифайл для последующе обработки autoit exe-шником
 
             try // Очищаем старую информацию в секциях ini 
             {

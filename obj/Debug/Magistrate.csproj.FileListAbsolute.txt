@@ -20,3 +20,6 @@ E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article2025.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.ReturnDuty.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.ByJurisdiction.resources
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\bin\Debug\MyIni.dll
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\bin\Debug\MyIni.pdb
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.csproj.CopyComplete

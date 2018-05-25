@@ -13,7 +13,7 @@ namespace Magistrate
     /// </summary>
     public static class Db
     {
-        private static Ini db = new Ini("db");
+        private static IniFacade db = new IniFacade("db");
 
         /// <summary>
         /// Вернуть значения одной колонки
