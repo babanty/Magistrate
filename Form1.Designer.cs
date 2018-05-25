@@ -45,6 +45,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button14 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -52,7 +53,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(497, 244);
+            this.button1.Location = new System.Drawing.Point(326, 346);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 45);
             this.button1.TabIndex = 0;
@@ -63,7 +64,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(497, 295);
+            this.button3.Location = new System.Drawing.Point(166, 346);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(154, 45);
             this.button3.TabIndex = 2;
@@ -220,15 +221,27 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button14);
             this.groupBox3.Controls.Add(this.button13);
             this.groupBox3.Controls.Add(this.button9);
             this.groupBox3.Controls.Add(this.button8);
             this.groupBox3.Location = new System.Drawing.Point(464, 16);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(221, 222);
+            this.groupBox3.Size = new System.Drawing.Size(221, 291);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Определения";
+            // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button14.Location = new System.Drawing.Point(6, 219);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(208, 60);
+            this.button14.TabIndex = 13;
+            this.button14.Text = "По подсудности";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Magistrate
             // 
@@ -272,6 +285,7 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button14;
     }
 }
 

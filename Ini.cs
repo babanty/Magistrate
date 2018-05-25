@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
@@ -16,6 +13,8 @@ namespace Magistrate
     /// </summary>
     class Ini
     {
+
+        #region Инициализация внешней библиотеки
         private string PathAndName; //Имя файла.
 
         [DllImport("kernel32")] // Подключаем kernel32.dll и описываем его функцию WritePrivateProfilesString
@@ -43,6 +42,8 @@ namespace Magistrate
         [In] UInt32 nSize,
         [In] [MarshalAs(UnmanagedType.LPStr)] string strFileName
         );
+        #endregion Инициализация внешней библиотеки
+
 
         /// <summary>
         /// Вернуть простой массив значения ключей в секции, где [-,0] - имя ключа, а [-, 1] - значение ключа или null
@@ -77,6 +78,7 @@ namespace Magistrate
             return returnArray;
         }
 
+
         /// <summary>
         /// Вернуть количество ключей в секции, если секция пустая или не существует возвращает 0
         /// </summary>
@@ -90,6 +92,7 @@ namespace Magistrate
 
             return array.Length;
         }
+
 
         /// <summary>
         /// Вернуть имена всех секций, сделан из костылей
@@ -111,6 +114,7 @@ namespace Magistrate
                 return null;
             }
         }
+
 
         /// <summary>
         /// Вернуть простой массив значения ключей в секции по формату "Ключ=Значение"
@@ -175,6 +179,7 @@ namespace Magistrate
             PathAndName = new FileInfo(IniPath).FullName.ToString();
         }
 
+
         /// <summary>
         /// Читаем ini-файл и возвращаем значение указного ключа из заданной секции.
         /// </summary>
@@ -191,28 +196,36 @@ namespace Magistrate
             return RetVal.ToString();
         }
 
-        //Записываем в ini-файл. Запись происходит в выбранную секцию в выбранный ключ.
+
+        /// <summary>Записываем в ini-файл. Запись происходит в выбранную секцию в выбранный ключ.</summary>
         public void Write(string Section, string Key, string Value)
         {
             WritePrivateProfileString(Section, Key, Value, PathAndName);
         }
 
-        //Удаляем ключ из выбранной секции.
+
+        /// <summary>Удаляем ключ из выбранной секции.</summary>
         public void DeleteKey(string Key, string Section = null)
         {
             Write(Section, Key, null);
         }
-        //Удаляем выбранную секцию
+
+
+        /// <summary>Удаляем выбранную секцию</summary>
         public void DeleteSection(string Section = null)
         {
             Write(Section, null, null);
         }
-        //Проверяем, есть ли такой ключ, в этой секции
+
+
+        /// <summary>Проверяем, есть ли такой ключ, в этой секции</summary>
         public bool KeyExists(string Key, string Section = null)
         {
             return IniReadKey(Section, Key).Length > 0;
         }
 
+
+        // костыль
         private static List<string> ВернутьВсеСовпаденияМеждуДвумяСтроками(string текстДляПоиска, string перваяСтрока, string втораяСтрока)
         {
             List<string> возврат = new List<string>();

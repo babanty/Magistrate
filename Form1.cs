@@ -114,5 +114,11 @@ namespace Magistrate
             ReturnDuty form2 = new ReturnDuty(); // Создание соовтественующего окна
             form2.Show(); // показать окно
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            ByJurisdiction form2 = new ByJurisdiction(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
     }
 }

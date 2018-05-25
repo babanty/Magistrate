@@ -37,10 +37,7 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -100,6 +97,9 @@
             this.LabelClipPutNum = new System.Windows.Forms.Label();
             this.LabelClipPutDescript = new System.Windows.Forms.Label();
             this.textBoxClipPutNum = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -234,6 +234,7 @@
             this.comboBox2.Size = new System.Drawing.Size(80, 28);
             this.comboBox2.TabIndex = 13;
             this.comboBox2.Tag = "3";
+            this.comboBox2.Text = "18";
             // 
             // comboBox1
             // 
@@ -259,16 +260,6 @@
             this.comboBox1.Text = "228";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(313, 154);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(462, 20);
-            this.label27.TabIndex = 91;
-            this.label27.Text = "Напишите фамилию в Р.п \"кого?\" (пример: \"Иванова\")";
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -278,26 +269,6 @@
             this.textBox1.TabIndex = 16;
             this.textBox1.Tag = "6";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(314, 212);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(436, 20);
-            this.label5.TabIndex = 95;
-            this.label5.Text = "Отчество в Р.п.  \"кого?\"  (пример: \"Геннадиевича\")";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(314, 183);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(309, 20);
-            this.label4.TabIndex = 94;
-            this.label4.Text = "Имя в Р.п.  \"кого?\" (пример: \"Игоря\")";
             // 
             // textBox3
             // 
@@ -325,9 +296,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(314, 308);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(377, 20);
+            this.label6.Size = new System.Drawing.Size(507, 20);
             this.label6.TabIndex = 101;
-            this.label6.Text = "Отчество \"кому?\" (пример: \"Геннадиевичу\")";
+            this.label6.Text = "Отчество направить  \"кому?\" (\"Петровича\" / \"Николаевне\")";
             // 
             // label7
             // 
@@ -335,9 +306,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(314, 276);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(260, 20);
+            this.label7.Size = new System.Drawing.Size(356, 20);
             this.label7.TabIndex = 100;
-            this.label7.Text = "Имя \"кому?\" (пример: \"Игорю\")";
+            this.label7.Text = "Имя, направить \"кому?\" (\"Игорю\" / \"Анне\")";
             // 
             // textBox4
             // 
@@ -363,9 +334,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.Location = new System.Drawing.Point(314, 244);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(417, 20);
+            this.label8.Size = new System.Drawing.Size(474, 20);
             this.label8.TabIndex = 97;
-            this.label8.Text = "Напишите фамилию \"кому?\" (пример: \"Иванову\")";
+            this.label8.Text = "Фамилия, направить \"кому?\" (\"Иванову\" / \"Кузнецовой\")";
             // 
             // textBox6
             // 
@@ -1172,6 +1143,36 @@
             this.textBoxClipPutNum.Size = new System.Drawing.Size(99, 26);
             this.textBoxClipPutNum.TabIndex = 76;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.Location = new System.Drawing.Point(313, 215);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(518, 20);
+            this.label25.TabIndex = 340;
+            this.label25.Text = "Отчество, в отношении кого?  (\"Петровича\" / \"Николаевны\")";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(313, 183);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(442, 20);
+            this.label26.TabIndex = 339;
+            this.label26.Text = "Имя, в отношении кого? (пример: \"Игоря\" / \"Марии\")";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(313, 151);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(581, 20);
+            this.label29.TabIndex = 338;
+            this.label29.Text = "Напишите фамилию, в отношении кого?  (\"Иванова\" / \"Кузнецовой\")";
+            // 
             // CasTaxes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -1179,6 +1180,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1003, 653);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label29);
             this.Controls.Add(this.textBoxClipPutName);
             this.Controls.Add(this.LabelClipPutNum);
             this.Controls.Add(this.LabelClipPutDescript);
@@ -1236,11 +1240,8 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label27);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -1276,10 +1277,7 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
@@ -1339,5 +1337,8 @@
         private System.Windows.Forms.Label LabelClipPutNum;
         private System.Windows.Forms.Label LabelClipPutDescript;
         private System.Windows.Forms.TextBox textBoxClipPutNum;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label29;
     }
 }
