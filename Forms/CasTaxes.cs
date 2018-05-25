@@ -19,10 +19,10 @@ namespace Magistrate.Forms
         {
             InitializeComponent();
 
-            Db.SetPropertiesComboBox(ref comboBox10, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBox13, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBox14, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBox15, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            Db.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
 
@@ -31,8 +31,8 @@ namespace Magistrate.Forms
             DateTime dateTimeNow = DateTime.Now;
             string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
-            comboBox3.Text = month;
-            comboBox4.Text = year;
+            comboBoxDateOfOrderMonth.Text = month;
+            comboBoxDateOfOrderYear.Text = year;
         }
         #endregion Инициализация
 
@@ -41,79 +41,79 @@ namespace Magistrate.Forms
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox6.Text = textBox1.Text;
+            textBoxFullNameSurNameIvanovu.Text = textBoxFullNameSurNameIvanovoy.Text;
 
             // название при сохранении
-            textBoxClipPutName.Text = textBox1.Text;
+            textBoxClipPutName.Text = textBoxFullNameSurNameIvanovoy.Text;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox5.Text = textBox2.Text;
+            textBoxFullNameNameIvanu.Text = textBoxFullNameNameMarii.Text;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            textBox4.Text = textBox3.Text;
+            textBoxFullNamePatronymicIvanovichu.Text = textBoxFullNamePatronymicIvanovni.Text;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
+            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
             {
-                comboBox5.Text = "Мировой судья";
+                comboBoxWhoIsJudge.Text = "Мировой судья";
             }
             else
             {
-                comboBox5.Text = "И.о. мирового судьи";
+                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
             }
         }
 
         #region Разблокировка возможности писать сумму задолженности и пени
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (checkBoxTransportTax.Checked)
             {
-                comboBox26.Enabled = true;
-                numericUpDown1.Enabled = true;
-                numericUpDown2.Enabled = true;
+                comboBoxTransportTaxYear.Enabled = true;
+                numericUpDownTransportTax.Enabled = true;
+                numericUpDownTransportTaxFine.Enabled = true;
             }
             else
             {
-                comboBox26.Enabled = false;
-                numericUpDown1.Enabled = false;
-                numericUpDown2.Enabled = false;
+                comboBoxTransportTaxYear.Enabled = false;
+                numericUpDownTransportTax.Enabled = false;
+                numericUpDownTransportTaxFine.Enabled = false;
             }
 
         }
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked)
+            if (checkBoxLandTax.Checked)
             {
-                comboBox17.Enabled = true;
-                numericUpDown3.Enabled = true;
-                numericUpDown4.Enabled = true;
+                comboBoxLandTaxYear.Enabled = true;
+                numericUpDownLandTax.Enabled = true;
+                numericUpDownLandTaxFine.Enabled = true;
             }
             else
             {
-                comboBox17.Enabled = false;
-                numericUpDown3.Enabled = false;
-                numericUpDown4.Enabled = false;
+                comboBoxLandTaxYear.Enabled = false;
+                numericUpDownLandTax.Enabled = false;
+                numericUpDownLandTaxFine.Enabled = false;
             }
         }
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox3.Checked)
+            if (checkBoxPropertyTax.Checked)
             {
-                comboBox18.Enabled = true;
-                numericUpDown5.Enabled = true;
-                numericUpDown6.Enabled = true;
+                comboBoxPropertyTaxYear.Enabled = true;
+                numericUpDownPropertyTax.Enabled = true;
+                numericUpDownPropertyTaxFine.Enabled = true;
             }
             else
             {
-                comboBox18.Enabled = false;
-                numericUpDown5.Enabled = false;
-                numericUpDown6.Enabled = false;
+                comboBoxPropertyTaxYear.Enabled = false;
+                numericUpDownPropertyTax.Enabled = false;
+                numericUpDownPropertyTaxFine.Enabled = false;
             }
         }
         #endregion Разблокировка возможности писать сумму задолженности и пени
@@ -168,7 +168,7 @@ namespace Magistrate.Forms
 
 
             // Если ИНН не равен 12 символам
-            if (textBox7.Text != null && textBox7.Text.Length != 12)
+            if (textBoxINN.Text != null && textBoxINN.Text.Length != 12)
             {
                 MessageBox.Show("ИНН должен состоять из 12 символов");
                 return;
@@ -176,7 +176,7 @@ namespace Magistrate.Forms
 
 
             // Если не чекнули ни один налог
-            if (checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == false)
+            if (checkBoxTransportTax.Checked == false && checkBoxLandTax.Checked == false && checkBoxPropertyTax.Checked == false)
             {
                 MessageBox.Show("Не поставили галку не над одиним налогом");
                 return;
@@ -185,26 +185,26 @@ namespace Magistrate.Forms
 
             // Обработка налогов, составление строки
             string taxesString = "";
-            if (checkBox1.Checked) // Транспортный налог
+            if (checkBoxTransportTax.Checked) // Транспортный налог
             {
-                taxesString += checkBox1.Text; // указываем налог
-                taxesString += " за " + comboBox26.Text + " год"; // добавляем год
-                taxesString += " в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown1.Value); // сумму налога переводим в 0 руб. 0 коп
-                taxesString += ", пени в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown2.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
+                taxesString += checkBoxTransportTax.Text; // указываем налог
+                taxesString += " за " + comboBoxTransportTaxYear.Text + " год"; // добавляем год
+                taxesString += " в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDownTransportTax.Value); // сумму налога переводим в 0 руб. 0 коп
+                taxesString += ", пени в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDownTransportTaxFine.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
             }
-            if (checkBox2.Checked) // Транспортный налог
+            if (checkBoxLandTax.Checked) // Транспортный налог
             {
-                taxesString += checkBox2.Text; // указываем налог
-                taxesString += " за " + comboBox17.Text + " год"; // добавляем год
-                taxesString += " в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown3.Value); // сумму налога переводим в 0 руб. 0 коп
-                taxesString += ", пени в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown4.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
+                taxesString += checkBoxLandTax.Text; // указываем налог
+                taxesString += " за " + comboBoxLandTaxYear.Text + " год"; // добавляем год
+                taxesString += " в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDownLandTax.Value); // сумму налога переводим в 0 руб. 0 коп
+                taxesString += ", пени в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDownLandTaxFine.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
             }
-            if (checkBox3.Checked) // Транспортный налог
+            if (checkBoxPropertyTax.Checked) // Транспортный налог
             {
-                taxesString += checkBox3.Text; // указываем налог
-                taxesString += " за " + comboBox18.Text + " год"; // добавляем год
-                taxesString += " в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown5.Value); // сумму налога переводим в 0 руб. 0 коп
-                taxesString += ", пени в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDown6.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
+                taxesString += checkBoxPropertyTax.Text; // указываем налог
+                taxesString += " за " + comboBoxPropertyTaxYear.Text + " год"; // добавляем год
+                taxesString += " в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDownPropertyTax.Value); // сумму налога переводим в 0 руб. 0 коп
+                taxesString += ", пени в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDownPropertyTaxFine.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
             }
             GenerationWord.AddValueControl(ref controlArrayToString, taxesString, "#-1"); // в ручную добавляем новый ключ
 
@@ -213,12 +213,12 @@ namespace Magistrate.Forms
             decimal taxesSum = 0m; // Сумма всех налогов
             try
             {
-                if (checkBox1.Checked)
-                    taxesSum += numericUpDown1.Value + numericUpDown2.Value;
-                if (checkBox2.Checked)
-                    taxesSum += numericUpDown3.Value + numericUpDown4.Value;
-                if (checkBox3.Checked)
-                    taxesSum += numericUpDown5.Value + numericUpDown6.Value;
+                if (checkBoxTransportTax.Checked)
+                    taxesSum += numericUpDownTransportTax.Value + numericUpDownTransportTaxFine.Value;
+                if (checkBoxLandTax.Checked)
+                    taxesSum += numericUpDownLandTax.Value + numericUpDownLandTaxFine.Value;
+                if (checkBoxPropertyTax.Checked)
+                    taxesSum += numericUpDownPropertyTax.Value + numericUpDownPropertyTaxFine.Value;
             }
             catch
             {

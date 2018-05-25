@@ -18,14 +18,14 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            Db.SetPropertiesComboBox(ref comboBox10, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBox13, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBox14, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBox15, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
-            Db.SetPropertiesComboBox(ref comboBox22, NamePropertiesForComboBox.МаркаАвто); // Марка авто
-            Db.SetPropertiesComboBox(ref comboBox23, NamePropertiesForComboBox.НазваниеТрассы); // Трасса
+            Db.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            Db.SetPropertiesComboBox(ref comboBoxCarBrand, NamePropertiesForComboBox.МаркаАвто); // Марка авто
+            Db.SetPropertiesComboBox(ref comboBoxRoute, NamePropertiesForComboBox.НазваниеТрассы); // Трасса
 
-            comboBox24.Items.AddRange(Db.GetAllShortRequisitesGAI().ToArray()); // Получатель бабулесов, ГАИ, заполняем варианты
+            comboBoxRecipientGIBDD.Items.AddRange(Db.GetAllShortRequisitesGAI().ToArray()); // Получатель бабулесов, ГАИ, заполняем варианты
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm , ref comboBoxLoad);// заполнение вариантами сохранений
 
@@ -34,8 +34,8 @@ namespace Magistrate.Forms
             DateTime dateTimeNow = DateTime.Now;
             string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
-            comboBox3.Text = month;
-            comboBox4.Text = year;
+            comboBoxDateOfOrderMonth.Text = month;
+            comboBoxDateOfOrderYear.Text = year;
         }
 
         #endregion Инициализация
@@ -45,24 +45,24 @@ namespace Magistrate.Forms
         // Перенос фамилии
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Text = textBox5.Text;
-            textBox6.Text = textBox5.Text;
+            textBoxFullNameSurNameIvanova.Text = textBoxFullNameSurNameIvanov.Text;
+            textBoxFullNameSurNameIvanovu.Text = textBoxFullNameSurNameIvanov.Text;
 
             // название при сохранении
-            textBoxClipPutName.Text = textBox5.Text;
+            textBoxClipPutName.Text = textBoxFullNameSurNameIvanov.Text;
         }
 
 
         // Выбранный участок, автоматически подставляет кто судья
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
+            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
             {
-                comboBox5.Text = "Мировой судья";
+                comboBoxWhoIsJudge.Text = "Мировой судья";
             }
             else
             {
-                comboBox5.Text = "И.о. мирового судьи";
+                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
             }
         }
 
@@ -70,49 +70,49 @@ namespace Magistrate.Forms
         // Автоматически переносит полное ФИО на другие поля
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox11.Text = textBox1.Text;
+            textBoxFullNameSurNameIvanovoy.Text = textBoxFullNameSurNameIvanova.Text;
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox10.Text = textBox2.Text;
+            textBoxFullNameNameMarii.Text = textBoxFullNameNameIvana.Text;
         }
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            textBox9.Text = textBox3.Text;
+            textBoxFullNamePatronymicIvanovni.Text = textBoxFullNamePatronymicIvanovicha.Text;
         }
 
 
         // разблочить поле для ввода альтернативных вариантов нарушений
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox4.Checked)
-                textBox13.Enabled = true;
+            if (checkBoxViolationAlternative.Checked)
+                textBoxViolationAlternative.Enabled = true;
 
-            if (checkBox4.Checked == false)
-                textBox13.Enabled = false;
+            if (checkBoxViolationAlternative.Checked == false)
+                textBoxViolationAlternative.Enabled = false;
         }
 
 
         // Выводит полную информацию что полчается с альтернативным вариантом нарушеня
         private void textBox13_TextChanged(object sender, EventArgs e)
         {
-            if(checkBox4.Checked == false) // Если альтернатива не чекнута 
+            if(checkBoxViolationAlternative.Checked == false) // Если альтернатива не чекнута 
             {
-                label33.Text = "";
+                labelViolationAlternative.Text = "";
                 return;
             }
 
-            string text = GetTextWhithAlternative(textBox13.Text);
+            string text = GetTextWhithAlternative(textBoxViolationAlternative.Text);
 
-            label33.Text = text;
+            labelViolationAlternative.Text = text;
         }
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            label33.Text = GetTextWhithAlternative();
+            labelViolationAlternative.Text = GetTextWhithAlternative();
         }
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            label33.Text = GetTextWhithAlternative();
+            labelViolationAlternative.Text = GetTextWhithAlternative();
         }
 
 
@@ -124,8 +124,8 @@ namespace Magistrate.Forms
             label19.Text = "Улица, например: ул. Клементьевская";
             label22.Text = "Город, есть выбор";
 
-            comboBox23.Items.Clear(); // очищаем варианты для городов
-            Db.SetPropertiesComboBox(ref comboBox23, NamePropertiesForComboBox.МестоПравонарушения); // Место жителства населенный пункт
+            comboBoxRoute.Items.Clear(); // очищаем варианты для городов
+            Db.SetPropertiesComboBox(ref comboBoxRoute, NamePropertiesForComboBox.МестоПравонарушения); // Место жителства населенный пункт
         }
 
         // Нажали "на трассе"
@@ -136,8 +136,8 @@ namespace Magistrate.Forms
             label19.Text = "М. трассы, на которой было правонарушение";
             label22.Text = "Трасса, на которой было правонарушение";
 
-            comboBox23.Items.Clear(); // очищаем варианты для городов
-            Db.SetPropertiesComboBox(ref comboBox23, NamePropertiesForComboBox.НазваниеТрассы); // Место жителства населенный пункт
+            comboBoxRoute.Items.Clear(); // очищаем варианты для городов
+            Db.SetPropertiesComboBox(ref comboBoxRoute, NamePropertiesForComboBox.НазваниеТрассы); // Место жителства населенный пункт
         }
 
 
@@ -145,7 +145,7 @@ namespace Magistrate.Forms
         private void comboBox24_SelectedIndexChanged(object sender, EventArgs e)
         {
             string yin = ""; // Статичная часть УИНа
-            Db.GetRequisitesGAI(comboBox24.Text, out string requisitesGAI, out yin); // Заполняем переменные с реквизитами
+            Db.GetRequisitesGAI(comboBoxRecipientGIBDD.Text, out string requisitesGAI, out yin); // Заполняем переменные с реквизитами
 
             // меняем текст в лэйбле
             if (yin == null)
@@ -161,7 +161,7 @@ namespace Magistrate.Forms
         // Гос рег знак заглавные буквы
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            textBox8.Text = textBox8.Text.ToUpper();
+            textBoxStateRegistrationMark.Text = textBoxStateRegistrationMark.Text.ToUpper();
         }
         #endregion Автоматическое заполнение полей
 
@@ -177,11 +177,11 @@ namespace Magistrate.Forms
         {
             string returnStr = "";
 
-            if (checkBox2.Checked)
-                returnStr += " " + checkBox2.Text;
+            if (checkBoxViolationP1dot1.Checked)
+                returnStr += " " + checkBoxViolationP1dot1.Text;
 
-            if (checkBox3.Checked)
-                returnStr += " " + checkBox3.Text;
+            if (checkBoxViolationP3dot20.Checked)
+                returnStr += " " + checkBoxViolationP3dot20.Text;
 
             if (text != "" && text != null)
                 returnStr += " " + text;
@@ -288,29 +288,29 @@ namespace Magistrate.Forms
 
             // Делаем инициалы ФИО
             string initials = "";
-            if (textBox2.Text.Length > 2 && textBox3.Text.Length > 2) // Если правильно заполнили имя и отчество
-                initials = textBox2.Text.Remove(1) + "." + textBox3.Text.Remove(1) + ".";
+            if (textBoxFullNameNameIvana.Text.Length > 2 && textBoxFullNamePatronymicIvanovicha.Text.Length > 2) // Если правильно заполнили имя и отчество
+                initials = textBoxFullNameNameIvana.Text.Remove(1) + "." + textBoxFullNamePatronymicIvanovicha.Text.Remove(1) + ".";
             GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
 
 
             // Тип нарушения, с пересечением и проч.
-            string textOffence = GetTextWhithAlternative(textBox13.Text);
+            string textOffence = GetTextWhithAlternative(textBoxViolationAlternative.Text);
             GenerationWord.AddValueControl(ref controlArrayToString, textOffence, "#-3"); // в ручную добавляем новый ключ
 
 
             // На трассе или у дома
             string addressViolation = ""; // адрес нарушения
-            if (radioButton3.Checked) // если на трассе
-                addressViolation = "на " + textBox7.Text + " км+" + textBox4.Text + " м а/дороги " + comboBox23.Text;
-            if (radioButton4.Checked) // если у дома
-                addressViolation = "у дома № " + textBox7.Text + " по " + textBox4.Text + " " + comboBox23.Text;
+            if (radioButtonOnRoute.Checked) // если на трассе
+                addressViolation = "на " + textBoxKmRouteOrNumHouse.Text + " км+" + textBoxMetrRoute.Text + " м а/дороги " + comboBoxRoute.Text;
+            if (radioButtonOnHouse.Checked) // если у дома
+                addressViolation = "у дома № " + textBoxKmRouteOrNumHouse.Text + " по " + textBoxMetrRoute.Text + " " + comboBoxRoute.Text;
             GenerationWord.AddValueControl(ref controlArrayToString, addressViolation, "#-5"); // в ручную добавляем новый ключ
 
 
             // Получатель и УИН
             string requisitesGAI = ""; // полные реквзииты ГАИ
-            Db.GetRequisitesGAI(comboBox24.Text, out requisitesGAI, out string standartYIN); // Заполняем переменные с реквизитами
-            requisitesGAI += textBox14.Text; // Добавляем оставшийся УИН
+            Db.GetRequisitesGAI(comboBoxRecipientGIBDD.Text, out requisitesGAI, out string standartYIN); // Заполняем переменные с реквизитами
+            requisitesGAI += textBoxYINgIBDD.Text; // Добавляем оставшийся УИН
             GenerationWord.AddValueControl(ref controlArrayToString, requisitesGAI, "#-6"); // в ручную добавляем новый ключ
 
 
@@ -332,6 +332,5 @@ namespace Magistrate.Forms
                 GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "ст 12.15 Жен", controlArrayToString);
             }
         }
-
     }
 }

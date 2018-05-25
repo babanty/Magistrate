@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Magistrate
 {
+    /// <summary>
+    /// Логика настроек приложения
+    /// </summary>
     public static class PropertiesMyApp
     {
         // Инициализация файла для сохранения настроек

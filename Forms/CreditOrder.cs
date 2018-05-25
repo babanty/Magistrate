@@ -17,11 +17,11 @@ namespace Magistrate.Forms
         {
             InitializeComponent();
 
-            Db.SetPropertiesComboBox(ref comboBoxNameBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
-            Db.SetPropertiesComboBox(ref comboBox10, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBox13, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBox14, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBox15, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            Db.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
+            Db.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
 
@@ -30,8 +30,8 @@ namespace Magistrate.Forms
             DateTime dateTimeNow = DateTime.Now;
             string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
-            comboBox3.Text = month;
-            comboBox4.Text = year;
+            comboBoxDateOfOrderMonth.Text = month;
+            comboBoxDateOfOrderYear.Text = year;
         }
         #endregion Инициализация
 
@@ -40,19 +40,19 @@ namespace Magistrate.Forms
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             // название при сохранении
-            textBoxClipPutName.Text = textBox1.Text;
+            textBoxClipPutName.Text = textBoxFullNameSurNameIvanovoy.Text;
         }
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
+            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
             {
-                comboBox5.Text = "Мировой судья";
+                comboBoxWhoIsJudge.Text = "Мировой судья";
             }
             else
             {
-                comboBox5.Text = "И.о. мирового судьи";
+                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
             }
         }
         #endregion Автоматическое заполнение полей
@@ -134,7 +134,7 @@ namespace Magistrate.Forms
 
 
             // Заполняем полные реквизиты банка
-            string bankRequisites = GetBank(comboBoxNameBank.Text); // находим полные реквизиты банка
+            string bankRequisites = GetBank(comboBoxBank.Text); // находим полные реквизиты банка
             if (bankRequisites == null) // банк не опознан
             {
                 MessageBox.Show("Реквизиты банка не опознаны, после герации не забудьте их вписать");
@@ -145,30 +145,30 @@ namespace Magistrate.Forms
 
             // Заполнение второй даты, выделено отдельно т.к. иначе в word-е будут лишние точки
             string dateTwo = ""; // дата вторая 
-            if (comboBox25.Text != "" && comboBox25.Text != null)
+            if (comboBoxPeriodTwoDay.Text != "" && comboBoxPeriodTwoDay.Text != null)
             {
-                dateTwo = comboBox25.Text + "." + comboBox24.Text + "." + comboBox23.Text;
+                dateTwo = comboBoxPeriodTwoDay.Text + "." + comboBoxPeriodTwoMonth.Text + "." + comboBoxPeriodTwoYear.Text;
                 dateTwo = " по " + dateTwo + " года";
             }
             GenerationWord.AddValueControl(ref controlArrayToString, dateTwo, "#-2"); // в ручную добавляем новый ключ
 
 
             // Изменение суммы задолженности по принципу 0 руб. 0 коп.
-            string Debt = HandlerTextControls.IntInRubAndCop(numericUpDown1.Value);
+            string Debt = HandlerTextControls.IntInRubAndCop(numericUpDownCredit.Value);
             if (Debt == null)
                 return;
             GenerationWord.AddValueControl(ref controlArrayToString, Debt, "#-3"); // в ручную добавляем новый ключ
 
 
             // Изменение суммы государственной пошлины по принципу 0 руб. 0 коп.
-            string Duty = HandlerTextControls.IntInRubAndCop(numericUpDown2.Value);
+            string Duty = HandlerTextControls.IntInRubAndCop(numericUpDownCreditFine.Value);
             if (Duty == null)
                 return;
             GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-4"); // в ручную добавляем новый ключ
 
 
             // Суммирование взыскиваемой суммы
-            decimal summToPay = numericUpDown1.Value + numericUpDown2.Value; // сумма к оплате
+            decimal summToPay = numericUpDownCredit.Value + numericUpDownCreditFine.Value; // сумма к оплате
             string ToPay = HandlerTextControls.IntInRubAndCop(summToPay);
             GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-5"); // в ручную добавляем новый ключ
 

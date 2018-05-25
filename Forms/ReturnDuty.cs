@@ -18,7 +18,7 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            Db.SetPropertiesComboBox(ref comboBoxNameBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
+            Db.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
             // Save
             SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
 
@@ -27,8 +27,8 @@ namespace Magistrate.Forms
             DateTime dateTimeNow = DateTime.Now;
             string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
-            comboBox3.Text = month;
-            comboBox4.Text = year;
+            comboBoxDateOfOrderMonth.Text = month;
+            comboBoxDateOfOrderYear.Text = year;
         }
         #endregion Инициализация
 
@@ -37,13 +37,13 @@ namespace Magistrate.Forms
         // Выбранный участок, автоматически подставляет кто судья
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
+            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
             {
-                comboBox5.Text = "Мировой судья";
+                comboBoxWhoIsJudge.Text = "Мировой судья";
             }
             else
             {
-                comboBox5.Text = "И.о. мирового судьи";
+                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
             }
         }
 
@@ -51,8 +51,8 @@ namespace Magistrate.Forms
         // Название файла и сохранения
         private void textBox6FIO_TextChanged(object sender, EventArgs e)
         {
-            textBoxClipPutName.Text = textBox6FIO.Text;
-            textBoxForSave.Text = textBox6FIO.Text;
+            textBoxClipPutName.Text = textBoxFullNameSurNameIvanovoy.Text;
+            textBoxForSave.Text = textBoxFullNameSurNameIvanovoy.Text;
         }
 
         #endregion автоматическое заполнение полей

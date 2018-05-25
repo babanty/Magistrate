@@ -52,30 +52,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Article12.26.p1_appeared.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Article12.26.p1_appeared.Designer.cs">
-      <DependentUpon>Article12.26.p1_appeared.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Article12.26.p1_DidNotAppear.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Article12.26.p1_DidNotAppear.Designer.cs">
-      <DependentUpon>Article12.26.p1_DidNotAppear.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Article12.8.p1_appeared.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Article12.8.p1_appeared.Designer.cs">
-      <DependentUpon>Article12.8.p1_appeared.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Article12.8.p1_DidNotAppear.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Article12.8.p1_DidNotAppear.Designer.cs">
-      <DependentUpon>Article12.8.p1_DidNotAppear.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Article1215.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,18 +134,6 @@
     <Compile Include="ValueControl.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Article12.26.p1_appeared.resx">
-      <DependentUpon>Article12.26.p1_appeared.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Article12.26.p1_DidNotAppear.resx">
-      <DependentUpon>Article12.26.p1_DidNotAppear.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Article12.8.p1_appeared.resx">
-      <DependentUpon>Article12.8.p1_appeared.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Article12.8.p1_DidNotAppear.resx">
-      <DependentUpon>Article12.8.p1_DidNotAppear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Article1215.resx">
       <DependentUpon>Article1215.cs</DependentUpon>

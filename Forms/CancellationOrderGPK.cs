@@ -18,7 +18,7 @@ namespace Magistrate.Forms
         {
             InitializeComponent();
 
-            Db.SetPropertiesComboBox(ref comboBox7, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
+            Db.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
 
@@ -27,8 +27,8 @@ namespace Magistrate.Forms
             DateTime dateTimeNow = DateTime.Now;
             string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
-            comboBox9.Text = month;
-            comboBox8.Text = year;
+            comboBoxDateOfOrderMonth.Text = month;
+            comboBoxDateOfOrderYear.Text = year;
         }
         #endregion Инициализация
 
@@ -38,15 +38,15 @@ namespace Magistrate.Forms
         // Выбранный участок, автоматически подставляет кто судья
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
+            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
             {
-                comboBox2.Text = "Мировой судья";
-                comboBox3.Text = "мировым судьей";
+                comboBoxWhoIsJudge.Text = "Мировой судья";
+                comboBoxSomeIsJudge.Text = "мировым судьей";
             }
             else
             {
-                comboBox2.Text = "И.о. мирового судьи";
-                comboBox3.Text = "и.о. мирового судьи";
+                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
+                comboBoxSomeIsJudge.Text = "и.о. мирового судьи";
             }
         }
         
@@ -54,7 +54,7 @@ namespace Magistrate.Forms
         // название при сохранении
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBoxClipPutName.Text = textBox1.Text;
+            textBoxClipPutName.Text = textBoxFullNameSurNameIvanova.Text;
         }
 
         #endregion Автоматическое заполнение полей
@@ -112,12 +112,12 @@ namespace Magistrate.Forms
             Clipboard.SetText(numCase + textBoxClipPutName.Text + "  " + this.Text);
 
             // Если с восстановлением, то один шаблон, если нет, то другой
-            if (radioButton2.Checked)
+            if (radioButtonNotRecovery.Checked)
             {
                 // Сгенерировать ворд
                 GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Отмена приказа по ГПК Без восстановления", controlArrayToString);
             }
-            else if (radioButton1.Checked)
+            else if (radioButtonRecovery.Checked)
             {
                 // Сгенерировать ворд
                 GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Отмена приказа по ГПК С восстановлением", controlArrayToString);

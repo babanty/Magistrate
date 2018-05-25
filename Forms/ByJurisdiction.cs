@@ -18,9 +18,9 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            Db.SetPropertiesComboBox(ref comboBox13, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBox14, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBox15, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            Db.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
             // Save
             SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
 
@@ -29,8 +29,8 @@ namespace Magistrate.Forms
             DateTime dateTimeNow = DateTime.Now;
             string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
-            comboBox3.Text = month;
-            comboBox4.Text = year;
+            comboBoxDateOfOrderMonth.Text = month;
+            comboBoxDateOfOrderYear.Text = year;
         }
         #endregion Инициализация
 
@@ -39,24 +39,24 @@ namespace Magistrate.Forms
         // Выбранный участок, автоматически подставляет кто судья
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
+            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
             {
-                comboBox5.Text = "Мировой судья";
+                comboBoxWhoIsJudge.Text = "Мировой судья";
             }
             else
             {
-                comboBox5.Text = "И.о. мирового судьи";
+                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
             }
         }
 
         // автоматически переносит фамилию на другие поля ввода
         private void textBox2FIO_TextChanged(object sender, EventArgs e)
         {
-            textBox6FIO.Text = textBox2FIO.Text;
+            textBoxFullNameSurNameIvanova.Text = textBoxFullNameSurNameIvanovu.Text;
 
             // название при сохранении
-            textBoxClipPutName.Text = textBox2FIO.Text;
-            textBoxForSave.Text = textBox2FIO.Text;
+            textBoxClipPutName.Text = textBoxFullNameSurNameIvanovu.Text;
+            textBoxForSave.Text = textBoxFullNameSurNameIvanovu.Text;
         }
 
         #endregion Автозаполнение форм
@@ -108,8 +108,8 @@ namespace Magistrate.Forms
 
             // Делаем инициалы ФИО
             string initials = "";
-            if (textBox7FIO.Text.Length > 2 && textBox8FIO.Text.Length > 2) // Если правильно заполнили имя и отчество
-                initials = textBox7FIO.Text.Remove(1) + "." + textBox8FIO.Text.Remove(1) + ".";
+            if (textBoxFullNameNameIvana.Text.Length > 2 && textBoxFullNamePatronymicIvanovicha.Text.Length > 2) // Если правильно заполнили имя и отчество
+                initials = textBoxFullNameNameIvana.Text.Remove(1) + "." + textBoxFullNamePatronymicIvanovicha.Text.Remove(1) + ".";
             GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-1"); // в ручную добавляем новый ключ
 
 

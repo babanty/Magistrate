@@ -3,15 +3,11 @@ E:\MyDesktop\Code\Судья\Судья v2\Magistrate\bin\Debug\Magistrate.exe
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\bin\Debug\Magistrate.pdb
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.csprojResolveAssemblyReference.cache
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Magistrate.resources
-E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1281appeared.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Properties.Resources.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.csproj.GenerateResource.cache
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.csproj.CoreCompileInputs.cache
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.exe
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.pdb
-E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1281notAppear.resources
-E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1226p1_appeared.resources
-E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.Article1226p1_NotAppeared.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.CreditOrder.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.CasTaxes.resources
 E:\MyDesktop\Code\Судья\Судья v2\Magistrate\obj\Debug\Magistrate.Forms.PropertiesApp.resources

@@ -31,31 +31,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CancellationOrderGPK));
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxWhoIsJudge = new System.Windows.Forms.ComboBox();
+            this.comboBoxPlotNumber = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSomeIsJudge = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxFullNameSurNameIvanovoy = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxFullNameNameIvana = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.textBoxFullNameSurNameIvanova = new System.Windows.Forms.TextBox();
+            this.buttonGenerateWord = new System.Windows.Forms.Button();
+            this.comboBoxCancelOrderYear = new System.Windows.Forms.ComboBox();
+            this.comboBoxCancelOrderMonth = new System.Windows.Forms.ComboBox();
+            this.comboBoxCancelOrderDay = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxNumOrder = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comboBoxBank = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.comboBoxDateOfOrderYear = new System.Windows.Forms.ComboBox();
+            this.comboBoxDateOfOrderMonth = new System.Windows.Forms.ComboBox();
+            this.comboBoxDateOfOrderDay = new System.Windows.Forms.ComboBox();
+            this.radioButtonRecovery = new System.Windows.Forms.RadioButton();
+            this.radioButtonNotRecovery = new System.Windows.Forms.RadioButton();
             this.label31 = new System.Windows.Forms.Label();
             this.buttonDeleteSave = new System.Windows.Forms.Button();
             this.comboBoxLoad = new System.Windows.Forms.ComboBox();
@@ -66,8 +66,8 @@
             this.LabelClipPutNum = new System.Windows.Forms.Label();
             this.LabelClipPutDescript = new System.Windows.Forms.Label();
             this.textBoxClipPutNum = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxRecoveryOrNot = new System.Windows.Forms.GroupBox();
+            this.groupBoxRecoveryOrNot.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -90,27 +90,27 @@
             this.label1.TabIndex = 79;
             this.label1.Text = "Участок №";
             // 
-            // comboBox2
+            // comboBoxWhoIsJudge
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxWhoIsJudge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxWhoIsJudge.FormattingEnabled = true;
+            this.comboBoxWhoIsJudge.Items.AddRange(new object[] {
             "И.о. мирового судьи",
             "Мировой судья"});
-            this.comboBox2.Location = new System.Drawing.Point(12, 46);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(296, 28);
-            this.comboBox2.TabIndex = 12;
-            this.comboBox2.TabStop = false;
-            this.comboBox2.Tag = "2";
-            this.comboBox2.Text = "Мировой судья";
+            this.comboBoxWhoIsJudge.Location = new System.Drawing.Point(12, 46);
+            this.comboBoxWhoIsJudge.Name = "comboBoxWhoIsJudge";
+            this.comboBoxWhoIsJudge.Size = new System.Drawing.Size(296, 28);
+            this.comboBoxWhoIsJudge.TabIndex = 12;
+            this.comboBoxWhoIsJudge.TabStop = false;
+            this.comboBoxWhoIsJudge.Tag = "2";
+            this.comboBoxWhoIsJudge.Text = "Мировой судья";
             // 
-            // comboBox1
+            // comboBoxPlotNumber
             // 
-            this.comboBox1.DropDownWidth = 200;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxPlotNumber.DropDownWidth = 200;
+            this.comboBoxPlotNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxPlotNumber.FormattingEnabled = true;
+            this.comboBoxPlotNumber.Items.AddRange(new object[] {
             "228",
             "225",
             "226",
@@ -121,13 +121,13 @@
             "232",
             "233",
             "234"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(296, 28);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Tag = "1";
-            this.comboBox1.Text = "228";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxPlotNumber.Location = new System.Drawing.Point(12, 12);
+            this.comboBoxPlotNumber.Name = "comboBoxPlotNumber";
+            this.comboBoxPlotNumber.Size = new System.Drawing.Size(296, 28);
+            this.comboBoxPlotNumber.TabIndex = 11;
+            this.comboBoxPlotNumber.Tag = "1";
+            this.comboBoxPlotNumber.Text = "228";
+            this.comboBoxPlotNumber.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -139,20 +139,20 @@
             this.label2.TabIndex = 82;
             this.label2.Text = "кем? мировым судьей или и.о. мирового судьи";
             // 
-            // comboBox3
+            // comboBoxSomeIsJudge
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.comboBoxSomeIsJudge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxSomeIsJudge.FormattingEnabled = true;
+            this.comboBoxSomeIsJudge.Items.AddRange(new object[] {
             "мировым судьей",
             "и. о. мирового судьи"});
-            this.comboBox3.Location = new System.Drawing.Point(12, 80);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(296, 28);
-            this.comboBox3.TabIndex = 13;
-            this.comboBox3.TabStop = false;
-            this.comboBox3.Tag = "3";
-            this.comboBox3.Text = "мировым судьей";
+            this.comboBoxSomeIsJudge.Location = new System.Drawing.Point(12, 80);
+            this.comboBoxSomeIsJudge.Name = "comboBoxSomeIsJudge";
+            this.comboBoxSomeIsJudge.Size = new System.Drawing.Size(296, 28);
+            this.comboBoxSomeIsJudge.TabIndex = 13;
+            this.comboBoxSomeIsJudge.TabStop = false;
+            this.comboBoxSomeIsJudge.Tag = "3";
+            this.comboBoxSomeIsJudge.Text = "мировым судьей";
             // 
             // label28
             // 
@@ -164,14 +164,14 @@
             this.label28.TabIndex = 207;
             this.label28.Text = "Отчество. Поступившие от кого?  (пример: \"Николаевны\")";
             // 
-            // textBox3
+            // textBoxFullNameSurNameIvanovoy
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(12, 408);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(296, 26);
-            this.textBox3.TabIndex = 37;
-            this.textBox3.Tag = "9";
+            this.textBoxFullNameSurNameIvanovoy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxFullNameSurNameIvanovoy.Location = new System.Drawing.Point(12, 408);
+            this.textBoxFullNameSurNameIvanovoy.Name = "textBoxFullNameSurNameIvanovoy";
+            this.textBoxFullNameSurNameIvanovoy.Size = new System.Drawing.Size(296, 26);
+            this.textBoxFullNameSurNameIvanovoy.TabIndex = 37;
+            this.textBoxFullNameSurNameIvanovoy.Tag = "9";
             // 
             // label29
             // 
@@ -183,14 +183,14 @@
             this.label29.TabIndex = 206;
             this.label29.Text = "Имя. Поступившие от кого?  (пример: \"Марии\")";
             // 
-            // textBox2
+            // textBoxFullNameNameIvana
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(12, 376);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(296, 26);
-            this.textBox2.TabIndex = 36;
-            this.textBox2.Tag = "8";
+            this.textBoxFullNameNameIvana.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxFullNameNameIvana.Location = new System.Drawing.Point(12, 376);
+            this.textBoxFullNameNameIvana.Name = "textBoxFullNameNameIvana";
+            this.textBoxFullNameNameIvana.Size = new System.Drawing.Size(296, 26);
+            this.textBoxFullNameNameIvana.TabIndex = 36;
+            this.textBoxFullNameNameIvana.Tag = "8";
             // 
             // label5
             // 
@@ -202,49 +202,49 @@
             this.label5.TabIndex = 203;
             this.label5.Text = "Фамилия. Поступившие от кого?  (пример: \"Кузнецовой\")";
             // 
-            // textBox1
+            // textBoxFullNameSurNameIvanova
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(12, 344);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 26);
-            this.textBox1.TabIndex = 35;
-            this.textBox1.Tag = "7";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxFullNameSurNameIvanova.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxFullNameSurNameIvanova.Location = new System.Drawing.Point(12, 344);
+            this.textBoxFullNameSurNameIvanova.Name = "textBoxFullNameSurNameIvanova";
+            this.textBoxFullNameSurNameIvanova.Size = new System.Drawing.Size(296, 26);
+            this.textBoxFullNameSurNameIvanova.TabIndex = 35;
+            this.textBoxFullNameSurNameIvanova.Tag = "7";
+            this.textBoxFullNameSurNameIvanova.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // buttonGenerateWord
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(12, 472);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(296, 30);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Сгенерировать Word";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonGenerateWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonGenerateWord.Location = new System.Drawing.Point(12, 472);
+            this.buttonGenerateWord.Name = "buttonGenerateWord";
+            this.buttonGenerateWord.Size = new System.Drawing.Size(296, 30);
+            this.buttonGenerateWord.TabIndex = 40;
+            this.buttonGenerateWord.Text = "Сгенерировать Word";
+            this.buttonGenerateWord.UseVisualStyleBackColor = true;
+            this.buttonGenerateWord.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox6
+            // comboBoxCancelOrderYear
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.comboBoxCancelOrderYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxCancelOrderYear.FormattingEnabled = true;
+            this.comboBoxCancelOrderYear.Items.AddRange(new object[] {
             "2016",
             "2017",
             "2018",
             "2019",
             "2020",
             "2021"});
-            this.comboBox6.Location = new System.Drawing.Point(206, 148);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(102, 28);
-            this.comboBox6.TabIndex = 19;
-            this.comboBox6.Tag = "12";
+            this.comboBoxCancelOrderYear.Location = new System.Drawing.Point(206, 148);
+            this.comboBoxCancelOrderYear.Name = "comboBoxCancelOrderYear";
+            this.comboBoxCancelOrderYear.Size = new System.Drawing.Size(102, 28);
+            this.comboBoxCancelOrderYear.TabIndex = 19;
+            this.comboBoxCancelOrderYear.Tag = "12";
             // 
-            // comboBox5
+            // comboBoxCancelOrderMonth
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.comboBoxCancelOrderMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxCancelOrderMonth.FormattingEnabled = true;
+            this.comboBoxCancelOrderMonth.Items.AddRange(new object[] {
             "01",
             "02",
             "03",
@@ -257,17 +257,17 @@
             "10",
             "11",
             "12"});
-            this.comboBox5.Location = new System.Drawing.Point(93, 148);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(107, 28);
-            this.comboBox5.TabIndex = 18;
-            this.comboBox5.Tag = "11";
+            this.comboBoxCancelOrderMonth.Location = new System.Drawing.Point(93, 148);
+            this.comboBoxCancelOrderMonth.Name = "comboBoxCancelOrderMonth";
+            this.comboBoxCancelOrderMonth.Size = new System.Drawing.Size(107, 28);
+            this.comboBoxCancelOrderMonth.TabIndex = 18;
+            this.comboBoxCancelOrderMonth.Tag = "11";
             // 
-            // comboBox4
+            // comboBoxCancelOrderDay
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.comboBoxCancelOrderDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxCancelOrderDay.FormattingEnabled = true;
+            this.comboBoxCancelOrderDay.Items.AddRange(new object[] {
             "01",
             "02",
             "03",
@@ -299,11 +299,11 @@
             "29",
             "30",
             "31"});
-            this.comboBox4.Location = new System.Drawing.Point(12, 148);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(75, 28);
-            this.comboBox4.TabIndex = 17;
-            this.comboBox4.Tag = "10";
+            this.comboBoxCancelOrderDay.Location = new System.Drawing.Point(12, 148);
+            this.comboBoxCancelOrderDay.Name = "comboBoxCancelOrderDay";
+            this.comboBoxCancelOrderDay.Size = new System.Drawing.Size(75, 28);
+            this.comboBoxCancelOrderDay.TabIndex = 17;
+            this.comboBoxCancelOrderDay.Tag = "10";
             // 
             // label23
             // 
@@ -324,14 +324,14 @@
             this.label4.TabIndex = 214;
             this.label4.Text = "Номер судебного приказа";
             // 
-            // textBox4
+            // textBoxNumOrder
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(12, 182);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(296, 26);
-            this.textBox4.TabIndex = 20;
-            this.textBox4.Tag = "13";
+            this.textBoxNumOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxNumOrder.Location = new System.Drawing.Point(12, 182);
+            this.textBoxNumOrder.Name = "textBoxNumOrder";
+            this.textBoxNumOrder.Size = new System.Drawing.Size(296, 26);
+            this.textBoxNumOrder.TabIndex = 20;
+            this.textBoxNumOrder.Tag = "13";
             // 
             // label6
             // 
@@ -343,18 +343,18 @@
             this.label6.TabIndex = 216;
             this.label6.Text = "Организация в пользу кого";
             // 
-            // comboBox7
+            // comboBoxBank
             // 
-            this.comboBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(12, 214);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(296, 28);
-            this.comboBox7.TabIndex = 31;
-            this.comboBox7.TabStop = false;
-            this.comboBox7.Tag = "14";
+            this.comboBoxBank.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxBank.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxBank.FormattingEnabled = true;
+            this.comboBoxBank.Location = new System.Drawing.Point(12, 214);
+            this.comboBoxBank.Name = "comboBoxBank";
+            this.comboBoxBank.Size = new System.Drawing.Size(296, 28);
+            this.comboBoxBank.TabIndex = 31;
+            this.comboBoxBank.TabStop = false;
+            this.comboBoxBank.Tag = "14";
             // 
             // label7
             // 
@@ -366,27 +366,27 @@
             this.label7.TabIndex = 220;
             this.label7.Text = "Дата вынесения определения";
             // 
-            // comboBox8
+            // comboBoxDateOfOrderYear
             // 
-            this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.comboBoxDateOfOrderYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxDateOfOrderYear.FormattingEnabled = true;
+            this.comboBoxDateOfOrderYear.Items.AddRange(new object[] {
             "2016",
             "2017",
             "2018",
             "2019",
             "2020"});
-            this.comboBox8.Location = new System.Drawing.Point(205, 114);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(103, 28);
-            this.comboBox8.TabIndex = 16;
-            this.comboBox8.Tag = "6";
+            this.comboBoxDateOfOrderYear.Location = new System.Drawing.Point(205, 114);
+            this.comboBoxDateOfOrderYear.Name = "comboBoxDateOfOrderYear";
+            this.comboBoxDateOfOrderYear.Size = new System.Drawing.Size(103, 28);
+            this.comboBoxDateOfOrderYear.TabIndex = 16;
+            this.comboBoxDateOfOrderYear.Tag = "6";
             // 
-            // comboBox9
+            // comboBoxDateOfOrderMonth
             // 
-            this.comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
+            this.comboBoxDateOfOrderMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxDateOfOrderMonth.FormattingEnabled = true;
+            this.comboBoxDateOfOrderMonth.Items.AddRange(new object[] {
             "января",
             "февраля",
             "марта",
@@ -399,17 +399,17 @@
             "октября",
             "ноября",
             "декабря"});
-            this.comboBox9.Location = new System.Drawing.Point(93, 114);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(106, 28);
-            this.comboBox9.TabIndex = 15;
-            this.comboBox9.Tag = "5";
+            this.comboBoxDateOfOrderMonth.Location = new System.Drawing.Point(93, 114);
+            this.comboBoxDateOfOrderMonth.Name = "comboBoxDateOfOrderMonth";
+            this.comboBoxDateOfOrderMonth.Size = new System.Drawing.Size(106, 28);
+            this.comboBoxDateOfOrderMonth.TabIndex = 15;
+            this.comboBoxDateOfOrderMonth.Tag = "5";
             // 
-            // comboBox10
+            // comboBoxDateOfOrderDay
             // 
-            this.comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
+            this.comboBoxDateOfOrderDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxDateOfOrderDay.FormattingEnabled = true;
+            this.comboBoxDateOfOrderDay.Items.AddRange(new object[] {
             "01",
             "02",
             "03",
@@ -441,33 +441,33 @@
             "29",
             "30",
             "31"});
-            this.comboBox10.Location = new System.Drawing.Point(12, 114);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(75, 28);
-            this.comboBox10.TabIndex = 14;
-            this.comboBox10.Tag = "4";
+            this.comboBoxDateOfOrderDay.Location = new System.Drawing.Point(12, 114);
+            this.comboBoxDateOfOrderDay.Name = "comboBoxDateOfOrderDay";
+            this.comboBoxDateOfOrderDay.Size = new System.Drawing.Size(75, 28);
+            this.comboBoxDateOfOrderDay.TabIndex = 14;
+            this.comboBoxDateOfOrderDay.Tag = "4";
             // 
-            // radioButton1
+            // radioButtonRecovery
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(10, 0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(197, 24);
-            this.radioButton1.TabIndex = 33;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "С восстановлением";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonRecovery.AutoSize = true;
+            this.radioButtonRecovery.Location = new System.Drawing.Point(10, 0);
+            this.radioButtonRecovery.Name = "radioButtonRecovery";
+            this.radioButtonRecovery.Size = new System.Drawing.Size(197, 24);
+            this.radioButtonRecovery.TabIndex = 33;
+            this.radioButtonRecovery.TabStop = true;
+            this.radioButtonRecovery.Text = "С восстановлением";
+            this.radioButtonRecovery.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonNotRecovery
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(10, 30);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(204, 24);
-            this.radioButton2.TabIndex = 34;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Без восстановления";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonNotRecovery.AutoSize = true;
+            this.radioButtonNotRecovery.Location = new System.Drawing.Point(10, 30);
+            this.radioButtonNotRecovery.Name = "radioButtonNotRecovery";
+            this.radioButtonNotRecovery.Size = new System.Drawing.Size(204, 24);
+            this.radioButtonNotRecovery.TabIndex = 34;
+            this.radioButtonNotRecovery.TabStop = true;
+            this.radioButtonNotRecovery.Text = "Без восстановления";
+            this.radioButtonNotRecovery.UseVisualStyleBackColor = true;
             // 
             // label31
             // 
@@ -569,16 +569,16 @@
             this.textBoxClipPutNum.Size = new System.Drawing.Size(99, 26);
             this.textBoxClipPutNum.TabIndex = 38;
             // 
-            // groupBox1
+            // groupBoxRecoveryOrNot
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 248);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(223, 66);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBoxRecoveryOrNot.Controls.Add(this.radioButtonNotRecovery);
+            this.groupBoxRecoveryOrNot.Controls.Add(this.radioButtonRecovery);
+            this.groupBoxRecoveryOrNot.Location = new System.Drawing.Point(12, 248);
+            this.groupBoxRecoveryOrNot.Name = "groupBoxRecoveryOrNot";
+            this.groupBoxRecoveryOrNot.Size = new System.Drawing.Size(223, 66);
+            this.groupBoxRecoveryOrNot.TabIndex = 32;
+            this.groupBoxRecoveryOrNot.TabStop = false;
+            this.groupBoxRecoveryOrNot.Text = "groupBox1";
             // 
             // CancellationOrderGPK
             // 
@@ -587,7 +587,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 503);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxRecoveryOrNot);
             this.Controls.Add(this.textBoxClipPutName);
             this.Controls.Add(this.LabelClipPutNum);
             this.Controls.Add(this.LabelClipPutDescript);
@@ -599,37 +599,37 @@
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox8);
-            this.Controls.Add(this.comboBox9);
-            this.Controls.Add(this.comboBox10);
+            this.Controls.Add(this.comboBoxDateOfOrderYear);
+            this.Controls.Add(this.comboBoxDateOfOrderMonth);
+            this.Controls.Add(this.comboBoxDateOfOrderDay);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox7);
+            this.Controls.Add(this.comboBoxBank);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.textBoxNumOrder);
+            this.Controls.Add(this.comboBoxCancelOrderYear);
+            this.Controls.Add(this.comboBoxCancelOrderMonth);
+            this.Controls.Add(this.comboBoxCancelOrderDay);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonGenerateWord);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxFullNameSurNameIvanovoy);
             this.Controls.Add(this.label29);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxFullNameNameIvana);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxFullNameSurNameIvanova);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBoxSomeIsJudge);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxWhoIsJudge);
+            this.Controls.Add(this.comboBoxPlotNumber);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CancellationOrderGPK";
             this.Text = "Отмена приказа по ГПК";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxRecoveryOrNot.ResumeLayout(false);
+            this.groupBoxRecoveryOrNot.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -639,31 +639,31 @@
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxWhoIsJudge;
+        private System.Windows.Forms.ComboBox comboBoxPlotNumber;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxSomeIsJudge;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxFullNameSurNameIvanovoy;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxFullNameNameIvana;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox textBoxFullNameSurNameIvanova;
+        private System.Windows.Forms.Button buttonGenerateWord;
+        private System.Windows.Forms.ComboBox comboBoxCancelOrderYear;
+        private System.Windows.Forms.ComboBox comboBoxCancelOrderMonth;
+        private System.Windows.Forms.ComboBox comboBoxCancelOrderDay;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxNumOrder;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBoxBank;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.ComboBox comboBoxDateOfOrderYear;
+        private System.Windows.Forms.ComboBox comboBoxDateOfOrderMonth;
+        private System.Windows.Forms.ComboBox comboBoxDateOfOrderDay;
+        private System.Windows.Forms.RadioButton radioButtonRecovery;
+        private System.Windows.Forms.RadioButton radioButtonNotRecovery;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button buttonDeleteSave;
         private System.Windows.Forms.ComboBox comboBoxLoad;
@@ -674,6 +674,6 @@
         private System.Windows.Forms.Label LabelClipPutNum;
         private System.Windows.Forms.Label LabelClipPutDescript;
         private System.Windows.Forms.TextBox textBoxClipPutNum;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxRecoveryOrNot;
     }
 }

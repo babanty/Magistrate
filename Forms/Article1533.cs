@@ -19,10 +19,10 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            Db.SetPropertiesComboBox(ref comboBox10, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBox13, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBox14, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBox15, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            Db.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
             // Save
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
 
@@ -31,10 +31,10 @@ namespace Magistrate.Forms
             DateTime dateTimeNow = DateTime.Now;
             string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
-            comboBox3.Text = month;
-            comboBox4.Text = year;
+            comboBoxDateOfOrderMonth.Text = month;
+            comboBoxDateOfOrderYear.Text = year;
             //СЗВ-м за какой год
-            comboBox16.Text = (dateTimeNow.Year - 1).ToString();
+            comboBoxSZVMYear.Text = (dateTimeNow.Year - 1).ToString();
         }
         #endregion Инициализация
 
@@ -44,12 +44,12 @@ namespace Magistrate.Forms
         // Выбранный участок, автоматически подставляет кто судья
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
+            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
             {
-                comboBox5.Text = "Мировой судья";
+                comboBoxWhoIsJudge.Text = "Мировой судья";
             }else
             {
-                comboBox5.Text = "И.о. мирового судьи";
+                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
             }
         }
 
@@ -57,26 +57,26 @@ namespace Magistrate.Forms
         // автоматически переносит фамилию на другие поля ввода
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Text = textBox5.Text;
-            textBox6.Text = textBox5.Text;
+            textBoxFullNameSurNameIvanova.Text = textBoxFullNameSurNameIvanov.Text;
+            textBoxFullNameSurNameIvanovu.Text = textBoxFullNameSurNameIvanov.Text;
 
             // название при сохранении
-            textBoxClipPutName.Text = textBox5.Text;
+            textBoxClipPutName.Text = textBoxFullNameSurNameIvanov.Text;
         }
 
 
         // Автоматически переносит полное ФИО на другие поля
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox11.Text = textBox1.Text;
+            textBoxFullNameSurNameIvanovoy.Text = textBoxFullNameSurNameIvanova.Text;
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox10.Text = textBox2.Text;
+            textBoxFullNameNameMarii.Text = textBoxFullNameNameIvana.Text;
         }
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            textBox9.Text = textBox3.Text;
+            textBoxFullNamePatronymicIvanovni.Text = textBoxFullNamePatronymicIvanovicha.Text;
         }
 
 
@@ -85,56 +85,56 @@ namespace Magistrate.Forms
         {
             string placeOrganization = "";
 
-            placeOrganization += comboBox11.Text + ", "; // Зарегестрирован по адресу. Страна
-            placeOrganization += comboBox12.Text + ", "; // Область, например: Московская область
-            placeOrganization += comboBox13.Text + ", "; // Населенный пункт, например: г.Сергиев Посад
-            placeOrganization += comboBox14.Text + ", "; // Поселок, улица, проспект и т.д., напрмер: ул.Громова
-            placeOrganization += comboBox15.Text; // Дом, квартира и т.д., например: д.20, кв 60
+            placeOrganization += comboBoxResidenceCountry.Text + ", "; // Зарегестрирован по адресу. Страна
+            placeOrganization += comboBoxResidenceRegion.Text + ", "; // Область, например: Московская область
+            placeOrganization += comboBoxResidenceCity.Text + ", "; // Населенный пункт, например: г.Сергиев Посад
+            placeOrganization += comboBoxResidenceStreet.Text + ", "; // Поселок, улица, проспект и т.д., напрмер: ул.Громова
+            placeOrganization += comboBoxResidenceHouse.Text; // Дом, квартира и т.д., например: д.20, кв 60
 
-            textBox4.Text = placeOrganization;
+            textBoxPlaceOrganization.Text = placeOrganization;
         }
 
         // автоматическое заполнение следющего месяца 
         private void comboBox18_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string valueControl = comboBox18.Text;
+            string valueControl = comboBoxSZVMMonth.Text;
             switch (valueControl)
             {
                 case "январь":
-                    comboBox20.Text = "02";
+                    comboBoxSZVMGoodMonth.Text = "02";
                 break;
                 case "февраль":
-                    comboBox20.Text = "03";
+                    comboBoxSZVMGoodMonth.Text = "03";
                     break;
                 case "март":
-                    comboBox20.Text = "04";
+                    comboBoxSZVMGoodMonth.Text = "04";
                     break;
                 case "апрель":
-                    comboBox20.Text = "05";
+                    comboBoxSZVMGoodMonth.Text = "05";
                     break;
                 case "май":
-                    comboBox20.Text = "06";
+                    comboBoxSZVMGoodMonth.Text = "06";
                     break;
                 case "июнь":
-                    comboBox20.Text = "07";
+                    comboBoxSZVMGoodMonth.Text = "07";
                     break;
                 case "июль":
-                    comboBox20.Text = "08";
+                    comboBoxSZVMGoodMonth.Text = "08";
                     break;
                 case "август":
-                    comboBox20.Text = "09";
+                    comboBoxSZVMGoodMonth.Text = "09";
                     break;
                 case "сентябрь":
-                    comboBox20.Text = "10";
+                    comboBoxSZVMGoodMonth.Text = "10";
                     break;
                 case "октябрь":
-                    comboBox20.Text = "11";
+                    comboBoxSZVMGoodMonth.Text = "11";
                     break;
                 case "ноябрь":
-                    comboBox20.Text = "12";
+                    comboBoxSZVMGoodMonth.Text = "12";
                     break;
                 case "декабрь":
-                    comboBox20.Text = "01";
+                    comboBoxSZVMGoodMonth.Text = "01";
                     break;
             }
         }
@@ -142,12 +142,12 @@ namespace Magistrate.Forms
         // автоматическое выставление года "не позднее"
         private void comboBox16_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox24.Text = comboBox16.Text; // Фактически отдал сзв-м в таком то году, авто перенос
+            comboBoxSZVMFactYear.Text = comboBoxSZVMYear.Text; // Фактически отдал сзв-м в таком то году, авто перенос
 
-            comboBox19.Text = comboBox16.Text;
+            comboBoxSZVMGoodYear.Text = comboBoxSZVMYear.Text;
             // Если декабрь, то год пишется следующий
-            if(comboBox18.Text == "декабрь") 
-                comboBox19.Text = (int.Parse(comboBox16.Text)+1).ToString(); // преобразовываем год в число, прибавляем 1 и возвращаем обратно в строку
+            if(comboBoxSZVMMonth.Text == "декабрь") 
+                comboBoxSZVMGoodYear.Text = (int.Parse(comboBoxSZVMYear.Text)+1).ToString(); // преобразовываем год в число, прибавляем 1 и возвращаем обратно в строку
 
         }
         #endregion Автоматическое заполнение полей 
@@ -239,8 +239,8 @@ namespace Magistrate.Forms
 
             // Делаем инициалы ФИО
             string initials = "";
-            if (textBox2.Text.Length > 2 && textBox3.Text.Length > 2) // Если правильно заполнили имя и отчество
-                initials = textBox2.Text.Remove(1) + "." + textBox3.Text.Remove(1) + ".";
+            if (textBoxFullNameNameIvana.Text.Length > 2 && textBoxFullNamePatronymicIvanovicha.Text.Length > 2) // Если правильно заполнили имя и отчество
+                initials = textBoxFullNameNameIvana.Text.Remove(1) + "." + textBoxFullNamePatronymicIvanovicha.Text.Remove(1) + ".";
             GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
 
             // Указание если явился ,кроме признания своей вины,

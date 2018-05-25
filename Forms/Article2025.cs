@@ -18,11 +18,11 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            Db.SetPropertiesComboBox(ref comboBox10, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBox13, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBox14, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBox15, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
-            comboBoxGAI.Items.AddRange(Db.GetAllShortRequisitesGAI().ToArray()); // Получатель бабулесов, ГАИ, заполняем варианты
+            Db.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            Db.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            Db.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            Db.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            comboBoxRecipientGIBDD.Items.AddRange(Db.GetAllShortRequisitesGAI().ToArray()); // Получатель бабулесов, ГАИ, заполняем варианты
             // Save
             SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
 
@@ -31,10 +31,10 @@ namespace Magistrate.Forms
             DateTime dateTimeNow = DateTime.Now;
             string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
             string year = dateTimeNow.Year.ToString(); // год
-            comboBox3.Text = month;
-            comboBox4.Text = year;
+            comboBoxDateOfOrderMonth.Text = month;
+            comboBoxDateOfOrderYear.Text = year;
             // автоматом выставление года, когда было вынесено постановление
-            comboBox19.Text = (dateTimeNow.Year - 1).ToString();
+            comboBoxDateCrimeYear.Text = (dateTimeNow.Year - 1).ToString();
         }
         #endregion Инициализация
 
@@ -43,45 +43,45 @@ namespace Magistrate.Forms
         // Выбранный участок, автоматически подставляет кто судья
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
+            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
             {
-                comboBox5.Text = "Мировой судья";
+                comboBoxWhoIsJudge.Text = "Мировой судья";
             }
             else
             {
-                comboBox5.Text = "И.о. мирового судьи";
+                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
             }
         }
 
         // автоматически переносит фамилию на другие поля ввода
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            textBox3FIO.Text = textBox1FIO.Text;
-            textBox2FIO.Text = textBox1FIO.Text;
+            textBoxFullNameSurNameIvanova.Text = textBoxFullNameSurNameIvanov.Text;
+            textBoxFullNameSurNameIvanovu.Text = textBoxFullNameSurNameIvanov.Text;
 
             // название при сохранении
-            textBoxClipPutName.Text = textBox1FIO.Text;
+            textBoxClipPutName.Text = textBoxFullNameSurNameIvanov.Text;
         }
 
         // Автоматически переносит полное ФИО на другие поля
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox6FIO.Text = textBox3FIO.Text;
+            textBoxFullNameSurNameIvanovoy.Text = textBoxFullNameSurNameIvanova.Text;
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            textBox7FIO.Text = textBox4FIO.Text;
+            textBoxFullNameNameMarii.Text = textBoxFullNameNameIvana.Text;
         }
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            textBox8FIO.Text = textBox5FIO.Text;
+            textBoxFullNamePatronymicIvanovni.Text = textBoxFullNamePatronymicIvanovicha.Text;
         }
 
         // Автоматическое изменение УИН в лейбле
         private void comboBoxGAI_SelectedIndexChanged(object sender, EventArgs e)
         {
             string yin = ""; // Статичная часть УИНа
-            Db.GetRequisitesGAI(comboBoxGAI.Text, out string requisitesGAI, out yin); // Заполняем переменные с реквизитами
+            Db.GetRequisitesGAI(comboBoxRecipientGIBDD.Text, out string requisitesGAI, out yin); // Заполняем переменные с реквизитами
 
             // меняем текст в лэйбле
             if (yin == null)
@@ -181,20 +181,20 @@ namespace Magistrate.Forms
 
             // Делаем инициалы ФИО
             string initials = "";
-            if (textBox4FIO.Text.Length > 2 && textBox5FIO.Text.Length > 2) // Если правильно заполнили имя и отчество
-                initials = textBox4FIO.Text.Remove(1) + "." + textBox5FIO.Text.Remove(1) + ".";
+            if (textBoxFullNameNameIvana.Text.Length > 2 && textBoxFullNamePatronymicIvanovicha.Text.Length > 2) // Если правильно заполнили имя и отчество
+                initials = textBoxFullNameNameIvana.Text.Remove(1) + "." + textBoxFullNamePatronymicIvanovicha.Text.Remove(1) + ".";
             GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
 
             // Получатель и УИН
             string requisitesGAI = ""; // полные реквзииты ГАИ
-            Db.GetRequisitesGAI(comboBoxGAI.Text, out requisitesGAI, out string standartYIN); // Заполняем переменные с реквизитами
-            requisitesGAI += textBoxYIN.Text; // Добавляем оставшийся УИН
+            Db.GetRequisitesGAI(comboBoxRecipientGIBDD.Text, out requisitesGAI, out string standartYIN); // Заполняем переменные с реквизитами
+            requisitesGAI += textBoxYINgIBDD.Text; // Добавляем оставшийся УИН
             GenerationWord.AddValueControl(ref controlArrayToString, requisitesGAI, "#-3"); // в ручную добавляем новый ключ
 
             // Сумма штрафа умножить на два
             try
             {
-                int sumFine = Convert.ToInt32(comboBox22.Text) * 2; // сумма штрафа
+                int sumFine = Convert.ToInt32(comboBoxFine.Text) * 2; // сумма штрафа
                 GenerationWord.AddValueControl(ref controlArrayToString, sumFine.ToString(), "#-4"); // в ручную добавляем новый ключ
             }catch
             {
