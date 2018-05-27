@@ -195,16 +195,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyIni\MyIni.csproj">
+    <Content Include="Задачи для выполнения.txt" />
+    <Content Include="Инструкция по коду.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="MyIni\MyIni.csproj">
       <Project>{51945e23-d32c-4321-a36f-c42580867bba}</Project>
       <Name>MyIni</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Sample\Описание папки.txt" />
-    <Content Include="Задачи для выполнения.txt" />
-    <Content Include="Инструкция по коду.txt" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

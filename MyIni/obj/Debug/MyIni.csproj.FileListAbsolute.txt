@@ -1,0 +1,6 @@
+E:\MyDesktop\Code\Судья\Судья v2\MyIni\bin\Debug\MyIni.dll
+E:\MyDesktop\Code\Судья\Судья v2\MyIni\bin\Debug\MyIni.pdb
+E:\MyDesktop\Code\Судья\Судья v2\MyIni\obj\Debug\MyIni.csprojResolveAssemblyReference.cache
+E:\MyDesktop\Code\Судья\Судья v2\MyIni\obj\Debug\MyIni.csproj.CoreCompileInputs.cache
+E:\MyDesktop\Code\Судья\Судья v2\MyIni\obj\Debug\MyIni.dll
+E:\MyDesktop\Code\Судья\Судья v2\MyIni\obj\Debug\MyIni.pdb
