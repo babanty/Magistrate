@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magistrate.FormLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,23 +13,33 @@ namespace Magistrate.Forms
 {
     public partial class ReturnDuty : Form
     {
+        private string nameForm; // название формы, идентичен ее названию ее класса
+
         #region Инициализация
         public ReturnDuty()
         {
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            Db.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
-            // Save
-            SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
 
-            // Автозаполнение 
-            // Заполнение даты вынесения решения текущими датами
-            DateTime dateTimeNow = DateTime.Now;
-            string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
-            string year = dateTimeNow.Year.ToString(); // год
-            comboBoxDateOfOrderMonth.Text = month;
-            comboBoxDateOfOrderYear.Text = year;
+            FormController.SetStandartParamsInControls
+    (nameForm,
+    ref comboBoxLoad,               // заполнение вариантами сохранений
+    ref comboBoxDateOfOrderMonth,   // заполнение месяца вынесения решения
+    ref comboBoxDateOfOrderYear);   // заполнение года вынесения решения
+
+            nameForm = this.GetType().ToString(); // Название формы
+        }
+
+        /// <summary>Обновить контролы на форме</summary>
+        /// <param name="controls">контролы, которыми будут заменяться контролы на форме</param>
+        private void UpdateControls(Control.ControlCollection controls)
+        {
+            for (int i = 0; i < controls.Count; i++)
+            {
+                Controls[i].Text = controls[i].Text;
+            }
         }
         #endregion Инициализация
 
@@ -37,14 +48,7 @@ namespace Magistrate.Forms
         // Выбранный участок, автоматически подставляет кто судья
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
-            {
-                comboBoxWhoIsJudge.Text = "Мировой судья";
-            }
-            else
-            {
-                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
-            }
+            comboBoxWhoIsJudge.Text = FormController.GetMagistrateOrDeputy(comboBoxPlotNumber.Text);
         }
 
 
@@ -59,40 +63,28 @@ namespace Magistrate.Forms
 
 
         #region Сохранение
+
         // Сохранить заполненные поля
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-
-            string nameSave = this.Name + "$" + textBoxForSave.Text; // имя сохранения
-            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.SaveForm(Controls, nameForm, textBoxForSave.Text, ref comboBoxLoad);
         }
+
         // Загрузить сохраненные поля
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            var controls = SaveLoadForm.LoadForm(this.Name, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
+            // получаем заполненные сейвом контролы
+            var controls = FormController.GetControlsLoadForm(Controls, nameForm, ref comboBoxLoad);
 
-            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
-            for (int i = 0; i < controls.Count; i++)
-            {
-                Controls[i].Text = controls[i].Text;
-            }
+            UpdateControls(controls);
         }
+
         // Удалить сохранение
         private void buttonDeleteSave_Click(object sender, EventArgs e)
         {
-            SaveLoadForm.DeleteSave(comboBoxLoad.Text, this.Name); // Удаляем сохранение
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            comboBoxLoad.Text = ""; // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.DeleteSave(ref comboBoxLoad, nameForm);
         }
+
         #endregion Сохранение
 
 
@@ -111,13 +103,10 @@ namespace Magistrate.Forms
 
 
             // Вставляем название в буфер обмена
-            string numCase = ""; // номер дела
-            if (textBoxClipPutNum.Text != null && textBoxClipPutNum.Text != "")
-                numCase = textBoxClipPutNum.Text + "  ";
-            Clipboard.SetText(numCase + textBoxClipPutName.Text + "  " + this.Text);
+            FormController.ClipPutNameWord(textBoxClipPutNum.Text, textBoxClipPutName.Text, this.Text);
 
-            // Сгенерировать ворд
-            GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Возврат госпошлины", controlArrayToString);
+
+            FormController.GenerateWord(controlArrayToString, "Возврат госпошлины");
         }
 
 

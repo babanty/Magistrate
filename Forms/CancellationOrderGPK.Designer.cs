@@ -54,8 +54,6 @@
             this.comboBoxDateOfOrderYear = new System.Windows.Forms.ComboBox();
             this.comboBoxDateOfOrderMonth = new System.Windows.Forms.ComboBox();
             this.comboBoxDateOfOrderDay = new System.Windows.Forms.ComboBox();
-            this.radioButtonRecovery = new System.Windows.Forms.RadioButton();
-            this.radioButtonNotRecovery = new System.Windows.Forms.RadioButton();
             this.label31 = new System.Windows.Forms.Label();
             this.buttonDeleteSave = new System.Windows.Forms.Button();
             this.comboBoxLoad = new System.Windows.Forms.ComboBox();
@@ -66,8 +64,7 @@
             this.LabelClipPutNum = new System.Windows.Forms.Label();
             this.LabelClipPutDescript = new System.Windows.Forms.Label();
             this.textBoxClipPutNum = new System.Windows.Forms.TextBox();
-            this.groupBoxRecoveryOrNot = new System.Windows.Forms.GroupBox();
-            this.groupBoxRecoveryOrNot.SuspendLayout();
+            this.checkBoxWithRestoration = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label3
@@ -447,28 +444,6 @@
             this.comboBoxDateOfOrderDay.TabIndex = 14;
             this.comboBoxDateOfOrderDay.Tag = "4";
             // 
-            // radioButtonRecovery
-            // 
-            this.radioButtonRecovery.AutoSize = true;
-            this.radioButtonRecovery.Location = new System.Drawing.Point(10, 0);
-            this.radioButtonRecovery.Name = "radioButtonRecovery";
-            this.radioButtonRecovery.Size = new System.Drawing.Size(197, 24);
-            this.radioButtonRecovery.TabIndex = 33;
-            this.radioButtonRecovery.TabStop = true;
-            this.radioButtonRecovery.Text = "С восстановлением";
-            this.radioButtonRecovery.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonNotRecovery
-            // 
-            this.radioButtonNotRecovery.AutoSize = true;
-            this.radioButtonNotRecovery.Location = new System.Drawing.Point(10, 30);
-            this.radioButtonNotRecovery.Name = "radioButtonNotRecovery";
-            this.radioButtonNotRecovery.Size = new System.Drawing.Size(204, 24);
-            this.radioButtonNotRecovery.TabIndex = 34;
-            this.radioButtonNotRecovery.TabStop = true;
-            this.radioButtonNotRecovery.Text = "Без восстановления";
-            this.radioButtonNotRecovery.UseVisualStyleBackColor = true;
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -569,16 +544,16 @@
             this.textBoxClipPutNum.Size = new System.Drawing.Size(99, 26);
             this.textBoxClipPutNum.TabIndex = 38;
             // 
-            // groupBoxRecoveryOrNot
+            // checkBoxWithRestoration
             // 
-            this.groupBoxRecoveryOrNot.Controls.Add(this.radioButtonNotRecovery);
-            this.groupBoxRecoveryOrNot.Controls.Add(this.radioButtonRecovery);
-            this.groupBoxRecoveryOrNot.Location = new System.Drawing.Point(12, 248);
-            this.groupBoxRecoveryOrNot.Name = "groupBoxRecoveryOrNot";
-            this.groupBoxRecoveryOrNot.Size = new System.Drawing.Size(223, 66);
-            this.groupBoxRecoveryOrNot.TabIndex = 32;
-            this.groupBoxRecoveryOrNot.TabStop = false;
-            this.groupBoxRecoveryOrNot.Text = "groupBox1";
+            this.checkBoxWithRestoration.AutoSize = true;
+            this.checkBoxWithRestoration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxWithRestoration.Location = new System.Drawing.Point(12, 248);
+            this.checkBoxWithRestoration.Name = "checkBoxWithRestoration";
+            this.checkBoxWithRestoration.Size = new System.Drawing.Size(215, 24);
+            this.checkBoxWithRestoration.TabIndex = 32;
+            this.checkBoxWithRestoration.Text = "С восстановлением";
+            this.checkBoxWithRestoration.UseVisualStyleBackColor = true;
             // 
             // CancellationOrderGPK
             // 
@@ -587,7 +562,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 503);
-            this.Controls.Add(this.groupBoxRecoveryOrNot);
+            this.Controls.Add(this.checkBoxWithRestoration);
             this.Controls.Add(this.textBoxClipPutName);
             this.Controls.Add(this.LabelClipPutNum);
             this.Controls.Add(this.LabelClipPutDescript);
@@ -628,8 +603,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CancellationOrderGPK";
             this.Text = "Отмена приказа по ГПК";
-            this.groupBoxRecoveryOrNot.ResumeLayout(false);
-            this.groupBoxRecoveryOrNot.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -662,8 +635,6 @@
         private System.Windows.Forms.ComboBox comboBoxDateOfOrderYear;
         private System.Windows.Forms.ComboBox comboBoxDateOfOrderMonth;
         private System.Windows.Forms.ComboBox comboBoxDateOfOrderDay;
-        private System.Windows.Forms.RadioButton radioButtonRecovery;
-        private System.Windows.Forms.RadioButton radioButtonNotRecovery;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button buttonDeleteSave;
         private System.Windows.Forms.ComboBox comboBoxLoad;
@@ -674,6 +645,6 @@
         private System.Windows.Forms.Label LabelClipPutNum;
         private System.Windows.Forms.Label LabelClipPutDescript;
         private System.Windows.Forms.TextBox textBoxClipPutNum;
-        private System.Windows.Forms.GroupBox groupBoxRecoveryOrNot;
+        private System.Windows.Forms.CheckBox checkBoxWithRestoration;
     }
 }

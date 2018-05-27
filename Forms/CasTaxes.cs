@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magistrate.FormLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Magistrate.Forms
 {
     public partial class CasTaxes : Form
     {
+        private string nameForm; // название формы, идентичен ее названию ее класса
 
         #region Инициализация
 
@@ -19,20 +21,18 @@ namespace Magistrate.Forms
         {
             InitializeComponent();
 
-            Db.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
 
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.SetStandartParamsInControls
+                (nameForm,
+                ref comboBoxLoad,               // заполнение вариантами сохранений
+                ref comboBoxDateOfOrderMonth,   // заполнение месяца вынесения решения
+                ref comboBoxDateOfOrderYear);   // заполнение года вынесения решения
 
-            // Автозаполнение 
-            // Заполнение даты вынесения решения текущими датами
-            DateTime dateTimeNow = DateTime.Now;
-            string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
-            string year = dateTimeNow.Year.ToString(); // год
-            comboBoxDateOfOrderMonth.Text = month;
-            comboBoxDateOfOrderYear.Text = year;
+            nameForm = this.GetType().ToString(); // Название формы
         }
         #endregion Инициализация
 
@@ -59,14 +59,7 @@ namespace Magistrate.Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
-            {
-                comboBoxWhoIsJudge.Text = "Мировой судья";
-            }
-            else
-            {
-                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
-            }
+            comboBoxWhoIsJudge.Text = FormController.GetMagistrateOrDeputy(comboBoxPlotNumber.Text);
         }
 
         #region Разблокировка возможности писать сумму задолженности и пени
@@ -117,74 +110,54 @@ namespace Magistrate.Forms
             }
         }
         #endregion Разблокировка возможности писать сумму задолженности и пени
-        
+
         #endregion Автоматическое заполнение полей
 
 
         #region Сохранение
+
         // Сохранить заполненные поля
-        string nameForm = "CasTaxes";
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-
-            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
-            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.SaveForm(Controls, nameForm, textBoxForSave.Text, ref comboBoxLoad);
         }
+
         // Загрузить сохраненные поля
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
+            // получаем заполненные сейвом контролы
+            var controls = FormController.GetControlsLoadForm(Controls, nameForm, ref comboBoxLoad);
 
-            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
+            UpdateControls(controls);
+        }
+
+        // Удалить сохранение
+        private void buttonDeleteSave_Click(object sender, EventArgs e)
+        {
+            FormController.DeleteSave(ref comboBoxLoad, nameForm);
+        }
+
+        #endregion Сохранение
+
+
+        #region Приватные методы
+
+        /// <summary>Обновить контролы на форме</summary>
+        /// <param name="controls">контролы, которыми будут заменяться контролы на форме</param>
+        private void UpdateControls(Control.ControlCollection controls)
+        {
             for (int i = 0; i < controls.Count; i++)
             {
                 Controls[i].Text = controls[i].Text;
             }
         }
-        // Удалить сохранение
-        private void buttonDeleteSave_Click(object sender, EventArgs e)
+
+
+        // Обработка налогов, составление строки
+        private string TaxHandlerStringPreparation()
         {
-            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            comboBoxLoad.Text = ""; // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
-        }
-        #endregion Сохранение
-
-        
-        // СГЕНЕРИРОВАТЬ WORD
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-
-
-            // Если ИНН не равен 12 символам
-            if (textBoxINN.Text != null && textBoxINN.Text.Length != 12)
-            {
-                MessageBox.Show("ИНН должен состоять из 12 символов");
-                return;
-            }
-
-
-            // Если не чекнули ни один налог
-            if (checkBoxTransportTax.Checked == false && checkBoxLandTax.Checked == false && checkBoxPropertyTax.Checked == false)
-            {
-                MessageBox.Show("Не поставили галку не над одиним налогом");
-                return;
-            }
-
-
-            // Обработка налогов, составление строки
             string taxesString = "";
+
             if (checkBoxTransportTax.Checked) // Транспортный налог
             {
                 taxesString += checkBoxTransportTax.Text; // указываем налог
@@ -206,11 +179,16 @@ namespace Magistrate.Forms
                 taxesString += " в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDownPropertyTax.Value); // сумму налога переводим в 0 руб. 0 коп
                 taxesString += ", пени в сумме " + HandlerTextControls.IntInRubAndCop(numericUpDownPropertyTaxFine.Value) + ", "; // сумму пени переводим в 0 руб. 0 коп
             }
-            GenerationWord.AddValueControl(ref controlArrayToString, taxesString, "#-1"); // в ручную добавляем новый ключ
+
+            return taxesString;
+
+        }
 
 
-            // Подсчет суммы всех налогов
-            decimal taxesSum = 0m; // Сумма всех налогов
+        // Подсчет суммы всех налогов
+        private string SumAllTaxes(out decimal taxesSum)
+        {
+            taxesSum = 0m; // Сумма всех налогов
             try
             {
                 if (checkBoxTransportTax.Checked)
@@ -222,15 +200,20 @@ namespace Magistrate.Forms
             }
             catch
             {
-                MessageBox.Show("Все поля с цифрами задолженности и пени должны быть заполнены хотя бы нулем");
-                return;
+                throw new Exception("Все поля с цифрами задолженности и пени должны быть заполнены хотя бы нулем");
             }
+
             string taxesSumToString = HandlerTextControls.IntInRubAndCop(taxesSum); // сумму налога переводим в 0 руб. 0 коп
+
             taxesSumToString = "всего " + taxesSumToString;
-            GenerationWord.AddValueControl(ref controlArrayToString, taxesSumToString, "#-2"); // в ручную добавляем новый ключ
+
+            return taxesSumToString;
+        }
 
 
-            //Считаем гос.пошлину
+        // Считаем госпошлину, где taxesSum - сумма всех прочих налогов
+        private string CountStateFee(decimal taxesSum)
+        {
             decimal duty = 0m;
             string dutyToString = "";
             if (taxesSum <= 20000)
@@ -259,22 +242,74 @@ namespace Magistrate.Forms
             }
             else
             {
-                MessageBox.Show("Ну удалось посчитать госпошлину из-за некорректных данных");
-                return;
+                throw new Exception("Все поля с цифрами задолженности и пени должны быть заполнены хотя бы нулем");
             }
             dutyToString = HandlerTextControls.IntInRubAndCop(Math.Round(duty, 2)); // сумму пошлины переводим в 0 руб. 0 коп
-            GenerationWord.AddValueControl(ref controlArrayToString, dutyToString, "#-3"); // в ручную добавляем новый ключ
+
+            return dutyToString;
+        }
+        #endregion Приватные методы
+
+        // СГЕНЕРИРОВАТЬ WORD
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+
+
+            // Если ИНН не равен 12 символам
+            if (textBoxINN.Text != null && textBoxINN.Text.Length != 12)
+            {
+                MessageBox.Show("ИНН должен состоять из 12 символов");
+                return;
+            }
+
+
+            // Если не чекнули ни один налог
+            if (checkBoxTransportTax.Checked == false && checkBoxLandTax.Checked == false && checkBoxPropertyTax.Checked == false)
+            {
+                MessageBox.Show("Не поставили галку не над одиним налогом");
+                return;
+            }
+
+
+            // Обработка налогов, составление строки
+            string taxesString = TaxHandlerStringPreparation();
+            GenerationWord.AddValueControl(ref controlArrayToString, taxesString, "#-1"); // в ручную добавляем новый ключ
+
+
+            // Подсчет суммы всех налогов
+            decimal taxesSum; // Сумма всех налогов
+            try
+            {
+                string taxesSumToString = SumAllTaxes(out taxesSum);
+                GenerationWord.AddValueControl(ref controlArrayToString, taxesSumToString, "#-2"); // в ручную добавляем новый ключ
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+
+            //Считаем гос.пошлину
+            try
+            {
+                string dutyToString = CountStateFee(taxesSum);
+                GenerationWord.AddValueControl(ref controlArrayToString, dutyToString, "#-3"); // в ручную добавляем новый ключ
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
 
 
             // Вставляем название в буфер обмена
-            string numCase = ""; // номер дела
-            if (textBoxClipPutNum.Text != null && textBoxClipPutNum.Text != "")
-                numCase = textBoxClipPutNum.Text + "  ";
-            Clipboard.SetText(numCase + textBoxClipPutName.Text + "  " + this.Text);
+            FormController.ClipPutNameWord(textBoxClipPutNum.Text, textBoxClipPutName.Text, this.Text);
 
 
-            // Сгенерировать ворд
-            GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Взыскание налога", controlArrayToString);
+            FormController.GenerateWord(controlArrayToString, "Взыскание налога");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magistrate.FormLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Magistrate.Forms
 {
     public partial class OrdersForCommunal : Form
     {
+        private string nameForm; // название формы, идентичен ее названию ее класса
 
         #region Инициализация
         public OrdersForCommunal()
@@ -19,22 +21,20 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // добавление организаций
-            Db.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.КомуналкаСокращенная); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.КомуналкаСокращенная); // Место жителства дом
 
-            Db.SetPropertiesComboBox(ref d1comboBox5, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref d1comboBox8, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref d1comboBox9, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            Db.SetPropertiesComboBox(ref d1comboBox10, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref d1comboBox5, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            FormController.SetPropertiesComboBox(ref d1comboBox8, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref d1comboBox9, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            FormController.SetPropertiesComboBox(ref d1comboBox10, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
 
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.SetStandartParamsInControls
+                (nameForm,
+                ref comboBoxLoad,               // заполнение вариантами сохранений
+                ref comboBoxDateOfOrderMonth,   // заполнение месяца вынесения решения
+                ref comboBoxDateOfOrderYear);   // заполнение года вынесения решения
 
-            // Автозаполнение 
-            // Заполнение даты вынесения решения текущими датами
-            DateTime dateTimeNow = DateTime.Now;
-            string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
-            string year = dateTimeNow.Year.ToString(); // год
-            comboBoxDateOfOrderMonth.Text = month;
-            comboBoxDateOfOrderYear.Text = year;
+            nameForm = this.GetType().ToString(); // Название формы
         }
         #endregion Инициализация
         
@@ -44,14 +44,7 @@ namespace Magistrate.Forms
         // Автоматическое выставление судья или И.о участка
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
-            {
-                comboBoxWhoIsJudge.Text = "Мировой судья";
-            }
-            else
-            {
-                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
-            }
+            comboBoxWhoIsJudge.Text = FormController.GetMagistrateOrDeputy(comboBoxPlotNumber.Text);
         }
 
         
@@ -191,6 +184,16 @@ namespace Magistrate.Forms
 
         #region Приватные методы
 
+        /// <summary>Обновить контролы на форме</summary>
+        /// <param name="controls">контролы, которыми будут заменяться контролы на форме</param>
+        private void UpdateControls(Control.ControlCollection controls)
+        {
+            for (int i = 0; i < controls.Count; i++)
+            {
+                Controls[i].Text = controls[i].Text;
+            }
+        }
+
         /// <summary>
         /// Возвращает контрол по его таб индексу
         /// </summary>
@@ -208,121 +211,57 @@ namespace Magistrate.Forms
             return null;
         }
 
-        /// <summary>
-        /// Возвращает полные реквизиты организации по названию или null
-        /// </summary>
-        /// <param name="Name">Название организации</param>
-        private string GetRec(string Name)
-        { // потом сделать динамчным вытгиванием из БД 
-            int nameLength = Name.Length; // Количество символов в названии банка
-            string result = null;
 
-
-            // Проверяем сходится ли название с полными реквизитами
-            List<string> allRec = Db.GetColumn(NamePropertiesForComboBox.КомуналкаПолная);
-            if (allRec == null)
-                return null;
-
-            foreach (string bank in allRec)
-            {
-                if (bank.Substring(0, nameLength) == Name) // первые слова в полных реквизитах соотвествуют 
-                    return bank;
-            }
-
-            // Возвращаем результат null
-            return result;
-        }
-
-        #endregion Приватные методы
-
-
-        #region Сохранение
-        // Сохранить заполненные поля
-        string nameForm = "OrdersForCommunal";
-        private void buttonSave_Click(object sender, EventArgs e)
+        /// <summary> Находим полные реквизиты по комуналке </summary>
+        private string FindFullDetailsCommunal()
         {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-
-            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
-            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
-        }
-        // Загрузить сохраненные поля
-        private void buttonLoad_Click(object sender, EventArgs e)
-        {
-            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
-
-            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
-            for (int i = 0; i < controls.Count; i++)
-            {
-                Controls[i].Text = controls[i].Text;
-            }
-        }
-        // Удалить сохранение
-        private void buttonDeleteSave_Click(object sender, EventArgs e)
-        {
-            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            comboBoxLoad.Text = ""; // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
-        }
-        #endregion Сохранение
-
-        // СГЕНЕРИРОВАТЬ WORD
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-
-            // Находим полные реквизиты по комуналке
-            string Requisites = GetRec(comboBoxBank.Text); // находим полные реквизиты банка
+            string Requisites = FormController.GetRecMunicipal(comboBoxBank.Text); // находим полные реквизиты банка
             if (Requisites == null) // банк не опознан
             {
                 MessageBox.Show("Реквизиты организации не опознаны, после герации не забудьте их вписать");
                 Requisites = "";
             }
-            GenerationWord.AddValueControl(ref controlArrayToString, Requisites, "#-1"); // в ручную добавляем новый ключ
 
+            return Requisites;
+        }
 
-            // должника / должников
-            string debtor = "";
-            if (numericUpDownNumDebtor.Value == 1)
-            {
-                debtor = "должника";
-            }
-            else
-            {
+        /// <summary> должника / должников </summary>
+        private string DebtorOrDebtord()
+        {
+            string debtor = "должника";
+            if (numericUpDownNumDebtor.Value > 1)
                 debtor = "должников";
-            }
-            GenerationWord.AddValueControl(ref controlArrayToString, debtor, "#-2"); // в ручную добавляем новый ключ
 
+            return debtor;
+        }
 
-            // солидарно или нет
+        /// <summary> солидарно или нет </summary>
+        private string SeverallyOrNot()
+        {
             string severally = "";
             if (numericUpDownNumDebtor.Value != 1)
-            {
                 severally = "солидарно";
-            }
-            GenerationWord.AddValueControl(ref controlArrayToString, severally, "#-3"); // в ручную добавляем новый ключ
 
+            return severally;
+        }
 
-            // Заполнение второй даты, выделено отдельно т.к. иначе в word-е будут лишние точки
-            // На дату / период / с - по
+        /// <summary> Заполнение второй даты, выделено отдельно т.к. иначе в word-е будут лишние точки
+        /// На дату / период / с - по </summary>
+        private string FillingSecondDate()
+        {
             string dateTwo = ""; // дата вторая 
             if (comboBoxPeriodTwoDay.Text != "" && comboBoxPeriodTwoDay.Text != null)
             {
                 dateTwo = comboBoxPeriodTwoDay.Text + "." + comboBoxPeriodTwoMonth.Text + "." + comboBoxPeriodTwoYear.Text;
                 dateTwo = " по " + dateTwo + " года";
             }
-            GenerationWord.AddValueControl(ref controlArrayToString, dateTwo, "#-4"); // в ручную добавляем новый ключ
 
-            // С кого взимать задолженность, только ФИО все вместе
+            return dateTwo;
+        }
+
+        /// <summary> С кого взимать задолженность, только ФИО все вместе </summary>
+        private string FromWhomCollectDebt()
+        {
             string fullNames = "";
             if (numericUpDownNumDebtor.Value > 0) // добавляем по одному человеку
                 fullNames += d1textBox1.Text + " " + d1textBox2.Text + " " + d1textBox3.Text;
@@ -334,10 +273,13 @@ namespace Magistrate.Forms
                 fullNames += ", " + d4textBox1.Text + " " + d4textBox2.Text + " " + d4textBox3.Text;
             if (numericUpDownNumDebtor.Value > 4) // добавляем по одному человеку
                 fullNames += ", " + d5textBox1.Text + " " + d5textBox2.Text + " " + d5textBox3.Text;
-            GenerationWord.AddValueControl(ref controlArrayToString, fullNames, "#-5"); // в ручную добавляем новый ключ
 
-
-            // С кого взимать задолженность, полные реквизиты все вместе
+            return fullNames;
+        }
+        
+        /// <summary> С кого взимать задолженность, полные реквизиты все вместе </summary>
+        private string FromWhomCollectDebtFullDetails()
+        {
             string allDetailsDebtors = "";
             if (numericUpDownNumDebtor.Value > 0) // добавляем по одному человеку
                 allDetailsDebtors += d1textBox1.Text + " " + d1textBox2.Text + " " + d1textBox3.Text
@@ -369,20 +311,32 @@ namespace Magistrate.Forms
                     + ", место рождения: " + d5comboBox4.Text + " " + d5comboBox5.Text
                     + ", место регистрации: " + d5comboBox6.Text + ", " + d5comboBox7.Text + ", " + d5comboBox8.Text
                      + ", " + d5comboBox9.Text + ", " + d5comboBox10.Text;
-            GenerationWord.AddValueControl(ref controlArrayToString, allDetailsDebtors, "#-6"); // в ручную добавляем новый ключ
+
+            return allDetailsDebtors;
+        }
+        
+        /// <summary> Логика конкретно данной формы </summary>
+        private List<ValueControl> LogicForm(List<ValueControl> controlArrayToString)
+        {
+            GenerationWord.AddValueControl(ref controlArrayToString, FindFullDetailsCommunal(), "#-1");
+            GenerationWord.AddValueControl(ref controlArrayToString, DebtorOrDebtord(), "#-2");
+            GenerationWord.AddValueControl(ref controlArrayToString, SeverallyOrNot(), "#-3");
+            GenerationWord.AddValueControl(ref controlArrayToString, FillingSecondDate(), "#-4");
+            GenerationWord.AddValueControl(ref controlArrayToString, FromWhomCollectDebt(), "#-5");
+            GenerationWord.AddValueControl(ref controlArrayToString, FromWhomCollectDebtFullDetails(), "#-6");
 
 
             // В сумме руб коп
             string Summ = HandlerTextControls.IntInRubAndCop(numericUpDownCredit.Value);
             if (Summ == null)
-                return;
+                throw new Exception("Некорректная сумма");
             GenerationWord.AddValueControl(ref controlArrayToString, Summ, "#-7"); // в ручную добавляем новый ключ
 
 
             // Пени руб коп
             string Duty = HandlerTextControls.IntInRubAndCop(numericUpDownCreditFine.Value);
             if (Duty == null)
-                return;
+                throw new Exception("Некорректное пени");
             GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-8"); // в ручную добавляем новый ключ
 
             // Всего руб коп
@@ -390,16 +344,54 @@ namespace Magistrate.Forms
             string ToPay = HandlerTextControls.IntInRubAndCop(summToPay);
             GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-9"); // в ручную добавляем новый ключ
 
+            return controlArrayToString;
+        }
+        #endregion Приватные методы
+
+
+        #region Сохранение
+
+        // Сохранить заполненные поля
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            FormController.SaveForm(Controls, nameForm, textBoxForSave.Text, ref comboBoxLoad);
+        }
+
+        // Загрузить сохраненные поля
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            // получаем заполненные сейвом контролы
+            var controls = FormController.GetControlsLoadForm(Controls, nameForm, ref comboBoxLoad);
+
+            UpdateControls(controls);
+        }
+
+        // Удалить сохранение
+        private void buttonDeleteSave_Click(object sender, EventArgs e)
+        {
+            FormController.DeleteSave(ref comboBoxLoad, nameForm);
+        }
+
+        #endregion Сохранение
+
+        // СГЕНЕРИРОВАТЬ WORD
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
+            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+
+
+            try { controlArrayToString = LogicForm(controlArrayToString); }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
 
             // Вставляем название в буфер обмена
-            string numCase = ""; // номер дела
-            if (textBoxClipPutNum.Text != null && textBoxClipPutNum.Text != "")
-                numCase = textBoxClipPutNum.Text + "  ";
-            Clipboard.SetText(numCase + textBoxClipPutName.Text + "  " + this.Text);
-
-
-            // Сгенерировать ворд
-            GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Приказ по комуналке", controlArrayToString);
+            FormController.ClipPutNameWord(textBoxClipPutNum.Text, textBoxClipPutName.Text, this.Text);
+            
+            FormController.GenerateWord(controlArrayToString, "Приказ по комуналке");
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Magistrate
         private static string PathToApp = Application.StartupPath + "\\AutoitGenerateWord.exe"; 
 
         /// <summary>
-        /// Запихнуть в ворд в пронумерованные ключи необходимую инфомарцию
+        /// Запихнуть в ворд вместо пронумерованных ключей необходимую инфомарцию
         /// </summary>
         /// <param name="PathToSample">Путь до папки с примерами</param>
         /// <param name="NameSample">Имя примера шаблона без расширения, .docx дописывает автоматом</param>
@@ -80,6 +80,7 @@ namespace Magistrate
             return controlArrayToString;
         }
 
+
         /// <summary>
         /// В ручную добавить ключ-значение в выгружаемый массив
         /// </summary>
@@ -96,6 +97,7 @@ namespace Magistrate
             
         }
 
+
         /// <summary>
         /// В ручную добавить ключ-значение в выгружаемый массив без информации с котрола на форме
         /// </summary>
@@ -111,8 +113,9 @@ namespace Magistrate
             ValueControlArray.Add(newValueControl); // Записать в лист
         }
 
+
         /// <summary>
-        /// В ручную добавить ключ-значение в выгружаемый массив. Ключ будет значение TablIndex элемента
+        /// В ручную добавить ключ-значение в выгружаемый массив. Ключ будет значение TaglIndex элемента
         /// </summary>
         /// <param name="ValueControlArray">Массив, в который добавляется значение</param>
         /// <param name="control">Контрол которыйд добавляется</param>
@@ -124,6 +127,7 @@ namespace Magistrate
             ValueControlArray.Add(newValueControl); // Записать в лист
 
         }
+
 
         /// <summary>
         /// Берет текст из всех форм заполнения пользователем и превращает в массив
@@ -147,6 +151,7 @@ namespace Magistrate
             return valueControlsReturn;
         }
 
+
         /// <summary>
         /// Добавляет ключи для вставки их в шаблон к массиву строк, который потом будет замещать эти ключи в шаблоне
         /// </summary>
@@ -161,6 +166,7 @@ namespace Magistrate
                 i.Key = GenerateKey(i); // Сгенерировать ключ
             }
         }
+
 
         /// <summary>
         /// Сгенерировать ключ для контрола
@@ -188,6 +194,7 @@ namespace Magistrate
             returnResult = "#" + numString; // Пример результата: #05
             return returnResult;
         }
+
 
         /// <summary>
         /// Открыть аутоит скрипт, генерирующий ворд на основе COM обхектов

@@ -14,6 +14,7 @@ namespace Magistrate
     {
 
         #region IntInRubAndCop - Число с плавающей запятой переделать в формат "0 руб. 0 коп."
+
         /// <summary>
         /// Число с плавающей запятой переделать в формат "0 руб. 0 коп."
         /// </summary>
@@ -57,6 +58,7 @@ namespace Magistrate
                 return null;
             }
         }
+
         #endregion IntInRubAndCop - Число с плавающей запятой переделать в формат "0 руб. 0 коп."
 
 

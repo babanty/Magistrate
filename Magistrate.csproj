@@ -52,6 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsLogic\FormController.cs" />
     <Compile Include="Forms\Article1215.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,10 +101,10 @@
     <Compile Include="Forms\CreditOrder.Designer.cs">
       <DependentUpon>CreditOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\NewGAI.cs">
+    <Compile Include="PropertiesForm\NewGAI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\NewGAI.Designer.cs">
+    <Compile Include="PropertiesForm\NewGAI.Designer.cs">
       <DependentUpon>NewGAI.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\OrdersForCommunal.cs">
@@ -159,7 +160,7 @@
     <EmbeddedResource Include="Forms\CreditOrder.resx">
       <DependentUpon>CreditOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\NewGAI.resx">
+    <EmbeddedResource Include="PropertiesForm\NewGAI.resx">
       <DependentUpon>NewGAI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrdersForCommunal.resx">
@@ -204,5 +205,6 @@
     <Content Include="Задачи для выполнения.txt" />
     <Content Include="Инструкция по коду.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

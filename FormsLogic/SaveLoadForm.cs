@@ -76,6 +76,7 @@ namespace Magistrate
             return controls;
         }
 
+
         /// <summary>
         /// Заполнить комбобокс вариантами сохранений
         /// </summary>
@@ -117,6 +118,7 @@ namespace Magistrate
             }
         }
 
+
         /// <summary>
         /// Удалить сохранение
         /// </summary>
@@ -127,6 +129,7 @@ namespace Magistrate
             string nameSection = nameForm + "$" + nameSave;
             ini.DeleteSection(nameSection);
         }
+
 
         /// <summary>
         /// Вернуть названия всех колонок

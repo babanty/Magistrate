@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magistrate.FormLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,30 +13,35 @@ namespace Magistrate.Forms
 {
     public partial class Article1533 : Form
     {
+        private string nameForm; // название формы, идентичен ее названию ее класса
+
 
         #region Инициализация
+
         public Article1533()
         {
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            Db.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
-            // Save
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
 
             // Автозаполнение 
-            // Заполнение даты вынесения решения текущими датами
+            FormController.SetStandartParamsInControls
+    (nameForm,
+    ref comboBoxLoad,               // заполнение вариантами сохранений
+    ref comboBoxDateOfOrderMonth,   // заполнение месяца вынесения решения
+    ref comboBoxDateOfOrderYear);   // заполнение года вынесения решения
+
+            nameForm = this.GetType().ToString(); // Название формы
+
             DateTime dateTimeNow = DateTime.Now;
-            string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
-            string year = dateTimeNow.Year.ToString(); // год
-            comboBoxDateOfOrderMonth.Text = month;
-            comboBoxDateOfOrderYear.Text = year;
             //СЗВ-м за какой год
             comboBoxSZVMYear.Text = (dateTimeNow.Year - 1).ToString();
         }
+
         #endregion Инициализация
 
         
@@ -44,13 +50,7 @@ namespace Magistrate.Forms
         // Выбранный участок, автоматически подставляет кто судья
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
-            {
-                comboBoxWhoIsJudge.Text = "Мировой судья";
-            }else
-            {
-                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
-            }
+            comboBoxWhoIsJudge.Text = FormController.GetMagistrateOrDeputy(comboBoxPlotNumber.Text);
         }
 
 
@@ -155,74 +155,42 @@ namespace Magistrate.Forms
 
         #region Приватные методы
 
-        /// <summary>
-        /// метод возвращающий формулировку в случае если явился или не явился или null если не правильные параметры
-        /// </summary>
-        /// <param name="appeared">Если явился, то true</param>
-        /// <param name="ItIsWoomen">Если женщина, то true</param>
-        /// <returns>метод возвращающий формулировку в случае если явился или не явился или null</returns>
-        private string AppearedOrNot(bool appeared, bool ItIsWoomen)
+        /// <summary>Обновить контролы на форме</summary>
+        /// <param name="controls">контролы, которыми будут заменяться контролы на форме</param>
+        private void UpdateControls(Control.ControlCollection controls)
         {
-            if (appeared && ItIsWoomen)
-                return "явилась, вину признала";
-            if (appeared == false && ItIsWoomen)
-                return "не явилась, извещена надлежащим образом о времени и месте судебного " +
-                    "заседания. Учитывая, что имеются данные о ее надлежащем извещении о месте и " +
-                    "времени рассмотрения дела и от нее не поступило ходатайство об отложении " +
-                    "рассмотрения дела, суд на основании ч.2 ст.25.1 КоАП РФ считает возможным " +
-                    "рассмотреть дело в ее отсутствие.";
-
-            if (appeared && ItIsWoomen == false)
-                return "явился, вину признал";
-            if (appeared == false && ItIsWoomen == false)
-                return "не явился, извещен надлежащим образом о времени и месте судебного " +
-                    "заседания. Учитывая, что имеются данные о его надлежащем извещении о месте и " +
-                    "времени рассмотрения дела и от него не поступило ходатайство об отложении " +
-                    "рассмотрения дела, суд на основании ч.2 ст.25.1 КоАП РФ считает возможным " +
-                    "рассмотреть дело в его отсутствие.";
-
-            return null;
+            for (int i = 0; i < controls.Count; i++)
+            {
+                Controls[i].Text = controls[i].Text;
+            }
         }
+
         #endregion Приватные методы
 
 
         #region Сохранение
 
         // Сохранить заполненные поля
-        string nameForm = "Article1533";
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-
-            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
-            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.SaveForm(Controls, nameForm, textBoxForSave.Text, ref comboBoxLoad);
         }
+
         // Загрузить сохраненные поля
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
+            // получаем заполненные сейвом контролы
+            var controls = FormController.GetControlsLoadForm(Controls, nameForm, ref comboBoxLoad);
 
-            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
-            for (int i = 0; i < controls.Count; i++)
-            {
-                Controls[i].Text = controls[i].Text;
-            }
+            UpdateControls(controls);
         }
+
         // Удалить сохранение
         private void buttonDeleteSave_Click(object sender, EventArgs e)
         {
-            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            comboBoxLoad.Text = ""; // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.DeleteSave(ref comboBoxLoad, nameForm);
         }
+
         #endregion Сохранение
 
 
@@ -234,13 +202,11 @@ namespace Magistrate.Forms
 
 
             //Явился или не явился
-            string resultAppeared = AppearedOrNot(checkBoxAppearedOrNot.Checked, radioButtonSexWoomen.Checked);
+            string resultAppeared = FormController.AppearedOrNotExplanation(checkBoxAppearedOrNot.Checked, radioButtonSexWoomen.Checked);
             GenerationWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); // в ручную добавляем новый ключ
 
             // Делаем инициалы ФИО
-            string initials = "";
-            if (textBoxFullNameNameIvana.Text.Length > 2 && textBoxFullNamePatronymicIvanovicha.Text.Length > 2) // Если правильно заполнили имя и отчество
-                initials = textBoxFullNameNameIvana.Text.Remove(1) + "." + textBoxFullNamePatronymicIvanovicha.Text.Remove(1) + ".";
+            string initials = FormController.GetInitials(textBoxFullNameNameIvana.Text, textBoxFullNamePatronymicIvanovicha.Text);
             GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
 
             // Указание если явился ,кроме признания своей вины,
@@ -255,23 +221,9 @@ namespace Magistrate.Forms
 
 
             // Вставляем название в буфер обмена
-            string numCase = ""; // номер дела
-            if (textBoxClipPutNum.Text != null && textBoxClipPutNum.Text != "")
-                numCase = textBoxClipPutNum.Text + "  ";
-            Clipboard.SetText(numCase + textBoxClipPutName.Text + "  " + this.Text);
+            FormController.ClipPutNameWord(textBoxClipPutNum.Text, textBoxClipPutName.Text, this.Text);
 
-
-            // Если пол мужской, то один шаблон, если женский, то другой
-            if (radioButtonSexMen.Checked)
-            {
-                // Сгенерировать ворд
-                GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "ст 15.33 Муж", controlArrayToString);
-            }
-            else
-            {
-                // Сгенерировать ворд
-                GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "ст 15.33 Жен", controlArrayToString);
-            }
+            FormController.GenerateWord(controlArrayToString, radioButtonSexMen.Checked, "ст 15.33 Муж", "ст 15.33 Жен");
         }
     }
 }

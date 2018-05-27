@@ -117,25 +117,6 @@ namespace Magistrate
         }
 
         /// <summary>
-        /// Заполняет поля для ввода комбобокс вариантами из БД
-        /// </summary>
-        /// <param name="comboBox">Комбобокс который надо заполнить</param>
-        /// <param name="column">Название колоки в БД</param>
-        public static void SetPropertiesComboBox(ref ComboBox comboBox, NamePropertiesForComboBox nameProperties)
-        {
-            List<string> str = GetColumn(nameProperties);
-
-            if (str != null)
-            {
-                // сортировка по возрастанию, LINQ запрос
-                var sortedStr = from s in str // определяем каждый объект из str как s
-                                orderby s  // упорядочиваем по возрастанию
-                                select s; // выбираем объект
-                comboBox.Items.AddRange(sortedStr.ToArray());
-            }
-        }
-
-        /// <summary>
         /// Расшифровывает что значат типы настроек для комбобокса, возвращает строку,
         /// по которой обращаться в БД, нарпимер "Банк полные реквизиты" или null
         /// </summary>
@@ -276,6 +257,7 @@ namespace Magistrate
         БанкСокращенный,
         БанкПолный,
         КомуналкаСокращенная,
-        КомуналкаПолная
+        КомуналкаПолная,
+        РеквизитыГИБДД
     }
 }

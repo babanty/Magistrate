@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magistrate.FormLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,26 +13,26 @@ namespace Magistrate.Forms
 {
     public partial class CreditOrder : Form
     {
+        private string nameForm; // название формы, идентичен ее названию ее класса
+
         #region Инициализация
         public CreditOrder()
         {
             InitializeComponent();
 
-            Db.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
-            Db.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            Db.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            Db.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            Db.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
+            FormController.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
 
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.SetStandartParamsInControls
+                (nameForm,
+                ref comboBoxLoad,               // заполнение вариантами сохранений
+                ref comboBoxDateOfOrderMonth,   // заполнение месяца вынесения решения
+                ref comboBoxDateOfOrderYear);   // заполнение года вынесения решения
 
-            // Автозаполнение 
-            // Заполнение даты вынесения решения текущими датами
-            DateTime dateTimeNow = DateTime.Now;
-            string month = HandlerTextControls.MonthInString(dateTimeNow.Month); // месяц
-            string year = dateTimeNow.Year.ToString(); // год
-            comboBoxDateOfOrderMonth.Text = month;
-            comboBoxDateOfOrderYear.Text = year;
+            nameForm = this.GetType().ToString(); // Название формы
         }
         #endregion Инициализация
 
@@ -46,83 +47,49 @@ namespace Magistrate.Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxPlotNumber.Text == PropertiesMyApp.GetPropertiesValue(TypeProperties.PlaceNum))
-            {
-                comboBoxWhoIsJudge.Text = "Мировой судья";
-            }
-            else
-            {
-                comboBoxWhoIsJudge.Text = "И.о. мирового судьи";
-            }
+            comboBoxWhoIsJudge.Text = FormController.GetMagistrateOrDeputy(comboBoxPlotNumber.Text);
         }
         #endregion Автоматическое заполнение полей
 
 
         #region Приватные методы
-        /// <summary>
-        /// Возвращает полные реквизиты банка по названию или null
-        /// </summary>
-        /// <param name="Name">Название банка</param>
-        private string GetBank(string Name)
-        { // потом сделать динамчным вытгиванием из БД 
-            int nameLength = Name.Length; // Количество символов в названии банка
-            string result = null;
 
-
-            // Проверяем сходится ли название с полными реквизитами
-            List<string> allBanks = Db.GetColumn(NamePropertiesForComboBox.БанкПолный);
-            if (allBanks == null)
-                return null;
-
-            foreach (string bank in allBanks)
-            {
-                if (bank.Substring(0, nameLength) == Name) // первые слова в полных реквизитах соотвествуют 
-                    return bank;
-            }
-
-            // Возвращаем результат null
-            return result;
-            
-        }
-        #endregion Приватные методы
-
-
-        #region Сохранение
-        // Сохранить заполненные поля
-        string nameForm = "CreditOrder";
-        private void buttonSave_Click(object sender, EventArgs e)
+        /// <summary>Обновить контролы на форме</summary>
+        /// <param name="controls">контролы, которыми будут заменяться контролы на форме</param>
+        private void UpdateControls(Control.ControlCollection controls)
         {
-            // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
-
-            string nameSave = nameForm + "$" + textBoxForSave.Text; // имя сохранения
-            SaveLoadForm.SaveForm(nameSave, controlArrayToString); // сохранить
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
-        }
-        // Загрузить сохраненные поля
-        private void buttonLoad_Click(object sender, EventArgs e)
-        {
-            var controls = SaveLoadForm.LoadForm(nameForm, comboBoxLoad.Text, Controls); // получаем заполненные сейвом контролы
-
-            // Переносим текст массива заполненных контролов в контролы этой формы. Иначе ни как, т.к. Controls {get;}
             for (int i = 0; i < controls.Count; i++)
             {
                 Controls[i].Text = controls[i].Text;
             }
         }
+
+        #endregion Приватные методы
+
+
+        #region Сохранение
+
+        // Сохранить заполненные поля
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            FormController.SaveForm(Controls, nameForm, textBoxForSave.Text, ref comboBoxLoad);
+        }
+
+        // Загрузить сохраненные поля
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            // получаем заполненные сейвом контролы
+            var controls = FormController.GetControlsLoadForm(Controls, nameForm, ref comboBoxLoad);
+
+            UpdateControls(controls);
+        }
+
         // Удалить сохранение
         private void buttonDeleteSave_Click(object sender, EventArgs e)
         {
-            SaveLoadForm.DeleteSave(comboBoxLoad.Text, nameForm); // Удаляем сохранение
-
-            // перезаполняем варианты сохранений
-            comboBoxLoad.Items.Clear(); // стираем текущие варианты
-            comboBoxLoad.Text = ""; // стираем текущие варианты
-            SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
+            FormController.DeleteSave(ref comboBoxLoad, nameForm);
         }
+
         #endregion Сохранение
 
 
@@ -134,7 +101,7 @@ namespace Magistrate.Forms
 
 
             // Заполняем полные реквизиты банка
-            string bankRequisites = GetBank(comboBoxBank.Text); // находим полные реквизиты банка
+            string bankRequisites = FormController.GetBank(comboBoxBank.Text); // находим полные реквизиты банка
             if (bankRequisites == null) // банк не опознан
             {
                 MessageBox.Show("Реквизиты банка не опознаны, после герации не забудьте их вписать");
@@ -174,14 +141,10 @@ namespace Magistrate.Forms
 
 
             // Вставляем название в буфер обмена
-            string numCase = ""; // номер дела
-            if (textBoxClipPutNum.Text != null && textBoxClipPutNum.Text != "")
-                numCase = textBoxClipPutNum.Text + "  ";
-            Clipboard.SetText(numCase + textBoxClipPutName.Text + "  " + this.Text);
+            FormController.ClipPutNameWord(textBoxClipPutNum.Text, textBoxClipPutName.Text, this.Text);
 
 
-            // Сгенерировать ворд
-            GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", "Приказ по банку или фин орг", controlArrayToString);
+            FormController.GenerateWord(controlArrayToString, "Приказ по банку или фин орг");
         }
     }
 }
