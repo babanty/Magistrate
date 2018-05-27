@@ -217,26 +217,26 @@ namespace Magistrate.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+            List<ValueControl> controlArrayToString = GeneratorWord.StandartListValueControl(Controls);
 
 
             //Явился или не явился разъяяснение
             string resultAppeared = FormController.AppearedOrNotExplanation(checkBoxAppearedOrNot.Checked, radioButtonSexWoomen.Checked);
-            GenerationWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); // в ручную добавляем новый ключ
 
             //Явился или не явился смягчающие обстоятельства
             resultAppeared = FormController.AppearedOrNotCircumstances(checkBoxAppearedOrNot.Checked);
-            GenerationWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-4"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-4"); // в ручную добавляем новый ключ
 
 
             // Делаем инициалы ФИО
             string initials = FormController.GetInitials(textBoxFullNameNameIvana.Text, textBoxFullNamePatronymicIvanovicha.Text);
-            GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
 
 
             // Тип нарушения, с пересечением и проч.
             string textOffence = GetTextWhithAlternative(textBoxViolationAlternative.Text);
-            GenerationWord.AddValueControl(ref controlArrayToString, textOffence, "#-3"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, textOffence, "#-3"); // в ручную добавляем новый ключ
 
 
             // На трассе или у дома
@@ -245,12 +245,12 @@ namespace Magistrate.Forms
                 addressViolation = "на " + textBoxKmRouteOrNumHouse.Text + " км+" + textBoxMetrRoute.Text + " м а/дороги " + comboBoxRoute.Text;
             if (radioButtonOnHouse.Checked) // если у дома
                 addressViolation = "у дома № " + textBoxKmRouteOrNumHouse.Text + " по " + textBoxMetrRoute.Text + " " + comboBoxRoute.Text;
-            GenerationWord.AddValueControl(ref controlArrayToString, addressViolation, "#-5"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, addressViolation, "#-5"); // в ручную добавляем новый ключ
 
 
             // Получатель и УИН
             string requisitesGAI = FormController.GenerateFullRequisitesGAI(comboBoxRecipientGIBDD.Text, textBoxYINgIBDD.Text); // полные реквзииты ГАИ
-            GenerationWord.AddValueControl(ref controlArrayToString, requisitesGAI, "#-6"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, requisitesGAI, "#-6"); // в ручную добавляем новый ключ
 
 
             // Вставляем название в буфер обмена

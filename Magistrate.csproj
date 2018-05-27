@@ -125,7 +125,7 @@
     <Compile Include="Forms\ReturnDuty.Designer.cs">
       <DependentUpon>ReturnDuty.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsLogic\GenerationWord.cs" />
+    <Compile Include="FormsLogic\GeneratorWord.cs" />
     <Compile Include="FormsLogic\HandlerTextControls.cs" />
     <Compile Include="DataBase\IniFacade.cs" />
     <Compile Include="Program.cs" />

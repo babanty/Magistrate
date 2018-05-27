@@ -92,14 +92,14 @@ namespace Magistrate.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+            List<ValueControl> controlArrayToString = GeneratorWord.StandartListValueControl(Controls);
 
 
             // Изменение суммы госпошлины по принципу 0 руб. 0 коп.
             string Duty = HandlerTextControls.IntInRubAndCop(numericUpDownDuty.Value);
             if (Duty == null)
                 return;
-            GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-1"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, Duty, "#-1"); // в ручную добавляем новый ключ
 
 
             // Вставляем название в буфер обмена

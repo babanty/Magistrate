@@ -139,26 +139,26 @@ namespace Magistrate.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+            List<ValueControl> controlArrayToString = GeneratorWord.StandartListValueControl(Controls);
 
 
             //Явился или не явился
             string resultAppeared = FormController.AppearedOrNotExplanation(checkBoxAppearedOrNot.Checked, radioButtonSexWoomen.Checked);
-            GenerationWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); // в ручную добавляем новый ключ
 
             // Делаем инициалы ФИО
             string initials = FormController.GetInitials(textBoxFullNameNameIvana.Text, textBoxFullNamePatronymicIvanovicha.Text);
-            GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
 
             // Получатель и УИН
             string requisitesGAI = FormController.GenerateFullRequisitesGAI(comboBoxRecipientGIBDD.Text, textBoxYINgIBDD.Text); // полные реквзииты ГАИ
-            GenerationWord.AddValueControl(ref controlArrayToString, requisitesGAI, "#-3"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, requisitesGAI, "#-3"); // в ручную добавляем новый ключ
 
             // Сумма штрафа умножить на два
             try
             {
                 int sumFine = Convert.ToInt32(comboBoxFine.Text) * 2; // сумма штрафа
-                GenerationWord.AddValueControl(ref controlArrayToString, sumFine.ToString(), "#-4"); // в ручную добавляем новый ключ
+                GeneratorWord.AddValueControl(ref controlArrayToString, sumFine.ToString(), "#-4"); // в ручную добавляем новый ключ
             }catch
             {
                 MessageBox.Show("Некорректно введена сумма штрафа");

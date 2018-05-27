@@ -98,12 +98,12 @@ namespace Magistrate.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+            List<ValueControl> controlArrayToString = GeneratorWord.StandartListValueControl(Controls);
             
 
             // Делаем инициалы ФИО
             string initials = FormController.GetInitials(textBoxFullNameNameIvana.Text, textBoxFullNamePatronymicIvanovicha.Text);
-            GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-1"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, initials, "#-1"); // в ручную добавляем новый ключ
 
 
             // Вставляем название в буфер обмена

@@ -97,7 +97,7 @@ namespace Magistrate.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+            List<ValueControl> controlArrayToString = GeneratorWord.StandartListValueControl(Controls);
 
 
             // Заполняем полные реквизиты банка
@@ -107,7 +107,7 @@ namespace Magistrate.Forms
                 MessageBox.Show("Реквизиты банка не опознаны, после герации не забудьте их вписать");
                 bankRequisites = "";
             }
-            GenerationWord.AddValueControl(ref controlArrayToString, bankRequisites, "#-1"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, bankRequisites, "#-1"); // в ручную добавляем новый ключ
 
 
             // Заполнение второй даты, выделено отдельно т.к. иначе в word-е будут лишние точки
@@ -117,27 +117,27 @@ namespace Magistrate.Forms
                 dateTwo = comboBoxPeriodTwoDay.Text + "." + comboBoxPeriodTwoMonth.Text + "." + comboBoxPeriodTwoYear.Text;
                 dateTwo = " по " + dateTwo + " года";
             }
-            GenerationWord.AddValueControl(ref controlArrayToString, dateTwo, "#-2"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, dateTwo, "#-2"); // в ручную добавляем новый ключ
 
 
             // Изменение суммы задолженности по принципу 0 руб. 0 коп.
             string Debt = HandlerTextControls.IntInRubAndCop(numericUpDownCredit.Value);
             if (Debt == null)
                 return;
-            GenerationWord.AddValueControl(ref controlArrayToString, Debt, "#-3"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, Debt, "#-3"); // в ручную добавляем новый ключ
 
 
             // Изменение суммы государственной пошлины по принципу 0 руб. 0 коп.
             string Duty = HandlerTextControls.IntInRubAndCop(numericUpDownCreditFine.Value);
             if (Duty == null)
                 return;
-            GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-4"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, Duty, "#-4"); // в ручную добавляем новый ключ
 
 
             // Суммирование взыскиваемой суммы
             decimal summToPay = numericUpDownCredit.Value + numericUpDownCreditFine.Value; // сумма к оплате
             string ToPay = HandlerTextControls.IntInRubAndCop(summToPay);
-            GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-5"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, ToPay, "#-5"); // в ручную добавляем новый ключ
 
 
             // Вставляем название в буфер обмена

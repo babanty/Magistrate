@@ -254,7 +254,7 @@ namespace Magistrate.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+            List<ValueControl> controlArrayToString = GeneratorWord.StandartListValueControl(Controls);
 
 
             // Если ИНН не равен 12 символам
@@ -275,7 +275,7 @@ namespace Magistrate.Forms
 
             // Обработка налогов, составление строки
             string taxesString = TaxHandlerStringPreparation();
-            GenerationWord.AddValueControl(ref controlArrayToString, taxesString, "#-1"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, taxesString, "#-1"); // в ручную добавляем новый ключ
 
 
             // Подсчет суммы всех налогов
@@ -283,7 +283,7 @@ namespace Magistrate.Forms
             try
             {
                 string taxesSumToString = SumAllTaxes(out taxesSum);
-                GenerationWord.AddValueControl(ref controlArrayToString, taxesSumToString, "#-2"); // в ручную добавляем новый ключ
+                GeneratorWord.AddValueControl(ref controlArrayToString, taxesSumToString, "#-2"); // в ручную добавляем новый ключ
             }
             catch (Exception ex)
             {
@@ -296,7 +296,7 @@ namespace Magistrate.Forms
             try
             {
                 string dutyToString = CountStateFee(taxesSum);
-                GenerationWord.AddValueControl(ref controlArrayToString, dutyToString, "#-3"); // в ручную добавляем новый ключ
+                GeneratorWord.AddValueControl(ref controlArrayToString, dutyToString, "#-3"); // в ручную добавляем новый ключ
             }
             catch (Exception ex)
             {

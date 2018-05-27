@@ -202,7 +202,7 @@ namespace Magistrate.FormLogic
             ref ComboBox comboBoxLoad)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(controls);
+            List<ValueControl> controlArrayToString = GeneratorWord.StandartListValueControl(controls);
 
             string fullNameSave = nameForm + "$" + nameSave; // имя сохранения
             SaveLoadForm.SaveForm(fullNameSave, controlArrayToString); // сохранить
@@ -320,12 +320,12 @@ namespace Magistrate.FormLogic
             if (ItIsMen)
             {
                 // Сгенерировать ворд
-                GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", namePatternWordForMen, listValueControl);
+                GeneratorWord.GenerateWord(Application.StartupPath + "\\Sample", namePatternWordForMen, listValueControl);
             }
             else
             {
                 // Сгенерировать ворд
-                GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", namePatternWordForWoomen, listValueControl);
+                GeneratorWord.GenerateWord(Application.StartupPath + "\\Sample", namePatternWordForWoomen, listValueControl);
             }
         }
 
@@ -337,7 +337,7 @@ namespace Magistrate.FormLogic
         public static void GenerateWord(List<ValueControl> listValueControl, string namePatternWord)
         {
             // Сгенерировать ворд
-            GenerationWord.GenerateWord(Application.StartupPath + "\\Sample", namePatternWord, listValueControl);
+            GeneratorWord.GenerateWord(Application.StartupPath + "\\Sample", namePatternWord, listValueControl);
         }
 
 

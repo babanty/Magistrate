@@ -198,25 +198,25 @@ namespace Magistrate.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+            List<ValueControl> controlArrayToString = GeneratorWord.StandartListValueControl(Controls);
 
 
             //Явился или не явился
             string resultAppeared = FormController.AppearedOrNotExplanation(checkBoxAppearedOrNot.Checked, radioButtonSexWoomen.Checked);
-            GenerationWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); // в ручную добавляем новый ключ
 
             // Делаем инициалы ФИО
             string initials = FormController.GetInitials(textBoxFullNameNameIvana.Text, textBoxFullNamePatronymicIvanovicha.Text);
-            GenerationWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
 
             // Указание если явился ,кроме признания своей вины,
             if (checkBoxAppearedOrNot.Checked)
             {
-                GenerationWord.AddValueControl(ref controlArrayToString, ", кроме признания своей вины,", "#-3"); // в ручную добавляем новый ключ
+                GeneratorWord.AddValueControl(ref controlArrayToString, ", кроме признания своей вины,", "#-3"); // в ручную добавляем новый ключ
             }
             else
             {
-                GenerationWord.AddValueControl(ref controlArrayToString, "", "#-3"); // в ручную добавляем новый ключ
+                GeneratorWord.AddValueControl(ref controlArrayToString, "", "#-3"); // в ручную добавляем новый ключ
             }
 
 

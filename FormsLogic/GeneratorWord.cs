@@ -13,7 +13,7 @@ namespace Magistrate
     /// <summary>
     /// Набор статических инструментов для генерации ворда и заполнение его информацией
     /// </summary>
-    public static class GenerationWord
+    public static class GeneratorWord
     {
         // Путь до скрипта генератора
         private static string PathToApp = Application.StartupPath + "\\AutoitGenerateWord.exe"; 

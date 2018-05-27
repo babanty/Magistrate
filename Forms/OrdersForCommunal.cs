@@ -318,31 +318,31 @@ namespace Magistrate.Forms
         /// <summary> Логика конкретно данной формы </summary>
         private List<ValueControl> LogicForm(List<ValueControl> controlArrayToString)
         {
-            GenerationWord.AddValueControl(ref controlArrayToString, FindFullDetailsCommunal(), "#-1");
-            GenerationWord.AddValueControl(ref controlArrayToString, DebtorOrDebtord(), "#-2");
-            GenerationWord.AddValueControl(ref controlArrayToString, SeverallyOrNot(), "#-3");
-            GenerationWord.AddValueControl(ref controlArrayToString, FillingSecondDate(), "#-4");
-            GenerationWord.AddValueControl(ref controlArrayToString, FromWhomCollectDebt(), "#-5");
-            GenerationWord.AddValueControl(ref controlArrayToString, FromWhomCollectDebtFullDetails(), "#-6");
+            GeneratorWord.AddValueControl(ref controlArrayToString, FindFullDetailsCommunal(), "#-1");
+            GeneratorWord.AddValueControl(ref controlArrayToString, DebtorOrDebtord(), "#-2");
+            GeneratorWord.AddValueControl(ref controlArrayToString, SeverallyOrNot(), "#-3");
+            GeneratorWord.AddValueControl(ref controlArrayToString, FillingSecondDate(), "#-4");
+            GeneratorWord.AddValueControl(ref controlArrayToString, FromWhomCollectDebt(), "#-5");
+            GeneratorWord.AddValueControl(ref controlArrayToString, FromWhomCollectDebtFullDetails(), "#-6");
 
 
             // В сумме руб коп
             string Summ = HandlerTextControls.IntInRubAndCop(numericUpDownCredit.Value);
             if (Summ == null)
                 throw new Exception("Некорректная сумма");
-            GenerationWord.AddValueControl(ref controlArrayToString, Summ, "#-7"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, Summ, "#-7"); // в ручную добавляем новый ключ
 
 
             // Пени руб коп
             string Duty = HandlerTextControls.IntInRubAndCop(numericUpDownCreditFine.Value);
             if (Duty == null)
                 throw new Exception("Некорректное пени");
-            GenerationWord.AddValueControl(ref controlArrayToString, Duty, "#-8"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, Duty, "#-8"); // в ручную добавляем новый ключ
 
             // Всего руб коп
             decimal summToPay = numericUpDownCredit.Value + numericUpDownCreditFine.Value; // сумма к оплате
             string ToPay = HandlerTextControls.IntInRubAndCop(summToPay);
-            GenerationWord.AddValueControl(ref controlArrayToString, ToPay, "#-9"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, ToPay, "#-9"); // в ручную добавляем новый ключ
 
             return controlArrayToString;
         }
@@ -378,7 +378,7 @@ namespace Magistrate.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             // Сделать стандратный массив значений полей для ввода с формы с ключами для autoit скрипта генерирующего word 
-            List<ValueControl> controlArrayToString = GenerationWord.StandartListValueControl(Controls);
+            List<ValueControl> controlArrayToString = GeneratorWord.StandartListValueControl(Controls);
 
 
             try { controlArrayToString = LogicForm(controlArrayToString); }
