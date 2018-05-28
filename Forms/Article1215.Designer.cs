@@ -120,6 +120,8 @@
             this.LabelClipPutNum = new System.Windows.Forms.Label();
             this.textBoxClipPutName = new System.Windows.Forms.TextBox();
             this.groupBoxSex = new System.Windows.Forms.GroupBox();
+            this.buttonUpdateRequisites = new System.Windows.Forms.Button();
+            this.buttonAddRequisites = new System.Windows.Forms.Button();
             this.groupBoxRouteOrHouse.SuspendLayout();
             this.groupBoxSex.SuspendLayout();
             this.SuspendLayout();
@@ -1236,7 +1238,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label30.Location = new System.Drawing.Point(316, 1196);
+            this.label30.Location = new System.Drawing.Point(631, 1196);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(110, 20);
             this.label30.TabIndex = 270;
@@ -1475,6 +1477,28 @@
             this.groupBoxSex.TabStop = false;
             this.groupBoxSex.Text = "Пол подсудимого";
             // 
+            // buttonUpdateRequisites
+            // 
+            this.buttonUpdateRequisites.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonUpdateRequisites.Location = new System.Drawing.Point(429, 1192);
+            this.buttonUpdateRequisites.Name = "buttonUpdateRequisites";
+            this.buttonUpdateRequisites.Size = new System.Drawing.Size(196, 28);
+            this.buttonUpdateRequisites.TabIndex = 318;
+            this.buttonUpdateRequisites.Text = "Обновить реквизиты";
+            this.buttonUpdateRequisites.UseVisualStyleBackColor = true;
+            this.buttonUpdateRequisites.Click += new System.EventHandler(this.buttonUpdateRequisites_Click);
+            // 
+            // buttonAddRequisites
+            // 
+            this.buttonAddRequisites.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddRequisites.Location = new System.Drawing.Point(315, 1192);
+            this.buttonAddRequisites.Name = "buttonAddRequisites";
+            this.buttonAddRequisites.Size = new System.Drawing.Size(108, 28);
+            this.buttonAddRequisites.TabIndex = 317;
+            this.buttonAddRequisites.Text = "Добавить";
+            this.buttonAddRequisites.UseVisualStyleBackColor = true;
+            this.buttonAddRequisites.Click += new System.EventHandler(this.buttonAddRequisites_Click);
+            // 
             // Article1215
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -1482,6 +1506,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1024, 653);
+            this.Controls.Add(this.buttonUpdateRequisites);
+            this.Controls.Add(this.buttonAddRequisites);
             this.Controls.Add(this.groupBoxSex);
             this.Controls.Add(this.textBoxClipPutName);
             this.Controls.Add(this.LabelClipPutNum);
@@ -1676,5 +1702,7 @@
         private System.Windows.Forms.Label LabelClipPutNum;
         private System.Windows.Forms.TextBox textBoxClipPutName;
         private System.Windows.Forms.GroupBox groupBoxSex;
+        private System.Windows.Forms.Button buttonUpdateRequisites;
+        private System.Windows.Forms.Button buttonAddRequisites;
     }
 }

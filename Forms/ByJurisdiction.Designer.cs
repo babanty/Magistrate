@@ -553,11 +553,11 @@
             this.comboBoxArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxArticle.FormattingEnabled = true;
             this.comboBoxArticle.Items.AddRange(new object[] {
-            "12.9 ч.2",
-            "12.18",
-            "12.6",
-            "12.37 ч.1",
-            "12.2 ч.1"});
+            "12.15 ч. 4",
+            "12.15 ч. 5",
+            "12.8 ч. 1",
+            "12.26 ч. 1",
+            "12.16 ч. 3"});
             this.comboBoxArticle.Location = new System.Drawing.Point(12, 482);
             this.comboBoxArticle.Name = "comboBoxArticle";
             this.comboBoxArticle.Size = new System.Drawing.Size(296, 28);

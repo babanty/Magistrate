@@ -131,7 +131,18 @@ namespace Magistrate.Forms
             }
         }
 
-
+        // добавить организацию
+        private void buttonAddRequisites_Click(object sender, EventArgs e)
+        {
+            NewGAI form2 = new NewGAI(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
+        // Обновить реквизиты
+        private void buttonUpdateRequisites_Click(object sender, EventArgs e)
+        {
+            comboBoxRecipientGIBDD.Items.Clear();
+            FormController.SetPropertiesComboBox(ref comboBoxRecipientGIBDD, NamePropertiesForComboBox.РеквизитыГИБДД); // Место жителства дом
+        }
         #endregion приватные методы
 
 
@@ -172,6 +183,5 @@ namespace Magistrate.Forms
             FormController.GenerateWord(controlArrayToString, radioButtonSexMen.Checked, "ст 20.25 Муж", "ст 20.25 Жен");
 
         }
-        
     }
 }

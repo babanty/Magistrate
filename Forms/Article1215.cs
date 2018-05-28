@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Magistrate.FormLogic;
+using Magistrate.PropertiesForm;
 
 namespace Magistrate.Forms
 {
@@ -212,6 +213,18 @@ namespace Magistrate.Forms
 
         #endregion Сохранение
 
+        // добавить организацию
+        private void buttonAddRequisites_Click(object sender, EventArgs e)
+        {
+            NewGAI form2 = new NewGAI(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
+        // Обновить реквизиты
+        private void buttonUpdateRequisites_Click(object sender, EventArgs e)
+        {
+            comboBoxRecipientGIBDD.Items.Clear();
+            FormController.SetPropertiesComboBox(ref comboBoxRecipientGIBDD, NamePropertiesForComboBox.РеквизитыГИБДД); // Место жителства дом
+        }
 
         // СГЕНЕРИРОВАТЬ WORD
         private void button1_Click(object sender, EventArgs e)
@@ -259,7 +272,6 @@ namespace Magistrate.Forms
 
             FormController.GenerateWord(controlArrayToString, radioButtonSexMen.Checked, "ст 12.15 Муж", "ст 12.15 Жен");
         }
-
 
 
     }

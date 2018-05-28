@@ -1,0 +1,5 @@
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\MyIni\bin\Release\MyIni.dll
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\MyIni\bin\Release\MyIni.pdb
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\MyIni\obj\Release\MyIni.csproj.CoreCompileInputs.cache
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\MyIni\obj\Release\MyIni.dll
+E:\MyDesktop\Code\Судья\Судья v2\Magistrate\MyIni\obj\Release\MyIni.pdb

@@ -107,6 +107,8 @@
             this.comboBoxDateProtocolYear = new System.Windows.Forms.ComboBox();
             this.comboBoxDateProtocolMonth = new System.Windows.Forms.ComboBox();
             this.comboBoxDateProtocolDay = new System.Windows.Forms.ComboBox();
+            this.buttonUpdateRequisites = new System.Windows.Forms.Button();
+            this.buttonAddRequisites = new System.Windows.Forms.Button();
             this.groupBoxSex.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1065,7 +1067,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label30.Location = new System.Drawing.Point(316, 875);
+            this.label30.Location = new System.Drawing.Point(634, 876);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(185, 20);
             this.label30.TabIndex = 324;
@@ -1307,6 +1309,28 @@
             this.comboBoxDateProtocolDay.TabIndex = 58;
             this.comboBoxDateProtocolDay.Tag = "33";
             // 
+            // buttonUpdateRequisites
+            // 
+            this.buttonUpdateRequisites.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonUpdateRequisites.Location = new System.Drawing.Point(432, 872);
+            this.buttonUpdateRequisites.Name = "buttonUpdateRequisites";
+            this.buttonUpdateRequisites.Size = new System.Drawing.Size(196, 28);
+            this.buttonUpdateRequisites.TabIndex = 343;
+            this.buttonUpdateRequisites.Text = "Обновить реквизиты";
+            this.buttonUpdateRequisites.UseVisualStyleBackColor = true;
+            this.buttonUpdateRequisites.Click += new System.EventHandler(this.buttonUpdateRequisites_Click);
+            // 
+            // buttonAddRequisites
+            // 
+            this.buttonAddRequisites.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddRequisites.Location = new System.Drawing.Point(318, 872);
+            this.buttonAddRequisites.Name = "buttonAddRequisites";
+            this.buttonAddRequisites.Size = new System.Drawing.Size(108, 28);
+            this.buttonAddRequisites.TabIndex = 342;
+            this.buttonAddRequisites.Text = "Добавить";
+            this.buttonAddRequisites.UseVisualStyleBackColor = true;
+            this.buttonAddRequisites.Click += new System.EventHandler(this.buttonAddRequisites_Click);
+            // 
             // Article2025
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -1314,6 +1338,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.buttonUpdateRequisites);
+            this.Controls.Add(this.buttonAddRequisites);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.comboBoxDateProtocolYear);
             this.Controls.Add(this.comboBoxDateProtocolMonth);
@@ -1482,5 +1508,7 @@
         private System.Windows.Forms.ComboBox comboBoxDateProtocolYear;
         private System.Windows.Forms.ComboBox comboBoxDateProtocolMonth;
         private System.Windows.Forms.ComboBox comboBoxDateProtocolDay;
+        private System.Windows.Forms.Button buttonUpdateRequisites;
+        private System.Windows.Forms.Button buttonAddRequisites;
     }
 }
