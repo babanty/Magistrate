@@ -99,6 +99,8 @@
             this.textBoxClipPutNum = new System.Windows.Forms.TextBox();
             this.numericUpDownCreditFine = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownCredit = new System.Windows.Forms.NumericUpDown();
+            this.buttonUpdateRequisites = new System.Windows.Forms.Button();
+            this.buttonAddRequisites = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCreditFine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCredit)).BeginInit();
             this.SuspendLayout();
@@ -736,7 +738,7 @@
             // buttonGenerateWord
             // 
             this.buttonGenerateWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonGenerateWord.Location = new System.Drawing.Point(11, 907);
+            this.buttonGenerateWord.Location = new System.Drawing.Point(11, 940);
             this.buttonGenerateWord.Name = "buttonGenerateWord";
             this.buttonGenerateWord.Size = new System.Drawing.Size(297, 30);
             this.buttonGenerateWord.TabIndex = 78;
@@ -797,7 +799,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(317, 662);
+            this.label17.Location = new System.Drawing.Point(317, 695);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(585, 20);
             this.label17.TabIndex = 116;
@@ -806,7 +808,7 @@
             // textBoxNumContract
             // 
             this.textBoxNumContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxNumContract.Location = new System.Drawing.Point(12, 656);
+            this.textBoxNumContract.Location = new System.Drawing.Point(12, 689);
             this.textBoxNumContract.Name = "textBoxNumContract";
             this.textBoxNumContract.Size = new System.Drawing.Size(296, 26);
             this.textBoxNumContract.TabIndex = 53;
@@ -816,7 +818,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(317, 722);
+            this.label18.Location = new System.Drawing.Point(317, 755);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(621, 20);
             this.label18.TabIndex = 118;
@@ -829,7 +831,7 @@
             this.comboBoxPeriod.Items.AddRange(new object[] {
             "за период",
             "на дату"});
-            this.comboBoxPeriod.Location = new System.Drawing.Point(12, 722);
+            this.comboBoxPeriod.Location = new System.Drawing.Point(12, 755);
             this.comboBoxPeriod.Name = "comboBoxPeriod";
             this.comboBoxPeriod.Size = new System.Drawing.Size(296, 28);
             this.comboBoxPeriod.TabIndex = 57;
@@ -840,7 +842,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(317, 756);
+            this.label19.Location = new System.Drawing.Point(317, 789);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(298, 20);
             this.label19.TabIndex = 122;
@@ -861,7 +863,7 @@
             "2018",
             "2019",
             "2020"});
-            this.comboBoxPeriodOneYear.Location = new System.Drawing.Point(210, 756);
+            this.comboBoxPeriodOneYear.Location = new System.Drawing.Point(210, 789);
             this.comboBoxPeriodOneYear.Name = "comboBoxPeriodOneYear";
             this.comboBoxPeriodOneYear.Size = new System.Drawing.Size(98, 28);
             this.comboBoxPeriodOneYear.TabIndex = 60;
@@ -884,7 +886,7 @@
             "10",
             "11",
             "12"});
-            this.comboBoxPeriodOneMonth.Location = new System.Drawing.Point(99, 756);
+            this.comboBoxPeriodOneMonth.Location = new System.Drawing.Point(99, 789);
             this.comboBoxPeriodOneMonth.Name = "comboBoxPeriodOneMonth";
             this.comboBoxPeriodOneMonth.Size = new System.Drawing.Size(105, 28);
             this.comboBoxPeriodOneMonth.TabIndex = 59;
@@ -926,7 +928,7 @@
             "29",
             "30",
             "31"});
-            this.comboBoxPeriodOneDay.Location = new System.Drawing.Point(12, 756);
+            this.comboBoxPeriodOneDay.Location = new System.Drawing.Point(12, 789);
             this.comboBoxPeriodOneDay.Name = "comboBoxPeriodOneDay";
             this.comboBoxPeriodOneDay.Size = new System.Drawing.Size(81, 28);
             this.comboBoxPeriodOneDay.TabIndex = 58;
@@ -936,7 +938,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(317, 790);
+            this.label20.Location = new System.Drawing.Point(317, 823);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(545, 20);
             this.label20.TabIndex = 126;
@@ -957,7 +959,7 @@
             "2018",
             "2019",
             "2020"});
-            this.comboBoxPeriodTwoYear.Location = new System.Drawing.Point(210, 790);
+            this.comboBoxPeriodTwoYear.Location = new System.Drawing.Point(210, 823);
             this.comboBoxPeriodTwoYear.Name = "comboBoxPeriodTwoYear";
             this.comboBoxPeriodTwoYear.Size = new System.Drawing.Size(98, 28);
             this.comboBoxPeriodTwoYear.TabIndex = 73;
@@ -980,7 +982,7 @@
             "10",
             "11",
             "12"});
-            this.comboBoxPeriodTwoMonth.Location = new System.Drawing.Point(99, 790);
+            this.comboBoxPeriodTwoMonth.Location = new System.Drawing.Point(99, 823);
             this.comboBoxPeriodTwoMonth.Name = "comboBoxPeriodTwoMonth";
             this.comboBoxPeriodTwoMonth.Size = new System.Drawing.Size(105, 28);
             this.comboBoxPeriodTwoMonth.TabIndex = 72;
@@ -1022,7 +1024,7 @@
             "29",
             "30",
             "31"});
-            this.comboBoxPeriodTwoDay.Location = new System.Drawing.Point(12, 790);
+            this.comboBoxPeriodTwoDay.Location = new System.Drawing.Point(12, 823);
             this.comboBoxPeriodTwoDay.Name = "comboBoxPeriodTwoDay";
             this.comboBoxPeriodTwoDay.Size = new System.Drawing.Size(81, 28);
             this.comboBoxPeriodTwoDay.TabIndex = 71;
@@ -1032,7 +1034,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(12, 821);
+            this.label21.Location = new System.Drawing.Point(12, 854);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(144, 20);
             this.label21.TabIndex = 128;
@@ -1042,7 +1044,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(166, 821);
+            this.label22.Location = new System.Drawing.Point(166, 854);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(119, 20);
             this.label22.TabIndex = 130;
@@ -1052,7 +1054,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(317, 694);
+            this.label23.Location = new System.Drawing.Point(317, 727);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(137, 20);
             this.label23.TabIndex = 134;
@@ -1073,7 +1075,7 @@
             "2018",
             "2019",
             "2020"});
-            this.comboBoxDateContractYear.Location = new System.Drawing.Point(210, 688);
+            this.comboBoxDateContractYear.Location = new System.Drawing.Point(210, 721);
             this.comboBoxDateContractYear.Name = "comboBoxDateContractYear";
             this.comboBoxDateContractYear.Size = new System.Drawing.Size(98, 28);
             this.comboBoxDateContractYear.TabIndex = 56;
@@ -1096,7 +1098,7 @@
             "10",
             "11",
             "12"});
-            this.comboBoxDateContractMonth.Location = new System.Drawing.Point(99, 688);
+            this.comboBoxDateContractMonth.Location = new System.Drawing.Point(99, 721);
             this.comboBoxDateContractMonth.Name = "comboBoxDateContractMonth";
             this.comboBoxDateContractMonth.Size = new System.Drawing.Size(105, 28);
             this.comboBoxDateContractMonth.TabIndex = 55;
@@ -1138,7 +1140,7 @@
             "29",
             "30",
             "31"});
-            this.comboBoxDateContractDay.Location = new System.Drawing.Point(12, 688);
+            this.comboBoxDateContractDay.Location = new System.Drawing.Point(12, 721);
             this.comboBoxDateContractDay.Name = "comboBoxDateContractDay";
             this.comboBoxDateContractDay.Size = new System.Drawing.Size(81, 28);
             this.comboBoxDateContractDay.TabIndex = 54;
@@ -1167,7 +1169,7 @@
             // buttonDeleteSave
             // 
             this.buttonDeleteSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDeleteSave.Location = new System.Drawing.Point(536, 975);
+            this.buttonDeleteSave.Location = new System.Drawing.Point(536, 1008);
             this.buttonDeleteSave.Name = "buttonDeleteSave";
             this.buttonDeleteSave.Size = new System.Drawing.Size(74, 28);
             this.buttonDeleteSave.TabIndex = 92;
@@ -1181,7 +1183,7 @@
             this.comboBoxLoad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxLoad.FormattingEnabled = true;
-            this.comboBoxLoad.Location = new System.Drawing.Point(314, 975);
+            this.comboBoxLoad.Location = new System.Drawing.Point(314, 1008);
             this.comboBoxLoad.Name = "comboBoxLoad";
             this.comboBoxLoad.Size = new System.Drawing.Size(216, 28);
             this.comboBoxLoad.TabIndex = 80;
@@ -1190,7 +1192,7 @@
             // 
             this.textBoxForSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxForSave.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBoxForSave.Location = new System.Drawing.Point(314, 943);
+            this.textBoxForSave.Location = new System.Drawing.Point(314, 976);
             this.textBoxForSave.Name = "textBoxForSave";
             this.textBoxForSave.Size = new System.Drawing.Size(296, 26);
             this.textBoxForSave.TabIndex = 79;
@@ -1200,7 +1202,7 @@
             // buttonLoad
             // 
             this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLoad.Location = new System.Drawing.Point(12, 975);
+            this.buttonLoad.Location = new System.Drawing.Point(12, 1008);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(296, 28);
             this.buttonLoad.TabIndex = 91;
@@ -1211,7 +1213,7 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(12, 943);
+            this.buttonSave.Location = new System.Drawing.Point(12, 976);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(296, 26);
             this.buttonSave.TabIndex = 305;
@@ -1222,7 +1224,7 @@
             // textBoxClipPutName
             // 
             this.textBoxClipPutName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxClipPutName.Location = new System.Drawing.Point(142, 875);
+            this.textBoxClipPutName.Location = new System.Drawing.Point(142, 908);
             this.textBoxClipPutName.Name = "textBoxClipPutName";
             this.textBoxClipPutName.Size = new System.Drawing.Size(164, 26);
             this.textBoxClipPutName.TabIndex = 77;
@@ -1231,7 +1233,7 @@
             // 
             this.LabelClipPutNum.AutoSize = true;
             this.LabelClipPutNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelClipPutNum.Location = new System.Drawing.Point(6, 878);
+            this.LabelClipPutNum.Location = new System.Drawing.Point(6, 911);
             this.LabelClipPutNum.Name = "LabelClipPutNum";
             this.LabelClipPutNum.Size = new System.Drawing.Size(25, 20);
             this.LabelClipPutNum.TabIndex = 312;
@@ -1241,7 +1243,7 @@
             // 
             this.LabelClipPutDescript.AutoSize = true;
             this.LabelClipPutDescript.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelClipPutDescript.Location = new System.Drawing.Point(312, 878);
+            this.LabelClipPutDescript.Location = new System.Drawing.Point(312, 911);
             this.LabelClipPutDescript.Name = "LabelClipPutDescript";
             this.LabelClipPutDescript.Size = new System.Drawing.Size(547, 20);
             this.LabelClipPutDescript.TabIndex = 311;
@@ -1250,7 +1252,7 @@
             // textBoxClipPutNum
             // 
             this.textBoxClipPutNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxClipPutNum.Location = new System.Drawing.Point(37, 875);
+            this.textBoxClipPutNum.Location = new System.Drawing.Point(37, 908);
             this.textBoxClipPutNum.Name = "textBoxClipPutNum";
             this.textBoxClipPutNum.Size = new System.Drawing.Size(99, 26);
             this.textBoxClipPutNum.TabIndex = 76;
@@ -1259,7 +1261,7 @@
             // 
             this.numericUpDownCreditFine.DecimalPlaces = 2;
             this.numericUpDownCreditFine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDownCreditFine.Location = new System.Drawing.Point(170, 844);
+            this.numericUpDownCreditFine.Location = new System.Drawing.Point(170, 877);
             this.numericUpDownCreditFine.Maximum = new decimal(new int[] {
             4000000,
             0,
@@ -1273,7 +1275,7 @@
             // 
             this.numericUpDownCredit.DecimalPlaces = 2;
             this.numericUpDownCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDownCredit.Location = new System.Drawing.Point(11, 844);
+            this.numericUpDownCredit.Location = new System.Drawing.Point(11, 877);
             this.numericUpDownCredit.Maximum = new decimal(new int[] {
             4000000,
             0,
@@ -1284,6 +1286,28 @@
             this.numericUpDownCredit.TabIndex = 74;
             this.numericUpDownCredit.ThousandsSeparator = true;
             // 
+            // buttonUpdateRequisites
+            // 
+            this.buttonUpdateRequisites.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonUpdateRequisites.Location = new System.Drawing.Point(437, 656);
+            this.buttonUpdateRequisites.Name = "buttonUpdateRequisites";
+            this.buttonUpdateRequisites.Size = new System.Drawing.Size(196, 28);
+            this.buttonUpdateRequisites.TabIndex = 316;
+            this.buttonUpdateRequisites.Text = "Обновить реквизиты";
+            this.buttonUpdateRequisites.UseVisualStyleBackColor = true;
+            this.buttonUpdateRequisites.Click += new System.EventHandler(this.buttonUpdateRequisites_Click);
+            // 
+            // buttonAddRequisites
+            // 
+            this.buttonAddRequisites.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddRequisites.Location = new System.Drawing.Point(323, 656);
+            this.buttonAddRequisites.Name = "buttonAddRequisites";
+            this.buttonAddRequisites.Size = new System.Drawing.Size(108, 28);
+            this.buttonAddRequisites.TabIndex = 315;
+            this.buttonAddRequisites.Text = "Добавить";
+            this.buttonAddRequisites.UseVisualStyleBackColor = true;
+            this.buttonAddRequisites.Click += new System.EventHandler(this.buttonAddRequisites_Click);
+            // 
             // CreditOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1291,6 +1315,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.buttonUpdateRequisites);
+            this.Controls.Add(this.buttonAddRequisites);
             this.Controls.Add(this.numericUpDownCreditFine);
             this.Controls.Add(this.numericUpDownCredit);
             this.Controls.Add(this.textBoxClipPutName);
@@ -1443,5 +1469,7 @@
         private System.Windows.Forms.TextBox textBoxClipPutNum;
         private System.Windows.Forms.NumericUpDown numericUpDownCreditFine;
         private System.Windows.Forms.NumericUpDown numericUpDownCredit;
+        private System.Windows.Forms.Button buttonUpdateRequisites;
+        private System.Windows.Forms.Button buttonAddRequisites;
     }
 }

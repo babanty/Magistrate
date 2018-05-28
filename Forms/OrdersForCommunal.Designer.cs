@@ -192,6 +192,8 @@
             this.LabelClipPutNum = new System.Windows.Forms.Label();
             this.LabelClipPutDescript = new System.Windows.Forms.Label();
             this.textBoxClipPutNum = new System.Windows.Forms.TextBox();
+            this.buttonAddRequisites = new System.Windows.Forms.Button();
+            this.buttonUpdateRequisites = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCreditFine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCredit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumDebtor)).BeginInit();
@@ -597,7 +599,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(317, 114);
+            this.label5.Location = new System.Drawing.Point(631, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(267, 20);
             this.label5.TabIndex = 140;
@@ -3103,6 +3105,26 @@
             this.textBoxClipPutNum.Size = new System.Drawing.Size(99, 26);
             this.textBoxClipPutNum.TabIndex = 18;
             // 
+            // buttonAddRequisites
+            // 
+            this.buttonAddRequisites.Location = new System.Drawing.Point(315, 114);
+            this.buttonAddRequisites.Name = "buttonAddRequisites";
+            this.buttonAddRequisites.Size = new System.Drawing.Size(108, 28);
+            this.buttonAddRequisites.TabIndex = 313;
+            this.buttonAddRequisites.Text = "Добавить";
+            this.buttonAddRequisites.UseVisualStyleBackColor = true;
+            this.buttonAddRequisites.Click += new System.EventHandler(this.buttonAddRequisites_Click);
+            // 
+            // buttonUpdateRequisites
+            // 
+            this.buttonUpdateRequisites.Location = new System.Drawing.Point(429, 114);
+            this.buttonUpdateRequisites.Name = "buttonUpdateRequisites";
+            this.buttonUpdateRequisites.Size = new System.Drawing.Size(196, 28);
+            this.buttonUpdateRequisites.TabIndex = 314;
+            this.buttonUpdateRequisites.Text = "Обновить реквизиты";
+            this.buttonUpdateRequisites.UseVisualStyleBackColor = true;
+            this.buttonUpdateRequisites.Click += new System.EventHandler(this.buttonUpdateRequisites_Click);
+            // 
             // OrdersForCommunal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -3110,6 +3132,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.buttonUpdateRequisites);
+            this.Controls.Add(this.buttonAddRequisites);
             this.Controls.Add(this.textBoxClipPutName);
             this.Controls.Add(this.LabelClipPutNum);
             this.Controls.Add(this.LabelClipPutDescript);
@@ -3451,5 +3475,7 @@
         private System.Windows.Forms.Label LabelClipPutNum;
         private System.Windows.Forms.Label LabelClipPutDescript;
         private System.Windows.Forms.TextBox textBoxClipPutNum;
+        private System.Windows.Forms.Button buttonAddRequisites;
+        private System.Windows.Forms.Button buttonUpdateRequisites;
     }
 }

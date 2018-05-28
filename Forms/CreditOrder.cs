@@ -1,4 +1,5 @@
 ﻿using Magistrate.FormLogic;
+using Magistrate.PropertiesForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -145,6 +146,19 @@ namespace Magistrate.Forms
 
 
             FormController.GenerateWord(controlArrayToString, "Приказ по банку или фин орг");
+        }
+
+        // добавить организацию
+        private void buttonAddRequisites_Click(object sender, EventArgs e)
+        {
+            NewRequisites form2 = new NewRequisites(TypeRequisites.Bank); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+        }
+        // Обновить реквизиты
+        private void buttonUpdateRequisites_Click(object sender, EventArgs e)
+        {
+            comboBoxBank.Items.Clear();
+            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Место жителства дом
         }
     }
 }
