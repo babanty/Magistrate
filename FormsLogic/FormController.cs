@@ -59,8 +59,14 @@ namespace Magistrate.FormLogic
             return GetFullRequisites(Name, NamePropertiesForComboBox.КомуналкаПолная);
         }
 
-        // Вернуть полные реквиты по названию организации
-        private static string GetFullRequisites(string Name, NamePropertiesForComboBox nameProperties)
+        /// <summary>
+        /// Вернуть полные реквиты по названию организации, не забывайте про более 
+        /// высокоуровневые GetBank, GetRecMunicipal и проч.
+        /// </summary>
+        /// <param name="Name">Сокращенное название организации</param>
+        /// <param name="nameProperties">Имя колонки с полными реквизитами</param>
+        /// <returns></returns>
+        public static string GetFullRequisites(string Name, NamePropertiesForComboBox nameProperties)
         {
             int nameLength = Name.Length; // Количество символов в названии банка
             string result = null;

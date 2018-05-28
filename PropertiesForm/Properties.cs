@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magistrate.PropertiesForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,6 +71,22 @@ namespace Magistrate.Forms
         private void button4_Click(object sender, EventArgs e)
         {
             NewGAI form2 = new NewGAI(); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+            this.Close(); // закрыть настройки
+        }
+
+        // изменение банков
+        private void button5_Click(object sender, EventArgs e)
+        {
+            NewRequisites form2 = new NewRequisites(TypeRequisites.Bank); // Создание соовтественующего окна
+            form2.Show(); // показать окно
+            this.Close(); // закрыть настройки
+        }
+
+        // изменение коммунальщиков
+        private void button6_Click(object sender, EventArgs e)
+        {
+            NewRequisites form2 = new NewRequisites(TypeRequisites.Communal); // Создание соовтественующего окна
             form2.Show(); // показать окно
             this.Close(); // закрыть настройки
         }

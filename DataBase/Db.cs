@@ -122,7 +122,7 @@ namespace Magistrate
         /// </summary>
         /// <param name="nameProperties"></param>
         /// <returns>возвращает строку, по которой обращаться в БД, нарпимер "Банк полные реквизиты" или null</returns>
-        private static string DecodingEnumPropertiesForComboBox(NamePropertiesForComboBox nameProperties)
+        public static string DecodingEnumPropertiesForComboBox(NamePropertiesForComboBox nameProperties)
         {
             string returnStr = null;
 
