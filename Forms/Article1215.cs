@@ -222,21 +222,21 @@ namespace Magistrate.Forms
 
             //Явился или не явился разъяяснение
             string resultAppeared = FormController.AppearedOrNotExplanation(checkBoxAppearedOrNot.Checked, radioButtonSexWoomen.Checked);
-            GeneratorWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-1"); 
 
             //Явился или не явился смягчающие обстоятельства
             resultAppeared = FormController.AppearedOrNotCircumstances(checkBoxAppearedOrNot.Checked);
-            GeneratorWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-4"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, resultAppeared, "#-4"); 
 
 
             // Делаем инициалы ФИО
             string initials = FormController.GetInitials(textBoxFullNameNameIvana.Text, textBoxFullNamePatronymicIvanovicha.Text);
-            GeneratorWord.AddValueControl(ref controlArrayToString, initials, "#-2"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, initials, "#-2"); 
 
 
             // Тип нарушения, с пересечением и проч.
             string textOffence = GetTextWhithAlternative(textBoxViolationAlternative.Text);
-            GeneratorWord.AddValueControl(ref controlArrayToString, textOffence, "#-3"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, textOffence, "#-3"); 
 
 
             // На трассе или у дома
@@ -245,12 +245,12 @@ namespace Magistrate.Forms
                 addressViolation = "на " + textBoxKmRouteOrNumHouse.Text + " км+" + textBoxMetrRoute.Text + " м а/дороги " + comboBoxRoute.Text;
             if (radioButtonOnHouse.Checked) // если у дома
                 addressViolation = "у дома № " + textBoxKmRouteOrNumHouse.Text + " по " + textBoxMetrRoute.Text + " " + comboBoxRoute.Text;
-            GeneratorWord.AddValueControl(ref controlArrayToString, addressViolation, "#-5"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, addressViolation, "#-5"); 
 
 
             // Получатель и УИН
             string requisitesGAI = FormController.GenerateFullRequisitesGAI(comboBoxRecipientGIBDD.Text, textBoxYINgIBDD.Text); // полные реквзииты ГАИ
-            GeneratorWord.AddValueControl(ref controlArrayToString, requisitesGAI, "#-6"); // в ручную добавляем новый ключ
+            GeneratorWord.AddValueControl(ref controlArrayToString, requisitesGAI, "#-6"); 
 
 
             // Вставляем название в буфер обмена

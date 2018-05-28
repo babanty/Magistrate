@@ -31,14 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewGAI));
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBoxFullRequisites = new System.Windows.Forms.TextBox();
+            this.buttonAddGIBDD = new System.Windows.Forms.Button();
+            this.buttonDeleteGIBDD = new System.Windows.Forms.Button();
+            this.listBoxNameGIBDD = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxNameGIBDD = new System.Windows.Forms.TextBox();
+            this.textBoxStandartYIN = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonChangeNameGIBDD = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -53,77 +54,77 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 19);
+            this.label3.Location = new System.Drawing.Point(12, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(391, 20);
             this.label3.TabIndex = 84;
             this.label3.Text = "В это поле ввода писать реквизиты без УИН";
             // 
-            // textBox1
+            // textBoxFullRequisites
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 42);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(450, 189);
-            this.textBox1.TabIndex = 80;
+            this.textBoxFullRequisites.Location = new System.Drawing.Point(12, 145);
+            this.textBoxFullRequisites.Multiline = true;
+            this.textBoxFullRequisites.Name = "textBoxFullRequisites";
+            this.textBoxFullRequisites.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxFullRequisites.Size = new System.Drawing.Size(450, 189);
+            this.textBoxFullRequisites.TabIndex = 2;
             // 
-            // button2
+            // buttonAddGIBDD
             // 
-            this.button2.Location = new System.Drawing.Point(12, 394);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(451, 29);
-            this.button2.TabIndex = 81;
-            this.button2.Text = "Добавить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonAddGIBDD.Location = new System.Drawing.Point(12, 394);
+            this.buttonAddGIBDD.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAddGIBDD.Name = "buttonAddGIBDD";
+            this.buttonAddGIBDD.Size = new System.Drawing.Size(451, 29);
+            this.buttonAddGIBDD.TabIndex = 4;
+            this.buttonAddGIBDD.Text = "Добавить";
+            this.buttonAddGIBDD.UseVisualStyleBackColor = true;
+            this.buttonAddGIBDD.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // buttonDeleteGIBDD
             // 
-            this.button1.Location = new System.Drawing.Point(469, 394);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(452, 29);
-            this.button1.TabIndex = 83;
-            this.button1.Text = "Удалить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonDeleteGIBDD.Location = new System.Drawing.Point(469, 394);
+            this.buttonDeleteGIBDD.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDeleteGIBDD.Name = "buttonDeleteGIBDD";
+            this.buttonDeleteGIBDD.Size = new System.Drawing.Size(225, 29);
+            this.buttonDeleteGIBDD.TabIndex = 7;
+            this.buttonDeleteGIBDD.Text = "Удалить";
+            this.buttonDeleteGIBDD.UseVisualStyleBackColor = true;
+            this.buttonDeleteGIBDD.Click += new System.EventHandler(this.button1_Click);
             // 
-            // listBox1
+            // listBoxNameGIBDD
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(469, 42);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(450, 344);
-            this.listBox1.TabIndex = 82;
+            this.listBoxNameGIBDD.FormattingEnabled = true;
+            this.listBoxNameGIBDD.ItemHeight = 20;
+            this.listBoxNameGIBDD.Location = new System.Drawing.Point(469, 42);
+            this.listBoxNameGIBDD.Margin = new System.Windows.Forms.Padding(4);
+            this.listBoxNameGIBDD.Name = "listBoxNameGIBDD";
+            this.listBoxNameGIBDD.Size = new System.Drawing.Size(450, 344);
+            this.listBoxNameGIBDD.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 243);
+            this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(397, 20);
             this.label1.TabIndex = 86;
             this.label1.Text = "Краткое наименование, например: Наш ГБДД";
             // 
-            // textBox2
+            // textBoxNameGIBDD
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 266);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(450, 68);
-            this.textBox2.TabIndex = 87;
+            this.textBoxNameGIBDD.Location = new System.Drawing.Point(12, 42);
+            this.textBoxNameGIBDD.Multiline = true;
+            this.textBoxNameGIBDD.Name = "textBoxNameGIBDD";
+            this.textBoxNameGIBDD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxNameGIBDD.Size = new System.Drawing.Size(450, 68);
+            this.textBoxNameGIBDD.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxStandartYIN
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 360);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(450, 27);
-            this.textBox3.TabIndex = 89;
+            this.textBoxStandartYIN.Location = new System.Drawing.Point(12, 360);
+            this.textBoxStandartYIN.Name = "textBoxStandartYIN";
+            this.textBoxStandartYIN.Size = new System.Drawing.Size(450, 27);
+            this.textBoxStandartYIN.TabIndex = 3;
             // 
             // label2
             // 
@@ -134,22 +135,34 @@
             this.label2.TabIndex = 88;
             this.label2.Text = "Не изменная часть УИН-а ";
             // 
+            // buttonChangeNameGIBDD
+            // 
+            this.buttonChangeNameGIBDD.Location = new System.Drawing.Point(702, 394);
+            this.buttonChangeNameGIBDD.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonChangeNameGIBDD.Name = "buttonChangeNameGIBDD";
+            this.buttonChangeNameGIBDD.Size = new System.Drawing.Size(220, 29);
+            this.buttonChangeNameGIBDD.TabIndex = 6;
+            this.buttonChangeNameGIBDD.Text = "Изменить";
+            this.buttonChangeNameGIBDD.UseVisualStyleBackColor = true;
+            this.buttonChangeNameGIBDD.Click += new System.EventHandler(this.buttonChange_Click);
+            // 
             // NewGAI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(942, 453);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.buttonChangeNameGIBDD);
+            this.Controls.Add(this.textBoxStandartYIN);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxNameGIBDD);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.textBoxFullRequisites);
+            this.Controls.Add(this.buttonAddGIBDD);
+            this.Controls.Add(this.buttonDeleteGIBDD);
+            this.Controls.Add(this.listBoxNameGIBDD);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -164,13 +177,14 @@
 
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBoxFullRequisites;
+        private System.Windows.Forms.Button buttonAddGIBDD;
+        private System.Windows.Forms.Button buttonDeleteGIBDD;
+        private System.Windows.Forms.ListBox listBoxNameGIBDD;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxNameGIBDD;
+        private System.Windows.Forms.TextBox textBoxStandartYIN;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonChangeNameGIBDD;
     }
 }
