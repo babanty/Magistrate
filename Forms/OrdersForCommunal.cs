@@ -22,12 +22,12 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // добавление организаций
-            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.КомуналкаСокращенная); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.CommunalShortened); // Место жителства дом
 
-            FormController.SetPropertiesComboBox(ref d1comboBox5, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            FormController.SetPropertiesComboBox(ref d1comboBox8, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            FormController.SetPropertiesComboBox(ref d1comboBox9, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            FormController.SetPropertiesComboBox(ref d1comboBox10, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref d1comboBox5, NamePropertiesForComboBox.PlaceBirth); // Заполняем Населенный пункт, место рождения
+            FormController.SetPropertiesComboBox(ref d1comboBox8, NamePropertiesForComboBox.PlaceResidenceCity); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref d1comboBox9, NamePropertiesForComboBox.PlaceResidenceStreet); // Место жителства улица
+            FormController.SetPropertiesComboBox(ref d1comboBox10, NamePropertiesForComboBox.PlaceResidenceHouse); // Место жителства дом
 
             FormController.SetStandartParamsInControls
                 (nameForm,
@@ -405,7 +405,7 @@ namespace Magistrate.Forms
         private void buttonUpdateRequisites_Click(object sender, EventArgs e)
         {
             comboBoxBank.Items.Clear();
-            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.КомуналкаСокращенная); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.CommunalShortened); // Место жителства дом
         }
     }
 }

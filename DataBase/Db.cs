@@ -128,37 +128,37 @@ namespace Magistrate
 
             switch (nameProperties)
             {
-                case NamePropertiesForComboBox.МестоРождения:
+                case NamePropertiesForComboBox.PlaceBirth:
                     returnStr = "Место Рождения";
                     break;
-                case NamePropertiesForComboBox.МестоЖительстваГород:
+                case NamePropertiesForComboBox.PlaceResidenceCity:
                     returnStr = "Место жительства город";
                     break;
-                case NamePropertiesForComboBox.МестоЖительстваУлица:
+                case NamePropertiesForComboBox.PlaceResidenceStreet:
                     returnStr = "Место жительства улица";
                     break;
-                case NamePropertiesForComboBox.МестоЖительстваДом:
+                case NamePropertiesForComboBox.PlaceResidenceHouse:
                     returnStr = "Место жительства дом";
                     break;
-                case NamePropertiesForComboBox.МаркаАвто:
+                case NamePropertiesForComboBox.CarBrand:
                     returnStr = "Марка авто";
                     break;
-                case NamePropertiesForComboBox.НазваниеТрассы:
+                case NamePropertiesForComboBox.NameTrack:
                     returnStr = "Название трассы";
                     break;
-                case NamePropertiesForComboBox.МестоПравонарушения:
+                case NamePropertiesForComboBox.PlaceOffence:
                     returnStr = "Место правонарушения";
                     break;
-                case NamePropertiesForComboBox.БанкСокращенный:
+                case NamePropertiesForComboBox.BankReduced:
                     returnStr = "Банк только название";
                     break;
-                case NamePropertiesForComboBox.БанкПолный:
+                case NamePropertiesForComboBox.BankFull:
                     returnStr = "Банк полные реквизиты";
                     break;
-                case NamePropertiesForComboBox.КомуналкаСокращенная:
+                case NamePropertiesForComboBox.CommunalShortened:
                     returnStr = "Комуналка организации только название";
                     break;
-                case NamePropertiesForComboBox.КомуналкаПолная:
+                case NamePropertiesForComboBox.CommunalFull:
                     returnStr = "Комуналка организации полные реквизиты";
                     break;
             }
@@ -247,17 +247,29 @@ namespace Magistrate
     /// <summary> Имя массива вариантов для полей-контролов (comboBox) </summary>
     public enum NamePropertiesForComboBox
     {
-        МестоРождения,
-        МестоЖительстваГород,
-        МестоЖительстваУлица,
-        МестоЖительстваДом,
-        МаркаАвто,
-        НазваниеТрассы,
-        МестоПравонарушения,
-        БанкСокращенный,
-        БанкПолный,
-        КомуналкаСокращенная,
-        КомуналкаПолная,
-        РеквизитыГИБДД
+        /// <summary> МестоРождения </summary>
+        PlaceBirth,
+        /// <summary> МестоЖительстваГород  </summary>
+        PlaceResidenceCity,
+        /// <summary> МестоЖительстваУлица </summary>
+        PlaceResidenceStreet,
+        /// <summary> МестоЖительстваДом </summary>
+        PlaceResidenceHouse,
+        /// <summary> МаркаАвто </summary>
+        CarBrand,
+        /// <summary> НазваниеТрассы </summary>
+        NameTrack,
+        /// <summary> МестоПравонарушения </summary>
+        PlaceOffence,
+        /// <summary> БанкСокращенный </summary>
+        BankReduced,
+        /// <summary> БанкПолный </summary>
+        BankFull,
+        /// <summary> КомуналкаСокращенная </summary>
+        CommunalShortened,
+        /// <summary> КомуналкаПолная </summary>
+        CommunalFull,
+        /// <summary> РеквизитыГИБДД </summary>
+        DetailsTrafficPolice
     }
 }

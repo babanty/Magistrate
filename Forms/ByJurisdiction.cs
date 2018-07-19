@@ -22,9 +22,9 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.PlaceResidenceCity); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.PlaceResidenceStreet); // Место жителства улица
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.PlaceResidenceHouse); // Место жителства дом
             // Save
             SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
 

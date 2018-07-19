@@ -20,7 +20,7 @@ namespace Magistrate.Forms
         {
             InitializeComponent();
 
-            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
+            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.BankReduced); // Заполняем банки
 
             SaveLoadForm.SetVariantsSaveInComboBox(nameForm, ref comboBoxLoad);// заполнение вариантами сохранений
 

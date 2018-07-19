@@ -21,11 +21,11 @@ namespace Magistrate.Forms
         {
             InitializeComponent();
 
-            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
-            FormController.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.BankReduced); // Заполняем банки
+            FormController.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.PlaceBirth); // Заполняем Населенный пункт, место рождения
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.PlaceResidenceCity); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.PlaceResidenceStreet); // Место жителства улица
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.PlaceResidenceHouse); // Место жителства дом
 
             FormController.SetStandartParamsInControls
                 (nameForm,
@@ -158,7 +158,7 @@ namespace Magistrate.Forms
         private void buttonUpdateRequisites_Click(object sender, EventArgs e)
         {
             comboBoxBank.Items.Clear();
-            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.BankReduced); // Место жителства дом
         }
     }
 }

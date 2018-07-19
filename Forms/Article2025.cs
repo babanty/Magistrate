@@ -22,10 +22,10 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            FormController.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.PlaceBirth); // Заполняем Населенный пункт, место рождения
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.PlaceResidenceCity); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.PlaceResidenceStreet); // Место жителства улица
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.PlaceResidenceHouse); // Место жителства дом
             comboBoxRecipientGIBDD.Items.AddRange(Db.GetAllShortRequisitesGAI().ToArray()); // Получатель бабулесов, ГАИ, заполняем варианты
             // Save
             SaveLoadForm.SetVariantsSaveInComboBox(this.Name, ref comboBoxLoad);// заполнение вариантами сохранений
@@ -141,7 +141,7 @@ namespace Magistrate.Forms
         private void buttonUpdateRequisites_Click(object sender, EventArgs e)
         {
             comboBoxRecipientGIBDD.Items.Clear();
-            FormController.SetPropertiesComboBox(ref comboBoxRecipientGIBDD, NamePropertiesForComboBox.РеквизитыГИБДД); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxRecipientGIBDD, NamePropertiesForComboBox.DetailsTrafficPolice); // Место жителства дом
         }
         #endregion приватные методы
 

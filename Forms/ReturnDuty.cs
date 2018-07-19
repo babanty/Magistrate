@@ -21,7 +21,7 @@ namespace Magistrate.Forms
             InitializeComponent();
 
             // Заполнение полей ввода вариантами
-            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.БанкСокращенный); // Заполняем банки
+            FormController.SetPropertiesComboBox(ref comboBoxBank, NamePropertiesForComboBox.BankReduced); // Заполняем банки
 
             FormController.SetStandartParamsInControls
     (nameForm,

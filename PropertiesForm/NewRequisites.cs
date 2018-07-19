@@ -170,12 +170,12 @@ namespace Magistrate.PropertiesForm
             switch (typeRequisites)
             {
                 case TypeRequisites.Bank:
-                    OnlyName = NamePropertiesForComboBox.БанкСокращенный;
-                    fullRequisites = NamePropertiesForComboBox.БанкПолный;
+                    OnlyName = NamePropertiesForComboBox.BankReduced;
+                    fullRequisites = NamePropertiesForComboBox.BankFull;
                     return;
                 case TypeRequisites.Communal:
-                    OnlyName = NamePropertiesForComboBox.КомуналкаСокращенная;
-                    fullRequisites = NamePropertiesForComboBox.КомуналкаПолная;
+                    OnlyName = NamePropertiesForComboBox.CommunalShortened;
+                    fullRequisites = NamePropertiesForComboBox.CommunalFull;
                     return;
             }
         }

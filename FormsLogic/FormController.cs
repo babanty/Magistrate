@@ -32,7 +32,7 @@ namespace Magistrate.FormLogic
         /// <param name="column">Название колоки в БД</param>
         public static void SetPropertiesComboBox(ref ComboBox comboBox, NamePropertiesForComboBox nameProperties)
         {
-            if(nameProperties == NamePropertiesForComboBox.РеквизитыГИБДД)
+            if(nameProperties == NamePropertiesForComboBox.DetailsTrafficPolice)
             {
                 comboBox.Items.AddRange(Db.GetAllShortRequisitesGAI().ToArray());
             }
@@ -47,7 +47,7 @@ namespace Magistrate.FormLogic
         /// <param name="Name">Название банка</param>
         public static string GetBank(string Name)
         {
-            return GetFullRequisites(Name, NamePropertiesForComboBox.БанкПолный);
+            return GetFullRequisites(Name, NamePropertiesForComboBox.BankFull);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Magistrate.FormLogic
         /// <param name="Name">Название организации</param>
         public static string GetRecMunicipal(string Name)
         {
-            return GetFullRequisites(Name, NamePropertiesForComboBox.КомуналкаПолная);
+            return GetFullRequisites(Name, NamePropertiesForComboBox.CommunalFull);
         }
 
         /// <summary>

@@ -23,13 +23,13 @@ namespace Magistrate.Forms
             InitializeComponent(); 
 
             // Заполнение полей ввода вариантами
-            FormController.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.МестоРождения); // Заполняем Населенный пункт, место рождения
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.МестоЖительстваГород); // Место жителства населенный пункт
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.МестоЖительстваУлица); // Место жителства улица
-            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.МестоЖительстваДом); // Место жителства дом
-            FormController.SetPropertiesComboBox(ref comboBoxCarBrand, NamePropertiesForComboBox.МаркаАвто); // Марка авто
-            FormController.SetPropertiesComboBox(ref comboBoxRoute, NamePropertiesForComboBox.НазваниеТрассы); // Трасса
-            FormController.SetPropertiesComboBox(ref comboBoxRecipientGIBDD, NamePropertiesForComboBox.РеквизитыГИБДД);
+            FormController.SetPropertiesComboBox(ref comboBoxPlaceOfBirth, NamePropertiesForComboBox.PlaceBirth); // Заполняем Населенный пункт, место рождения
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceCity, NamePropertiesForComboBox.PlaceResidenceCity); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceStreet, NamePropertiesForComboBox.PlaceResidenceStreet); // Место жителства улица
+            FormController.SetPropertiesComboBox(ref comboBoxResidenceHouse, NamePropertiesForComboBox.PlaceResidenceHouse); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxCarBrand, NamePropertiesForComboBox.CarBrand); // Марка авто
+            FormController.SetPropertiesComboBox(ref comboBoxRoute, NamePropertiesForComboBox.NameTrack); // Трасса
+            FormController.SetPropertiesComboBox(ref comboBoxRecipientGIBDD, NamePropertiesForComboBox.DetailsTrafficPolice);
 
             FormController.SetStandartParamsInControls
                 (nameForm,
@@ -118,7 +118,7 @@ namespace Magistrate.Forms
             label22.Text = "Город, есть выбор";
 
             comboBoxRoute.Items.Clear(); // очищаем варианты для городов
-            FormController.SetPropertiesComboBox(ref comboBoxRoute, NamePropertiesForComboBox.МестоПравонарушения); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref comboBoxRoute, NamePropertiesForComboBox.PlaceOffence); // Место жителства населенный пункт
         }
 
         // Нажали "на трассе"
@@ -130,7 +130,7 @@ namespace Magistrate.Forms
             label22.Text = "Трасса, на которой было правонарушение";
 
             comboBoxRoute.Items.Clear(); // очищаем варианты для городов
-            FormController.SetPropertiesComboBox(ref comboBoxRoute, NamePropertiesForComboBox.НазваниеТрассы); // Место жителства населенный пункт
+            FormController.SetPropertiesComboBox(ref comboBoxRoute, NamePropertiesForComboBox.NameTrack); // Место жителства населенный пункт
         }
 
 
@@ -223,7 +223,7 @@ namespace Magistrate.Forms
         private void buttonUpdateRequisites_Click(object sender, EventArgs e)
         {
             comboBoxRecipientGIBDD.Items.Clear();
-            FormController.SetPropertiesComboBox(ref comboBoxRecipientGIBDD, NamePropertiesForComboBox.РеквизитыГИБДД); // Место жителства дом
+            FormController.SetPropertiesComboBox(ref comboBoxRecipientGIBDD, NamePropertiesForComboBox.DetailsTrafficPolice); // Место жителства дом
         }
 
         // СГЕНЕРИРОВАТЬ WORD
