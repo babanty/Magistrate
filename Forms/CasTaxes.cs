@@ -38,22 +38,31 @@ namespace Magistrate.Forms
 
 
         #region Автоматическое заполнение полей
-
+        // Фамилия кого "Иванова"
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            // Указываем что первый символ с большой буквы
+            FirstCharUpperInTextBox(ref textBoxFullNameSurNameIvanovoy);
+
             textBoxFullNameSurNameIvanovu.Text = textBoxFullNameSurNameIvanovoy.Text;
 
             // название при сохранении
             textBoxClipPutName.Text = textBoxFullNameSurNameIvanovoy.Text;
         }
-
+        // Имя кого "Ивана"
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            // Указываем что первый символ с большой буквы
+            FirstCharUpperInTextBox(ref textBoxFullNameNameMarii);
+
             textBoxFullNameNameIvanu.Text = textBoxFullNameNameMarii.Text;
         }
-
+        // Отчество "Ивановича"
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
+            // Указываем что первый символ с большой буквы
+            FirstCharUpperInTextBox(ref textBoxFullNamePatronymicIvanovni);
+
             textBoxFullNamePatronymicIvanovichu.Text = textBoxFullNamePatronymicIvanovni.Text;
         }
 
@@ -141,6 +150,25 @@ namespace Magistrate.Forms
 
 
         #region Приватные методы
+
+        /// <summary>
+        /// Сделать заглавной первую букву в 
+        /// </summary>
+        /// <param name="str">Собственно строка</param>
+        /// <returns> строку с первой заглавной буквой</returns>
+        private void FirstCharUpperInTextBox(ref TextBox control)
+        {
+            var str = control.Text;
+
+            if (str == null || str == "") return;
+
+            char firstChar = str[0]; // выбираем первую букву
+            firstChar = Char.ToUpper(firstChar); // делаем ее заглавной
+
+            control.Text = firstChar.ToString() + str.Substring(1); // заполняем строку
+
+            control.SelectionStart = control.Text.Length; // перемещаем каретку в конец
+        }
 
         /// <summary>Обновить контролы на форме</summary>
         /// <param name="controls">контролы, которыми будут заменяться контролы на форме</param>
